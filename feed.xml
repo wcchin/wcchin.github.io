@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Geo-Graph-ing</title>
-    <subtitle>Analyzing the space and network</subtitle>
+    <subtitle>地-圖-論</subtitle>
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-07-30T09:32:01Z</updated>
+    <updated>2015-07-30T16:51:49Z</updated>
     
     <author>
         <name>Benny</name>
