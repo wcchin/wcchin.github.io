@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Geo-Graph-ing</title>
+    <subtitle>Analyzing the space and network</subtitle>
+    <link rel="alternate" href="http://wcchin.github.io/" />
+    <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
+    <id>http://wcchin.github.io/</id>
+    <updated>2015-07-30T09:32:01Z</updated>
+    
+    <author>
+        <name>Benny</name>
+        <email>wcchin.88@gmail.com</email>
+        <uri>http://wcchin.github.io/</uri>
+    </author>
+    
+    
+        <entry>
+            <title>About</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/07/30/about/" type="text/html" />
+            <id>http://wcchin.github.io/2015/07/30/about/</id>
+            <updated>2015-07-30T09:31:48Z</updated>
+            
+            <summary type="html">about post</summary>
+            <content type="html">&lt;p&gt;about post&lt;/p&gt;
+
+&lt;p&gt;The first post&lt;/p&gt;
+
+&lt;p&gt;測試測試&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>First pooost</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/07/30/First_post/" type="text/html" />
+            <id>http://wcchin.github.io/2015/07/30/First_post/</id>
+            <updated>2015-07-30T01:40:00Z</updated>
+            
+            
+            <content type="html">&lt;h1&gt;First post&lt;/h1&gt;
+&lt;p&gt;The first post&lt;/p&gt;
+
+&lt;p&gt;測試測試&lt;/p&gt;
+</content>
+        </entry>
+    
+</feed>
