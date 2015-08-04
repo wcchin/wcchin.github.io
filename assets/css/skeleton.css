@@ -346,7 +346,8 @@ select,
 fieldset {
   margin-bottom: 1.5rem; }
 pre,
-blockquote,
+blockquote{
+  font-style: italic; },
 dl,
 figure,
 table,
