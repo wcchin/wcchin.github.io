@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-08-04T17:52:58Z</updated>
+    <updated>2015-08-16T15:43:34Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,10 +18,10 @@
             <title>First post of the mini-lab</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/03/First_post/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/03/First_post/</id>
-            <updated>2015-08-03T16:35:00Z</updated>
+            <updated>2015-08-03T15:26:00Z</updated>
             
             
-            <content type="html">&lt;h5&gt;Welcome to Benny.mini-lab&lt;/h5&gt;
+            <content type="html">&lt;h5&gt;Welcome to &lt;a href=&#34;https://wcchin.github.io&#34;&gt;Benny.mini-lab&lt;/a&gt;&lt;/h5&gt;
 &lt;p&gt;This is a place for storing what has come to my mind, and what I&amp;rsquo;ve done&lt;/p&gt;
 
 &lt;p&gt;I created this website using the &lt;a href=&#34;http://mynt.uhnomoli.com&#34;&gt;mynt&lt;/a&gt;, a static site generator using python and jinja.&lt;/p&gt;
@@ -33,60 +33,6 @@ This website&amp;rsquo;s template was modified from the mynt&amp;rsquo;s &lt;em&
 The other pages will be fill-in while I am working.&lt;/p&gt;
 
 &lt;p&gt;Thanks for visiting.&lt;/p&gt;
-</content>
-        </entry>
-    
-        <entry>
-            <title>About the mini-lab and I</title>
-            <link rel="alternate" href="http://wcchin.github.io/2015/08/03/about/" type="text/html" />
-            <id>http://wcchin.github.io/2015/08/03/about/</id>
-            <updated>2015-08-03T15:26:08Z</updated>
-            
-            <summary type="html">I&amp;rsquo;m Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the lab for geospatial computational science, which focuses on using the spatial data for studying the people living in the geographical space.</summary>
-            <content type="html">&lt;p&gt;I&amp;rsquo;m Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the lab for geospatial computational science, which focuses on using the spatial data for studying the people living in the geographical space.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The real world contains extensive connections.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Moving between places is what we do in our daily life. While people move, they bring things from one place to another, such as resources, diseases, information, technologies, and feelings. This is one form of how places are connected, and there are many ways the places would be connected. &lt;/p&gt;
-
-&lt;p&gt;Understanding how the places are connected, and how the connections between places are what I am interested in. Therefore, I am now trying to integrate the GEOgraphical space and the GRAPH. &lt;/p&gt;
-
-&lt;p&gt;Graph theory, is a bunch of theory and ideas for exploring the connections betweem things, by analyzing the network. &lt;/p&gt;
-
-&lt;p&gt;Therefore, I am here trying to understand the geographical space and the graph of the places.&lt;/p&gt;
-
-&lt;hr&gt;
-&lt;h5&gt;About this place.&lt;/h5&gt;
-&lt;p&gt;This mini-lab includes several pages:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wcchin.github.io/geograph/&#34;&gt;Geo-Graph&lt;/a&gt;, where the notes about spatial analysis and network analysis will be.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wcchin.github.io/lightbulb/&#34;&gt;Light-bulb&lt;/a&gt; stores some ideas that pop in my head.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wcchin.github.io/workingdesk/&#34;&gt;Working-desk&lt;/a&gt; is a messy space with things that I&amp;rsquo;m working on.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wcchin.github.io/notes/&#34;&gt;Notes&lt;/a&gt; about codes and possibly anything.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://wcchin.github.io/findings/&#34;&gt;Findings&lt;/a&gt; includes a list of what I&amp;rsquo;ve observed and results of studies that I&amp;rsquo;ve participated in.&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr&gt;
-&lt;h5&gt;About Benny&lt;/h5&gt;
-&lt;p&gt;First, I&amp;rsquo;m a geographer. I&amp;rsquo;m a Malaysian. I was born in Penang. While I was 9, I moved to Selangor with my family. I continued my study at Taipei after graduated from Pin Hwa High School, Klang. I finished my undergraduate and master degree in NTU, Taiwan. I worked as a research assistance before I continued studying as a PhD. student. 
-Maybe moving around, meeting new people, and blending in different culture, made me a geographer that like to explore the connections between places.  &lt;/p&gt;
-
-&lt;p&gt;Second, I&amp;rsquo;m a cartographer. I made maps most of the time while I was a master student and a research assistance (and also currently as a PhD student). I made maps for text book, for summited articles aurthored by my boss and friends, and two large maps (wall size) for the Geography Department, NTU. Those are static-printed map. 
-In addition, I also make interactive-web map. I joined a research project which used web-map as the main tool for the early-warning system. I also created a medical resource accessibility map for participating a medical-map contest.  &lt;/p&gt;
-
-&lt;p&gt;Third, I&amp;rsquo;m a GIScientist. GIS is not just a mapping system. It is a system for gathering and presenting geographical information, and a platform for exploring the goegraphical-spaces. There are already so many analyzing methods for solving many types of problems. But, I believe this is just the beginning of the rising GIS.
-In the age of BIG DATA, with the help of computing power, there are still uncountable information await for digging from the geographical data. &lt;/p&gt;
-
-&lt;p&gt;In simple words, I&amp;rsquo;m a guy who like thinking about connected spaces, working with computer, playing with data, drawing map, and writing some codes.&lt;/p&gt;
-
-&lt;p&gt;Therefore, I made this website to gather some ideas come into my head, to keep some notes, and hopefully to present some findings.&lt;/p&gt;
-
-&lt;p&gt;Thank you. &lt;/p&gt;
-
-&lt;p&gt;Wei Chien Benny, Chin&lt;/p&gt;
 </content>
         </entry>
     
