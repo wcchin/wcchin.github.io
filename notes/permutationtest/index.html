@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="Benny Chin">
+<meta name="description" content="Mini-Lab for GeoGraphical data analysis">
+<meta name="generator" content="mynt v0.3.1">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href='//fonts.googleapis.com/earlyaccess/cwtexyen.css' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/earlyaccess/cwtexhei.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>-->
+  <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,700,400italic,700italic" type="text/css">-->
+  
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+<link rel="alternate" href="/feed.xml" type="application/atom+xml">-->
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css" type="text/css">
+<!--<link rel="stylesheet" href="/assets/css/screen.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/pygments.css" type="text/css">-->
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/mynt.min.js" type="text/javascript"></script>-->
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link rel="icon" type="image/png" href="images/favicon.png">-->
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+-->
+
+  <!-- Google analytics
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65836543-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+    <title>About permutation test : Blog – Chin.Mini-Lab</title>
+
+	
+</head>
+
+<body>
+  <div class="container">
+	<div class="row">
+	<div class="four columns" style="margin-top: 1%">
+		<h5 id="title"><font face="Gruppo"><a href="/">Chin.Mini-Lab</a>
+        <small>Geo-Graph-ing</small></font></h5>
+    </div>
+	  <div class="eight columns" style="margin-top: 1%">
+			<div align="right"> 
+			<a href="/">Blog</a> | 
+			<a href="/about/">about</a> | 
+			<a href="/geograph/">Geo-Graph</a> | 
+			<a href="/lightbulb/">Light-bulb</a> | 
+			<a href="/workingdesk/">Working-desk</a> | 
+			<a href="/notes/">Notes</a> |  
+			<a href="/findings/">Findings</a> <!--|  
+			<a href="/archives/">Archives</a> | 
+			<a href="/feed.xml">Feed</a>-->
+			</div>
+      </div>
+	</div>
+	<div class="row">
+        <font face="Gruppo">
+    <ul id="breadcrumbs">
+        <li><a href="/">Mini-lab</a> / <a href="/codingnote/">Notes</a>  / About permutation test</li>
+    </ul>
+</font>
+	</div>
+    <div class="row">
+		<div class="eight columns">
+			<div id="content">
+				<div class="container">
+					
+<h5 class="post-title"> About permutation test </h5>
+
+				</div>
+			</div>
+		</div>
+		<div class="four columns">
+			<div id="content">
+				<div class="container">
+					<font face="Gruppo">
+<h6 class="post-meta" align="right">Thursday, August 20, 2015 <span>»</span> <a href="/notes/tag/permutation-test/">permutation test</a></h6>
+</font>
+				</div>
+			</div>
+		</div>
+			<hr width="80%">
+    </div>
+    <div class="row">
+		<div id="content">
+			<div class="container">
+				
+    <h4>Random Permutation test</h4>
+<p>關於 permutation test 有一些想不通之處，尤其在處理時空資料方面。</p>
+
+<ol>
+<li><p>先分清楚兩種類型的資料，不同類型的時空資料， 其 permutation 的方式應該有所不同：</p>
+
+<ul>
+<li>代表(單一)「事件」的資料，例如 車禍事件、犯罪事件、就診事件&hellip;，各個單一事件所發生的位置與時間點形成一筆資料，暫且稱爲 event point。</li>
+<li>代表有容量的「倉庫」的資料，例如 鄉鎮區、醫院、學校&hellip;，各個倉庫中收容了個體或事件的容量資訊(aggregate)，如人口數、就診人次、學生數，暫且稱爲 stock location。
+先不說其在地圖上的資料類型(點、線、面)，這兩種資料都可以「代表」點、線、面，所以點線面不是重點。
+雖然在數字與演算法層面的計算過程上，沒有多大的差異；但是在解釋與意義層面上，會有很大的差異。
+當然這樣的分類，可能不是最好的分類，只是爲了作以下的討論之前，想先分清楚各個資料所「代表」的概念，及其所謂「脈絡」。</li>
+</ul></li>
+<li><p>就我所知道，作 permutation test 的方法中， Moran&rsquo;s I 與 LISA 是屬性值(stock location)資料的洗牌，就是互相交換，算出來的值是否顯著高於隨機狀況。</p>
+
+<ul>
+<li>這兩種指標，基本上都是針對第二種「倉庫」類型的資料作洗牌。</li>
+<li>這樣作的目的，就我的理解，簡單來說，是： 
+假設算出來的值好像很高，那這個值到底是否真的很高；還是只是因爲空間結構上的分佈所導致的？
+例如，可能有很多家醫院相互很靠近，而其餘的醫院都分散在別的地方，因此這幾家醫院的病人數即使是在隨機的情況下，其算出來的 Moran&rsquo;s I 也會很高。
+爲了避免這一誤判，所以需要進行多次的洗牌，在同樣數量的總就醫人次下，隨機的將病人丟到隨機的醫院去，然後作計算，看看隨機的情況下算出來的值是否也很高，透過足夠多的次數，畫出來的分布圖就會很像常態分佈，然後用 observe 所計算出來的值去作比較。
+若比隨機的結果高，就是顯著的空間相依的狀況，若沒有，則無法拒絕該值顯著高於隨機的值(類似這樣的解釋)。</li>
+<li>btw，LISA 的處理方式則是 locally 的作permutation，若沒有看錯，應該是有多少個 local 區，就要做多少次的洗牌，每次洗牌固定一個 local 區的值，只對其他區作洗牌。</li>
+<li>關於這部分，有一個問題： 對於不是加總(人數、人次)類型的資料，例如密度、比例的屬性值資料，這樣的 permutation test 是 OK 的嗎？
+因爲密度是除面積，所以同樣的人數隨機洗牌到別的地方去，應該要除的面積就應該不一樣了？&hellip;</li>
+</ul></li>
+<li><p>對於事件(event point) 的 permutation test 方面，我可以想象到的方法(似乎有聽過但忘了哪個方法是這樣處理)，是用 Monte Carlo simulation，在符合條件的研究範圍內，產生同樣多的事件點(位置洗牌)。</p>
+
+<ul>
+<li>符合條件的研究範圍 指的是，例如交通意外事件，符合條件的區域就是道路區域，車禍理論上不會發生在公園、湖泊裏面，則應該只能將隨機事件點在隨機的道路空間上。</li>
+<li>同樣多的意外事件，隨機地分佈在有限的空間裏，可能還是會形成一些 cluster(依照同一組參數設定下的同一種分析方法所定義出的cluster)，所以 permutation test 的意義在於避免這種誤判的發生。</li>
+</ul></li>
+<li><p>我理解 permutation test 的方式不是死的，上述的分類也只是嘗試幫助簡化「想解決的問題是什麼」這個問題。但如果不像上述這樣處理，那應該要有很明確的目的 &ndash; 想要看到什麼，想避免哪種誤判，及真的可以這樣做嗎&hellip;</p>
+
+<ul>
+<li>stock location 的資料代表的是一個個有容量的空間，所以基本上不可以用位置洗牌來處理：
+一方面，不知這樣處理要看的是什麼東西；另一方面，例如就診事件，只能發生在醫療院所，不可能發生在公園、海上&hellip;位置打亂的意義不明。</li>
+<li>event point 的資料方面，若用交換屬性值的方式，則表示其空間位置被「固定」下來，只作其他屬性值(例如意外的死亡人數、犯罪事件損失規模等)的洗牌。event point 資料的特性，位置是其中一組屬性值。而爲什麼位置「應該」被固定，以及爲什麼位置「可以」被固定，這兩個問題&hellip;
+事件理論上可以發生在「符合條件的空間」中的任意位置，所以洗牌理論上要在符合條件的空間中隨意洗牌。固定事件的位置，其在理論層面上，是在縮小「符合條件的空間」到觀察事件所發生的各個位置。所以這樣作處理，有必要先說明清除是在什麼前提、假設下。例如假設有發生過犯罪事件的點位置是(僅有的)最可能發生犯罪事件的位置，這個前提下，然後看規模的大小是否存在 cluster。</li>
+</ul></li>
+<li><p>上述的討論，基本上是圍繞着「空間」的維度。當時間維度加進來，問題就更複雜。</p>
+
+<ul>
+<li>我先承認，我還沒有作足夠多的功課，還沒找到有哪些時空計量分析方法中，其 permutation test 的進行方式。</li>
+<li>再承認，我不太記得老師上課提到的時空間 permutation test，只記得有一些 significance 的算法，包括計算 expected value 來換算 z-值。但這跟 permutation test 的邏輯沒有直接的關係。</li>
+</ul></li>
+<li><p>(重複地)簡單來說，空間的 permutation test 是爲了看算出來的值是否真的很高(是否真的有 cluster或空間相依的狀況)。
+那當時間維度加進來，時空間的 permutation test 是要看什麼？</p>
+
+<ul>
+<li>以那天飛鷹的研究對象來說，(沒錯的話應該)是犯罪點事件的分析。所以就是上述 event point 的類型資料。
+&gt; 若用上述 event point 的處理方式，應該是要在「符合條件的時空間」裏產生一樣多的犯罪事件。這樣看的，是：同樣多的事件下，在同一組參數設定的同一個計算方法下，隨機分佈的事件是否也會形成這些 cluster？
+&gt; 若是固定時間，位置洗牌，則是假設每一天會有與觀察值各天同樣多的事件發生，而是否在這樣多的事件下， 隨機分佈的事件也會出現 cluster 的趨勢？ 也就是說，如果當天總數量變多，則可能更容易出現 cluster，而觀察找到的 cluster 會更難達到顯著，表示觀察所找到的 cluster 可能只是「剛好」。我覺得這種做法類似時間上用 local 的方式作處理。
+&gt; 若是固定位置，時間洗牌，則是假設會發生事件的地點終究還是會發生(將符合條件的空間限縮到這些點上)，觀察的 cluster 在時間維度上是否達到顯著。但實際上時間維度基本上不像空間上，可能出現空間結構上的侷限(如鄉鎮形狀導致位置上的靠近，或醫院的分佈位置導致cluster的出現而非真的是事件在某些地方較多)，時間維度上理應沒有這種侷限&hellip;？ 那時間上作 permutation test 要回答的是什麼問題？</li>
+<li>以 cdc 計畫來說，是醫院的病例數，所以是 stock location 類型的資料。
+&gt; permutation test 是有必要的，因爲就目前的觀察來說，有一些 cluster 很可能是因爲附近有很多醫院，發生事件的機率就較高，而一些偏遠地區的醫院則可能有較少機會找到鄰居，所以出現 cluster 的可能性就較低(在目前用的方法上來說，是用直線距離來定義醫院之間是否鄰近)。
+&gt; 醫院位置一定是固定的，但洗牌的方式我覺得應該有2種：
+&gt;&gt; 每一天，各家醫院之間的量作洗牌，是假設每一天會生病的人就是那麼多，那如果有這麼多人，觀察所找到的 cluster 是否顯著的比隨機狀況下更顯著？
+&gt;&gt; 每一家醫院，其本身各時間之間的量作洗牌，是假設會在該醫院看病的人就是那麼多，那時間上是否有達到顯著。 (基本上這兩點都與上述狀況類似)
+&gt; 以cdc 計畫來說，是作 early warning system，所以資料上，理論上會每天都有新的資料進來，類似 prospective study。所以第二種做法基本上無法進行。可行性上是第一種比較可行。</li>
+</ul></li>
+<li><p>最後，操作上，dbscan 時空間的 permutation test，應該是用 類似 Moran&rsquo;s I (global) 的方式進行，或是 類似 LISA (local) 的方式進行？</p>
+
+<ul>
+<li>操作上來說， dbscan 並不是計算出一個值。不像 Moran&rsquo;s I 算一個值，或 LISA 每一個空間算一個值。而是，找出 0-N 個 clusters 的分佈。</li>
+<li>所以操作上來說， dbscan 應該要作什麼樣的permutation？來判斷各 cluster 是否是真的 cluster ?</li>
+<li>還是說，應該像王逸翔的做法，somehow 用 bootstrap 的方式找到 critical value 來當作參數的一部分？ (而不是作 permutation test？)</li>
+</ul></li>
+</ol>
+
+<p>以上有一些問題，也許過去有一些文章已經討論，或有相應的處理方式與解釋方式。但目前我還沒想法&hellip;</p>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+			</div>
+		</div>
+	</div>
+    <div class="row">
+			<hr width="80%">
+		<div id="content">
+			<div class="container" align="center">
+				 <h6><font face="Gruppo">2015 Benny Chin.</font></h6> <!--<br> 
+				 website made with <a href="http://mynt.uhnomoli.com">mynt</a>, <a href="http://getskeleton.com/">skeleton</a>-->
+			</div>
+		</div>
+	</div>
+    </div>
+  </div>
+</body>
+</html>

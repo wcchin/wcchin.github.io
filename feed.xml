@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-08-16T15:43:34Z</updated>
+    <updated>2015-08-20T15:19:32Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -13,6 +13,29 @@
         <uri>http://wcchin.github.io/</uri>
     </author>
     
+    
+        <entry>
+            <title>Adding commenting system</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/08/20/Second_post/" type="text/html" />
+            <id>http://wcchin.github.io/2015/08/20/Second_post/</id>
+            <updated>2015-08-20T15:13:00Z</updated>
+            
+            <summary type="html">In order to get feedbacks from friends, I added the Disqus commenting system in this site.</summary>
+            <content type="html">&lt;p&gt;In order to get feedbacks from friends, I added the Disqus commenting system in this site.&lt;/p&gt;
+
+&lt;p&gt;Adding a Disqus comment system in a static website is not difficult:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Sign-up on Disqus.&lt;/li&gt;
+&lt;li&gt;Go to Settings, Admin&lt;/li&gt;
+&lt;li&gt;Add new site and setup.&lt;/li&gt;
+&lt;li&gt;Go to Install, Universal Code, and copy the codes to the template/layout html file.&lt;/li&gt;
+&lt;li&gt;Regenerate the website, and push to the hosting server.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thats all.&lt;/p&gt;
+</content>
+        </entry>
     
         <entry>
             <title>First post of the mini-lab</title>
