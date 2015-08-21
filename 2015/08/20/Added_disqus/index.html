@@ -67,9 +67,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>2015 : Archives : Mini-lab – Chin.Mini-Lab</title>
+    <title>Adding commenting system : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -98,7 +100,7 @@
 	<div class="row">
         <font face="Gruppo">
     <ul id="breadcrumbs">
-        <li><a href="/">Mini-lab</a> / <a href="/archives/">Archives</a> / 2015 </li>
+        <li><a href="/">Mini-lab</a> / Adding commenting system</li>
     </ul>
 </font>
 	</div>
@@ -107,7 +109,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Archives</h5>
+<h2 class="post-title"> Adding commenting system </h2>
 
 				</div>
 			</div>
@@ -115,7 +117,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Thursday, August 20, 2015 <span>»</span> <a href="/tags/anything/">anything</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -125,32 +129,49 @@
 		<div id="content">
 			<div class="container">
 				
-    <dl class="archives">
-        
-            
-                <dt class="archives-post-date">Aug 21</dt>
-                <dd class="archives-post-title"><a href="/2015/08/21/Including_mathjax/">Adding math formula</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-                <dt class="archives-post-date">Aug 20</dt>
-                <dd class="archives-post-title"><a href="/2015/08/20/Added_disqus/">Adding commenting system</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-                <dt class="archives-post-date">Aug 03</dt>
-                <dd class="archives-post-title"><a href="/2015/08/03/First_post/">First post of the mini-lab</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-        
-    </dl>
+    <p>In order to get feedbacks from friends, I added the Disqus commenting system in this site.</p>
+
+<p>Adding a Disqus comment system in a static website is not difficult:</p>
+
+<ol>
+<li>Sign-up on <a href="https://disqus.com" target="_blank">Disqus</a>.</li>
+<li>Go to Settings, Admin.</li>
+<li>Add new site and setup.</li>
+<li>Go to Install, Universal Code, and copy the codes to the template/layout html file.</li>
+<li>Regenerate the website, and push to the hosting server.</li>
+</ol>
+
+<p>Thats all.</p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>

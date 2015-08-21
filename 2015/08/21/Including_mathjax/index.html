@@ -67,9 +67,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>2015 : Archives : Mini-lab – Chin.Mini-Lab</title>
+    <title>Adding math formula : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -98,7 +100,7 @@
 	<div class="row">
         <font face="Gruppo">
     <ul id="breadcrumbs">
-        <li><a href="/">Mini-lab</a> / <a href="/archives/">Archives</a> / 2015 </li>
+        <li><a href="/">Mini-lab</a> / Adding math formula</li>
     </ul>
 </font>
 	</div>
@@ -107,7 +109,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Archives</h5>
+<h2 class="post-title"> Adding math formula </h2>
 
 				</div>
 			</div>
@@ -115,7 +117,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Friday, August 21, 2015 <span>»</span> <a href="/tags/anything/">anything</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -125,32 +129,49 @@
 		<div id="content">
 			<div class="container">
 				
-    <dl class="archives">
-        
-            
-                <dt class="archives-post-date">Aug 21</dt>
-                <dd class="archives-post-title"><a href="/2015/08/21/Including_mathjax/">Adding math formula</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-                <dt class="archives-post-date">Aug 20</dt>
-                <dd class="archives-post-title"><a href="/2015/08/20/Added_disqus/">Adding commenting system</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-                <dt class="archives-post-date">Aug 03</dt>
-                <dd class="archives-post-title"><a href="/2015/08/03/First_post/">First post of the mini-lab</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/anything/">anything</a></dd>
-                
-            
-        
-    </dl>
+    <p>Testing <a href="https://www.mathjax.org" target="_blank">MathJax</a></p>
+
+<p>$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$</p>
+
+<p>The &ldquo;installing&rdquo; steps is simple:</p>
+
+<ol>
+<li>include the CDN in <head> &hellip; </head>, in the case of mynt&rsquo;s quick start template, this could be added in the page.header.html file.</li>
+<li>type the formula in tex&rsquo;s syntax, using the double $ as the entering and exiting characters, so that the formula is between double $ pair. </li>
+<li>note that in default setting, the inline math mode is not supported, namely the single $ pair. To use this, some code is needed to be added to overwrite this setting. </li>
+</ol>
+
+<p>note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. </p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>

@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-08-20T16:07:47Z</updated>
+    <updated>2015-08-21T04:15:53Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -15,10 +15,33 @@
     
     
         <entry>
+            <title>Adding math formula</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/08/21/Including_mathjax/" type="text/html" />
+            <id>http://wcchin.github.io/2015/08/21/Including_mathjax/</id>
+            <updated>2015-08-21T04:06:00Z</updated>
+            
+            <summary type="html">Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;</summary>
+            <content type="html">&lt;p&gt;Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;installing&amp;rdquo; steps is simple:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;include the CDN in &lt;head&gt; &amp;hellip; &lt;/head&gt;, in the case of mynt&amp;rsquo;s quick start template, this could be added in the page.header.html file.&lt;/li&gt;
+&lt;li&gt;type the formula in tex&amp;rsquo;s syntax, using the double $ as the entering and exiting characters, so that the formula is between double $ pair. &lt;/li&gt;
+&lt;li&gt;note that in default setting, the inline math mode is not supported, namely the single $ pair. To use this, some code is needed to be added to overwrite this setting. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. &lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>Adding commenting system</title>
-            <link rel="alternate" href="http://wcchin.github.io/2015/08/20/Second_post/" type="text/html" />
-            <id>http://wcchin.github.io/2015/08/20/Second_post/</id>
-            <updated>2015-08-20T15:13:00Z</updated>
+            <link rel="alternate" href="http://wcchin.github.io/2015/08/20/Added_disqus/" type="text/html" />
+            <id>http://wcchin.github.io/2015/08/20/Added_disqus/</id>
+            <updated>2015-08-20T04:07:00Z</updated>
             
             <summary type="html">In order to get feedbacks from friends, I added the Disqus commenting system in this site.</summary>
             <content type="html">&lt;p&gt;In order to get feedbacks from friends, I added the Disqus commenting system in this site.&lt;/p&gt;
@@ -26,8 +49,8 @@
 &lt;p&gt;Adding a Disqus comment system in a static website is not difficult:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Sign-up on Disqus.&lt;/li&gt;
-&lt;li&gt;Go to Settings, Admin&lt;/li&gt;
+&lt;li&gt;Sign-up on &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Go to Settings, Admin.&lt;/li&gt;
 &lt;li&gt;Add new site and setup.&lt;/li&gt;
 &lt;li&gt;Go to Install, Universal Code, and copy the codes to the template/layout html file.&lt;/li&gt;
 &lt;li&gt;Regenerate the website, and push to the hosting server.&lt;/li&gt;
@@ -41,15 +64,15 @@
             <title>First post of the mini-lab</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/03/First_post/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/03/First_post/</id>
-            <updated>2015-08-03T15:26:00Z</updated>
+            <updated>2015-08-03T04:10:00Z</updated>
             
             
-            <content type="html">&lt;h5&gt;Welcome to &lt;a href=&#34;https://wcchin.github.io&#34;&gt;Benny.mini-lab&lt;/a&gt;&lt;/h5&gt;
+            <content type="html">&lt;h5&gt;Welcome to &lt;a href=&#34;https://wcchin.github.io&#34; target=&#34;_blank&#34;&gt;Benny.mini-lab&lt;/a&gt;.&lt;/h5&gt;
 &lt;p&gt;This is a place for storing what has come to my mind, and what I&amp;rsquo;ve done&lt;/p&gt;
 
-&lt;p&gt;I created this website using the &lt;a href=&#34;http://mynt.uhnomoli.com&#34;&gt;mynt&lt;/a&gt;, a static site generator using python and jinja.&lt;/p&gt;
+&lt;p&gt;I created this website using the &lt;a href=&#34;http://mynt.uhnomoli.com&#34; target=&#34;_blank&#34;&gt;mynt&lt;/a&gt;, a static site generator using python and jinja.&lt;/p&gt;
 
-&lt;p&gt;The style of the website is inspired by the &lt;a href=&#34;http://leafletjs.com&#34;&gt;leafletjs&lt;/a&gt; and &lt;a href=&#34;http://getskeleton.com&#34;&gt;skeleton&lt;/a&gt; website. These websites showed the beauty and power of simplicity. 
+&lt;p&gt;The style of the website is inspired by the &lt;a href=&#34;http://leafletjs.com&#34; target=&#34;_blank&#34;&gt;leafletjs&lt;/a&gt; and &lt;a href=&#34;http://getskeleton.com&#34; target=&#34;_blank&#34;&gt;skeleton&lt;/a&gt; website. These websites showed the beauty and power of simplicity. 
 This website&amp;rsquo;s template was modified from the mynt&amp;rsquo;s &lt;em&gt;init&lt;/em&gt; site with the skeleton css.&lt;/p&gt;
 
 &lt;p&gt;Currently, the &lt;a href=&#34;http://wcchin.github.io/about/&#34;&gt;about&lt;/a&gt; page was done. Two published paper that I have a little contribution were added in the &lt;a href=&#34;http://wcchin.github.io/findings/&#34;&gt;findings&lt;/a&gt; page.
