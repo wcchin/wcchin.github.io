@@ -73,9 +73,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>Chin.Mini-Lab – Geo-Graph-ing</title>
+    <title>Using nbconvert to convert ipynb to slides in html : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -117,7 +119,7 @@
 	<div class="row">
         <font face="Gruppo">
     <ul id="breadcrumbs">
-        <li><a href="/">Mini-lab</a> / Light-bulb</li>
+        <li><a href="/">Mini-lab</a> / Using nbconvert to convert ipynb to slides in html</li>
     </ul>
 </font>
 	</div>
@@ -126,7 +128,7 @@
 			<div id="content">
 				<div class="container">
 					
-        <h5>Mini-lab light bulb</h5>
+<h2 class="post-title"> Using nbconvert to convert ipynb to slides in html </h2>
 
 				</div>
 			</div>
@@ -134,7 +136,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Thursday, August 27, 2015 <span>»</span> <a href="/tags/ipython/">ipython</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -144,13 +148,63 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        
-            <p><a href="/lightbulb/permutationtest/">About permutation test</a> – <font face="Gruppo"><small>關於 permutation test 有一些想不通之處，尤其在處理時空資料方面。</small></font>
-             <span>»</span> <a href="/lightbulb/tag/permutation-test/">permutation test</a>
-            </p>
-        
-    
+    <p>This is a note on using nbconvert to make slides from ipynb to html, with markdown and codes using jupyter.
+jupyter, nbconvert have to be installed in the computer.</p>
+<h2>Prepare the file</h2>
+<ol>
+<li>open a jupyter from terminal:</li>
+</ol>
+<pre><code>$ pyenv shell miniconda-3.9.1
+$ ipython notebook
+</code></pre>
+<ol>
+<li><p>create a file (.ipynb), maybe a python2 file or R or something else which code you are going to use.</p></li>
+<li><p>For the text page, change the <code>Code</code> to <code>Markdown</code>, choose <code>Slideshow</code> in Cell Toolbar.</p></li>
+<li><p>Select one of the item in the Slide Type in the heading of each cell.</p></li>
+<li><p>Type in markdown syntax, use tex syntax to type equation (MathJax is supported).</p></li>
+<li><p>Click save, or wait until autosave.</p></li>
+</ol>
+<h2>Convert to slides:</h2>
+<ol>
+<li><p>In terminal, change directory to where the .ipynb is.</p></li>
+<li><p>type this in terminal, suppose the .ipynb file&rsquo;s name is &lsquo;filename&rsquo;:</p></li>
+</ol>
+<pre><code>$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &quot;http:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;reveal.js&#x2F;2.5.0&quot;
+</code></pre>
+<ol>
+<li><p>a file name &lsquo;filename.slides.html&rsquo; will be created, open it.</p></li>
+<li><p>Taada~~~</p></li>
+</ol>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>

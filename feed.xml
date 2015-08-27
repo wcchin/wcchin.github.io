@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-08-27T05:29:33Z</updated>
+    <updated>2015-08-27T16:04:05Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -15,10 +15,48 @@
     
     
         <entry>
+            <title>Using nbconvert to convert ipynb to slides in html</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/08/27/using_nbconverttoslides/" type="text/html" />
+            <id>http://wcchin.github.io/2015/08/27/using_nbconverttoslides/</id>
+            <updated>2015-08-27T16:04:00Z</updated>
+            
+            <summary type="html">This is a note on using nbconvert to make slides from ipynb to html, with markdown and codes using jupyter.
+jupyter, nbconvert have to be installed in the computer.</summary>
+            <content type="html">&lt;p&gt;This is a note on using nbconvert to make slides from ipynb to html, with markdown and codes using jupyter.
+jupyter, nbconvert have to be installed in the computer.&lt;/p&gt;
+&lt;h2&gt;Prepare the file&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;open a jupyter from terminal:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ pyenv shell miniconda-3.9.1
+$ ipython notebook
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;create a file (.ipynb), maybe a python2 file or R or something else which code you are going to use.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For the text page, change the &lt;code&gt;Code&lt;/code&gt; to &lt;code&gt;Markdown&lt;/code&gt;, choose &lt;code&gt;Slideshow&lt;/code&gt; in Cell Toolbar.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select one of the item in the Slide Type in the heading of each cell.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Type in markdown syntax, use tex syntax to type equation (MathJax is supported).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click save, or wait until autosave.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Convert to slides:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;In terminal, change directory to where the .ipynb is.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;type this in terminal, suppose the .ipynb file&amp;rsquo;s name is &amp;lsquo;filename&amp;rsquo;:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&amp;#x2F;&amp;#x2F;cdn.jsdelivr.net&amp;#x2F;reveal.js&amp;#x2F;2.5.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;a file name &amp;lsquo;filename.slides.html&amp;rsquo; will be created, open it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Taada~~~&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>Adding math formula</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/21/Including_mathjax/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/21/Including_mathjax/</id>
-            <updated>2015-08-21T04:06:00Z</updated>
+            <updated>2015-08-21T16:00:00Z</updated>
             
             <summary type="html">Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;</summary>
             <content type="html">&lt;p&gt;Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;&lt;/p&gt;
@@ -41,7 +79,7 @@
             <title>Adding commenting system</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/20/Added_disqus/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/20/Added_disqus/</id>
-            <updated>2015-08-20T04:07:00Z</updated>
+            <updated>2015-08-20T16:00:00Z</updated>
             
             <summary type="html">In order to get feedbacks from friends, I added the Disqus commenting system in this site.</summary>
             <content type="html">&lt;p&gt;In order to get feedbacks from friends, I added the Disqus commenting system in this site.&lt;/p&gt;
@@ -64,7 +102,7 @@
             <title>First post of the mini-lab</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/03/First_post/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/03/First_post/</id>
-            <updated>2015-08-03T04:10:00Z</updated>
+            <updated>2015-08-03T16:00:00Z</updated>
             
             
             <content type="html">&lt;h5&gt;Welcome to &lt;a href=&#34;https://wcchin.github.io&#34; target=&#34;_blank&#34;&gt;Benny.mini-lab&lt;/a&gt;.&lt;/h5&gt;
