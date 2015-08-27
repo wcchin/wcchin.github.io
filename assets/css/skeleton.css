@@ -121,11 +121,13 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.8em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "cwTeXYen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: #222; 
+  background-image: url(img/noise.png);
+  background-repeat:repeat; }
 
 
 /* Typography
@@ -304,6 +306,30 @@ li {
   margin-bottom: 1rem; }
 
 
+/* Flex list for nav bar 
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
+
+.flex-list {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+}
+.flex-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+}
+.flex-list li {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 1em;
+    text-align: center;
+    border-left: 1px solid #ccc;
+}
+*/
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
@@ -417,3 +443,5 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
