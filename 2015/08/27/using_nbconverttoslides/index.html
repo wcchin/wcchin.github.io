@@ -167,14 +167,23 @@ $ ipython notebook
 <h2>Convert to slides:</h2>
 <ol>
 <li><p>In terminal, change directory to where the .ipynb is.</p></li>
-<li><p>type this in terminal, suppose the .ipynb file&rsquo;s name is &lsquo;filename&rsquo;:</p></li>
+<li><p>type this in terminal, suppose the .ipynb file&rsquo;s name is <code>filename</code>:</p></li>
 </ol>
 <pre><code>$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &quot;http:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;reveal.js&#x2F;2.5.0&quot;
+$ ## or
+$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &quot;http:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;reveal.js&#x2F;2.5.0&quot; --post serve
 </code></pre>
 <ol>
-<li><p>a file name &lsquo;filename.slides.html&rsquo; will be created, open it.</p></li>
-<li><p>Taada~~~</p></li>
+<li><p>a file name <code>filename.slides.html</code> will be created, open it.</p></li>
+<li><p>to change the theme from default to other provided theme, in address bar, add <code>?theme=sky</code> after the <code>filename.slides.html</code> .</p></li>
+<li><p>other theme options: simple (default), sky, beige, solarized, serif, night, moon</p></li>
+<li><p>to change the default transition to other provided way, same as changing the theme, add <code>?transition=convex</code> .</p></li>
+<li><p>other transition options: none, fade, slide, convex, concave, zoom</p></li>
+<li><p>if the themes still not meet your ideal slides, add a file in the same directory name <code>custom.css</code>, use this to alter the looks of the page, font style etc.</p></li>
+<li><p>Taada</p></li>
 </ol>
+
+<iframe width="800" height="600" src="/assets/ipyslides/testing_slides.slides.html?theme=sky?transition=convex" frameborder="0" allowfullscreen></iframe>
 
     <!--
 	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>

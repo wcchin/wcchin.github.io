@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-08-27T16:04:05Z</updated>
+    <updated>2015-08-28T12:06:42Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,7 +18,7 @@
             <title>Using nbconvert to convert ipynb to slides in html</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/27/using_nbconverttoslides/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/27/using_nbconverttoslides/</id>
-            <updated>2015-08-27T16:04:00Z</updated>
+            <updated>2015-08-27T12:06:00Z</updated>
             
             <summary type="html">This is a note on using nbconvert to make slides from ipynb to html, with markdown and codes using jupyter.
 jupyter, nbconvert have to be installed in the computer.</summary>
@@ -41,14 +41,23 @@ $ ipython notebook
 &lt;h2&gt;Convert to slides:&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;In terminal, change directory to where the .ipynb is.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;type this in terminal, suppose the .ipynb file&amp;rsquo;s name is &amp;lsquo;filename&amp;rsquo;:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;type this in terminal, suppose the .ipynb file&amp;rsquo;s name is &lt;code&gt;filename&lt;/code&gt;:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&amp;#x2F;&amp;#x2F;cdn.jsdelivr.net&amp;#x2F;reveal.js&amp;#x2F;2.5.0&amp;quot;
+$ ## or
+$ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&amp;#x2F;&amp;#x2F;cdn.jsdelivr.net&amp;#x2F;reveal.js&amp;#x2F;2.5.0&amp;quot; --post serve
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;a file name &amp;lsquo;filename.slides.html&amp;rsquo; will be created, open it.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Taada~~~&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;a file name &lt;code&gt;filename.slides.html&lt;/code&gt; will be created, open it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;to change the theme from default to other provided theme, in address bar, add &lt;code&gt;?theme=sky&lt;/code&gt; after the &lt;code&gt;filename.slides.html&lt;/code&gt; .&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;other theme options: simple (default), sky, beige, solarized, serif, night, moon&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;to change the default transition to other provided way, same as changing the theme, add &lt;code&gt;?transition=convex&lt;/code&gt; .&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;other transition options: none, fade, slide, convex, concave, zoom&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;if the themes still not meet your ideal slides, add a file in the same directory name &lt;code&gt;custom.css&lt;/code&gt;, use this to alter the looks of the page, font style etc.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Taada&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;iframe width=&#34;800&#34; height=&#34;600&#34; src=&#34;http://wcchin.github.io/assets/ipyslides/testing_slides.slides.html?theme=sky?transition=convex&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 </content>
         </entry>
     
