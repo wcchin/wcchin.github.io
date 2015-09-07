@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-09-06T16:36:54Z</updated>
+    <updated>2015-09-07T09:36:46Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -13,6 +13,162 @@
         <uri>http://wcchin.github.io/</uri>
     </author>
     
+    
+        <entry>
+            <title>Using plotly</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/09/07/using_plotly/" type="text/html" />
+            <id>http://wcchin.github.io/2015/09/07/using_plotly/</id>
+            <updated>2015-09-07T09:36:00Z</updated>
+            
+            <summary type="html">I made a &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34; target=&#34;_blank&#34;&gt;3D scatter plot&lt;/a&gt; with &lt;a href=&#34;https://plot.ly&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt; yesterday, in ipython notebook (Jupyter).
+The data was stored in github, including the processed point data (with centroid coordinate), and the boundary vertex of Taiwan.</summary>
+            <content type="html">&lt;p&gt;I made a &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34; target=&#34;_blank&#34;&gt;3D scatter plot&lt;/a&gt; with &lt;a href=&#34;https://plot.ly&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt; yesterday, in ipython notebook (Jupyter).
+The data was stored in github, including the processed point data (with centroid coordinate), and the boundary vertex of Taiwan.&lt;/p&gt;
+
+&lt;p&gt;The plot figures is at &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34;&gt;Dengue cases at Taiwan from year 2014 &lt;/a&gt; 
+or in &lt;a href=&#34;https://plot.ly/~wcchin/67/indigenous-case-imported-case-taiwan-boundary/&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The code is as the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;import sys
+reload(sys)
+sys.setdefaultencoding(&amp;quot;utf-8&amp;quot;)
+import plotly.plotly as py
+from plotly.graph_objs import *
+import pandas as pd
+import datetime
+
+df = pd.read_csv(&amp;#x27;https:&amp;#x2F;&amp;#x2F;raw.githubusercontent.com&amp;#x2F;wcchin&amp;#x2F;gdata&amp;#x2F;master&amp;#x2F;Dengue_ALL_4_1415.csv&amp;#x27;)
+df_bound = pd.read_csv(&amp;#x27;https:&amp;#x2F;&amp;#x2F;raw.githubusercontent.com&amp;#x2F;wcchin&amp;#x2F;gdata&amp;#x2F;master&amp;#x2F;taiwan_bound_84_vertices2.csv&amp;#x27;)
+yy = df[&amp;#x27;lat&amp;#x27;].tolist()
+xx = df[&amp;#x27;lon&amp;#x27;].tolist()
+zz = df[&amp;#x27;day&amp;#x27;].tolist()
+vilname = df[&amp;#x27;fullname&amp;#x27;].tolist()
+importcheck = df[&amp;#x27;importcase&amp;#x27;].tolist()
+
+datelist_imp = []
+latlist_imp = []
+lonlist_imp = []
+vilname_imp = []
+
+datelist_ind = []
+latlist_ind = []
+lonlist_ind = []
+vilname_ind = []
+
+year = df[&amp;#x27;year&amp;#x27;].tolist()
+month = df[&amp;#x27;month&amp;#x27;].tolist()
+day = df[&amp;#x27;day&amp;#x27;].tolist()
+for i in range(len(year)):
+    thisyear = year[i]
+    thismonth = month[i]
+    thisday = day[i]
+    thisdate = datetime.date(thisyear, thismonth, thisday)
+    thisvilname=vilname[i].decode(&amp;#x27;big5&amp;#x27;)
+    #print importcheck[i]
+    if importcheck[i]==True:
+        datelist_imp.append(thisdate)
+        latlist_imp.append(yy[i])
+        lonlist_imp.append(xx[i])
+        vilname_imp.append(thisvilname)
+    else:
+        datelist_ind.append(thisdate)
+        latlist_ind.append(yy[i])
+        lonlist_ind.append(xx[i])
+        vilname_ind.append(thisvilname)
+#print len(datelist_ind)
+#print len(datelist_imp)
+
+bound_x = df_bound[&amp;#x27;lon&amp;#x27;].tolist()
+bound_y = df_bound[&amp;#x27;lat&amp;#x27;].tolist()
+zero = [datetime.date(2014,1,1)]
+bound_z = zero*(len(bound_x))
+
+trace1 = Scatter3d(
+    x=lonlist_ind, 
+    y=latlist_ind, 
+    z=datelist_ind, 
+    text=vilname_ind,
+    mode=&amp;#x27;markers&amp;#x27;,
+    name=&amp;#x27;indigenous case&amp;#x27;,
+    marker=Marker(
+        size=2,
+        line=Line(
+            color=&amp;#x27;rgb(0, 0, 0)&amp;#x27;,
+            width=0.5
+        ),
+        opacity=0.8
+    )
+)
+
+trace2 = Scatter3d(
+    x=lonlist_imp, 
+    y=latlist_imp, 
+    z=datelist_imp, 
+    text=vilname_imp,
+    mode=&amp;#x27;markers&amp;#x27;,
+    name=&amp;#x27;imported case&amp;#x27;,
+    marker=Marker(
+        color=&amp;#x27;rgb(255, 65, 54)&amp;#x27;,
+        size=3,
+        symbol=&amp;#x27;circle&amp;#x27;,
+        line=Line(
+            color=&amp;#x27;rgb(255, 65, 54)&amp;#x27;,
+            width=1
+        ),
+        opacity=0.6
+    )
+)
+
+tracebound = Scatter3d(
+    x= bound_x,
+    y= bound_y, 
+    z= bound_z, 
+    mode=&amp;#x27;lines&amp;#x27;,
+    name=&amp;#x27;taiwan boundary&amp;#x27;,
+    marker=Marker(
+        color=&amp;#x27;#1f77b4&amp;#x27;,
+        size=12,
+        symbol=&amp;#x27;circle&amp;#x27;,
+        line=Line(
+            color=&amp;#x27;rgb(0,0,0)&amp;#x27;,
+            width=0
+        )
+    ),
+    line=Line(
+        color=&amp;#x27;#1f77b4&amp;#x27;,
+        width=1
+    )
+)
+       
+data = Data([trace1, trace2, tracebound])
+layout = Layout(
+    margin=Margin(
+        l=0,
+        r=0,
+        b=0,
+        t=0
+    ),
+    legend=Legend(
+        y=0.5,
+        traceorder=&amp;#x27;reversed&amp;#x27;,
+        font=Font(
+            size=16
+        ),
+        yref=&amp;#x27;paper&amp;#x27;
+    ),
+    
+    scene=Scene(
+        xaxis=XAxis(title=&amp;#x27;longitude&amp;#x27;),
+        yaxis=YAxis(title=&amp;#x27;latitude&amp;#x27;),
+        zaxis=ZAxis(title=&amp;#x27;date&amp;#x27;)
+    )
+)
+fig = Figure(data=data, layout=layout)
+plot_url = py.plot(fig, filename=&amp;#x27;Taiwan dengue cases (indigenous or imported) space-time map&amp;#x27;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ps: the python environment has to complete the connection api key configuration before using the code above. &lt;/p&gt;
+</content>
+        </entry>
     
         <entry>
             <title>Using nbconvert to convert ipynb to slides in html</title>
