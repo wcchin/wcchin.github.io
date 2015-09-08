@@ -1,0 +1,18 @@
+
+div.code > div {
+  background-color: #1f1f1f;
+}
+
+.highlighttable {
+  background-color: transparent;
+}
+
+.linenos {
+  background-color: #1a1a1a;
+  color: #a6a6a6;
+}
+
+.linenodiv > pre, .highlight > pre {
+  padding: 0px;
+  background-color: transparent;
+}

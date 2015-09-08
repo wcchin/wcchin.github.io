@@ -126,9 +126,8 @@ body {
   font-weight: 400;
   font-family: "Raleway", "cwTeXYen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; 
-/*  background-image: url(img/noise.png);
-  background-repeat:repeat; 
-*/}
+  background-image: url(img/noise.png);
+  background-repeat:repeat; }
 
 
 /* Typography
@@ -161,9 +160,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– #1EAEDB #0FA0CE */
 a {
-  color: #9900CC; } /*#4F49CC; #9900CC; #99CCCC}*/
+  color: #9900CC; } /*#4F49CC; }*/
 a:hover {
-  color: #40e0d0;} /* #332D9D; } */
+  color: #332D9D; }
 
 
 /* Buttons
