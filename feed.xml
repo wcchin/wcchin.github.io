@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-10-06T11:18:58Z</updated>
+    <updated>2015-10-06T11:21:19Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,7 +18,7 @@
             <title>Article published</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/10/06/published/" type="text/html" />
             <id>http://wcchin.github.io/2015/10/06/published/</id>
-            <updated>2015-10-06T11:18:00Z</updated>
+            <updated>2015-10-06T11:20:00Z</updated>
             
             <summary type="html">Hooray~ This is an exciting news. </summary>
             <content type="html">&lt;p&gt;Hooray~ This is an exciting news. &lt;/p&gt;
@@ -26,7 +26,7 @@
 &lt;p&gt;My first article (me as the first author) has been published yesterday. It is rewritten from my master thesis. 
 The idea came to my mind in the begining of the year 2012. Most of the development of the algorithms were done within the semester. 
 Then I tried to test the algorithm in more ways, and finally all tryings were not end well. 
-In april 2013, the algorithms were first proposed in a international conference in L.A.. Then I graduated in the following June/July. 
+In april 2013, the algorithms were first proposed in an international conference in L.A.. Then I graduated in the following June/July. 
 After that, the formal research on these algorithms were stop, and some other things keep comming up. 
 Some further experiments were done. The codes were rewritten in matlab, then in python. I also made a GUI for the algorithms in Python. 
 Although most of the testings did not give good results that worth noting, but, the understanding on the algorithms has became more clear. &lt;/p&gt;
