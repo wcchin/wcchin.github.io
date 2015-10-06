@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2015-10-06T11:16:27Z</updated>
+    <updated>2015-10-06T11:18:58Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,7 +18,7 @@
             <title>Article published</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/10/06/published/" type="text/html" />
             <id>http://wcchin.github.io/2015/10/06/published/</id>
-            <updated>2015-10-06T11:15:00Z</updated>
+            <updated>2015-10-06T11:18:00Z</updated>
             
             <summary type="html">Hooray~ This is an exciting news. </summary>
             <content type="html">&lt;p&gt;Hooray~ This is an exciting news. &lt;/p&gt;
@@ -31,7 +31,7 @@ After that, the formal research on these algorithms were stop, and some other th
 Some further experiments were done. The codes were rewritten in matlab, then in python. I also made a GUI for the algorithms in Python. 
 Although most of the testings did not give good results that worth noting, but, the understanding on the algorithms has became more clear. &lt;/p&gt;
 
-&lt;p&gt;The article was submitted to the PLoSONE in the april 2015. After several times of revising, it was accepted in september after I came back from the FOSS4G conference at Seoul.  &lt;/p&gt;
+&lt;p&gt;The article was submitted to the PLoSONE in the may 2015. After several times of revising, it was accepted in september after I came back from the FOSS4G conference at Seoul.  &lt;/p&gt;
 
 &lt;p&gt;The article is about developing two algorithms for analyzing geospatial network, to see where people or moving agents would be gathering in the connected geographical space. 
 The algorithms were modified from the PageRank algorithm, in the similar way as the Weighted PageRank did. Two key elements were added, the geographical distance between nodes, and the attractiveness of each node. &lt;/p&gt;
