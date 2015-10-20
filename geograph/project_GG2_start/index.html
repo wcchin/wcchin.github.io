@@ -75,7 +75,7 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>Chin.Mini-Lab – Geo-Graph-ing</title>
+    <title>Project GeoGraph-II: The starting point : Blog – Chin.Mini-Lab</title>
 
 	
 </head>
@@ -119,7 +119,7 @@
 	<div class="row">
         <font face="Gruppo">
     <ul id="breadcrumbs">
-        <li><a href="/">Mini-lab</a> / Geo-Graph</li>
+        <li><a href="/">Mini-lab</a> / <a href="/geograph/">Geo-Graph</a>  / Project GeoGraph-II: The starting point</li>
     </ul>
 </font>
 	</div>
@@ -128,7 +128,7 @@
 			<div id="content">
 				<div class="container">
 					
-    <h5> Exploring Geo-Graph </h5>
+<h2 class="post-title"> Project GeoGraph-II: The starting point </h2>
 
 				</div>
 			</div>
@@ -136,7 +136,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Tuesday, October 20, 2015 <span>»</span> <a href="/geograph/tag/geography/">geography</a>, <a href="/geograph/tag/graph/">graph</a>, <a href="/geograph/tag/GUI/">GUI</a>, <a href="/geograph/tag/map/">map</a>, <a href="/geograph/tag/tool/">tool</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -146,23 +148,67 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        
-            <p><a href="/geograph/project_GG2_start/">Project GeoGraph-II: The starting point</a> – <font face="Gruppo"><small>I&rsquo;ve been working on my-own new project, the project GeoGraph-II, which is in my mind for about more than one year.</small></font>
-             <span>»</span> <a href="/geograph/tag/geography/">geography</a>, <a href="/geograph/tag/graph/">graph</a>, <a href="/geograph/tag/GUI/">GUI</a>, <a href="/geograph/tag/map/">map</a>, <a href="/geograph/tag/tool/">tool</a>
-            </p>
-        
-    
-        
-            <p><a href="/geograph/dengue_spacetimemap/">Dengue cases at Taiwan from year 2014</a> – <font face="Gruppo"><small>In Taiwan, there are two types of dengue fever cases, imported case and indigenous case. 
-Imported cases is the cases that &ldquo;imported&rdquo; from foreign countries, that patients had traveled to some South-East Asia countries before he/she got sick. 
-The imported cases is then pass the disease to the mosquito (Aedes). 
-Indigenous cases is the cases that the patients did not traveled to those countries with dengue fever. 
-Therefore they got the disease by local areas (was bitten by local mosquito). </small></font>
-             <span>»</span> <a href="/geograph/tag/dengue/">dengue</a>, <a href="/geograph/tag/map/">map</a>, <a href="/geograph/tag/plotly/">plotly</a>
-            </p>
-        
-    
+    <p>I&rsquo;ve been working on my-own new project, the project GeoGraph-II, which is in my mind for about more than one year.</p>
+<h2>The name</h2>
+<p>The name &ldquo;GeoGraph-II&rdquo; (read as &lsquo;geography&rsquo;), means that this project is about to build a tool, which integrate the geographical space and the network space.
+So the &ldquo;GEO&rdquo; and the &ldquo;GRAPH&rdquo;. 
+And the two &ldquo;I&rdquo; behind it, the &ldquo;~phy&rdquo;, is also the greek number for two, sounds like &ldquo;tool&rdquo;.
+So, the &ldquo;GEO&rdquo;, the &ldquo;GRAPH&rdquo;, and the &ldquo;TOOL&rdquo;, that read as &ldquo;geography~&rdquo;. </p>
+<h2>The tool</h2>
+<p>As its name suggested, this tool planning to build for analyzing the geospatial network. 
+Geospatial network is a form for representing the connections or relationships between spaces. 
+Although the network analysis toolbox is already lying in the ArcGIS toolbox, the routing algorithm is ready in many database service or GIS-related software, the graph-theory and network structures are not included in current GIS. 
+So, the major concept of building this tool is not for solving the routing/location-allocation/service-area types of problems.
+It is for analyzing the connected spaces.</p>
+<h2>The works (current screenshots of the development)</h2>
+<p>Building GUI in wxformbuilder: 
+<img src="/assets/images/GeoGraph/buildGUI.png" alt="Building GUI in wxformbuilder" style="width: 650px;"/></p>
+
+<p>Add shapefile as basemap: 
+<img src="/assets/images/GeoGraph/show_basemap.png" alt="add shapefile as basemap" style="width: 650px;"/></p>
+
+<p>Show the attribute table: 
+<img src="/assets/images/GeoGraph/show_attributetable.png" alt="showing the attribute table" style="width: 650px;"/></p>
+
+<p>The zoomed geospatial network: 
+<img src="/assets/images/GeoGraph/show_zoomed_network.png" alt="zoomed geospatial network" style="width: 650px;"/></p>
+<h2>To-do list (current focus)</h2>
+<ol>
+<li>draw point data</li>
+<li>nodes&#39; and links&#39; table</li>
+<li>properties page</li>
+<li>gdf input/output</li>
+<li>layer panel</li>
+<li>main and analysis&rsquo;s module interface</li>
+<li>chinese encoding string not showing in the table</li>
+</ol>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>
