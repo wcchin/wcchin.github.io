@@ -75,7 +75,7 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>Chin.Mini-Lab – Geo-Graph-ing</title>
+    <title>using wenlab server : Blog – Chin.Mini-Lab</title>
 
 	
 </head>
@@ -119,7 +119,7 @@
 	<div class="row">
         <font face="Gruppo">
     <ul id="breadcrumbs">
-        <li><a href="/">Mini-lab</a> / Notes</li>
+        <li><a href="/">Mini-lab</a> / <a href="/notes/">Notes</a>  / using wenlab server</li>
     </ul>
 </font>
 	</div>
@@ -128,7 +128,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Mini-lab Notes</h5>
+<h2 class="post-title"> using wenlab server </h2>
 
 				</div>
 			</div>
@@ -136,7 +136,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Wednesday, October 21, 2015 <span>»</span> <a href="/notes/tag/server/">server</a>, <a href="/notes/tag/wenlab/">wenlab</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -146,13 +148,66 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        
-            <p><a href="/notes/usingServer/">using wenlab server</a> – <font face="Gruppo"><small>None</small></font>
-             <span>»</span> <a href="/notes/tag/server/">server</a>, <a href="/notes/tag/wenlab/">wenlab</a>
-            </p>
-        
-    
+    <h3>關於 asus server 上安裝的 jupyterhub 以及 rstudio-server</h3>
+<p>這篇文章會說明：<br>
+1. 如何用 jupyterhub 寫網絡課的作業，同時作筆記說明
+2. 完成後，透過 rstudio-server 的 Rmarkdown 轉成 .html。</p>
+<h3>如何用 jupyterhub 寫程式，並作筆記</h3>
+<ol>
+<li>登錄 <a href="http://wenlab.geog.ntu.edu.tw:18001">http://wenlab.geog.ntu.edu.tw:18001</a> </li>
+<li>在適當的地方，如 /snaClass ，New 一個 R notebook
+<img src="/assets/images/usingServer/1.png" alt="new R notebook" style="width: 650px;"/></li>
+<li>在這文件中開始寫 R 的程式，如叫進 library、計算、畫圖、寫 function 等。用 Shift+enter 會執行當前的 cell，並進入下一個，或 ctrl+enter，會執行當前 cell 並停留在同一個 cell。
+<img src="/assets/images/usingServer/2.png" alt="writing R" style="width: 650px;"/></li>
+<li>當要放說明的時候，在需要放的地方開一個 cell，在上面原來是 Code 的地方，改選程 markdown，然後以 markdown 語法寫說明
+<img src="/assets/images/usingServer/4.png" alt="R notebook markdown as notes" style="width: 650px;"/></li>
+<li>當都準備完成了，作業寫完了，要輸出之前，先將 output 的東西先砍掉
+<img src="/assets/images/usingServer/5.png" alt="clear output 1" style="width: 650px;"/>
+<img src="/assets/images/usingServer/6.png" alt="clear output 2" style="width: 650px;"/></li>
+<li>透過 File&ndash;&gt;Download as&ndash;&gt; Markdown(.md) 輸出，下載到本機端
+<img src="/assets/images/usingServer/7.png" alt="download as .md" style="width: 650px;"/></li>
+</ol>
+<h3>透過 rstudio-server 轉 rmarkdown 並輸出 html</h3>
+<ol>
+<li>先把本機端的東西，透過 filezilla 上傳到自己的空間裏
+<img src="/assets/images/usingServer/8.png" alt="download as .md" style="width: 650px;"/></li>
+<li>登錄 <a href="http://wenlab.geog.ntu.edu.tw:18000">http://wenlab.geog.ntu.edu.tw:18000</a></li>
+<li>打開剛上傳的檔案
+<img src="/assets/images/usingServer/9.png" alt="download as .md" style="width: 650px;"/></li>
+<li>需要將 <code>R 改成</code>{r}，用 replace&ndash;&gt; all</li>
+<li>資料所在位置要調整好： ../ 是上一個資料夾的意思 ../../data 是前兩層資料夾下的 data 資料夾
+<img src="/assets/images/usingServer/12.png" alt="download as .md" style="width: 650px;"/></li>
+<li>跟單機版一樣，按 knit html</li>
+<li>存檔 html，完成。
+<img src="/assets/images/usingServer/13.png" alt="download as .md" style="width: 650px;"/></li>
+</ol>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>
