@@ -76,9 +76,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>webpage : Archives : Blog – Chin.Mini-Lab</title>
+    <title>Pushing items to gh-pages : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -106,7 +108,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Blog</a> / <a href="/archives/">Tags' Archives</a> / webpage
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / Pushing items to gh-pages
 </font>
 	</div>
     <div class="row">
@@ -114,7 +116,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Mini-lab Tags</h5>
+<h2 class="post-title"> Pushing items to gh-pages </h2>
 
 				</div>
 			</div>
@@ -122,7 +124,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Saturday, October 31, 2015 <span>»</span> <a href="/tags/gh-pages/">gh-pages</a>, <a href="/tags/github/">github</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -132,48 +136,52 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        <dl class="archives">
-            <dt class="archives-year"><a href="/archives/2015/">2015</a></dt>
-            <dd>
-                <dl class="archives-records">
-                    
-                        
-                            <dt class="archives-post-date">Oct 31</dt>
-                            <dd class="archives-post-title"><a href="/2015/10/31/using_mynt/">Using mynt - a static site generator</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/webpage/">webpage</a></dd>
-                            
-                        
-                    
-                        
-                            <dt class="archives-post-date">Aug 21</dt>
-                            <dd class="archives-post-title"><a href="/2015/08/21/Including_mathjax/">Adding math formula</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/webpage/">webpage</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Aug 20</dt>
-                            <dd class="archives-post-title"><a href="/2015/08/20/Added_disqus/">Adding commenting system</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/webpage/">webpage</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Aug 03</dt>
-                            <dd class="archives-post-title"><a href="/2015/08/03/First_post/">First post of the mini-lab</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/webpage/">webpage</a></dd>
-                            
-                        
-                    
-                </dl>
-            </dd>
-        </dl>
-    
+    <p>I am new to the &lsquo;git&rsquo; world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.</p>
+
+<p>The following codes would push things from local to the master branch:</p>
+<pre><code>git add --all
+git commit -m &#x27;the message about what have been changed&#x27;
+git push -u origin master
+</code></pre>
+<p>If the master branch is the gh-pages branch, then this is done.<br>
+The following codes would sync the gh-pages branch with the master:</p>
+<pre><code>git checkout gh-pages
+git rebase master
+git push origin gh-pages
+git checkout master
+</code></pre>
+<p>Then, the gh-pages would be online to the webpage:<br>
+<a href="https://username.github.io/repositoryname/filename.html">https://username.github.io/repositoryname/filename.html</a></p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>
