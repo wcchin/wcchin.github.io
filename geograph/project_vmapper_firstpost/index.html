@@ -76,7 +76,7 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>Chin.Mini-Lab – Geo-Graph-ing</title>
+    <title>Project vmapper : Blog – Chin.Mini-Lab</title>
 
 	
 </head>
@@ -106,7 +106,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / About 
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / <a href="/geograph/">Geo-Graph</a>  / Project vmapper
 </font>
 	</div>
     <div class="row">
@@ -114,7 +114,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>About the mini-lab and I</h5>
+<h2 class="post-title"> Project vmapper </h2>
 
 				</div>
 			</div>
@@ -122,7 +122,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Monday, January 11, 2016 <span>»</span> <a href="/geograph/tag/geography/">geography</a>, <a href="/geograph/tag/graph/">graph</a>, <a href="/geograph/tag/GUI/">GUI</a>, <a href="/geograph/tag/map/">map</a>, <a href="/geograph/tag/tool/">tool</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -132,52 +134,21 @@
 		<div id="content">
 			<div class="container">
 				
-	<p>I&rsquo;m Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the <a href="http://wenlab.geog.ntu.edu.tw" target="_blank">lab for geospatial computational science</a>, which focuses on using the spatial data for studying the people living in the geographical space.</p>
+    <p>vmapper: a vector mapping tool</p>
 
-<blockquote>
-<p>The real world contains extensive connections.</p>
-</blockquote>
+<p>I&rsquo;ve been working on a project for mapping the geographical data and viewing with browser. 
+Using svg, scallable vector graph, as the main output file, this python library is written to read spatial data 
+(currently shapefile, planned to get data from postgis database), and export them into svg file, with some simple mapping function (classification with qualitative data column, and planned to draw with sequential data column data).</p>
 
-<p>Moving between places is what we do in our daily life. While people move, they bring things from one place to another, such as resources, diseases, information, technologies, and feelings. This is one form of how places are connected, and there are many ways the places would be connected. </p>
+<p>Everything is still in &lsquo;first attemp&rsquo; and planning phases. So I will keep working on this in following times.</p>
 
-<p>Understanding how the places are connected, and how the connections between places are what I am interested in. Therefore, I am now trying to integrate the GEOgraphical space and the GRAPH. </p>
+<p><a href="https://github.com/wcchin/vmapper">project page</a></p>
 
-<p>Graph theory, is a bunch of theory and ideas for exploring the connections betweem things, by analyzing the network. </p>
+<p>result:<br>
+<img src="https://rawgit.com/wcchin/vmapper/master/testingPaper06.svg"></p>
 
-<p>Therefore, I am here trying to understand the geographical space and the graph of the places.</p>
-
-<hr>
-<h5>About this place.</h5>
-<p>This mini-lab includes several pages:</p>
-
-<ul>
-<li><a href="/geograph/">Geo-Graph</a>, where the notes about spatial analysis and network analysis will be.<br></li>
-<li><a href="/lightbulb/">Light-bulb</a> stores some ideas that pop in my head.<br></li>
-<li><a href="/workingdesk/">Working-desk</a> is a messy space with things that I&rsquo;m working on.<br></li>
-<li><a href="/notes/">Notes</a> about codes and possibly anything.<br></li>
-<li><a href="/findings/">Findings</a> includes a list of what I&rsquo;ve observed and results of studies that I&rsquo;ve participated in.<br></li>
-</ul>
-
-<hr>
-<h5>About Benny</h5>
-<p>First, I&rsquo;m a geographer. I&rsquo;m a Malaysian. I was born in Penang. While I was 9, I moved to Selangor with my family. I continued my study at Taipei after graduated from Pin Hwa High School, Klang. I finished my undergraduate and master degree in NTU, Taiwan. I worked as a research assistance before I continued studying as a PhD. student. 
-Maybe moving around, meeting new people, and blending in different culture, made me a geographer that like to explore the connections between places.  </p>
-
-<p>Second, I&rsquo;m a cartographer. I made maps most of the time while I was a master student and a research assistance (and also currently as a PhD student). I made maps for text book, for summited articles aurthored by my boss and friends, and two large maps (wall size) for the Geography Department, NTU. Those are static-printed map. 
-In addition, I also make interactive-web map. I joined a research project which used web-map as the main tool for the early-warning system. I also created a medical resource accessibility map for participating a medical-map contest.  </p>
-
-<p>Third, I&rsquo;m a GIScientist. GIS is not just a mapping system. It is a system for gathering and presenting geographical information, and a platform for exploring the goegraphical-spaces. There are already so many analyzing methods for solving many types of problems. But, I believe this is just the beginning of the rising GIS.
-In the age of BIG DATA, with the help of computing power, there are still uncountable information await for digging from the geographical data. </p>
-
-<p>In simple words, I&rsquo;m a guy who like thinking about connected spaces, working with computer, playing with data, drawing map, and writing some codes.</p>
-
-<p>Therefore, I made this website to gather some ideas come into my head, to keep some notes, and hopefully to present some findings.</p>
-
-<p>Thank you. </p>
-
-<p><strong><em>Wei Chien Benny, Chin</em></strong></p>
-
-<p><img src="/assets/images/benny.jpg" alt="alt text" title="This is Benny"></p>
+<p>demo:<br>
+<a href="https://rawgit.com/wcchin/vmapper/master/testingPaper06.svg">svg in browser with interactivity</a></p>
 
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">
