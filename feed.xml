@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-01-11T09:51:26Z</updated>
+    <updated>2016-01-30T05:31:34Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -13,6 +13,30 @@
         <uri>http://wcchin.github.io/</uri>
     </author>
     
+    
+        <entry>
+            <title>Using tiddler - lightbulb page changed</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/01/30/renew_lightbulb_page/" type="text/html" />
+            <id>http://wcchin.github.io/2016/01/30/renew_lightbulb_page/</id>
+            <updated>2016-01-30T05:31:00Z</updated>
+            
+            <summary type="html">The note page was changed to tiddler wiki based.</summary>
+            <content type="html">&lt;p&gt;The note page was changed to tiddler wiki based.&lt;/p&gt;
+
+&lt;p&gt;I am using tiddlywiki-desktop now, to write the tiddlers(posts) and journals(logs) with it, directly in the mynt staticsite folders.&lt;/p&gt;
+
+&lt;p&gt;The tiddlywiki is now locate in the asset folders, which can be linked to the note page via iframe.&lt;/p&gt;
+
+&lt;p&gt;Plus, the tiddlers can be open in a new tab, to show the tiddler and open the tiddlywiki as an independent (static but flowing/interactive) pages.&lt;/p&gt;
+
+&lt;p&gt;Tiddlywiki, a single-page-application, is a wiki style note-taking system. It is designed to be used as a one-file app, that open in the browser(html+js).
+Tiddlers are linked to the related tiddlers, just the same as the &amp;ldquo;wiki&amp;rdquo; system. (It is a wiki system)&lt;/p&gt;
+
+&lt;p&gt;I am planning on migrating my tiddlyspace tiddlers into this tiddly, since they seem to be closed in the end of 2016.&lt;/p&gt;
+
+&lt;p&gt;visit &lt;a href=&#34;http://wcchin.github.io/lightbulb/&#34;&gt;Lightbulb&lt;/a&gt; .&lt;/p&gt;
+</content>
+        </entry>
     
         <entry>
             <title>Pushing items to gh-pages</title>
