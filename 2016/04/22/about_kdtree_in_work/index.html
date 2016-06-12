@@ -73,7 +73,7 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>Adding commenting system : Blog – Chin.Mini-Lab</title>
+    <title>the nearest neighbours in two dimensions space : Blog – Chin.Mini-Lab</title>
 
 	
 	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
@@ -105,7 +105,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / Adding commenting system
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / the nearest neighbours in two dimensions space
 </font>
 	</div>
     <div class="row">
@@ -113,7 +113,7 @@
 			<div id="content">
 				<div class="container">
 					
-<h2 class="post-title"> Adding commenting system </h2>
+<h2 class="post-title"> the nearest neighbours in two dimensions space </h2>
 
 				</div>
 			</div>
@@ -122,7 +122,7 @@
 			<div id="content">
 				<div class="container">
 					<font face="Gruppo">
-<h5 class="post-meta" align="right">Thursday, August 20, 2015 <span>»</span> <a href="/tags/webpage/">webpage</a></h5>
+<h5 class="post-meta" align="right">Friday, April 22, 2016 <span>»</span> <a href="/tags/python/">python</a></h5>
 </font>
 				</div>
 			</div>
@@ -133,19 +133,65 @@
 		<div id="content">
 			<div class="container">
 				
-    <p>In order to get feedbacks from friends, I added the Disqus commenting system in this site.</p>
+    <h2>nearest neighbours</h2>
+<p>Which points are the nearest neighbours, or top N nearest neighbours, are the frequently used procedures in point data analysis. 
+Sometimes, we might need to find the neighbours in-radius of some distance. </p>
 
-<p>Adding a Disqus comment system in a static website is not difficult:</p>
+<p>K-d tree is one of the data structure for searching the points that is closer to a target point that is in k-dimensions. 
+E.g. for 2-d points, each point has a x coordinate and a y coordinate, it is called 2-d tree. 
+In a 2-d tree, starting from the root, is the first dimension (let say x-dimension), then the second level would be for the second dimension (y-dimension).
+The idea is to divide the points into two groups in each level, smaller item go to the left, bigger item go to the right&hellip;</p>
 
-<ol>
-<li>Sign-up on <a href="https://disqus.com" target="_blank">Disqus</a>.</li>
-<li>Go to Settings, Admin.</li>
-<li>Add new site and setup.</li>
-<li>Go to Install, Universal Code, and copy the codes to the template/layout html file.</li>
-<li>Regenerate the website, and push to the hosting server.</li>
-</ol>
+<p>So, the kd-tree helps to reduce the k-dimension nearest neighbours problem into a simpler problem (in terms of complexity), by using the divide-and-conquer trick.</p>
+<h2>working in python</h2>
+<p>In this example, base points are the points in the ground, let says, the shops;
+source points are the points that is going to search for the nearest destinations (base points), let says, the location of the people. 
+The aim is to locate the shops that is nearby to each person. 
+So, it would be for each person, search one time.</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
 
-<p>Thats all.</p>
+<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># x coordinates of base points...</span>
+<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># y coordinates of base points...</span>
+
+<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c1"># x coordinates for the three people</span>
+<span class="n">py</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">6.3</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span> <span class="err">$</span> <span class="n">ycoordinates</span> <span class="k">for</span> <span class="n">the</span> <span class="n">three</span> <span class="n">people</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xlist</span><span class="p">,</span><span class="n">ylist</span><span class="p">)</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">spatial</span><span class="o">.</span><span class="n">KDTree</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># the nearby radius for searching</span>
+<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> <span class="c1"># If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
+<span class="c1"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
+</pre></div>
+</td></tr></table></div></div>
+<p>besides query_ball_point, there are other methods (from <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">scipy</a>):</p>
+<div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c1">#Count how many nearby pairs can be formed.</span>
+<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c1">#Query the kd-tree for nearest neighbors</span>
+<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c1">#Find all pairs of points whose distance is at most r</span>
+<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c1">#Find all pairs of points within a distance.</span>
+<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c1">#Compute a sparse distance matrix</span>
+</pre></div>
+</td></tr></table></div></div>
+<p><a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">more details from scipy docs</a></p>
 
     <!--
 	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>

@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-01-31T16:18:53Z</updated>
+    <updated>2016-06-12T00:53:08Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -13,6 +13,96 @@
         <uri>http://wcchin.github.io/</uri>
     </author>
     
+    
+        <entry>
+            <title>the nearest neighbours in two dimensions space</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_kdtree_in_work/" type="text/html" />
+            <id>http://wcchin.github.io/2016/04/22/about_kdtree_in_work/</id>
+            <updated>2016-04-22T00:52:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;nearest neighbours&lt;/h2&gt;
+&lt;p&gt;Which points are the nearest neighbours, or top N nearest neighbours, are the frequently used procedures in point data analysis. 
+Sometimes, we might need to find the neighbours in-radius of some distance. &lt;/p&gt;
+
+&lt;p&gt;K-d tree is one of the data structure for searching the points that is closer to a target point that is in k-dimensions. 
+E.g. for 2-d points, each point has a x coordinate and a y coordinate, it is called 2-d tree. 
+In a 2-d tree, starting from the root, is the first dimension (let say x-dimension), then the second level would be for the second dimension (y-dimension).
+The idea is to divide the points into two groups in each level, smaller item go to the left, bigger item go to the right&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;So, the kd-tree helps to reduce the k-dimension nearest neighbours problem into a simpler problem (in terms of complexity), by using the divide-and-conquer trick.&lt;/p&gt;
+&lt;h2&gt;working in python&lt;/h2&gt;
+&lt;p&gt;In this example, base points are the points in the ground, let says, the shops;
+source points are the points that is going to search for the nearest destinations (base points), let says, the location of the people. 
+The aim is to locate the shops that is nearby to each person. 
+So, it would be for each person, search one time.&lt;/p&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;from scipy import spatial
+
+xlist = [5,4,3,8,7,6] # x coordinates of base points...
+ylist = [1,0,3,8,5,3] # y coordinates of base points...
+
+px = [2.4, 4.8, 1.2] # x coordinates for the three people
+py = [1.1, 6.3, 9.8] $ ycoordinates for the three people
+
+data = zip(xlist,ylist)
+pts = zip(px,py)
+tree = spatial.KDTree(data)
+
+nn_radius = 3 # the nearby radius for searching
+nlist = tree.query_ball_point(x=pts, r=nn_radius) # If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.
+# in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. 
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;besides query_ball_point, there are other methods (from &lt;a href=&#34;http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree&#34;&gt;scipy&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;count_neighbors(other, r[, p])  #Count how many nearby pairs can be formed.
+query(x[, k, eps, p, distance_upper_bound]) #Query the kd-tree for nearest neighbors
+query_ball_tree(other, r[, p, eps]) #Find all pairs of points whose distance is at most r
+query_pairs(r[, p, eps])    #Find all pairs of points within a distance.
+sparse_distance_matrix(other, max_distance) #Compute a sparse distance matrix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree&#34;&gt;more details from scipy docs&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>working with heapq in python</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_heapq_in_python/" type="text/html" />
+            <id>http://wcchin.github.io/2016/04/22/about_heapq_in_python/</id>
+            <updated>2016-04-22T00:50:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;simple notes on heapq&lt;/h2&gt;
+&lt;p&gt;heapq is a data structure to implement (work with) priority queue.&lt;/p&gt;
+
+&lt;p&gt;Let says, there is an array of several numbers. Sometimes, we need to get the top 3 largest number in the array.
+One way of getting the max or min result, is to scan all of the items (numbers) in the array, which means starting with the first number, then compare it to the second, change the number to the second one if the second is bigger, then continue until the last number. 
+Then, do this again with the rest of the numbers to get the second largest, and same procedure again for the third. That means, the complexity would be approximately m x N, that m is the top m largest or smallest, and N is the number of item in the array. &lt;/p&gt;
+
+&lt;p&gt;The other way is perform a sorting procedure to the array, then choose the top 3 number at the front or at the back. This solution&amp;rsquo;s complexity would depend on the sorting algorithm. &lt;/p&gt;
+
+&lt;p&gt;Priority queue (PQ) is like sorting, that do not sort the data in an array. But always pop out the smallest or largest item from the array.&lt;/p&gt;
+
+&lt;p&gt;We can use heapq to implement PQ. heapq construct a heap tree instead of sorting. There are two type of heap tree: min heap and max heap. 
+A min heap is a binary tree that the parent is always smaller (or equal) than the children. A max heap is the opposite, that parrent is always larger (or equal) than children. 
+So, with a min heap or max heap, it can always pop out the smallest or biggest item (respectively) from the array. &lt;/p&gt;
+&lt;h2&gt;heapq in python&lt;/h2&gt;&lt;pre&gt;&lt;code data-lang=&#34;python&#34;&gt;    import heapq
+    alist = [3,7,4,1,9,5,8,2,3,9,5,7]  #first, create a list that populated with items
+
+    heapq.heapify(alist) #heapify the list, that create a heap tree, inplace
+    aheap=alist
+
+    heapsort(alist) # this will create a sorted list of the list
+
+    heapq.heappush(aheap, 10) # add the item 10 into the heap tree
+
+    heapq.heappop(aheap) # pop out and return the smallest item from the heap tree
+
+    aheap[0] # access the smallest number without pop it out
+     
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/2/library/heapq.html&#34;&gt;more details from python docs&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
     
         <entry>
             <title>Using tiddler - lightbulb page changed</title>

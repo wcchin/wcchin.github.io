@@ -125,7 +125,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "cwTeXYen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; 
+  color: #CCCCCC;
+  background-color: #0C0C0C;
 /*  background-image: url(img/noise.png);
   background-repeat:repeat; 
 */}
@@ -161,9 +162,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– #1EAEDB #0FA0CE */
 a {
-  color: #9900CC; } /*#4F49CC; #9900CC; #99CCCC}*/
+  color: #AA88FC; } /*#4F49CC; #9900CC; #99CCCC}*/
 a:hover {
-  color: #40e0d0;} /* #332D9D; } */
+  color: #C50BF9;} /* #332D9D; } */
 
 
 /* Buttons
@@ -337,7 +338,7 @@ code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
   font-size: 90%;
-  white-space: nowrap;
+  white-space: wrap;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
   border-radius: 4px; }

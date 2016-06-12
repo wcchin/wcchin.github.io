@@ -73,9 +73,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>permutation test : Archives : Blog – Chin.Mini-Lab</title>
+    <title>working with heapq in python : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -103,7 +105,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Light-bulb</a> / <a href="/archives/">Tags' Archives</a> / permutation test
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / working with heapq in python
 </font>
 	</div>
     <div class="row">
@@ -111,7 +113,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Light-bulbs' Tags</h5>
+<h2 class="post-title"> working with heapq in python </h2>
 
 				</div>
 			</div>
@@ -119,7 +121,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Friday, April 22, 2016 <span>»</span> <a href="/tags/python/">python</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -129,23 +133,80 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        <dl class="archives">
-            <dt class="archives-year"><a href="/lightbulb/tag/permutation-test/"></a></dt>
-            <dd>
-                <dl class="archives-records">
-					
-                            <dt class="archives-post-date">Aug 20</dt>
-                            <dd class="archives-post-title"><a href="/lightbulb/permutationtest/">About permutation test</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/lightbulb/tag/permutation-test/">permutation test</a></dd>
-                            
-                    
-                </dl>
-            </dd>
-        </dl>
-    
+    <h2>simple notes on heapq</h2>
+<p>heapq is a data structure to implement (work with) priority queue.</p>
+
+<p>Let says, there is an array of several numbers. Sometimes, we need to get the top 3 largest number in the array.
+One way of getting the max or min result, is to scan all of the items (numbers) in the array, which means starting with the first number, then compare it to the second, change the number to the second one if the second is bigger, then continue until the last number. 
+Then, do this again with the rest of the numbers to get the second largest, and same procedure again for the third. That means, the complexity would be approximately m x N, that m is the top m largest or smallest, and N is the number of item in the array. </p>
+
+<p>The other way is perform a sorting procedure to the array, then choose the top 3 number at the front or at the back. This solution&rsquo;s complexity would depend on the sorting algorithm. </p>
+
+<p>Priority queue (PQ) is like sorting, that do not sort the data in an array. But always pop out the smallest or largest item from the array.</p>
+
+<p>We can use heapq to implement PQ. heapq construct a heap tree instead of sorting. There are two type of heap tree: min heap and max heap. 
+A min heap is a binary tree that the parent is always smaller (or equal) than the children. A max heap is the opposite, that parrent is always larger (or equal) than children. 
+So, with a min heap or max heap, it can always pop out the smallest or biggest item (respectively) from the array. </p>
+<h2>heapq in python</h2><div class="code"><div><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">heapq</span>
+    <span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>  <span class="c1">#first, create a list that populated with items</span>
+
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heapify</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c1">#heapify the list, that create a heap tree, inplace</span>
+    <span class="n">aheap</span><span class="o">=</span><span class="n">alist</span>
+
+    <span class="n">heapsort</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c1"># this will create a sorted list of the list</span>
+
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">aheap</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># add the item 10 into the heap tree</span>
+
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">aheap</span><span class="p">)</span> <span class="c1"># pop out and return the smallest item from the heap tree</span>
+
+    <span class="n">aheap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># access the smallest number without pop it out</span>
+     
+</pre></div>
+</td></tr></table></div></div>
+<p><a href="https://docs.python.org/2/library/heapq.html">more details from python docs</a></p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>
