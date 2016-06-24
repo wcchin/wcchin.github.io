@@ -1,5 +1,8 @@
 code { background-color: #404040 }
+code { word-wrap: break-word }
 .code { background-color: #404040 }
+.code { word-wrap: break-word }
+.code .highlight{ word-wrap: break-word }
 .code .highlight{ background-color: #404040 }
 .code .hll { background-color: #404040 }
 .code .c { color: #999999; font-style: italic } /* Comment */
