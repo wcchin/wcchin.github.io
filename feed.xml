@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-07-08T19:48:14Z</updated>
+    <updated>2016-07-08T20:01:47Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,7 +18,7 @@
             <title>the animated svg for viewing Bike Sharing OD relationship</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/09/about_animated_od_ubike/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/09/about_animated_od_ubike/</id>
-            <updated>2016-07-09T19:48:00Z</updated>
+            <updated>2016-07-09T20:01:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;animated svg&lt;/h2&gt;
@@ -30,7 +30,8 @@ The animation is recorded as in video: &lt;a href=&#34;https://drive.google.com/
 &lt;p&gt;So, I search for the simple animation script in svg: &lt;a href=&#34;https://mdn.mozillademos.org/files/3261/animateMotion.svg&#34;&gt;simple demo for animation in svg&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the result: 
-&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34;&gt;&lt;img src=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34; alt=&#34;animated svg&#34; style=&#34;width: 650px; height: 800px&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34;&gt;&lt;img src=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34; alt=&#34;animated svg&#34; style=&#34;width: 650px; height: 800px&#34;/&gt;&lt;/a&gt;&lt;br&gt;
+click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/p&gt;
 </content>
         </entry>
     
