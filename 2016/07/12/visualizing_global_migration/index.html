@@ -73,9 +73,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>python : Archives : Blog – Chin.Mini-Lab</title>
+    <title>Visualizing global migration : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -103,7 +105,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Blog</a> / <a href="/archives/">Tags' Archives</a> / python
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / Visualizing global migration
 </font>
 	</div>
     <div class="row">
@@ -111,7 +113,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Mini-lab Tags</h5>
+<h2 class="post-title"> Visualizing global migration </h2>
 
 				</div>
 			</div>
@@ -119,7 +121,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Tuesday, July 12, 2016 <span>»</span> <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -129,55 +133,59 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        <dl class="archives">
-            <dt class="archives-year"><a href="/archives/2016/">2016</a></dt>
-            <dd>
-                <dl class="archives-records">
-                    
-                        
-                            <dt class="archives-post-date">Jul 12</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/12/processing_human_movement_part1/">'Processing' human movements in Taipei City</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Jul 12</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/12/visualizing_global_migration/">Visualizing global migration</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Jul 09</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/09/about_animated_od_ubike/">the animated svg for viewing Bike Sharing OD relationship</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                            
-                        
-                    
-                        
-                            <dt class="archives-post-date">Apr 22</dt>
-                            <dd class="archives-post-title"><a href="/2016/04/22/about_kdtree_in_work/">the nearest neighbours in two dimensions space</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Apr 22</dt>
-                            <dd class="archives-post-title"><a href="/2016/04/22/about_heapq_in_python/">working with heapq in python</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                            
-                        
-                    
-                </dl>
-            </dd>
-        </dl>
-    
+    <h2>The global migration network</h2>
+<p>The migration data is obtained from the World DataBank website &ldquo;<a href="http://databank.worldbank.org/data/reports.aspx?source=global-bilateral-migration#">Global Bilateral Migration</a>&rdquo;.
+It is a bilateral matrix, so using each row/column of the matrix as the nodes, and the cells between each pair of row-column as the weight of the edges, this data could be shown as a graph.</p>
+<h2>The locations of nodes</h2>
+<p>Using the countries&#39; name, I used the python geocoder package, with the ArcGIS as provider, for doing the batch geocoding job. Some of them are not geocoded. These countries were geocoded using Google provider plus manually change the country&rsquo;s name according to wikipedia.
+&ldquo;Refugees&rdquo; rows/columns were ignored, because it is not a country/location.</p>
+<h2>Results</h2>
+<p>The year 1960, 1970, 1980, 1990, 2000 were included from the data source. So they were mapped separately.</p>
+
+<p><object id="svg1" data="/assets/images/inposts/workfile_4_1960.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/workfile_4_1960.svg"> Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+<p><object id="svg1" data="/assets/images/inposts/workfile_4_1970.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/workfile_4_1970.svg"> Year 1970. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+<p><object id="svg1" data="/assets/images/inposts/workfile_4_1980.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/workfile_4_1980.svg"> Year 1980. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+<p><object id="svg1" data="/assets/images/inposts/workfile_4_1990.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/workfile_4_1990.svg"> Year 1990. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+<p><object id="svg1" data="/assets/images/inposts/workfile_4_2000.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/workfile_4_2000.svg"> Year 2000. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>

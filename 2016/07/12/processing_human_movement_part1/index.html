@@ -73,9 +73,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>python : Archives : Blog – Chin.Mini-Lab</title>
+    <title>'Processing' human movements in Taipei City : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -103,7 +105,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Blog</a> / <a href="/archives/">Tags' Archives</a> / python
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / 'Processing' human movements in Taipei City
 </font>
 	</div>
     <div class="row">
@@ -111,7 +113,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Mini-lab Tags</h5>
+<h2 class="post-title"> 'Processing' human movements in Taipei City </h2>
 
 				</div>
 			</div>
@@ -119,7 +121,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Tuesday, July 12, 2016 <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -129,55 +133,64 @@
 		<div id="content">
 			<div class="container">
 				
-    
-        <dl class="archives">
-            <dt class="archives-year"><a href="/archives/2016/">2016</a></dt>
-            <dd>
-                <dl class="archives-records">
-                    
-                        
-                            <dt class="archives-post-date">Jul 12</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/12/processing_human_movement_part1/">'Processing' human movements in Taipei City</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Jul 12</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/12/visualizing_global_migration/">Visualizing global migration</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Jul 09</dt>
-                            <dd class="archives-post-title"><a href="/2016/07/09/about_animated_od_ubike/">the animated svg for viewing Bike Sharing OD relationship</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                            
-                        
-                    
-                        
-                            <dt class="archives-post-date">Apr 22</dt>
-                            <dd class="archives-post-title"><a href="/2016/04/22/about_kdtree_in_work/">the nearest neighbours in two dimensions space</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                            
-                        
-                            <dt class="archives-post-date">Apr 22</dt>
-                            <dd class="archives-post-title"><a href="/2016/04/22/about_heapq_in_python/">working with heapq in python</a></dd>
-                            
-                            
-                                <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                            
-                        
-                    
-                </dl>
-            </dd>
-        </dl>
-    
+    <h2>working on Taipei City&rsquo;s open data </h2>
+<p>Taipei City&rsquo;s open data contain quite a lots and useful data about <a href="https://taipeicity.github.io/traffic_realtime/">human movement</a>, which included vehicle detector for street vehicles number, bus location data, bike sharing service available situation. 
+Beside this, we have also obtained the bike sharing rental information, which include the timestamps and stations of rent/return for each rental event. 
+Using these data, I created a animated visualization using the <a href="https://processing.org/">Processing 3</a> tool.</p>
+
+<p>Although there is an alternative to create a web-based processing script using the <a href="http://processingjs.org/">processing.js</a> as a convertion tool, the data I included in the animation is too large for webpage and browser loading. 
+So, instead of making a web-based viz, I recorded the results as video.</p>
+
+<p>First, this is a simulation of moving vehicles on the streets network, that they turn randomly at the junctions.
+<iframe src="https://player.vimeo.com/video/168713881" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/168713881">simulation - moving cars on streets taking turn randomly - v0.2</a> from <a href="https://vimeo.com/user11082431">Benny Chin</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<p>Using vehicle detector for the calibration in a modified PageRank, the moving process and turning proportion is simulated in this video:<br>
+<iframe src="https://player.vimeo.com/video/168714357" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/168714357">simulation - moving cars on streets turning with the estimated probability - v0.2</a> from <a href="https://vimeo.com/user11082431">Benny Chin</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<p>Using the Taipei&rsquo;s Youbike (a Bike Sharing System) Origin-Destination data, the rental events is animated in this video:
+<iframe src="https://player.vimeo.com/video/172241655" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/172241655">Taipei Youbike Origin-Destination rental movement - time data in May 2015</a> from <a href="https://vimeo.com/user11082431">Benny Chin</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<p>The comparison between the results of Taipei City&rsquo;s Youbike with the New York City&rsquo;s Citibike rental events:
+<iframe src="https://player.vimeo.com/video/172311955" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/172311955">bike sharing trips temporal data visualization</a> from <a href="https://vimeo.com/user11082431">Benny Chin</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<p>The latest work is to show the location of buses in Taipei City and the area around:
+<iframe src="https://player.vimeo.com/video/174331241" width="640" height="369" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/174331241">One day of Taipei City&#039;s buses</a> from <a href="https://vimeo.com/user11082431">Benny Chin</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<a href="https://drive.google.com/file/d/0B41yDf_RGLPSTFZrLXpmMW02TTA/view?usp=sharing">go to google drive</a></p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>

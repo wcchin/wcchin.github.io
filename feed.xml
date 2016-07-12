@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-07-08T20:01:47Z</updated>
+    <updated>2016-07-12T09:20:33Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -15,10 +15,81 @@
     
     
         <entry>
+            <title>&#39;Processing&#39; human movements in Taipei City</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/07/12/processing_human_movement_part1/" type="text/html" />
+            <id>http://wcchin.github.io/2016/07/12/processing_human_movement_part1/</id>
+            <updated>2016-07-12T09:20:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;working on Taipei City&amp;rsquo;s open data &lt;/h2&gt;
+&lt;p&gt;Taipei City&amp;rsquo;s open data contain quite a lots and useful data about &lt;a href=&#34;https://taipeicity.github.io/traffic_realtime/&#34;&gt;human movement&lt;/a&gt;, which included vehicle detector for street vehicles number, bus location data, bike sharing service available situation. 
+Beside this, we have also obtained the bike sharing rental information, which include the timestamps and stations of rent/return for each rental event. 
+Using these data, I created a animated visualization using the &lt;a href=&#34;https://processing.org/&#34;&gt;Processing 3&lt;/a&gt; tool.&lt;/p&gt;
+
+&lt;p&gt;Although there is an alternative to create a web-based processing script using the &lt;a href=&#34;http://processingjs.org/&#34;&gt;processing.js&lt;/a&gt; as a convertion tool, the data I included in the animation is too large for webpage and browser loading. 
+So, instead of making a web-based viz, I recorded the results as video.&lt;/p&gt;
+
+&lt;p&gt;First, this is a simulation of moving vehicles on the streets network, that they turn randomly at the junctions.
+&lt;iframe src=&#34;https://player.vimeo.com/video/168713881&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/168713881&#34;&gt;simulation - moving cars on streets taking turn randomly - v0.2&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user11082431&#34;&gt;Benny Chin&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Using vehicle detector for the calibration in a modified PageRank, the moving process and turning proportion is simulated in this video:&lt;br&gt;
+&lt;iframe src=&#34;https://player.vimeo.com/video/168714357&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/168714357&#34;&gt;simulation - moving cars on streets turning with the estimated probability - v0.2&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user11082431&#34;&gt;Benny Chin&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the Taipei&amp;rsquo;s Youbike (a Bike Sharing System) Origin-Destination data, the rental events is animated in this video:
+&lt;iframe src=&#34;https://player.vimeo.com/video/172241655&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/172241655&#34;&gt;Taipei Youbike Origin-Destination rental movement - time data in May 2015&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user11082431&#34;&gt;Benny Chin&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;The comparison between the results of Taipei City&amp;rsquo;s Youbike with the New York City&amp;rsquo;s Citibike rental events:
+&lt;iframe src=&#34;https://player.vimeo.com/video/172311955&#34; width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/172311955&#34;&gt;bike sharing trips temporal data visualization&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user11082431&#34;&gt;Benny Chin&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;The latest work is to show the location of buses in Taipei City and the area around:
+&lt;iframe src=&#34;https://player.vimeo.com/video/174331241&#34; width=&#34;640&#34; height=&#34;369&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/174331241&#34;&gt;One day of Taipei City&amp;#039;s buses&lt;/a&gt; from &lt;a href=&#34;https://vimeo.com/user11082431&#34;&gt;Benny Chin&lt;/a&gt; on &lt;a href=&#34;https://vimeo.com&#34;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://drive.google.com/file/d/0B41yDf_RGLPSTFZrLXpmMW02TTA/view?usp=sharing&#34;&gt;go to google drive&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
+            <title>Visualizing global migration</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/07/12/visualizing_global_migration/" type="text/html" />
+            <id>http://wcchin.github.io/2016/07/12/visualizing_global_migration/</id>
+            <updated>2016-07-12T08:43:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;The global migration network&lt;/h2&gt;
+&lt;p&gt;The migration data is obtained from the World DataBank website &amp;ldquo;&lt;a href=&#34;http://databank.worldbank.org/data/reports.aspx?source=global-bilateral-migration#&#34;&gt;Global Bilateral Migration&lt;/a&gt;&amp;rdquo;.
+It is a bilateral matrix, so using each row/column of the matrix as the nodes, and the cells between each pair of row-column as the weight of the edges, this data could be shown as a graph.&lt;/p&gt;
+&lt;h2&gt;The locations of nodes&lt;/h2&gt;
+&lt;p&gt;Using the countries&amp;#39; name, I used the python geocoder package, with the ArcGIS as provider, for doing the batch geocoding job. Some of them are not geocoded. These countries were geocoded using Google provider plus manually change the country&amp;rsquo;s name according to wikipedia.
+&amp;ldquo;Refugees&amp;rdquo; rows/columns were ignored, because it is not a country/location.&lt;/p&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;p&gt;The year 1960, 1970, 1980, 1990, 2000 were included from the data source. So they were mapped separately.&lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1960.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 480px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1960.svg&#34;&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1970.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 480px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1970.svg&#34;&gt; Year 1970. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1980.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 480px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1980.svg&#34;&gt; Year 1980. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1990.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 480px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_1990.svg&#34;&gt; Year 1990. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_2000.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 480px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/workfile_4_2000.svg&#34;&gt; Year 2000. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>the animated svg for viewing Bike Sharing OD relationship</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/09/about_animated_od_ubike/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/09/about_animated_od_ubike/</id>
-            <updated>2016-07-09T20:01:00Z</updated>
+            <updated>2016-07-09T08:43:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;animated svg&lt;/h2&gt;
@@ -29,9 +100,10 @@ The animation is recorded as in video: &lt;a href=&#34;https://drive.google.com/
 
 &lt;p&gt;So, I search for the simple animation script in svg: &lt;a href=&#34;https://mdn.mozillademos.org/files/3261/animateMotion.svg&#34;&gt;simple demo for animation in svg&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This is the result: 
-&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34;&gt;&lt;img src=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34; alt=&#34;animated svg&#34; style=&#34;width: 650px; height: 800px&#34;/&gt;&lt;/a&gt;&lt;br&gt;
-click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/p&gt;
+&lt;p&gt;This is the result: &lt;/p&gt;
+
+&lt;p&gt;&lt;object id=&#34;svg1&#34; data=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 650px; height: 800px&#34;&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href=&#34;http://wcchin.github.io/assets/images/inposts/ubike_od_20150101_2.svg&#34;&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
 </content>
         </entry>
     
