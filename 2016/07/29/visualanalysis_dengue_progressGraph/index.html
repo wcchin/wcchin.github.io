@@ -73,9 +73,11 @@
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
     
-    <title>2016 : Archives : Mini-lab – Chin.Mini-Lab</title>
+    <title>Space-time process of dengue transmission -- the Progression Graph : Blog – Chin.Mini-Lab</title>
 
 	
+	<!--<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">-->
+
 </head>
 
 <body>
@@ -103,7 +105,7 @@
 	</div>
 	<div class="row">
         <font face="Gruppo">
-    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / <a href="/archives/">Archives</a> / 2016 
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / Space-time process of dengue transmission -- the Progression Graph
 </font>
 	</div>
     <div class="row">
@@ -111,7 +113,7 @@
 			<div id="content">
 				<div class="container">
 					
-	<h5>Archives</h5>
+<h2 class="post-title"> Space-time process of dengue transmission -- the Progression Graph </h2>
 
 				</div>
 			</div>
@@ -119,7 +121,9 @@
 		<div class="four columns">
 			<div id="content">
 				<div class="container">
-					<font face="Gruppo"></font>
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">Friday, July 29, 2016 <span>»</span> <a href="/tags/dengue/">dengue</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></h5>
+</font>
 				</div>
 			</div>
 		</div>
@@ -129,73 +133,46 @@
 		<div id="content">
 			<div class="container">
 				
-    <dl class="archives">
-        
-            
-                <dt class="archives-post-date">Aug 04</dt>
-                <dd class="archives-post-title"><a href="/2016/08/04/visualanalysis_dengue_progressGraph_part2/">Space-time process of dengue transmission (part 2) -- the ANIMATED Progression Graph</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/dengue/">dengue</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                
-            
-        
-            
-                <dt class="archives-post-date">Jul 29</dt>
-                <dd class="archives-post-title"><a href="/2016/07/29/visualanalysis_dengue_progressGraph/">Space-time process of dengue transmission -- the Progression Graph</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/dengue/">dengue</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                
-            
-                <dt class="archives-post-date">Jul 12</dt>
-                <dd class="archives-post-title"><a href="/2016/07/12/processing_human_movement_part1/">'Processing' human movements in Taipei City</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a></dd>
-                
-            
-                <dt class="archives-post-date">Jul 12</dt>
-                <dd class="archives-post-title"><a href="/2016/07/12/visualizing_global_migration/">Visualizing global migration</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                
-            
-                <dt class="archives-post-date">Jul 09</dt>
-                <dd class="archives-post-title"><a href="/2016/07/09/about_animated_od_ubike/">the animated svg for viewing Bike Sharing OD relationship</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/processing/">processing</a>, <a href="/tags/python/">python</a>, <a href="/tags/svg/">svg</a></dd>
-                
-            
-        
-            
-                <dt class="archives-post-date">Apr 22</dt>
-                <dd class="archives-post-title"><a href="/2016/04/22/about_kdtree_in_work/">the nearest neighbours in two dimensions space</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                
-            
-                <dt class="archives-post-date">Apr 22</dt>
-                <dd class="archives-post-title"><a href="/2016/04/22/about_heapq_in_python/">working with heapq in python</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/python/">python</a></dd>
-                
-            
-        
-            
-                <dt class="archives-post-date">Jan 30</dt>
-                <dd class="archives-post-title"><a href="/2016/01/30/renew_lightbulb_page/">Using tiddler - lightbulb page changed</a></dd>
-                
-                
-                    <dd class="archives-post-tags">Tagged <span>»</span> <a href="/tags/webpage/">webpage</a></dd>
-                
-            
-        
-    </dl>
+    <h2>Rewrite of codes</h2>
+<p>This is a result from rewriting the codes of the study from a colleague. The concept behind the algorithm is to identify the space-time cluster based on the appearance of the cases. Then, track the temporal chain of the cases.</p>
+<h2>The data</h2>
+<p>Lets take a look on the data &ndash; the happening of cases, using the animated svg to present:
+<object id="svg1" data="/assets/images/inposts/prog_event_3.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/prog_event_3.svg"> The dengue cases. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+<h2>The result</h2>
+<p>After the space-time clustering and progression tracking, this is the result, please wait for a few minutes, because the earlier cases did not form cluster, so it will have nothing to show at the begining:
+<object id="svg1" data="/assets/images/inposts/prog_map_3.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object><br>
+<a href="/assets/images/inposts/prog_map_3.svg"> The space-time clusters and progressions. click this and try to pan or zoom-in with your mouse scroll wheel. </a>  </p>
+
+    <!--
+	<a class="muut" href="https://muut.com/i/wcchin/comments" type="dynamic">wcchin forum</a>
+	<script src="//cdn.muut.com/1/moot.min.js"></script>-->
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
 
 			</div>
 		</div>
