@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="Benny Chin">
+<meta name="description" content="Mini-Lab for GeoGraphical data analysis">
+<meta name="generator" content="mynt v0.3.1">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href='//fonts.googleapis.com/earlyaccess/cwtexyen.css' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/earlyaccess/cwtexhei.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>-->
+  <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,700,400italic,700italic" type="text/css">-->
+  
+  <!-- flex list for navbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>-->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+<link rel="alternate" href="/feed.xml" type="application/atom+xml">-->
+  
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/pastie.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/typicons/typicons.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/pygments.css" type="text/css">
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/mynt.min.js" type="text/javascript"></script>-->
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link rel="icon" type="image/png" href="images/favicon.png">-->
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+-->
+
+  <!-- Google analytics
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65836543-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <!-- MathJax
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    
+    <title>從路段的連接性與流率分析城市內街道的流量以探討城市交通擁塞問題 : Blog – Chin.Mini-Lab</title>
+
+	
+</head>
+
+<body>
+  <div class="container">
+	<div class="row">
+	<div class="five columns" style="margin-top: 1%">
+		<h2 id="title"><font face="Gruppo">Chin.Mini-Lab<a href="/" title="Chin.Mini-Lab"><big><span class="typcn typcn-globe-outline"></span></big></a>
+        <small>Geo-Graph-ing</small></font></h2>
+        
+    </div>
+	  <div class="seven columns" style="margin-top: 1%">
+			<div align="right"> 
+			<font face="Gruppo"><h2>
+			<a href="/" title="Blog"><span class="typcn typcn-home"></span></a> | 
+			<a href="/about/" title="About"><span class="typcn typcn-user"></span></a> | 
+			<a href="/geograph/" title="Geo-Graph"><span class="typcn typcn-flow-switch"></span></a> | 
+			<a href="/lightbulb/" title="Light-bulb"><span class="typcn typcn-lightbulb"></span></a> | 
+			<a href="/workingdesk/" title="Working"><span class="typcn typcn-device-laptop"></span></a> | 
+			<a href="/notes/" title="Notes"><span class="typcn typcn-edit"></span></a> |  
+			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span></a> |
+			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span></a> |
+			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>
+			</h2></font>
+			</div>
+      </div>
+	</div>
+	<div class="row">
+        <font face="Gruppo">
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / <a href="/presentations/">Presentations</a> / 從路段的連接性與流率分析城市內街道的流量以探討城市交通擁塞問題
+</font>
+	</div>
+    <div class="row">
+		<div class="eight columns">
+			<div id="content">
+				<div class="container">
+					
+<h2 class="post-title"> 從路段的連接性與流率分析城市內街道的流量以探討城市交通擁塞問題 </h2>
+
+				</div>
+			</div>
+		</div>
+		<div class="four columns">
+			<div id="content">
+				<div class="container">
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">  <span>»</span> <a href="/presentations/tag/flow/">flow</a>, <a href="/presentations/tag/network/">network</a>, <a href="/presentations/tag/pagerank/">pagerank</a></h5>
+</font>
+				</div>
+			</div>
+		</div>
+			<hr width="80%">
+    </div>
+    <div class="row">
+		<div id="content">
+			<div class="container">
+				
+    <h4>Understanding urban traffic congestion by analyzing the link structure and the vehicle flows of urban street network</h4>
+<ul>
+<li>Conference: 發展研究年會</li>
+<li>Year: 2016</li>
+<li>Location: 國立台灣大學，台北市,台灣</li>
+<li>Language: Mandarin</li>
+<li>Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen</li>
+</ul>
+<h4>摘要:</h4>
+<p>城市的交通擁塞，是全球各大城市每天都會面臨的一個問題。車輛的每一趟移動被稱爲旅次，而旅次的發生在於人需要從一個地方前往到另一個地方。在一趟的旅次中，車子的路徑會經過不少的路段。而這些路段之間，因爲相互交錯而提供移動的連接性。路網的設計，除了寬度、最高與最低速限，車道數等物理結構方面的特性之外，還有一個關鍵是其拓撲架構—連接性。連接性高的路段，表示透過這個路段可以很快的到達更多的目的地，故也會有較多的車輛會選擇經過這個路段。路網的拓撲結構反映的是各個路段的供給面上，其能夠提供車輛移動的效率。而交通擁塞問題的另一關鍵，是旅次需求的分佈，亦即車輛在各個路段上移動的流率。流率越高，則路段的使用率高，當這些路段附近發生擁塞狀況時，這些地方將也很快的被影響。故，本研究將試着分析路段的連接性與流率等特性，討論擁塞的空間分佈。本研究透過應用部分路段的流量資訊，調校並應用 PageRank (PR) 演算法，分析路段與路口所組成的路網結構。並且，透過調校所取得的吸引程度資訊，討論路段的車輛轉向複雜度，以及計算最終的PR分數，推估每一條路段的潛在交通需求比例分佈。最後，透過套疊高轉向複雜度與高交通需求比例的路段，找出容易形成擁塞的路段。這些同時具備高轉向率與高交通需求比例的路段，主要分佈在官方公佈的十大擁塞路段以及透過街道車輛偵測器所找出的平均移動速度較低的路段的附近，說明轉向複雜度與交通需求比例是造成擁塞的潛在因子。</p>
+<h4>Presentation</h4>
+<p><em>work in progress</em></p>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+			</div>
+		</div>
+	</div>
+    <div class="row">
+			<hr width="80%">
+		<div id="content">
+			<div class="container" align="center">
+				 <h6><font face="Gruppo"> <small>Built with <a href="http://mynt.uhnomoli.com" target="blank">mynt</a>.<br></small> 2015 <a href="/" title="Chin.Mini-Lab"><span class="typcn typcn-globe"></span></a> Benny Chin.</font></h6>
+			</div>
+		</div>
+	</div>
+    </div>
+  </div>
+</body>
+</html>

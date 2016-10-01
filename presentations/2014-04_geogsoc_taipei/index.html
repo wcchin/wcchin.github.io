@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="Benny Chin">
+<meta name="description" content="Mini-Lab for GeoGraphical data analysis">
+<meta name="generator" content="mynt v0.3.1">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href='//fonts.googleapis.com/earlyaccess/cwtexyen.css' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/earlyaccess/cwtexhei.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>-->
+  <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|Ubuntu+Mono:400,700,400italic,700italic" type="text/css">-->
+  
+  <!-- flex list for navbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet"/>-->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+<link rel="alternate" href="/feed.xml" type="application/atom+xml">-->
+  
+  <link rel="stylesheet" href="/assets/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/pastie.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/typicons/typicons.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/pygments.css" type="text/css">
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/mynt.min.js" type="text/javascript"></script>-->
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link rel="icon" type="image/png" href="images/favicon.png">-->
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Droid Sans', 'Droid Serif']
+    }
+  });
+</script>
+-->
+
+  <!-- Google analytics
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65836543-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <!-- MathJax
+  ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    
+    <title>考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性 : Blog – Chin.Mini-Lab</title>
+
+	
+</head>
+
+<body>
+  <div class="container">
+	<div class="row">
+	<div class="five columns" style="margin-top: 1%">
+		<h2 id="title"><font face="Gruppo">Chin.Mini-Lab<a href="/" title="Chin.Mini-Lab"><big><span class="typcn typcn-globe-outline"></span></big></a>
+        <small>Geo-Graph-ing</small></font></h2>
+        
+    </div>
+	  <div class="seven columns" style="margin-top: 1%">
+			<div align="right"> 
+			<font face="Gruppo"><h2>
+			<a href="/" title="Blog"><span class="typcn typcn-home"></span></a> | 
+			<a href="/about/" title="About"><span class="typcn typcn-user"></span></a> | 
+			<a href="/geograph/" title="Geo-Graph"><span class="typcn typcn-flow-switch"></span></a> | 
+			<a href="/lightbulb/" title="Light-bulb"><span class="typcn typcn-lightbulb"></span></a> | 
+			<a href="/workingdesk/" title="Working"><span class="typcn typcn-device-laptop"></span></a> | 
+			<a href="/notes/" title="Notes"><span class="typcn typcn-edit"></span></a> |  
+			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span></a> |
+			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span></a> |
+			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>
+			</h2></font>
+			</div>
+      </div>
+	</div>
+	<div class="row">
+        <font face="Gruppo">
+    <span class="typcn typcn-globe"></span><a href="/">Mini-lab</a> / <a href="/presentations/">Presentations</a> / 考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性
+</font>
+	</div>
+    <div class="row">
+		<div class="eight columns">
+			<div id="content">
+				<div class="container">
+					
+<h2 class="post-title"> 考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性 </h2>
+
+				</div>
+			</div>
+		</div>
+		<div class="four columns">
+			<div id="content">
+				<div class="container">
+					<font face="Gruppo">
+<h5 class="post-meta" align="right">  <span>»</span> <a href="/presentations/tag/network/">network</a>, <a href="/presentations/tag/pagerank/">pagerank</a></h5>
+</font>
+				</div>
+			</div>
+		</div>
+			<hr width="80%">
+    </div>
+    <div class="row">
+		<div id="content">
+			<div class="container">
+				
+    <h4>Geographically modified PageRank algorithms: Measuring the importance of nodes in a geospatial network</h4>
+<ul>
+<li>Conference: 中國地理學會年會</li>
+<li>Year: 2014</li>
+<li>Location: 國立台灣大學，台北市,台灣</li>
+<li>Language: Mandarin</li>
+<li>Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen</li>
+</ul>
+<h4>Abstract</h4>
+<p>This study aims to proposed two geographically modified diffusion-based algorithms, to figure out where people live their lives. Since human movements reflects the locations where the daily lives of people occurred, a transportation network, which represent how places connect with each other by transportation system, could be used to uncover the spatial distribution pattern of the people’s daily lives. PageRank (PR), a successful diffusion-based algorithm, is what Google uses to determine how important a webpage is on the World Wide Web. However, most measures of network analysis, including PR, were designed to understand network topological structures rather than geographical structures. In other words, these measures have not considered the geographical constraints as their main concern. This study incorporates geographic properties, including distance-decay and gravity model among nodes, and proposes two modified PR algorithms, the Inversed-Distance PageRank (IDPR), and Geographical PageRank (GPR). To test the performance of the IDPR and GPR, this study calculated the IDPR and GPR for the inter-city network of Taiwan. Then, we used the population data and inter-townships car flow data as observed data to understand the correlation between them, and compared the correlation results with the correlations calculated with the existing algorithms, including PR and Weighted PageRank (WPR), and three centrality measurements, including degree, closeness, and betweenness. The results showed that IDPR and GPR are better correlated with the observed data. Since IDPR and GPR take the distance decay effect into account, results using the algorithms can capture more geographical properties. In conclusion, while dealing with a geographical issue, which distance decay effect existed, IDPR and GPR are better algorithms to be used in the analysis.</p>
+<h4>Keywords</h4>
+<p>PageRank, distance decay, gravity model, geospatial network</p>
+<h4>摘要:</h4>
+<p>本研究旨在提出兩個以地理特性修改之擴散式演算法,以討論人的生活環境空間的分佈。因人的生活的所在空間可以透過人的移動所反映,反應地方之間如何相連的交通網絡可以用以揭示人類生活空間的空間分佈形態。PageRank (PR),是一個擴散式演算法,其是 Google 搜尋引擎背後從網際網路中找出重要網頁的主要演算法。然而,大多數網絡分析的評量方法,包括 PR,皆以分析網絡拓撲結構為主要目的,而地理結構則並非其主要分析目的。換言之,這些評量方法並沒有將地理的限制納入其分析的考量。因此,本研究將地理特性,包括地方與地方之間的互動強度的距離遞減效果及引力模型特性與PageRank 演算法做整合,並提出兩個地理特性修改之 PageRank 演算法,包括Inversed-Distance PageRank (IDPR), 及 Geographical PageRank (GPR)。為了解IDPR 及 GPR 捕捉重要節點之能力,本研究將人口及城際運輸流量資料作為觀察資料,與計算所得之 IDPR 及 GPR 的結果做相關分析,並與已存在的 PR 及Weighted PageRank (WPR) ,及傳統網絡分析之中心性指標 (centrality) 之相關分析結果做比較。結果顯示,IDPR 及 GPR 與觀察資料有較高的相關性。因 IDPR及 GPR 都有考量距離遞減效果,因此其能夠捕捉較多的地理特性以運用於演算法中,並產出具考量地理特性之重要性分佈的結果。因此,當我們在討論具有地理特性之議題並分析其地理空間網絡時,IDPR 與 GPR 是較好的演算法。</p>
+<h3>關鍵字</h3>
+<p>PageRank, 距離遞減, 引力模型, 地理空間網絡</p>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'chinminilab';
+		
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+			</div>
+		</div>
+	</div>
+    <div class="row">
+			<hr width="80%">
+		<div id="content">
+			<div class="container" align="center">
+				 <h6><font face="Gruppo"> <small>Built with <a href="http://mynt.uhnomoli.com" target="blank">mynt</a>.<br></small> 2015 <a href="/" title="Chin.Mini-Lab"><span class="typcn typcn-globe"></span></a> Benny Chin.</font></h6>
+			</div>
+		</div>
+	</div>
+    </div>
+  </div>
+</body>
+</html>
