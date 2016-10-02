@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-10-01T18:58:27Z</updated>
+    <updated>2016-10-02T16:36:33Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -18,7 +18,7 @@
             <title>Gephi tutorial site</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/09/24/gephi_tutorial_site/" type="text/html" />
             <id>http://wcchin.github.io/2016/09/24/gephi_tutorial_site/</id>
-            <updated>2016-09-24T21:59:00Z</updated>
+            <updated>2016-09-24T13:59:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Announcement: Gephi tutorial site in chinese is built&lt;/h2&gt;
@@ -37,7 +37,7 @@
             <title>Space-time process of dengue transmission (part 2) -- the ANIMATED Progression Graph</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/08/04/visualanalysis_dengue_progressGraph_part2/" type="text/html" />
             <id>http://wcchin.github.io/2016/08/04/visualanalysis_dengue_progressGraph_part2/</id>
-            <updated>2016-08-04T23:52:00Z</updated>
+            <updated>2016-08-04T15:52:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Upgrading the visualization of the result&lt;/h2&gt;
@@ -71,7 +71,7 @@ So the plan has been changed. I only use different colors to separate the chaine
             <title>Space-time process of dengue transmission -- the Progression Graph</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/29/visualanalysis_dengue_progressGraph/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/29/visualanalysis_dengue_progressGraph/</id>
-            <updated>2016-07-29T11:57:00Z</updated>
+            <updated>2016-07-29T03:57:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;Rewrite of codes&lt;/h2&gt;
@@ -91,7 +91,7 @@ So the plan has been changed. I only use different colors to separate the chaine
             <title>&#39;Processing&#39; human movements in Taipei City</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/12/processing_human_movement_part1/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/12/processing_human_movement_part1/</id>
-            <updated>2016-07-12T17:20:00Z</updated>
+            <updated>2016-07-12T09:20:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;working on Taipei City&amp;rsquo;s open data &lt;/h2&gt;
@@ -129,7 +129,7 @@ So, instead of making a web-based viz, I recorded the results as video.&lt;/p&gt
             <title>Visualizing global migration</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/12/visualizing_global_migration/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/12/visualizing_global_migration/</id>
-            <updated>2016-07-12T11:57:00Z</updated>
+            <updated>2016-07-12T03:57:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;The global migration network&lt;/h2&gt;
@@ -162,7 +162,7 @@ It is a bilateral matrix, so using each row/column of the matrix as the nodes, a
             <title>the animated svg for viewing Bike Sharing OD relationship</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/07/09/about_animated_od_ubike/" type="text/html" />
             <id>http://wcchin.github.io/2016/07/09/about_animated_od_ubike/</id>
-            <updated>2016-07-09T16:43:00Z</updated>
+            <updated>2016-07-09T08:43:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;animated svg&lt;/h2&gt;
@@ -184,7 +184,7 @@ The animation is recorded as in video: &lt;a href=&#34;https://drive.google.com/
             <title>the nearest neighbours in two dimensions space</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_kdtree_in_work/" type="text/html" />
             <id>http://wcchin.github.io/2016/04/22/about_kdtree_in_work/</id>
-            <updated>2016-04-22T08:52:00Z</updated>
+            <updated>2016-04-22T00:52:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;nearest neighbours&lt;/h2&gt;
@@ -234,7 +234,7 @@ sparse_distance_matrix(other, max_distance) #Compute a sparse distance matrix
             <title>working with heapq in python</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_heapq_in_python/" type="text/html" />
             <id>http://wcchin.github.io/2016/04/22/about_heapq_in_python/</id>
-            <updated>2016-04-22T08:50:00Z</updated>
+            <updated>2016-04-22T00:50:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;simple notes on heapq&lt;/h2&gt;
@@ -274,7 +274,7 @@ So, with a min heap or max heap, it can always pop out the smallest or biggest i
             <title>Using tiddler - lightbulb page changed</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/01/30/renew_lightbulb_page/" type="text/html" />
             <id>http://wcchin.github.io/2016/01/30/renew_lightbulb_page/</id>
-            <updated>2016-01-30T13:31:00Z</updated>
+            <updated>2016-01-30T05:31:00Z</updated>
             
             <summary type="html">The note page was changed to tiddler wiki based.</summary>
             <content type="html">&lt;p&gt;The note page was changed to tiddler wiki based.&lt;/p&gt;
@@ -295,10 +295,36 @@ Tiddlers are linked to the related tiddlers, just the same as the &amp;ldquo;wik
         </entry>
     
         <entry>
+            <title>Pushing items to gh-pages</title>
+            <link rel="alternate" href="http://wcchin.github.io/2015/10/31/sync_ghpages/" type="text/html" />
+            <id>http://wcchin.github.io/2015/10/31/sync_ghpages/</id>
+            <updated>2015-10-31T23:06:00Z</updated>
+            
+            <summary type="html">I am new to the &amp;lsquo;git&amp;rsquo; world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.</summary>
+            <content type="html">&lt;p&gt;I am new to the &amp;lsquo;git&amp;rsquo; world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.&lt;/p&gt;
+
+&lt;p&gt;The following codes would push things from local to the master branch:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add --all
+git commit -m &amp;#x27;the message about what have been changed&amp;#x27;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If the master branch is the gh-pages branch, then this is done.&lt;br&gt;
+The following codes would sync the gh-pages branch with the master:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git checkout gh-pages
+git rebase master
+git push origin gh-pages
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, the gh-pages would be online to the webpage:&lt;br&gt;
+&lt;a href=&#34;https://username.github.io/repositoryname/filename.html&#34;&gt;https://username.github.io/repositoryname/filename.html&lt;/a&gt;&lt;/p&gt;
+</content>
+        </entry>
+    
+        <entry>
             <title>Using mynt - a static site generator</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/10/31/using_mynt/" type="text/html" />
             <id>http://wcchin.github.io/2015/10/31/using_mynt/</id>
-            <updated>2015-10-31T10:02:00Z</updated>
+            <updated>2015-10-31T02:02:00Z</updated>
             
             <summary type="html">This website is generated by using mynt &amp;ndash; a static site generator writen in python. Mynt will convert markdown text file to html by using the corresponding layout. &lt;a href=&#34;http://mynt.uhnomoli.com/&#34;&gt;Mynt&amp;rsquo;s website&lt;/a&gt;.</summary>
             <content type="html">&lt;p&gt;This website is generated by using mynt &amp;ndash; a static site generator writen in python. Mynt will convert markdown text file to html by using the corresponding layout. &lt;a href=&#34;http://mynt.uhnomoli.com/&#34;&gt;Mynt&amp;rsquo;s website&lt;/a&gt;.&lt;/p&gt;
@@ -427,36 +453,10 @@ mynt serve output&amp;#x2F;target -p 8001
         </entry>
     
         <entry>
-            <title>Pushing items to gh-pages</title>
-            <link rel="alternate" href="http://wcchin.github.io/2015/10/31/sync_ghpages/" type="text/html" />
-            <id>http://wcchin.github.io/2015/10/31/sync_ghpages/</id>
-            <updated>2015-10-31T07:06:00Z</updated>
-            
-            <summary type="html">I am new to the &amp;lsquo;git&amp;rsquo; world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.</summary>
-            <content type="html">&lt;p&gt;I am new to the &amp;lsquo;git&amp;rsquo; world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.&lt;/p&gt;
-
-&lt;p&gt;The following codes would push things from local to the master branch:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add --all
-git commit -m &amp;#x27;the message about what have been changed&amp;#x27;
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If the master branch is the gh-pages branch, then this is done.&lt;br&gt;
-The following codes would sync the gh-pages branch with the master:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git checkout gh-pages
-git rebase master
-git push origin gh-pages
-git checkout master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then, the gh-pages would be online to the webpage:&lt;br&gt;
-&lt;a href=&#34;https://username.github.io/repositoryname/filename.html&#34;&gt;https://username.github.io/repositoryname/filename.html&lt;/a&gt;&lt;/p&gt;
-</content>
-        </entry>
-    
-        <entry>
             <title>Article published</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/10/06/published/" type="text/html" />
             <id>http://wcchin.github.io/2015/10/06/published/</id>
-            <updated>2015-10-06T19:20:00Z</updated>
+            <updated>2015-10-06T11:20:00Z</updated>
             
             <summary type="html">Hooray~ This is an exciting news. </summary>
             <content type="html">&lt;p&gt;Hooray~ This is an exciting news. &lt;/p&gt;
@@ -485,7 +485,7 @@ The article could be accessed from the &lt;a href=&#34;http://journals.plos.org/
             <title>Using plotly</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/09/07/using_plotly/" type="text/html" />
             <id>http://wcchin.github.io/2015/09/07/using_plotly/</id>
-            <updated>2015-09-07T17:36:00Z</updated>
+            <updated>2015-09-07T09:36:00Z</updated>
             
             <summary type="html">I made a &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34; target=&#34;_blank&#34;&gt;3D scatter plot&lt;/a&gt; with &lt;a href=&#34;https://plot.ly&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt; yesterday, in ipython notebook (Jupyter).
 The data was stored in github, including the processed point data (with centroid coordinate), and the boundary vertex of Taiwan.</summary>
@@ -641,7 +641,7 @@ plot_url = py.plot(fig, filename=&amp;#x27;Taiwan dengue cases (indigenous or im
             <title>Using nbconvert to convert ipynb to slides in html</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/27/using_nbconverttoslides/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/27/using_nbconverttoslides/</id>
-            <updated>2015-08-27T20:06:00Z</updated>
+            <updated>2015-08-27T12:06:00Z</updated>
             
             <summary type="html">This is a note on using nbconvert to make slides from ipynb to html, with markdown and codes using jupyter.
 jupyter, nbconvert have to be installed in the computer.</summary>
@@ -688,7 +688,7 @@ $ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&a
             <title>Adding math formula</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/21/Including_mathjax/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/21/Including_mathjax/</id>
-            <updated>2015-08-21T00:00:00Z</updated>
+            <updated>2015-08-21T16:00:00Z</updated>
             
             <summary type="html">Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;</summary>
             <content type="html">&lt;p&gt;Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;&lt;/p&gt;
@@ -711,7 +711,7 @@ $ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&a
             <title>Adding commenting system</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/20/Added_disqus/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/20/Added_disqus/</id>
-            <updated>2015-08-20T00:00:00Z</updated>
+            <updated>2015-08-20T16:00:00Z</updated>
             
             <summary type="html">In order to get feedbacks from friends, I added the Disqus commenting system in this site.</summary>
             <content type="html">&lt;p&gt;In order to get feedbacks from friends, I added the Disqus commenting system in this site.&lt;/p&gt;
@@ -734,7 +734,7 @@ $ jupyter nbconvert --to slides filename.ipynb --reveal-prefix &amp;quot;http:&a
             <title>First post of the mini-lab</title>
             <link rel="alternate" href="http://wcchin.github.io/2015/08/03/First_post/" type="text/html" />
             <id>http://wcchin.github.io/2015/08/03/First_post/</id>
-            <updated>2015-08-03T00:00:00Z</updated>
+            <updated>2015-08-03T16:00:00Z</updated>
             
             
             <content type="html">&lt;h5&gt;Welcome to &lt;a href=&#34;https://wcchin.github.io&#34; target=&#34;_blank&#34;&gt;Benny.mini-lab&lt;/a&gt;.&lt;/h5&gt;
