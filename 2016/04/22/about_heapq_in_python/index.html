@@ -91,15 +91,15 @@
 	  <div class="seven columns" style="margin-top: 1%">
 			<div align="right"> 
 			<font face="Gruppo"><h2>
-			<a href="/" title="Blog"><span class="typcn typcn-home"></span></a> | 
-			<a href="/about/" title="About"><span class="typcn typcn-user"></span></a> | 
+			<a href="/" title="Blog"><span class="typcn typcn-home"></span> <small>Blog</small> </a> | 
+			<a href="/about/" title="About"><span class="typcn typcn-user"></span> <small>Me</small> </a> | 
+			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span> <small>Writes</small> </a> |
+			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span> <small>Talks</small> </a> |
+			<a href="/working/" title="Working"><span class="typcn typcn-device-laptop"></span> <small>Works</small> </a> <!--| 
 			<a href="/geograph/" title="Geo-Graph"><span class="typcn typcn-flow-switch"></span></a> | 
 			<a href="/lightbulb/" title="Light-bulb"><span class="typcn typcn-lightbulb"></span></a> | 
-			<a href="/workingdesk/" title="Working"><span class="typcn typcn-device-laptop"></span></a> | 
 			<a href="/notes/" title="Notes"><span class="typcn typcn-edit"></span></a> |  
-			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span></a> |
-			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span></a> |
-			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>
+			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>-->
 			</h2></font>
 			</div>
       </div>
@@ -161,19 +161,19 @@ So, with a min heap or max heap, it can always pop out the smallest or biggest i
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">heapq</span>
-    <span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>  <span class="c1">#first, create a list that populated with items</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre>    <span class="kn">import</span> <span class="nn">heapq</span>
+    <span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>  <span class="c">#first, create a list that populated with items</span>
 
-    <span class="n">heapq</span><span class="o">.</span><span class="n">heapify</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c1">#heapify the list, that create a heap tree, inplace</span>
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heapify</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c">#heapify the list, that create a heap tree, inplace</span>
     <span class="n">aheap</span><span class="o">=</span><span class="n">alist</span>
 
-    <span class="n">heapsort</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c1"># this will create a sorted list of the list</span>
+    <span class="n">heapsort</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span> <span class="c"># this will create a sorted list of the list</span>
 
-    <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">aheap</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># add the item 10 into the heap tree</span>
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">aheap</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c"># add the item 10 into the heap tree</span>
 
-    <span class="n">heapq</span><span class="o">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">aheap</span><span class="p">)</span> <span class="c1"># pop out and return the smallest item from the heap tree</span>
+    <span class="n">heapq</span><span class="o">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">aheap</span><span class="p">)</span> <span class="c"># pop out and return the smallest item from the heap tree</span>
 
-    <span class="n">aheap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># access the smallest number without pop it out</span>
+    <span class="n">aheap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># access the smallest number without pop it out</span>
      
 </pre></div>
 </td></tr></table></div></div>

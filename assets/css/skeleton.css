@@ -125,8 +125,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "cwTeXYen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #CCCCCC;
-  background-color: #0C0C0C;
+  color: #000000;
+  background-color: #eaeaff;
 /*  background-image: url(img/noise.png);
   background-repeat:repeat; 
 */}
@@ -162,9 +162,12 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– #1EAEDB #0FA0CE */
 a {
-  color: #AA88FC; } /*#4F49CC; #9900CC; #99CCCC}*/
+  color: #1111CF; 
+  text-decoration:none;} /*#4F49CC; #9900CC; #99CCCC}*/
 a:hover {
   color: #C50BF9;} /* #332D9D; } */
+a:active {
+  color:red;}
 
 
 /* Buttons

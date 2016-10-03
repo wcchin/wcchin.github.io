@@ -91,15 +91,15 @@
 	  <div class="seven columns" style="margin-top: 1%">
 			<div align="right"> 
 			<font face="Gruppo"><h2>
-			<a href="/" title="Blog"><span class="typcn typcn-home"></span></a> | 
-			<a href="/about/" title="About"><span class="typcn typcn-user"></span></a> | 
+			<a href="/" title="Blog"><span class="typcn typcn-home"></span> <small>Blog</small> </a> | 
+			<a href="/about/" title="About"><span class="typcn typcn-user"></span> <small>Me</small> </a> | 
+			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span> <small>Writes</small> </a> |
+			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span> <small>Talks</small> </a> |
+			<a href="/working/" title="Working"><span class="typcn typcn-device-laptop"></span> <small>Works</small> </a> <!--| 
 			<a href="/geograph/" title="Geo-Graph"><span class="typcn typcn-flow-switch"></span></a> | 
 			<a href="/lightbulb/" title="Light-bulb"><span class="typcn typcn-lightbulb"></span></a> | 
-			<a href="/workingdesk/" title="Working"><span class="typcn typcn-device-laptop"></span></a> | 
 			<a href="/notes/" title="Notes"><span class="typcn typcn-edit"></span></a> |  
-			<a href="/publications/" title="Publications"><span class="typcn typcn-zoom"></span></a> |
-			<a href="/presentations/" title="Presentations"><span class="typcn typcn-image"></span></a> |
-			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>
+			<a href="/links/" title="Links"><span class="typcn typcn-link-outline"></span></a>-->
 			</h2></font>
 			</div>
       </div>
@@ -163,21 +163,21 @@ So, it would be for each person, search one time.</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
 
-<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># x coordinates of base points...</span>
-<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># y coordinates of base points...</span>
+<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c"># x coordinates of base points...</span>
+<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c"># y coordinates of base points...</span>
 
-<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c1"># x coordinates for the three people</span>
+<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c"># x coordinates for the three people</span>
 <span class="n">py</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">6.3</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span> <span class="err">$</span> <span class="n">ycoordinates</span> <span class="k">for</span> <span class="n">the</span> <span class="n">three</span> <span class="n">people</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xlist</span><span class="p">,</span><span class="n">ylist</span><span class="p">)</span>
 <span class="n">pts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">)</span>
 <span class="n">tree</span> <span class="o">=</span> <span class="n">spatial</span><span class="o">.</span><span class="n">KDTree</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># the nearby radius for searching</span>
-<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> <span class="c1"># If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
-<span class="c1"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
+<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c"># the nearby radius for searching</span>
+<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> <span class="c"># If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
+<span class="c"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
 </pre></div>
 </td></tr></table></div></div>
 <p>besides query_ball_point, there are other methods (from <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">scipy</a>):</p>
@@ -185,11 +185,11 @@ So, it would be for each person, search one time.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c1">#Count how many nearby pairs can be formed.</span>
-<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c1">#Query the kd-tree for nearest neighbors</span>
-<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c1">#Find all pairs of points whose distance is at most r</span>
-<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c1">#Find all pairs of points within a distance.</span>
-<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c1">#Compute a sparse distance matrix</span>
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c">#Count how many nearby pairs can be formed.</span>
+<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c">#Query the kd-tree for nearest neighbors</span>
+<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c">#Find all pairs of points whose distance is at most r</span>
+<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c">#Find all pairs of points within a distance.</span>
+<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c">#Compute a sparse distance matrix</span>
 </pre></div>
 </td></tr></table></div></div>
 <p><a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">more details from scipy docs</a></p>
