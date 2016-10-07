@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-10-05T14:47:22Z</updated>
+    <updated>2016-10-07T06:35:28Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -13,6 +13,41 @@
         <uri>http://wcchin.github.io/</uri>
     </author>
     
+    
+        <entry>
+            <title>Exporting jupyter slides to html/pdf</title>
+            <link rel="alternate" href="http://wcchin.github.io/2016/10/07/export-revealjs-slides-to-pdf/" type="text/html" />
+            <id>http://wcchin.github.io/2016/10/07/export-revealjs-slides-to-pdf/</id>
+            <updated>2016-10-07T06:35:00Z</updated>
+            
+            
+            <content type="html">&lt;h2&gt;Exporting jupyter slides to html / pdf&lt;/h2&gt;
+&lt;p&gt;This snippet is a file that use nbconvert and decktape to convert the revealjs html or jupyter slides into html/pdf.&lt;/p&gt;
+&lt;h2&gt;Usage&lt;/h2&gt;
+&lt;p&gt;run this code to convert to pdf from notebook:
+python export_reveal.py &amp;ndash;notebook jupyter_notebook_file_name.ipynb&lt;/p&gt;
+
+&lt;p&gt;run this code to convert to pdf from converted html file:
+python export_reveal.py &amp;ndash;html reveal_js_file_name.html&lt;/p&gt;
+
+&lt;p&gt;additional options:
+-o, &amp;ndash;output    specifying an output filename, 
+-c              shortcut custimization button for customizing reveal using sky theme and concave transition
+&amp;ndash;trans         for changing transition method: concave, zoom&amp;hellip;
+&amp;ndash;theme         for changing theme, default to simple.css&lt;/p&gt;
+
+&lt;p&gt;for more detail, please check:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nbconvert - &lt;a href=&#34;https://github.com/jupyter/nbconvert&#34;&gt;https://github.com/jupyter/nbconvert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;decktape - &lt;a href=&#34;https://github.com/astefanutti/decktape&#34;&gt;https://github.com/astefanutti/decktape&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Snippet&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/wcchin/d25dea4c7f68acedb6d923f67bb0549c&#34;&gt;https://gist.github.com/wcchin/d25dea4c7f68acedb6d923f67bb0549c&lt;/a&gt;&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/wcchin/d25dea4c7f68acedb6d923f67bb0549c.js&#34;&gt;&lt;/script&gt;
+</content>
+        </entry>
     
         <entry>
             <title>Gephi tutorial site</title>
