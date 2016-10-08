@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-10-07T06:35:28Z</updated>
+    <updated>2016-10-08T11:42:10Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -219,7 +219,7 @@ The animation is recorded as in video: &lt;a href=&#34;https://drive.google.com/
             <title>the nearest neighbours in two dimensions space</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_kdtree_in_work/" type="text/html" />
             <id>http://wcchin.github.io/2016/04/22/about_kdtree_in_work/</id>
-            <updated>2016-04-22T00:52:00Z</updated>
+            <updated>2016-04-22T11:42:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;nearest neighbours&lt;/h2&gt;
@@ -243,7 +243,7 @@ xlist = [5,4,3,8,7,6] # x coordinates of base points...
 ylist = [1,0,3,8,5,3] # y coordinates of base points...
 
 px = [2.4, 4.8, 1.2] # x coordinates for the three people
-py = [1.1, 6.3, 9.8] $ ycoordinates for the three people
+py = [1.1, 6.3, 9.8] # y coordinates for the three people
 
 data = zip(xlist,ylist)
 pts = zip(px,py)
