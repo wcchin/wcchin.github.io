@@ -5,7 +5,7 @@
     <link rel="alternate" href="http://wcchin.github.io/" />
     <link rel="self" href="http://wcchin.github.io/feed.xml" type="application/atom+xml" />
     <id>http://wcchin.github.io/</id>
-    <updated>2016-10-08T11:42:10Z</updated>
+    <updated>2016-10-15T17:33:16Z</updated>
     
     <author>
         <name>Benny Chin</name>
@@ -219,7 +219,7 @@ The animation is recorded as in video: &lt;a href=&#34;https://drive.google.com/
             <title>the nearest neighbours in two dimensions space</title>
             <link rel="alternate" href="http://wcchin.github.io/2016/04/22/about_kdtree_in_work/" type="text/html" />
             <id>http://wcchin.github.io/2016/04/22/about_kdtree_in_work/</id>
-            <updated>2016-04-22T11:42:00Z</updated>
+            <updated>2016-04-22T11:48:00Z</updated>
             
             
             <content type="html">&lt;h2&gt;nearest neighbours&lt;/h2&gt;
@@ -250,7 +250,9 @@ pts = zip(px,py)
 tree = spatial.KDTree(data)
 
 nn_radius = 3 # the nearby radius for searching
-nlist = tree.query_ball_point(x=pts, r=nn_radius) # If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.
+nlist = tree.query_ball_point(x=pts, r=nn_radius) 
+# If x is a single point, returns a list of the indices of the neighbors of x. 
+# If x is an array of points, returns an object array of shape tuple containing lists of neighbors.
 # in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. 
 
 &lt;/code&gt;&lt;/pre&gt;

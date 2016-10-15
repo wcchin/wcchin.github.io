@@ -163,7 +163,9 @@ So, it would be for each person, search one time.</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
 
 <span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c"># x coordinates of base points...</span>
 <span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c"># y coordinates of base points...</span>
@@ -176,7 +178,9 @@ So, it would be for each person, search one time.</p>
 <span class="n">tree</span> <span class="o">=</span> <span class="n">spatial</span><span class="o">.</span><span class="n">KDTree</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c"># the nearby radius for searching</span>
-<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> <span class="c"># If x is a single point, returns a list of the indices of the neighbors of x. If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
+<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> 
+<span class="c"># If x is a single point, returns a list of the indices of the neighbors of x. </span>
+<span class="c"># If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
 <span class="c"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
 </pre></div>
 </td></tr></table></div></div>
