@@ -1,0 +1,504 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="shortcut icon" href="" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Benny Chin" />
+        <title>Using plotly</title>
+        
+<meta name="description" content="&lt;p&gt;I made a &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34; target=&#34;_blank&#34;&gt;3D scatter plot&lt;/a&gt; with &lt;a href=&#34;https://plot.ly&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt; yesterday, in ipython notebook (Jupyter).
+The data was stored in github, including the processed point data (with centroid coordinate), and the boundary vertex of Taiwan.&lt;/p&gt;
+&lt;p&gt;The plot figures is at &lt;a href=&#34;https://wcchin.github.io/geograph/dengue_spacetimemap/&#34;&gt;Dengue cases at Taiwan from year 2014 &lt;/a&gt; 
+or in &lt;a href=&#34;https://plot.ly/~wcchin/67/indigenous-case-imported-case-taiwan-boundary/&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The code …&lt;/p&gt;" />
+<meta name="keywords" content=" ipython plotly  "/>
+
+        <!--[if !IE 7]>
+        <style type="text/css">
+            #main-content {display:table;height:100%}
+        </style>
+        <![endif]-->
+        <link rel="stylesheet" href="/theme/css/backdrop.css" />
+        <link rel="stylesheet" href="/theme/css/pygments.css" />
+        <script src="/theme/js/modernizr.js"></script>
+
+        
+    </head>
+      
+
+    <body>
+        <div class="master-row">
+
+            <div class="content-pane main-content">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty --></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/pages/about-the-mini-lab-and-i.html">About the mini-lab and I</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="/category/annoucements.html">Annoucements</a></li>
+                            <li class="active"><a href="/category/blogs.html">Blogs</a></li>
+                            <li><a href="/category/presentation.html">Presentation</a></li>
+                            <li><a href="/category/project.html">Project</a></li>
+                            <li><a href="/category/publication.html">Publication</a></li>
+                        </ul>
+                    </section>
+                </nav>
+
+                <div class="row title-bar">
+                    <div class="small-12 columns">
+                        <h1><a href="">Chin.Mini Lab</a></h1><h2> <small>a Geographer, Cartographer, & GIScientist</small></h2>
+                        <hr>
+                    </div>
+                </div>
+            
+                <div id="contents">
+<div class="row">
+    <div class="small-12 columns article">
+        <h2>Using plotly</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; Mon 07 September 2015</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="/category/blogs.html">Blogs</a></span></li>
+            <li><span><i class="fa fa-comments"></i>&nbsp; <a href="/using-plotly.html#disqus_thread" rel="bookmark" title="Disqus Comments">Using plotly</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+                    <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="article">
+            <p>I made a <a href="https://wcchin.github.io/geograph/dengue_spacetimemap/" target="_blank">3D scatter plot</a> with <a href="https://plot.ly" target="_blank">plotly</a> yesterday, in ipython notebook (Jupyter).
+The data was stored in github, including the processed point data (with centroid coordinate), and the boundary vertex of Taiwan.</p>
+<p>The plot figures is at <a href="https://wcchin.github.io/geograph/dengue_spacetimemap/">Dengue cases at Taiwan from year 2014 </a> 
+or in <a href="https://plot.ly/~wcchin/67/indigenous-case-imported-case-taiwan-boundary/" target="_blank">plotly</a>.</p>
+<p>The code is as the following:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">reload</span><span class="p">(</span><span class="n">sys</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">setdefaultencoding</span><span class="p">(</span><span class="s">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>
+<span class="kn">from</span> <span class="nn">plotly.graph_objs</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;https://raw.githubusercontent.com/wcchin/gdata/master/Dengue_ALL_4_1415.csv&#39;</span><span class="p">)</span>
+<span class="n">df_bound</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;https://raw.githubusercontent.com/wcchin/gdata/master/taiwan_bound_84_vertices2.csv&#39;</span><span class="p">)</span>
+<span class="n">yy</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">xx</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">zz</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">vilname</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;fullname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">importcheck</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;importcase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">datelist_imp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">latlist_imp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lonlist_imp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">vilname_imp</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">datelist_ind</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">latlist_ind</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lonlist_ind</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">vilname_ind</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">year</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">month</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">day</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">year</span><span class="p">)):</span>
+    <span class="n">thisyear</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">thismonth</span> <span class="o">=</span> <span class="n">month</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">thisday</span> <span class="o">=</span> <span class="n">day</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">thisdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">thisyear</span><span class="p">,</span> <span class="n">thismonth</span><span class="p">,</span> <span class="n">thisday</span><span class="p">)</span>
+    <span class="n">thisvilname</span><span class="o">=</span><span class="n">vilname</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;big5&#39;</span><span class="p">)</span>
+    <span class="c">#print importcheck[i]</span>
+    <span class="k">if</span> <span class="n">importcheck</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="bp">True</span><span class="p">:</span>
+        <span class="n">datelist_imp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisdate</span><span class="p">)</span>
+        <span class="n">latlist_imp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">yy</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">lonlist_imp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xx</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">vilname_imp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisvilname</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">datelist_ind</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisdate</span><span class="p">)</span>
+        <span class="n">latlist_ind</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">yy</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">lonlist_ind</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xx</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">vilname_ind</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisvilname</span><span class="p">)</span>
+<span class="c">#print len(datelist_ind)</span>
+<span class="c">#print len(datelist_imp)</span>
+
+<span class="n">bound_x</span> <span class="o">=</span> <span class="n">df_bound</span><span class="p">[</span><span class="s">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">bound_y</span> <span class="o">=</span> <span class="n">df_bound</span><span class="p">[</span><span class="s">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">zero</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">bound_z</span> <span class="o">=</span> <span class="n">zero</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bound_x</span><span class="p">))</span>
+
+<span class="n">trace1</span> <span class="o">=</span> <span class="n">Scatter3d</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">lonlist_ind</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="n">latlist_ind</span><span class="p">,</span> 
+    <span class="n">z</span><span class="o">=</span><span class="n">datelist_ind</span><span class="p">,</span> 
+    <span class="n">text</span><span class="o">=</span><span class="n">vilname_ind</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;indigenous case&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">line</span><span class="o">=</span><span class="n">Line</span><span class="p">(</span>
+            <span class="n">color</span><span class="o">=</span><span class="s">&#39;rgb(0, 0, 0)&#39;</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span>
+        <span class="p">),</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.8</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">trace2</span> <span class="o">=</span> <span class="n">Scatter3d</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">lonlist_imp</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="n">latlist_imp</span><span class="p">,</span> 
+    <span class="n">z</span><span class="o">=</span><span class="n">datelist_imp</span><span class="p">,</span> 
+    <span class="n">text</span><span class="o">=</span><span class="n">vilname_imp</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;imported case&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">&#39;rgb(255, 65, 54)&#39;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">symbol</span><span class="o">=</span><span class="s">&#39;circle&#39;</span><span class="p">,</span>
+        <span class="n">line</span><span class="o">=</span><span class="n">Line</span><span class="p">(</span>
+            <span class="n">color</span><span class="o">=</span><span class="s">&#39;rgb(255, 65, 54)&#39;</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">),</span>
+        <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">tracebound</span> <span class="o">=</span> <span class="n">Scatter3d</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span> <span class="n">bound_x</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span> <span class="n">bound_y</span><span class="p">,</span> 
+    <span class="n">z</span><span class="o">=</span> <span class="n">bound_z</span><span class="p">,</span> 
+    <span class="n">mode</span><span class="o">=</span><span class="s">&#39;lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s">&#39;taiwan boundary&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">&#39;#1f77b4&#39;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+        <span class="n">symbol</span><span class="o">=</span><span class="s">&#39;circle&#39;</span><span class="p">,</span>
+        <span class="n">line</span><span class="o">=</span><span class="n">Line</span><span class="p">(</span>
+            <span class="n">color</span><span class="o">=</span><span class="s">&#39;rgb(0,0,0)&#39;</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">line</span><span class="o">=</span><span class="n">Line</span><span class="p">(</span>
+        <span class="n">color</span><span class="o">=</span><span class="s">&#39;#1f77b4&#39;</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">1</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">([</span><span class="n">trace1</span><span class="p">,</span> <span class="n">trace2</span><span class="p">,</span> <span class="n">tracebound</span><span class="p">])</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
+    <span class="n">margin</span><span class="o">=</span><span class="n">Margin</span><span class="p">(</span>
+        <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">t</span><span class="o">=</span><span class="mi">0</span>
+    <span class="p">),</span>
+    <span class="n">legend</span><span class="o">=</span><span class="n">Legend</span><span class="p">(</span>
+        <span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">traceorder</span><span class="o">=</span><span class="s">&#39;reversed&#39;</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="n">Font</span><span class="p">(</span>
+            <span class="n">size</span><span class="o">=</span><span class="mi">16</span>
+        <span class="p">),</span>
+        <span class="n">yref</span><span class="o">=</span><span class="s">&#39;paper&#39;</span>
+    <span class="p">),</span>
+
+    <span class="n">scene</span><span class="o">=</span><span class="n">Scene</span><span class="p">(</span>
+        <span class="n">xaxis</span><span class="o">=</span><span class="n">XAxis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;longitude&#39;</span><span class="p">),</span>
+        <span class="n">yaxis</span><span class="o">=</span><span class="n">YAxis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;latitude&#39;</span><span class="p">),</span>
+        <span class="n">zaxis</span><span class="o">=</span><span class="n">ZAxis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&#39;date&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+<span class="n">plot_url</span> <span class="o">=</span> <span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">&#39;Taiwan dengue cases (indigenous or imported) space-time map&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>ps: the python environment has to complete the connection api key configuration before using the code above. </p>    
+        </section>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "chinminilab"; // required: replace example with your forum shortname
+            var disqus_identifier = "using-plotly";
+            var disqus_url = "/using-plotly.html";
+            var disqus_title = "Using plotly";
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</div>
+                </div>
+
+                <footer class="show-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>                </footer>
+            </div>
+            
+            <div class="image-pane main-content" style="background: url('/images/bg2.jpg'); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <h5 class='text-center'>About</h5>
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="/images/benny.jpg">
+                                    <img src="/images/benny.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+                                I am Wei-Chien-Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the lab for geospatial & computational science, which focuses on using the spatial data for studying the people living in the geographical space.
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="mailto:wcchin.88@gmail.com"><i class="fa fa-envelope"></i>&nbsp; Email</a></li>
+                                    <li><a href="https://www.facebook.com/wcchin88"><i class="fa fa-facebook"></i>&nbsp; Facebook</a></li>
+                                    <li><a href="https://plus.google.com/105690138384754434725"><i class="fa fa-google-plus"></i>&nbsp; Google-Plus</a></li>
+                                    <li><a href="https://github.com/wcchin"><i class="fa fa-github"></i>&nbsp; Github</a></li>
+                                    <li><a href="https://bitbucket.org/wcchin/"><i class="fa fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
+                                    <li><a href="https://www.instagram.com/wcchin88/"><i class="fa fa-instagram"></i>&nbsp; Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <h5 class='text-center'>Links</h5>
+                        <ul class="inline-center">
+                            <li><a href="https://scholar.google.com.tw/citations?user=P2IJvyQAAAAJ&hl=zh-TW">My Google Scholar</a></li>
+                            <li><a href="geog.ntu.edu.tw">National Taiwan University</a></li>
+                            <li><a href="http://wenlab.geog.ntu.edu.tw/">Lab for Geospatial Computational Science</a></li>
+                        </ul>
+                    </div>
+
+<!--
+                    <div class="small-12 medium-3 large-12 columns">
+                    </div>
+-->
+               </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>            </footer>
+        </div>
+        
+        
+        <script src="/theme/js/jquery.min.js"></script>
+        <script src="/theme/js/foundation.min.js"></script>
+        <script src="/theme/js/app.js"></script>
+    </body>
+  
+</html>

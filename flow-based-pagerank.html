@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Chin.Mini Lab</title>
+
+    <link rel="stylesheet" type="text/css" href="/theme/css/minimal_orderedlist.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/typicons/typicons.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="/" title="Home"><span class="typcn typcn-globe-outline"></span> Home</a> </p>
+        <h1 class="post-title"> Flow-based PageRank </h1>
+
+        <p class="view">
+            <a href="https://bitbucket.org/wcchin/fbpr">View the Project <small> GPRas </small></a></p>
+        <ul>
+<li><a href="https://bitbucket.org/wcchin/fbpr/get/c28c0fb71ec3.zip">Download <strong>ZIP File</strong></a></li><li><a href="not-available-yet">Visit at <strong> pypi </strong></a></li><li><a href="http://wcchin.github.io/publications/PHYSA_166902/">Read the  <strong>Article</strong></a></li>      </ul>
+      </header>
+      <section>
+         <h1>An algorithm that calibrate the weight and PR score to meet the flow.</h1>
+         <p>FBPR</p>
+<h3>published article and applications</h3>
+<p><a href="http://wcchin.github.io/publications/PHYSA_166902/" target="blank">Wen, T. H., Chin, W. C. B., Lai, P. C. (2017). Understanding the topological characteristics and flow complexity of urban traffic congestion. Physica A: Statistical Mechanics and its Applications 473: 166-177. DOI http://dx.doi.org/10.1016/j.physa.2017.01.035</a></p>
+<p>book chapter
+<a href="http://wcchin.github.io/publications/BookChap_ComplexSocietalSystem/" target="blank">Wen, T. H., Chin, W. C. B. &amp; Lai, P. C. (2017). Link structure analysis of urban street networks for delineating traffic impact areas. In M. Nemiche, M. Essaaidi (eds.), Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18. Part 2: 203-220. DOI 10.1007/978-3-319-46164-9_10, ISBN 978-3-319-46164-9.</a></p>
+<h2>Install it</h2>
+<p>after download and unzip the repo:</p>
+<div class="highlight"><pre><span class="n">cd</span> <span class="n">the_directory</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="p">.</span>
+</pre></div>
+
+
+<h2>Using it</h2>
+<p>using this package</p>
+<p>import it</p>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">fbpr</span> <span class="n">import</span> <span class="n">FBPR</span>
+</pre></div>
+
+
+<p>setup the file and file setup</p>
+<div class="highlight"><pre><span class="n">intersf</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">inter_TP_1m</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
+<span class="n">flowsf</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">flow_TP_1m</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
+<span class="n">inters_fs</span> <span class="o">=</span> <span class="p">{</span> <span class="err">&#39;</span><span class="n">node1</span><span class="sc">&#39;:&#39;</span><span class="n">n1</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">node2</span><span class="sc">&#39;:&#39;</span><span class="n">n2</span><span class="err">&#39;</span> <span class="p">}</span>
+<span class="n">flows_fs</span> <span class="o">=</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">node</span><span class="sc">&#39;:&#39;</span><span class="n">rid</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">volume</span><span class="sc">&#39;:&#39;</span><span class="n">flow</span><span class="err">&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<p>initializing the FBPR</p>
+<div class="highlight"><pre><span class="n">fbpr</span> <span class="o">=</span> <span class="n">FBPR</span><span class="p">(</span><span class="n">intersf</span><span class="p">,</span> <span class="n">flowsf</span><span class="p">,</span> <span class="n">inters_fs</span><span class="o">=</span><span class="n">inters_fs</span><span class="p">,</span> <span class="n">flows_fs</span><span class="o">=</span><span class="n">flows_fs</span><span class="p">)</span>
+</pre></div>
+
+
+<p>initialize the solutions sets, run once</p>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">init_solutions</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">set_count</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p>run all sets</p>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">run_all</span><span class="p">(</span><span class="n">max_generation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_PRiter</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">run_pool</span><span class="o">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="o">=</span><span class="n">False</span><span class="p">)</span>
+</pre></div>
+
+
+<p>run one set (e.g. first set)</p>
+<div class="highlight"><pre><span class="n">run_set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_generation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_PRiter</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">run_pool</span><span class="o">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="o">=</span><span class="n">False</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="n">True</span><span class="p">)</span> <span class="err">##</span> <span class="n">export</span> <span class="n">the</span> <span class="n">dataframe</span>
+
+<span class="n">optimal_sol_df</span> <span class="o">=</span> <span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="n">False</span><span class="p">)</span> <span class="err">##</span> <span class="k">return</span> <span class="n">the</span> <span class="n">dataframe</span>
+</pre></div>
+
+
+<p>check the performance of each set</p>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+         <div id="disqus_thread"></div>
+     	<script type="text/javascript">
+     		/* * * CONFIGURATION VARIABLES * * */
+     		var disqus_shortname = 'chinminilab';
+
+     		/* * * DON'T EDIT BELOW THIS LINE * * */
+     		(function() {
+     			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     		})();
+     	</script>
+     	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+     	<script type="text/javascript">
+     		/* * * CONFIGURATION VARIABLES * * */
+     		var disqus_shortname = 'chinminilab';
+
+     		/* * * DON'T EDIT BELOW THIS LINE * * */
+     		(function () {
+     			var s = document.createElement('script'); s.async = true;
+     			s.type = 'text/javascript';
+     			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+     			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+     		}());
+     	</script>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="http://wcchin.github.io/about/"><span class="typcn typcn-user"></span>Benny Chin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+
+  </body>
+</html>

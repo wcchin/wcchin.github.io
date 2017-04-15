@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="shortcut icon" href="" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Benny Chin" />
+        <title>the nearest neighbours in two dimensions space</title>
+        
+<meta name="description" content="&lt;hr&gt;
+&lt;h2&gt;nearest neighbours&lt;/h2&gt;
+&lt;p&gt;Which points are the nearest neighbours, or top N nearest neighbours, are the frequently used procedures in point data analysis. 
+Sometimes, we might need to find the neighbours in-radius of some distance. &lt;/p&gt;
+&lt;p&gt;K-d tree is one of the data structure for searching the points that is closer to …&lt;/p&gt;" />
+<meta name="keywords" content=" python  "/>
+
+        <!--[if !IE 7]>
+        <style type="text/css">
+            #main-content {display:table;height:100%}
+        </style>
+        <![endif]-->
+        <link rel="stylesheet" href="/theme/css/backdrop.css" />
+        <link rel="stylesheet" href="/theme/css/pygments.css" />
+        <script src="/theme/js/modernizr.js"></script>
+
+        
+    </head>
+      
+
+    <body>
+        <div class="master-row">
+
+            <div class="content-pane main-content">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty --></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/pages/about-the-mini-lab-and-i.html">About the mini-lab and I</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="/category/annoucements.html">Annoucements</a></li>
+                            <li class="active"><a href="/category/blogs.html">Blogs</a></li>
+                            <li><a href="/category/presentation.html">Presentation</a></li>
+                            <li><a href="/category/project.html">Project</a></li>
+                            <li><a href="/category/publication.html">Publication</a></li>
+                        </ul>
+                    </section>
+                </nav>
+
+                <div class="row title-bar">
+                    <div class="small-12 columns">
+                        <h1><a href="">Chin.Mini Lab</a></h1><h2> <small>a Geographer, Cartographer, & GIScientist</small></h2>
+                        <hr>
+                    </div>
+                </div>
+            
+                <div id="contents">
+<div class="row">
+    <div class="small-12 columns article">
+        <h2>the nearest neighbours in two dimensions space</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; Fri 22 April 2016</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="/category/blogs.html">Blogs</a></span></li>
+            <li><span><i class="fa fa-comments"></i>&nbsp; <a href="/the-nearest-neighbours-in-two-dimensions-space.html#disqus_thread" rel="bookmark" title="Disqus Comments">the nearest neighbours in two dimensions space</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="/tag/python.html"><span class="label">python</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="article">
+            <hr>
+<h2>nearest neighbours</h2>
+<p>Which points are the nearest neighbours, or top N nearest neighbours, are the frequently used procedures in point data analysis. 
+Sometimes, we might need to find the neighbours in-radius of some distance. </p>
+<p>K-d tree is one of the data structure for searching the points that is closer to a target point that is in k-dimensions. 
+E.g. for 2-d points, each point has a x coordinate and a y coordinate, it is called 2-d tree. 
+In a 2-d tree, starting from the root, is the first dimension (let say x-dimension), then the second level would be for the second dimension (y-dimension).
+The idea is to divide the points into two groups in each level, smaller item go to the left, bigger item go to the right...</p>
+<p>So, the kd-tree helps to reduce the k-dimension nearest neighbours problem into a simpler problem (in terms of complexity), by using the divide-and-conquer trick.</p>
+<h2>working in python</h2>
+<p>In this example, base points are the points in the ground, let says, the shops;
+source points are the points that is going to search for the nearest destinations (base points), let says, the location of the people. 
+The aim is to locate the shops that is nearby to each person. 
+So, it would be for each person, search one time.</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
+
+<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c"># x coordinates of base points...</span>
+<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c"># y coordinates of base points...</span>
+
+<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c"># x coordinates for the three people</span>
+<span class="n">py</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">6.3</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span> <span class="c"># y coordinates for the three people</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xlist</span><span class="p">,</span><span class="n">ylist</span><span class="p">)</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">spatial</span><span class="o">.</span><span class="n">KDTree</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c"># the nearby radius for searching</span>
+<span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> 
+<span class="c"># If x is a single point, returns a list of the indices of the neighbors of x. </span>
+<span class="c"># If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
+<span class="c"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
+</pre></div>
+
+
+<p>besides query_ball_point, there are other methods (from <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">scipy</a>):</p>
+<div class="highlight"><pre><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c">#Count how many nearby pairs can be formed.</span>
+<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c">#Query the kd-tree for nearest neighbors</span>
+<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c">#Find all pairs of points whose distance is at most r</span>
+<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c">#Find all pairs of points within a distance.</span>
+<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c">#Compute a sparse distance matrix</span>
+</pre></div>
+
+
+<p><a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">more details from scipy docs</a></p>    
+        </section>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "chinminilab"; // required: replace example with your forum shortname
+            var disqus_identifier = "the-nearest-neighbours-in-two-dimensions-space";
+            var disqus_url = "/the-nearest-neighbours-in-two-dimensions-space.html";
+            var disqus_title = "the nearest neighbours in two dimensions space";
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</div>
+                </div>
+
+                <footer class="show-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>                </footer>
+            </div>
+            
+            <div class="image-pane main-content" style="background: url('/images/bg2.jpg'); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <h5 class='text-center'>About</h5>
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="/images/benny.jpg">
+                                    <img src="/images/benny.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+                                I am Wei-Chien-Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the lab for geospatial & computational science, which focuses on using the spatial data for studying the people living in the geographical space.
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="mailto:wcchin.88@gmail.com"><i class="fa fa-envelope"></i>&nbsp; Email</a></li>
+                                    <li><a href="https://www.facebook.com/wcchin88"><i class="fa fa-facebook"></i>&nbsp; Facebook</a></li>
+                                    <li><a href="https://plus.google.com/105690138384754434725"><i class="fa fa-google-plus"></i>&nbsp; Google-Plus</a></li>
+                                    <li><a href="https://github.com/wcchin"><i class="fa fa-github"></i>&nbsp; Github</a></li>
+                                    <li><a href="https://bitbucket.org/wcchin/"><i class="fa fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
+                                    <li><a href="https://www.instagram.com/wcchin88/"><i class="fa fa-instagram"></i>&nbsp; Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <h5 class='text-center'>Links</h5>
+                        <ul class="inline-center">
+                            <li><a href="https://scholar.google.com.tw/citations?user=P2IJvyQAAAAJ&hl=zh-TW">My Google Scholar</a></li>
+                            <li><a href="geog.ntu.edu.tw">National Taiwan University</a></li>
+                            <li><a href="http://wenlab.geog.ntu.edu.tw/">Lab for Geospatial Computational Science</a></li>
+                        </ul>
+                    </div>
+
+<!--
+                    <div class="small-12 medium-3 large-12 columns">
+                    </div>
+-->
+               </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>            </footer>
+        </div>
+        
+        
+        <script src="/theme/js/jquery.min.js"></script>
+        <script src="/theme/js/foundation.min.js"></script>
+        <script src="/theme/js/app.js"></script>
+    </body>
+  
+</html>

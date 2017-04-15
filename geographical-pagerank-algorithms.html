@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Chin.Mini Lab</title>
+
+    <link rel="stylesheet" type="text/css" href="/theme/css/minimal_orderedlist.css">
+    <link rel="stylesheet" type="text/css" href="/theme/css/typicons/typicons.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="/" title="Home"><span class="typcn typcn-globe-outline"></span> Home</a> </p>
+        <h1 class="post-title"> Geographical PageRank Algorithms </h1>
+
+        <p class="view">
+            <a href="https://bitbucket.org/wcchin/gpras">View the Project <small> GPRas </small></a></p>
+        <ul>
+<li><a href="https://bitbucket.org/wcchin/gpras/get/d00c8227d48f.zip">Download <strong>ZIP File</strong></a></li><li><a href="https://pypi.python.org/pypi/GPRas">Visit at <strong> pypi </strong></a></li><li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139509">Read the  <strong>Article</strong></a></li>      </ul>
+      </header>
+      <section>
+         <h1>Algorithms for measuring concentration distribution in a spatial network.</h1>
+         <p>GPRas</p>
+<h3>published article and applications</h3>
+<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139509" target="blank">Chin, W. C. B., &amp; Wen, T. H. (2015). Geographically Modified PageRank Algorithms: Identifying the Spatial Concentration of Human Movement in a Geospatial Network. PLoS ONE 10(10): e0139509. DOI:10.1371/journal.pone.0139509.</a></p>
+<h2>Intro.</h2>
+<p>The algorithm can be used to calculate these from a spatial network, i.e. network with x, y coordinates that can be used to calculate distance (i.e. projected accordingly from longitude and latitude):</p>
+<ul>
+<li>PR</li>
+<li>WPR</li>
+<li>DDPR (proposed in the PloSOne article above)</li>
+<li>GPR (proposed in the PloSOne article above)</li>
+<li>eDDPR (proposed in the PloSOne article above)</li>
+<li>eGPR (proposed in the PloSOne article above)</li>
+</ul>
+<p>==============================</p>
+<h2>dependencies</h2>
+<ul>
+<li>numpy</li>
+<li>pandas</li>
+<li>geopandas</li>
+<li>shapely</li>
+<li>networkx</li>
+</ul>
+<p>==============================</p>
+<h2>installing GPRas</h2>
+<p>on windows:</p>
+<p>install shapely first. can use conda if you are using anaconda(miniconda).</p>
+<div class="highlight"><pre><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">scitools</span> <span class="n">shapely</span><span class="o">=</span><span class="mf">1.5.13</span>
+</pre></div>
+
+
+<p>Geopandas is needed to be installed before installing this, which could be hard to install.
+First download these from here: http://www.lfd.uci.edu/~gohlke/pythonlibs/</p>
+<ul>
+<li>GDAL</li>
+<li>pyproj</li>
+<li>Fiona</li>
+</ul>
+<p>Then, install them with pip install</p>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">xxx</span><span class="o">-</span><span class="n">GDAL</span><span class="o">--</span><span class="p">.</span><span class="n">whl</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">xxx</span><span class="o">-</span><span class="n">pyproj</span><span class="o">--</span><span class="p">.</span><span class="n">whl</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">xxx</span><span class="o">-</span><span class="n">Fiona</span><span class="o">--</span><span class="p">.</span><span class="n">whl</span>
+</pre></div>
+
+
+<p>Then, install GPRas</p>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">GPRas</span>
+</pre></div>
+
+
+<p>==============================</p>
+<h2>Usage</h2>
+<p>import the module</p>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">GPRas</span> <span class="n">as</span> <span class="n">gpr</span>
+</pre></div>
+
+
+<h3>data input and create the spatial graph concentration object</h3>
+<p>Two ways of data input: csv file, nx.Graph object</p>
+<p><strong>for csv file</strong>:
+prepare the file paths and file setup info</p>
+<div class="highlight"><pre><span class="n">nodefile</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">test_data</span><span class="o">/</span><span class="n">TP_nodes</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
+<span class="n">linkfile</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">test_data</span><span class="o">/</span><span class="n">TP_links</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
+<span class="n">node_filesetup</span> <span class="o">=</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">node_id</span><span class="sc">&#39;:&#39;</span><span class="n">nid</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">xcor</span><span class="sc">&#39;:&#39;</span><span class="n">xcor</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">ycor</span><span class="sc">&#39;:&#39;</span><span class="n">ycor</span><span class="err">&#39;</span><span class="p">}</span>
+<span class="n">link_filesetup</span> <span class="o">=</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">ori</span><span class="sc">&#39;:&#39;</span><span class="n">ori</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">des</span><span class="sc">&#39;:&#39;</span><span class="n">des</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">weight</span><span class="sc">&#39;:&#39;</span><span class="n">time</span><span class="err">&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<p>create the spatial_graph object</p>
+<div class="highlight"><pre><span class="n">sg</span> <span class="o">=</span> <span class="n">gpr</span><span class="p">.</span><span class="n">GPRas</span><span class="p">()</span>
+</pre></div>
+
+
+<p>set the dataset from csv files</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">dataset</span><span class="p">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">nodefile</span><span class="p">,</span> <span class="n">linkfile</span><span class="p">,</span> <span class="n">node_filesetup</span><span class="p">,</span> <span class="n">link_filesetup</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>for nx.Graph object</strong></p>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">networkx</span> <span class="n">as</span> <span class="n">nx</span>
+<span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span> <span class="err">##</span> <span class="n">just</span> <span class="k">for</span> <span class="n">the</span> <span class="n">reading</span> <span class="n">of</span> <span class="n">file</span> <span class="n">before</span> <span class="n">creating</span> <span class="n">nx</span><span class="p">.</span><span class="n">Graph</span>
+<span class="n">ndf</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">nodefile</span><span class="p">)</span>
+<span class="n">nii</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="err">&#39;</span><span class="n">node_id</span><span class="err">&#39;</span><span class="p">]].</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nxx</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="err">&#39;</span><span class="n">xcor</span><span class="err">&#39;</span><span class="p">]].</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nyy</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="err">&#39;</span><span class="n">ycor</span><span class="err">&#39;</span><span class="p">]].</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nodes_lis</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="n">dict</span><span class="p">(</span><span class="n">xxx</span><span class="o">=</span><span class="n">xx</span><span class="p">,</span><span class="n">yyy</span><span class="o">=</span><span class="n">yy</span><span class="p">))</span> <span class="k">for</span> <span class="n">ii</span><span class="p">,</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="n">in</span> <span class="n">zip</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span><span class="n">nxx</span><span class="p">,</span><span class="n">nyy</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">edf</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">linkfile</span><span class="p">)</span>
+<span class="n">eoo</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="err">&#39;</span><span class="n">ori</span><span class="err">&#39;</span><span class="p">]].</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">edd</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="err">&#39;</span><span class="n">des</span><span class="err">&#39;</span><span class="p">]].</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">edges_lis</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">oo</span><span class="p">,</span><span class="n">dd</span><span class="p">)</span> <span class="k">for</span> <span class="n">oo</span><span class="p">,</span><span class="n">dd</span> <span class="n">in</span> <span class="n">zip</span><span class="p">(</span><span class="n">eoo</span><span class="p">,</span><span class="n">edd</span><span class="p">)</span> <span class="p">]</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="p">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="p">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">nodes_lis</span><span class="p">)</span>
+<span class="n">ag</span><span class="p">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">edges_lis</span><span class="p">)</span>
+
+<span class="cp">## graph setup info</span>
+<span class="n">node_setup</span> <span class="o">=</span> <span class="n">dict</span><span class="p">(</span><span class="n">xcor</span><span class="o">=</span><span class="err">&#39;</span><span class="n">xxx</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">ycor</span><span class="o">=</span><span class="err">&#39;</span><span class="n">yyy</span><span class="err">&#39;</span><span class="p">)</span> <span class="err">##</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="n">columns</span> <span class="n">from</span> <span class="n">the</span> <span class="n">nodes</span> <span class="n">attr</span><span class="p">.</span>
+<span class="n">link_setup</span> <span class="o">=</span> <span class="n">None</span>
+
+<span class="n">sg</span> <span class="o">=</span> <span class="n">sgc</span><span class="p">()</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">dataset</span><span class="p">.</span><span class="n">from_nx</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">node_setup</span><span class="p">,</span> <span class="n">link_setup</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>prepare and calculate</h3>
+<p>First, initialize the parameters</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">Initialize</span><span class="p">(</span><span class="n">iteration</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Calculate all of them (6 PRs) using the above parameter</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">CalculateAll</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Calculate each of them using updated parameters</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">PR</span><span class="p">()</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">WPR</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">DDPR</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">GPR</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">eDDPR</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">eGPR</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+</pre></div>
+
+
+<p>these calculation will change the parameters for summary output, but not the default paramters (for calculation with no paramter setup, eg. alpha=None), which are set from the initialization.</p>
+<h3>get the results in Pandas DataFrame format</h3>
+<p>get summary df</p>
+<div class="highlight"><pre><span class="n">summary_df</span> <span class="o">=</span> <span class="n">sg</span><span class="p">.</span><span class="n">get_summary</span><span class="p">()</span>
+<span class="n">print</span> <span class="n">summary_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+
+<p>get the nodes concentration results</p>
+<div class="highlight"><pre><span class="n">result_df</span> <span class="o">=</span> <span class="n">sg</span><span class="p">.</span><span class="n">get_results</span><span class="p">()</span> <span class="err">##</span> <span class="k">default</span> <span class="n">to</span> <span class="n">all</span> <span class="mi">6</span>
+<span class="n">print</span> <span class="n">result_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">part_result_df</span> <span class="o">=</span> <span class="n">sg</span><span class="p">.</span><span class="n">get_results</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="err">&#39;</span><span class="n">pr</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">wpr</span><span class="err">&#39;</span><span class="p">])</span> <span class="err">##</span> <span class="n">export</span> <span class="n">only</span> <span class="n">PR</span> <span class="n">and</span> <span class="n">WPR</span>
+<span class="n">print</span> <span class="n">part_result_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+
+<h3>export results</h3>
+<p>the results can be export directly to csv format and shapfile format</p>
+<p><strong>summary table</strong></p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">output_summary</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="err">&#39;</span><span class="n">result</span><span class="o">/</span><span class="n">temp_summary</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>to csv file</strong></p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="err">&#39;</span><span class="n">result</span><span class="o">/</span><span class="n">temp_output_dd_g</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="err">&#39;</span><span class="n">ddpr</span><span class="sc">&#39;,&#39;</span><span class="n">gpr</span><span class="err">&#39;</span><span class="p">])</span>
+
+<span class="cp"># also same as to_csv() with items=None</span>
+<span class="n">sg</span><span class="p">.</span><span class="n">All_to_csv</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="err">&#39;</span><span class="n">result</span><span class="o">/</span><span class="n">temp_output</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><strong>to shp file</strong>
+prepare a crs string, or it will be default to None</p>
+<div class="highlight"><pre><span class="n">crs67</span> <span class="o">=</span> <span class="err">&#39;</span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">tmerc</span> <span class="o">+</span><span class="n">lat_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">lon_0</span><span class="o">=</span><span class="mi">121</span> <span class="o">+</span><span class="n">k</span><span class="o">=</span><span class="mf">0.9999</span> <span class="o">+</span><span class="n">x_0</span><span class="o">=</span><span class="mi">250000</span> <span class="o">+</span><span class="n">y_0</span><span class="o">=</span><span class="mi">0</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">aust_SA</span> <span class="o">+</span><span class="n">towgs84</span><span class="o">=-</span><span class="mi">752</span><span class="p">,</span><span class="o">-</span><span class="mi">358</span><span class="p">,</span><span class="o">-</span><span class="mi">179</span><span class="p">,</span><span class="o">-</span><span class="mf">0.0000011698</span><span class="p">,</span><span class="mf">0.0000018398</span><span class="p">,</span><span class="mf">0.0000009822</span><span class="p">,</span><span class="mf">0.00002329</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<p>export the files, which include a point shpfile for nodes and the concentration results, and a line shpfile for edge (no result inside, just for mapping)</p>
+<p>output two of the results (PR and WPR) into one file</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">to_shps</span><span class="p">(</span><span class="n">filename_prefix</span><span class="o">=</span><span class="err">&#39;</span><span class="n">result</span><span class="o">/</span><span class="n">temp_shp_pr_wpr</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">crs67</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="err">&#39;</span><span class="n">pr</span><span class="sc">&#39;,&#39;</span><span class="n">wpr</span><span class="err">&#39;</span><span class="p">])</span>
+</pre></div>
+
+
+<p>output all 6 PRs</p>
+<div class="highlight"><pre><span class="n">sg</span><span class="p">.</span><span class="n">All_to_shps</span><span class="p">(</span><span class="n">filename_prefix</span><span class="o">=</span><span class="err">&#39;</span><span class="n">result</span><span class="o">/</span><span class="n">temp_shp</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">crs67</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>to networkx graph object</h3>
+<p>similar to the previous export</p>
+<div class="highlight"><pre><span class="n">ag</span><span class="p">,</span><span class="n">pos</span> <span class="o">=</span> <span class="n">sg</span><span class="p">.</span><span class="n">to_nx</span><span class="p">()</span> <span class="err">##</span> <span class="k">default</span> <span class="n">to</span> <span class="n">all</span> <span class="mi">6</span> <span class="n">PRs</span>
+
+<span class="n">ag</span><span class="p">,</span><span class="n">pos</span> <span class="o">=</span> <span class="n">sg</span><span class="p">.</span><span class="n">to_nx</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s">&quot;DDPR&quot;</span><span class="p">])</span>
+</pre></div>
+
+
+<p>demo for drawing the networkx object</p>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="n">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
+
+<span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">d</span> <span class="n">in</span> <span class="n">ag</span><span class="p">.</span><span class="n">nodes_iter</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">True</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">ss</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="err">&#39;</span><span class="n">DDPR_score</span><span class="err">&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">5000.</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">nx</span><span class="p">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="n">ss</span><span class="p">)</span>
+<span class="n">nx</span><span class="p">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="err">&#39;</span><span class="n">equal</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p>==============================</p>
+<h2>file structure</h2>
+<div class="highlight"><pre><span class="n">Geographical</span> <span class="n">PageRank</span> <span class="n">Algorithms</span>
+<span class="p">.</span>
+<span class="err">├──</span> <span class="n">build</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">bdist</span><span class="p">.</span><span class="n">linux</span><span class="o">-</span><span class="n">x86_64</span>
+<span class="err">│  </span> <span class="err">└──</span> <span class="n">lib</span>
+<span class="err">│  </span>     <span class="err">└──</span> <span class="n">GPRas</span>
+<span class="err">│  </span>         <span class="err">├──</span> <span class="n">GPRa</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">├──</span> <span class="n">GPR_algorithms</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">├──</span> <span class="n">input_func</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">├──</span> <span class="n">input_funcs</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">DataImport_nx</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">FileReading_csv</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">├──</span> <span class="n">output_func</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span> <span class="err">└──</span> <span class="n">output_funcs</span>
+<span class="err">│  </span>         <span class="err">│  </span>     <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span>     <span class="err">├──</span> <span class="n">to_csv</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span>     <span class="err">├──</span> <span class="n">to_nx</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">│  </span>     <span class="err">└──</span> <span class="n">to_shps</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">├──</span> <span class="n">GPRas</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span>         <span class="err">└──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">dist</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">GPRas</span><span class="o">-</span><span class="mf">0.1.0</span><span class="o">-</span><span class="n">py2</span><span class="mf">.7</span><span class="p">.</span><span class="n">egg</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">GPRas</span><span class="o">-</span><span class="mf">0.1.0</span><span class="o">-</span><span class="n">py2</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="p">.</span><span class="n">whl</span>
+<span class="err">│  </span> <span class="err">└──</span> <span class="n">GPRas</span><span class="o">-</span><span class="mf">0.1.0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="err">├──</span> <span class="n">GPRas</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">example</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">example_nx</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">example</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">result</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="n">demo</span> <span class="n">results</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="n">test_data</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">KH_links</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">KH_nodes</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">TC_links</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">TC_nodes</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">TP_links</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">└──</span> <span class="n">TP_nodes</span><span class="p">.</span><span class="n">csv</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">GPRa</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">GPR_algorithms</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">input_func</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">input_funcs</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">DataImport_nx</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">FileReading_csv</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">├──</span> <span class="n">output_func</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span> <span class="err">└──</span> <span class="n">output_funcs</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">to_csv</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">├──</span> <span class="n">to_nx</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">│  </span>     <span class="err">└──</span> <span class="n">to_shps</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">GPRas</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│  </span> <span class="err">└──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">GPRas</span><span class="p">.</span><span class="n">egg</span><span class="o">-</span><span class="n">info</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">dependency_links</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">PKG</span><span class="o">-</span><span class="n">INFO</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">requires</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">│  </span> <span class="err">├──</span> <span class="n">SOURCES</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">│  </span> <span class="err">└──</span> <span class="n">top_level</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">├──</span> <span class="n">LICENSE</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">├──</span> <span class="n">MANIFEST</span><span class="p">.</span><span class="n">in</span>
+<span class="err">├──</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
+<span class="err">└──</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span>
+</pre></div>
+         <div id="disqus_thread"></div>
+     	<script type="text/javascript">
+     		/* * * CONFIGURATION VARIABLES * * */
+     		var disqus_shortname = 'chinminilab';
+
+     		/* * * DON'T EDIT BELOW THIS LINE * * */
+     		(function() {
+     			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+     			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     		})();
+     	</script>
+     	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+     	<script type="text/javascript">
+     		/* * * CONFIGURATION VARIABLES * * */
+     		var disqus_shortname = 'chinminilab';
+
+     		/* * * DON'T EDIT BELOW THIS LINE * * */
+     		(function () {
+     			var s = document.createElement('script'); s.async = true;
+     			s.type = 'text/javascript';
+     			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+     			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+     		}());
+     	</script>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="http://wcchin.github.io/about/"><span class="typcn typcn-user"></span>Benny Chin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+
+  </body>
+</html>

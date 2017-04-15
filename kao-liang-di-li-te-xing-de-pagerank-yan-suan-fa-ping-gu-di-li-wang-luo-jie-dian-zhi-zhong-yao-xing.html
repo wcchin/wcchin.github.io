@@ -1,0 +1,384 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="shortcut icon" href="" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Benny Chin" />
+        <title>考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性</title>
+        
+<meta name="description" content="&lt;h4&gt;Geographically modified PageRank algorithms: Measuring the importance of nodes in a geospatial network&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference: 中國地理學會年會&lt;/li&gt;
+&lt;li&gt;Year: 2014&lt;/li&gt;
+&lt;li&gt;Location: 國立台灣大學，台北市,台灣&lt;/li&gt;
+&lt;li&gt;Language: Mandarin&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This study aims to proposed two geographically modified diffusion-based algorithms, to figure out where people live their lives. Since human movements …&lt;/p&gt;" />
+<meta name="keywords" content=" network pagerank  "/>
+
+        <!--[if !IE 7]>
+        <style type="text/css">
+            #main-content {display:table;height:100%}
+        </style>
+        <![endif]-->
+        <link rel="stylesheet" href="/theme/css/backdrop.css" />
+        <link rel="stylesheet" href="/theme/css/pygments.css" />
+        <script src="/theme/js/modernizr.js"></script>
+
+        
+    </head>
+      
+
+    <body>
+        <div class="master-row">
+
+            <div class="content-pane main-content">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty --></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/pages/about-the-mini-lab-and-i.html">About the mini-lab and I</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="/category/annoucements.html">Annoucements</a></li>
+                            <li><a href="/category/blogs.html">Blogs</a></li>
+                            <li class="active"><a href="/category/presentation.html">Presentation</a></li>
+                            <li><a href="/category/project.html">Project</a></li>
+                            <li><a href="/category/publication.html">Publication</a></li>
+                        </ul>
+                    </section>
+                </nav>
+
+                <div class="row title-bar">
+                    <div class="small-12 columns">
+                        <h1><a href="">Chin.Mini Lab</a></h1><h2> <small>a Geographer, Cartographer, & GIScientist</small></h2>
+                        <hr>
+                    </div>
+                </div>
+            
+                <div id="contents">
+<div class="row">
+    <div class="small-12 columns article">
+        <h2>考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; Sat 26 April 2014</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="/category/presentation.html">Presentation</a></span></li>
+            <li><span><i class="fa fa-comments"></i>&nbsp; <a href="/kao-liang-di-li-te-xing-de-pagerank-yan-suan-fa-ping-gu-di-li-wang-luo-jie-dian-zhi-zhong-yao-xing.html#disqus_thread" rel="bookmark" title="Disqus Comments">考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="/tag/network.html"><span class="label">network</span></a>
+                    <a href="/tag/pagerank.html"><span class="label">pagerank</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="article">
+            <h4>Geographically modified PageRank algorithms: Measuring the importance of nodes in a geospatial network</h4>
+<ul>
+<li>Conference: 中國地理學會年會</li>
+<li>Year: 2014</li>
+<li>Location: 國立台灣大學，台北市,台灣</li>
+<li>Language: Mandarin</li>
+<li>Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen</li>
+</ul>
+<h4>Abstract</h4>
+<p>This study aims to proposed two geographically modified diffusion-based algorithms, to figure out where people live their lives. Since human movements reflects the locations where the daily lives of people occurred, a transportation network, which represent how places connect with each other by transportation system, could be used to uncover the spatial distribution pattern of the people’s daily lives. PageRank (PR), a successful diffusion-based algorithm, is what Google uses to determine how important a webpage is on the World Wide Web. However, most measures of network analysis, including PR, were designed to understand network topological structures rather than geographical structures. In other words, these measures have not considered the geographical constraints as their main concern. This study incorporates geographic properties, including distance-decay and gravity model among nodes, and proposes two modified PR algorithms, the Inversed-Distance PageRank (IDPR), and Geographical PageRank (GPR). To test the performance of the IDPR and GPR, this study calculated the IDPR and GPR for the inter-city network of Taiwan. Then, we used the population data and inter-townships car flow data as observed data to understand the correlation between them, and compared the correlation results with the correlations calculated with the existing algorithms, including PR and Weighted PageRank (WPR), and three centrality measurements, including degree, closeness, and betweenness. The results showed that IDPR and GPR are better correlated with the observed data. Since IDPR and GPR take the distance decay effect into account, results using the algorithms can capture more geographical properties. In conclusion, while dealing with a geographical issue, which distance decay effect existed, IDPR and GPR are better algorithms to be used in the analysis.</p>
+<h4>Keywords</h4>
+<p>PageRank, distance decay, gravity model, geospatial network</p>
+<h4>摘要:</h4>
+<p>本研究旨在提出兩個以地理特性修改之擴散式演算法,以討論人的生活環境空間的分佈。因人的生活的所在空間可以透過人的移動所反映,反應地方之間如何相連的交通網絡可以用以揭示人類生活空間的空間分佈形態。PageRank (PR),是一個擴散式演算法,其是 Google 搜尋引擎背後從網際網路中找出重要網頁的主要演算法。然而,大多數網絡分析的評量方法,包括 PR,皆以分析網絡拓撲結構為主要目的,而地理結構則並非其主要分析目的。換言之,這些評量方法並沒有將地理的限制納入其分析的考量。因此,本研究將地理特性,包括地方與地方之間的互動強度的距離遞減效果及引力模型特性與PageRank 演算法做整合,並提出兩個地理特性修改之 PageRank 演算法,包括Inversed-Distance PageRank (IDPR), 及 Geographical PageRank (GPR)。為了解IDPR 及 GPR 捕捉重要節點之能力,本研究將人口及城際運輸流量資料作為觀察資料,與計算所得之 IDPR 及 GPR 的結果做相關分析,並與已存在的 PR 及Weighted PageRank (WPR) ,及傳統網絡分析之中心性指標 (centrality) 之相關分析結果做比較。結果顯示,IDPR 及 GPR 與觀察資料有較高的相關性。因 IDPR及 GPR 都有考量距離遞減效果,因此其能夠捕捉較多的地理特性以運用於演算法中,並產出具考量地理特性之重要性分佈的結果。因此,當我們在討論具有地理特性之議題並分析其地理空間網絡時,IDPR 與 GPR 是較好的演算法。</p>
+<h3>關鍵字</h3>
+<p>PageRank, 距離遞減, 引力模型, 地理空間網絡</p>
+<h4>Presentation -</h4>
+<p><a href="svgs/geogsoc_2014.svg" target="blank"> 研討會簡報檔 </a>  </p>
+<p>點擊滑鼠左鍵下一頁，右鍵上一頁，中鍵(滾輪)大綱跳頁
+<object id="svg1" data="svgs/geogsoc_2014.svg" type="image/svg+xml" style="width: 650px; height: 480px"></object>   </p>    
+        </section>
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "chinminilab"; // required: replace example with your forum shortname
+            var disqus_identifier = "考量地理特性的-pagerank-演算法：-評估地理網絡節點之重要性";
+            var disqus_url = "/kao-liang-di-li-te-xing-de-pagerank-yan-suan-fa-ping-gu-di-li-wang-luo-jie-dian-zhi-zhong-yao-xing.html";
+            var disqus_title = "考量地理特性的 PageRank 演算法： 評估地理網絡節點之重要性";
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</div>
+                </div>
+
+                <footer class="show-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>                </footer>
+            </div>
+            
+            <div class="image-pane main-content" style="background: url('/images/bg2.jpg'); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <h5 class='text-center'>About</h5>
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="/images/benny.jpg">
+                                    <img src="/images/benny.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+                                I am Wei-Chien-Benny Chin, a PhD. student who is studying at Department of Geography, National Taiwan University. I work in the lab for geospatial & computational science, which focuses on using the spatial data for studying the people living in the geographical space.
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="mailto:wcchin.88@gmail.com"><i class="fa fa-envelope"></i>&nbsp; Email</a></li>
+                                    <li><a href="https://www.facebook.com/wcchin88"><i class="fa fa-facebook"></i>&nbsp; Facebook</a></li>
+                                    <li><a href="https://plus.google.com/105690138384754434725"><i class="fa fa-google-plus"></i>&nbsp; Google-Plus</a></li>
+                                    <li><a href="https://github.com/wcchin"><i class="fa fa-github"></i>&nbsp; Github</a></li>
+                                    <li><a href="https://bitbucket.org/wcchin/"><i class="fa fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
+                                    <li><a href="https://www.instagram.com/wcchin88/"><i class="fa fa-instagram"></i>&nbsp; Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <h5 class='text-center'>Links</h5>
+                        <ul class="inline-center">
+                            <li><a href="https://scholar.google.com.tw/citations?user=P2IJvyQAAAAJ&hl=zh-TW">My Google Scholar</a></li>
+                            <li><a href="geog.ntu.edu.tw">National Taiwan University</a></li>
+                            <li><a href="http://wenlab.geog.ntu.edu.tw/">Lab for Geospatial Computational Science</a></li>
+                        </ul>
+                    </div>
+
+<!--
+                    <div class="small-12 medium-3 large-12 columns">
+                    </div>
+-->
+               </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="row">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'chinminilab';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="/">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+            <li><a href="/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="/tag/network.html"><span class="label">network</span></a>
+            <a href="/tag/python.html"><span class="label">python</span></a>
+            <a href="/tag/pagerank.html"><span class="label">PageRank</span></a>
+            <a href="/tag/webpage.html"><span class="label">webpage</span></a>
+            <a href="/tag/svg.html"><span class="label">svg</span></a>
+            <a href="/tag/web-framework.html"><span class="label">web-framework</span></a>
+            <a href="/tag/processing.html"><span class="label">processing</span></a>
+            <a href="/tag/spatial-temporal.html"><span class="label">spatial-temporal</span></a>
+            <a href="/tag/pr.html"><span class="label">PR</span></a>
+            <a href="/tag/open-data.html"><span class="label">open data</span></a>
+            <a href="/tag/spatial.html"><span class="label">spatial</span></a>
+            <a href="/tag/movement.html"><span class="label">movement</span></a>
+            <a href="/tag/transportation.html"><span class="label">transportation</span></a>
+            <a href="/tag/ipython.html"><span class="label">ipython</span></a>
+            <a href="/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="/tag/dengue.html"><span class="label">dengue</span></a>
+            <a href="/tag/network-analysis.html"><span class="label">network analysis</span></a>
+            <a href="/tag/vd.html"><span class="label">VD</span></a>
+            <a href="/tag/gh-pages.html"><span class="label">gh-pages</span></a>
+            <a href="/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="/tag/export.html"><span class="label">export</span></a>
+            <a href="/tag/timelag.html"><span class="label">timelag</span></a>
+            <a href="/tag/visualization.html"><span class="label">visualization</span></a>
+            <a href="/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
+            <a href="/tag/health.html"><span class="label">health</span></a>
+            <a href="/tag/gpr.html"><span class="label">GPR</span></a>
+            <a href="/tag/plotly.html"><span class="label">plotly</span></a>
+            <a href="/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="/tag/dengue-importation.html"><span class="label">dengue importation</span></a>
+            <a href="/tag/article.html"><span class="label">article</span></a>
+            <a href="/tag/publication.html"><span class="label">publication</span></a>
+            <a href="/tag/github.html"><span class="label">github</span></a>
+            <a href="/tag/jupyter.html"><span class="label">jupyter</span></a>
+            <a href="/tag/revealjs.html"><span class="label">revealjs</span></a>
+            <a href="/tag/documentation.html"><span class="label">documentation</span></a>
+            <a href="/tag/flow.html"><span class="label">flow</span></a>
+            <a href="/tag/fbpr.html"><span class="label">FBPR</span></a>
+            <a href="/tag/gephi.html"><span class="label">gephi</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 Benny Chin 
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-right">
+                Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="https://www.python.org/">Python</a>.
+            </p>
+        </div>
+    </div>
+</div>            </footer>
+        </div>
+        
+        
+        <script src="/theme/js/jquery.min.js"></script>
+        <script src="/theme/js/foundation.min.js"></script>
+        <script src="/theme/js/app.js"></script>
+    </body>
+  
+</html>
