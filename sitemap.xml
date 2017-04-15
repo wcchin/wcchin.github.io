@@ -5,35 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/</loc>
-<lastmod>2017-04-15T23:52:06-00:00</lastmod>
+<lastmod>2017-04-16T00:59:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/archives.html</loc>
-<lastmod>2017-04-15T23:52:06-00:00</lastmod>
+<lastmod>2017-04-16T00:59:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/tags.html</loc>
-<lastmod>2017-04-15T23:52:06-00:00</lastmod>
+<lastmod>2017-04-16T00:59:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/categories.html</loc>
-<lastmod>2017-04-15T23:52:06-00:00</lastmod>
+<lastmod>2017-04-16T00:59:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/pages/about-the-mini-lab-and-i.html</loc>
-<lastmod>2017-04-15T23:52:06-00:00</lastmod>
+<lastmod>2017-04-16T00:59:20-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/playing-with-tgod.html</loc>
+<lastmod>2017-04-16T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -306,7 +313,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/category/blogs.html</loc>
-<lastmod>2017-04-15T00:00:00+08:06</lastmod>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -363,6 +370,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wcchin.github.io/tag/webpage.html</loc>
 <lastmod>2016-01-30T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/tag/demo.html</loc>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -425,7 +439,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/open-data.html</loc>
-<lastmod>2017-04-15T00:00:00+08:06</lastmod>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -480,6 +494,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/bus.html</loc>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/tag/processing.html</loc>
 <lastmod>2016-12-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -501,8 +522,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://wcchin.github.io/tag/dengue-importation.html</loc>
-<lastmod>2016-09-24T00:00:00+08:06</lastmod>
+<loc>https://wcchin.github.io/tag/youbike.html</loc>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -613,8 +634,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/dengue-importation.html</loc>
+<lastmod>2016-09-24T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/author/benny-chin.html</loc>
-<lastmod>2017-04-15T00:00:00+08:06</lastmod>
+<lastmod>2017-04-16T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
