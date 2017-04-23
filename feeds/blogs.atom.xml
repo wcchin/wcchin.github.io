@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Blogs</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/blogs.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-04-16T00:00:00+08:00</updated><entry><title>Playing with TGOD</title><link href="https://wcchin.github.io/playing-with-tgod.html" rel="alternate"></link><published>2017-04-16T00:00:00+08:00</published><updated>2017-04-16T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-16:/playing-with-tgod.html</id><summary type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Blogs</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/blogs.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-04-22T00:00:00+08:00</updated><entry><title>Restructured vmapper</title><link href="https://wcchin.github.io/restructured-vmapper.html" rel="alternate"></link><published>2017-04-22T00:00:00+08:00</published><updated>2017-04-22T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-22:/restructured-vmapper.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;Vmapper is a simple python library for creating map in python, from reading spatial data source to exporting map.
+&lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The example is shown here:&lt;/p&gt;
+&lt;p&gt;&lt;object id="svg1" data="/svgs/vmapperexample.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;Vmapper is a simple python library for creating map in python, from reading spatial data source to exporting map.
+&lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The example is shown here:&lt;/p&gt;
+&lt;p&gt;&lt;object id="svg1" data="/svgs/vmapperexample.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="svg"></category><category term="map"></category><category term="vmapper"></category></entry><entry><title>Playing with TGOD</title><link href="https://wcchin.github.io/playing-with-tgod.html" rel="alternate"></link><published>2017-04-16T00:00:00+08:00</published><updated>2017-04-16T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-16:/playing-with-tgod.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;TGOD is a python package that can download some Taiwan open data. Here I am playing with the Taipei bus api and youbike api. The result is as the link show: 
 &lt;a href="http:140.112.64.67:2170"&gt;a demo site of the usage of TGOD&lt;/a&gt;. The demo site is created using Flask and skeleton css.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="alt text" src="/images/demo_site_170416.png" title="a demo site"&gt;&lt;/p&gt;
