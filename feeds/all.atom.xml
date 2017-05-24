@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-05-23T00:00:00+08:00</updated><entry><title>Applying space-time info. to explore disease process</title><link href="https://wcchin.github.io/applying-space-time-info-to-explore-disease-process.html" rel="alternate"></link><published>2017-05-23T00:00:00+08:00</published><updated>2017-05-23T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-23:/applying-space-time-info-to-explore-disease-process.html</id><summary type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-05-25T00:00:00+08:00</updated><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
+&lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  The Annual Meeting of the Taiwan Chapter of Society for Risk Analysis (SRA‐Taiwan)&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: May 25-26, 1300-1400 (Poster Session)&lt;/li&gt;
+&lt;li&gt;Location: Taichung City Hall, Taichung City, Taiwan&lt;/li&gt;
+&lt;li&gt;Room: Poster session …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  The Annual Meeting of the Taiwan Chapter of Society for Risk Analysis (SRA‐Taiwan)&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: May 25-26, 1300-1400 (Poster Session)&lt;/li&gt;
+&lt;li&gt;Location: Taichung City Hall, Taichung City, Taiwan&lt;/li&gt;
+&lt;li&gt;Room: Poster session&lt;/li&gt;
+&lt;li&gt;Poster ID: A033&lt;/li&gt;
+&lt;li&gt;Language: English&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen, Clive E. Sabel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Dengue Fever (DF) data is recorded as a space-time point data, i.e. each record contains a spatial location, and a temporal location. Previous studies often use clustering analysis method to analyze this type of disease case data, to search for spatial or space-time cluster areas (hot-spots), and connect the clusters manually. The process between disease clusters has been neglected in previous studies. &lt;/p&gt;
+&lt;p&gt;In disease diffusion processes, transmissions may experience a temporal lag for an incubation period, that is the time between infection and disease emergence. Thus a temporal lag between the transmission pairs should be considered in the understanding of disease diffusion. This can help to systematically model the disease diffusion process, and construct the relationships between cases and detect the process chains between clusters. &lt;/p&gt;
+&lt;p&gt;Therefore, the aim of this case study is to detect sub-clusters from the annual DF cases and identify processes between the sub-clusters.&lt;/p&gt;
+&lt;h4&gt;Link&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://srataiwan.fundot.tw/activity_show.aspx?id=20"&gt;about the conference&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://srataiwan.fundot.tw/activity_show.aspx?id=28"&gt;conference schedule&lt;/a&gt;  &lt;/p&gt;
+&lt;h4&gt;Poster&lt;/h4&gt;
+&lt;p&gt;&lt;a href="pdfs/poster_tsra_2017.pdf"&gt;Poster link&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Supplementary info&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://goo.gl/vZUGw2"&gt;animation of the diffusion process&lt;/a&gt;&lt;/p&gt;</content><category term="Dengue Fever"></category><category term="disease diffusion"></category><category term="open data"></category><category term="TaPiTaS"></category><category term="Kaohsiung City"></category></entry><entry><title>Applying space-time info. to explore disease process</title><link href="https://wcchin.github.io/applying-space-time-info-to-explore-disease-process.html" rel="alternate"></link><published>2017-05-23T00:00:00+08:00</published><updated>2017-05-23T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-23:/applying-space-time-info-to-explore-disease-process.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;Abstract:
 Dengue Fever (DF) data is recorded as a space-time point data, i.e. each record contains a spatial location, and a temporal location. Previous studies often use clustering analysis method to analyze this type of disease case data, to search for spatial or space-time cluster areas (hot-spots), and connect …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Abstract:

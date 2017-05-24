@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/</loc>
-<lastmod>2017-05-23T04:46:58-00:00</lastmod>
+<lastmod>2017-05-24T17:55:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/archives.html</loc>
-<lastmod>2017-05-23T04:46:58-00:00</lastmod>
+<lastmod>2017-05-24T17:55:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/tags.html</loc>
-<lastmod>2017-05-23T04:46:58-00:00</lastmod>
+<lastmod>2017-05-24T17:55:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/categories.html</loc>
-<lastmod>2017-05-23T04:46:58-00:00</lastmod>
+<lastmod>2017-05-24T17:55:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/pages/about-the-mini-lab-and-i.html</loc>
-<lastmod>2017-05-23T04:46:58-00:00</lastmod>
+<lastmod>2017-05-24T17:55:55-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</loc>
+<lastmod>2017-05-25T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -348,7 +355,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/category/presentation.html</loc>
-<lastmod>2016-12-01T00:00:00+08:06</lastmod>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -467,7 +474,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/open-data.html</loc>
-<lastmod>2017-05-23T00:00:00+08:06</lastmod>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -489,6 +496,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wcchin.github.io/tag/health.html</loc>
 <lastmod>2016-04-27T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/tag/kaohsiung-city.html</loc>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -551,7 +565,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/dengue-fever.html</loc>
-<lastmod>2017-05-23T00:00:00+08:06</lastmod>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -579,7 +593,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/tapitas.html</loc>
-<lastmod>2017-05-23T00:00:00+08:06</lastmod>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -662,6 +676,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/disease-diffusion.html</loc>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/tag/dengue.html</loc>
 <lastmod>2016-08-04T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -698,7 +719,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/author/benny-chin.html</loc>
-<lastmod>2017-05-23T00:00:00+08:06</lastmod>
+<lastmod>2017-05-25T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
