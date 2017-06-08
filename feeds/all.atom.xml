@@ -1,5 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-05-25T00:00:00+08:00</updated><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-06-08T00:00:00+08:00</updated><entry><title>A demonstration of how to use colouringmap and vmapper to generate a map in python</title><link href="https://wcchin.github.io/a-demonstration-of-how-to-use-colouringmap-and-vmapper-to-generate-a-map-in-python.html" rel="alternate"></link><published>2017-06-08T00:00:00+08:00</published><updated>2017-06-08T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-06-08:/a-demonstration-of-how-to-use-colouringmap-and-vmapper-to-generate-a-map-in-python.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;Some background&lt;/p&gt;
+&lt;p&gt;This demonstration shows how to use the colouringmap and vmapper packages to generate choropleth map. The data format that is using in these packages are the GeoPandas GeoDataFrame, which has a table-like dataframe, with one of the column to store the geometry, and a crs atribute to store …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;Some background&lt;/p&gt;
+&lt;p&gt;This demonstration shows how to use the colouringmap and vmapper packages to generate choropleth map. The data format that is using in these packages are the GeoPandas GeoDataFrame, which has a table-like dataframe, with one of the column to store the geometry, and a crs atribute to store the projection of the spatial features. &lt;/p&gt;
+&lt;p&gt;The colouringmap package is used to generate levels of each row of spatial feature, and then assign a color to each of them. 
+After that, you can choose to map the spatial features with the colours using matplotlib or other drawing (plot) packages. The geometry in geopandas is one of the shapely objects (polygon, multipolygon, point, or linestring). &lt;/p&gt;
+&lt;p&gt;Or, you can choose to use the vmapper package to create a map in vector file format - svg. Svg can be used in inkscape for further figure processing. It is also the native format for inkscape. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;First of all, import the packages that will be used in this tutorial.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;colouringmap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;theme_mapping&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vmapper&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;geopandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;gpd&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;shapely.ops&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cascaded_union&lt;/span&gt; &lt;span class="c"&gt;## this is for disolving the goemetry of basic statistic unit into townships&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, read the data into the environment&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;gdf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/path/to/file/vil_67_N_C.shp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, prepare the density values&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;aa&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;area&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NUMPOINTS&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;cdens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;aa&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cdens&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cdens&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now, use the colouring_sequence function to generate the level list, and also the colour list, that have the same length and in the same order as the gdf. level_list contain the level of each row, and colour_list has the colour of each row. Each row is a geometry of the spatial entities. The breaking method used here is the natural break, which is the default break for ESRI arcgis, and the break number is set to 7. The color scale map that is used in this package is imported from the &lt;a href="https://jiffyclub.github.io/palettable/" target="blank"&gt;Palettable for python&lt;/a&gt;, v3.0.0. So, you can go there and search for the color group and name from there, and check how is them called in this package in &lt;a href="https://github.com/wcchin/colouringmap" target="blank"&gt;here&lt;/a&gt;, where you can also find the list of valid break method. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;level_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;colouring_sequence&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colorbysequence&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cdens&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;natural_break&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_group&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cmocean_sequential&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Turbid_10&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The following demo how to prepare the label for each row of spatial feature. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;countyname&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;tn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;townname&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;vn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;villagenam&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;namelab&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;:count=&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vn&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;cc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;nlabel&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namelab&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;level&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;level_list&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;colour&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The spatial feature is smaller in the previous section. So, we want to dissolve them and forming a larger area that represent the larger administrative boundary, to map it together with the smaller resolution choropleth map. So later we will overlap these geodataframe and make the larger one transparent. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tnset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;t_geom&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;tnset&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;temp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;townname&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;temp_g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;temp&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;geometry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;town_bound&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cascaded_union&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;temp_g&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;t_geom&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;town_bound&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tdf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tnset&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;tgdf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GeoDataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;geometry&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;t_geom&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The following shows how to generate svg map with vmapper. First, prepare a map, that will be an interactive map (zoom, pan using mouse directly). &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;vmapper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;interactive&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## interactive will use the SVGPan.js, which will be copy automatically&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, add the larger layer to the map, which color is set to 'transparent', so it will not has fill color.
+The firstly added layer will be draw first, so it will be the lowest on the map. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_geodataframe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tgdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;layername&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;township&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;opacity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strokewidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strokecolor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;#000&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;transparent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, add the smaller resolution layer (finer). This one will set the color for each row, assigned from the colouringmap package, and also include the label created from above. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_geodataframe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;layername&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;crime_density&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;draw_setting&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;labelby&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;nlabel&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;idby&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;VILLCODE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colorby&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;colour&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;  &lt;span class="n"&gt;hovercolor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;hoveropacity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;hoverstroke&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#FF0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;hoverswidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;opacity&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strokecolor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#FFF&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strokewidth&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;showlabel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Finally, export them to a file, to the current folder (your current working directory).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;export_to_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;testing_taipei_crime_map2.svg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The result will be something like this: 
+(screenshot)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="screenshot of the svg map" src="/images/demo_colouring_vmapper.png" title="svg map with colouringmap and vmapper"&gt;&lt;/p&gt;
+&lt;p&gt;and the demo of svg:&lt;/p&gt;
+&lt;p&gt;&lt;object id="svg1" data="/svgs/testing_taipei_crime_map2.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
+&lt;a href="/svgs/testing_taipei_crime_map2.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="colouringmap"></category><category term="vmapper"></category><category term="svg"></category><category term="python"></category></entry><entry><title>colouringmap</title><link href="https://wcchin.github.io/colouringmap.html" rel="alternate"></link><published>2017-06-08T00:00:00+08:00</published><updated>2017-06-08T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-06-08:/colouringmap.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;&lt;a href="#eng_version"&gt;english version&lt;/a&gt; -- &lt;a href="#zh_version"&gt;中文版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name="eng_version"&gt;&lt;/p&gt;
+&lt;h1&gt;colouringmap&lt;/h1&gt;
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;intro&lt;/h3&gt;
+&lt;p&gt;This is a simple python library for colouring the geodataframe based on a column for scaling. &lt;/p&gt;
+&lt;p&gt;Let say there is a polygon geodataframe, with a column recording the population density of each area, and you want to create a thematic map that each polygon shows …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;a href="#eng_version"&gt;english version&lt;/a&gt; -- &lt;a href="#zh_version"&gt;中文版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name="eng_version"&gt;&lt;/p&gt;
+&lt;h1&gt;colouringmap&lt;/h1&gt;
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;intro&lt;/h3&gt;
+&lt;p&gt;This is a simple python library for colouring the geodataframe based on a column for scaling. &lt;/p&gt;
+&lt;p&gt;Let say there is a polygon geodataframe, with a column recording the population density of each area, and you want to create a thematic map that each polygon shows a colour that match its population density, the denser the population, the darker the colour. Therefore, first thing to do is to categorize them by the population density. Several popular ways to do this, including natural break, equal interval, quantile, standard deviation, head-tail break. After breaking the column values into several levels, next thing to do is setting the colours according to level. &lt;/p&gt;
+&lt;p&gt;This tool provide two functions to accomplish these tasks:
+1. breaking column values into several levels.
+2. setting the colours according to the levels (from the above or user specified).&lt;/p&gt;
+&lt;p&gt;The two functions returns a list that contain the levels of each record(row), and a list that contain the colours, in the same order as the geodataframe you give it. &lt;/p&gt;
+&lt;p&gt;There is another simple_mapping(gdf, colour_list, ax, colour_tuples=colour_tuples) function, that take the polygon geodataframe, colour list (from the above, with the same length as the gdf), an axes (matplotlib ax), and a colour tuples (for legend, also from above), to make a simple polygon map. &lt;/p&gt;
+&lt;p&gt;ps: This is designed to use with vmapper, a vector mapping tool in python that generate svg map. But since mapping the variable into map is a common job, so I separated this part as an individual tool for working with geopandas geodataframe.&lt;/p&gt;
+&lt;h3&gt;dependencies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;numpy: quantile breaks&lt;/li&gt;
+&lt;li&gt;jenkspy: natural break&lt;/li&gt;
+&lt;li&gt;palettable: getting color map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;install&lt;/h3&gt;
+&lt;p&gt;this package is in alpha, so it is a good idea to install in editable mode (-e)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/wcchin/colouringmap.git
+&lt;span class="nb"&gt;cd &lt;/span&gt;colouringmap/
+pip install -e .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install git+https://github.com/wcchin/colouringmap.git#egg&lt;span class="o"&gt;=&lt;/span&gt;colouringmap
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;usage&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;geopandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;gpd&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;colouringmap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;theme_mapping&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt; 
+
+&lt;span class="c"&gt;## reading files&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;testdata/county.shp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## a polygon file, encoding is utf-8, projection Twd1997/TM2&lt;/span&gt;
+&lt;span class="c"&gt;#gdf = gdf.to_crs(crs) ## reproject to a valid projection&amp;#39;s crs&lt;/span&gt;
+
+&lt;span class="c"&gt;## prepare the level_list, colour_list, and colour_tuples&lt;/span&gt;
+&lt;span class="n"&gt;level_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;colouring_sequence&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colorbysequence&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;area&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;natural_break&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_group&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cmocean_sequential&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Turbid_10&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;## preparing the matplotlib fig and ax&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_facecolor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cornflowerblue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# set the background to a blue color&lt;/span&gt;
+
+&lt;span class="c"&gt;## making the polygon map&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simple_mapping&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_tuples&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;colour_tuples&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;area&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;colouringmap.theme_mapping has three main functions: colouring_sequence (colouring based on a series of statistic numbers), colouring_category (based on a pre-defined category, or named categories), and simple_mapping. &lt;/p&gt;
+&lt;p&gt;colouringmap.breaking_levels has a main function: get_levels, which take one list of values (with some other arguments like method, N, cuts), and return two lists: the level_list and cuts point values. &lt;/p&gt;
+&lt;p&gt;colouringmap.get_colours has a main function: colour_list, which take a level_list (a list of integer to represent the level), and the colourmaps info (color_group, colour_name, reverse), then return a list of colours with the same length as the level-list (for colouring), and a list with the same length as the set of levels (for making legend). &lt;/p&gt;
+&lt;h3&gt;more info&lt;/h3&gt;
+&lt;h4&gt;about the color&lt;/h4&gt;
+&lt;p&gt;The colors will be getting from palettable, as now the version ins 3.0.0. &lt;/p&gt;
+&lt;p&gt;The valid color_group include:
+- 'cmocean_diverging'
+- 'cmocean_sequential'
+- 'colorbrewer_diverging'
+- 'colorbrewer_qualitative'
+- 'colorbrewer_sequential'
+- 'cubehelix'
+- 'matplotlib'
+- 'mycarta'
+- 'tableau'
+- 'wesanderson'&lt;/p&gt;
+&lt;p&gt;The valid color_name can check the website: https://jiffyclub.github.io/palettable/&lt;/p&gt;
+&lt;h4&gt;about the breaking methods&lt;/h4&gt;
+&lt;p&gt;The valid breaking methods include:
+- 'manual' # must provide a list of cuts (something like [20, 40, 60, 70, 100] for a variable range from 0 to 100), the max element should be the max element of the list, or it will be added
+- 'equal_interval' # provide the number of cuts expected
+- 'quantile' # must either provide the number of cuts (4 for .25,.50,.75, 1.), or a list of cuts like [.25, .50, .75, 1.]
+- 'standard_deviation' # must provide a number of cut, if len(alist)%2==0, then the mean of all values will also be included
+- 'natural_break' # must provide a number of cut
+- 'head_tail_break' # must provide a number of cut, i have simplified it so it is not that natural as it is in the paper&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;demo map result -- 範例結果
+&lt;img alt="density choropleth map" src="/images/demo_colouring_vmapper.png" title="density of some crime"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href="#eng_version"&gt;english version&lt;/a&gt; -- &lt;a href="#zh_version"&gt;中文版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a name="zh_version"&gt;&lt;/p&gt;
+&lt;h1&gt;colouringmap&lt;/h1&gt;
+&lt;p&gt;&lt;/a&gt;
+「分層」與「設色」的地圖工具 -- 對 GeoPandas geodataframe 加上分層級及顏色，來製作分層設色的主題地圖的 python 工具。&lt;/p&gt;
+&lt;h3&gt;簡介&lt;/h3&gt;
+&lt;p&gt;這是一個爲了方便畫圖而寫的 python 工具，主要是針對圖層資料的一個欄位(連續數字，例如統計值之類)來作資料的分層，以及根據這個分層來加入顏色。&lt;/p&gt;
+&lt;p&gt;舉例來說，我們有一個面資料圖層的 geodataframe，其中有一個欄位記錄着各個區塊的人口密度，而我們想要繪製一個人口密度的分布圖，也就是每一個面區塊用一個顏色來繪製，而這個顏色是人口密度越高則越深。
+所以，第一步要做的就是針對這連續數字所組成的人口密度欄位去作分層，值最高的那些區塊一層 ... 最低的那些區塊一層，然後同一層用一個顏色來繪製。這就是分層設色圖。
+常用的分層方法包括: natural break, quantile，標註差分組， head-tail break。至於顏色，主要會用的是單色的漸層，2色的漸層，以及3色的漸層。&lt;/p&gt;
+&lt;p&gt;而這個工具的目標就是提供以下兩個主要的功能來滿足上述提到的工作：
+1. 針對欄位進行分層
+2. 依據分層結果來上色&lt;/p&gt;
+&lt;p&gt;這兩個功能在工具中被寫成兩個 python function:
+1. 其一會回傳一個跟資料長度一樣長的 list，每一個 element 表示各個面區塊的層級；
+2. 其二會吃進一個分層的 list，可以是前面的 function 所產生，或是使用者自行準備好的，然後會回傳一個一樣長的 list， 每一個 element 是一個 color hex code (類似 #FFFF00)，提供用來畫圖。&lt;/p&gt;
+&lt;p&gt;這兩個 list 的順序與喂進去的 geodataframe 的順序一致。&lt;/p&gt;
+&lt;p&gt;除此之外，還有一個簡單的畫圖 function，叫做 simple_mapping，這會吃進 geodataframe, 顏色的 list，一個 matplotlib ax，以及一個顏色組的 list (供產生圖例)。
+這 function 可以用來繪製分層設色圖，是一種面圖層的呈現方式。&lt;/p&gt;
+&lt;p&gt;其實，前述兩個 function 會回傳出兩個 list，而若資料不是面資料，也可以應用這兩個 list 來產生其他的主題圖，包括變換點的大小的 gruaduated symbol 圖 (點圖層)，或是改變點或線顏色，並不限於用 matplotlib 畫分層設色的面圖層地圖。&lt;/p&gt;
+&lt;p&gt;ps: 這工具主要是爲了 vmapper 而設計， vmapper 是一個方便的畫地圖小工具，功能特點在於吃進 geodataframe，然後產出 svg 地圖。
+不過後來想到其實「分層」，及「設色」兩個動作在畫地圖時很常會用到，所以就將這工具獨立出來。後續會再花點時間把功能加入到 vmapper 中。&lt;/p&gt;
+&lt;h3&gt;dependencies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;numpy: quantile breaks &lt;/li&gt;
+&lt;li&gt;jenkspy: natural break &lt;/li&gt;
+&lt;li&gt;palettable: 調色盤，這小工具會用這調色盤來獲取顏色的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;安裝&lt;/h3&gt;
+&lt;p&gt;這套件還在 alpha 階段, 推薦用 editable mode (-e)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/wcchin/colouringmap.git
+&lt;span class="nb"&gt;cd &lt;/span&gt;colouringmap/
+pip install -e .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;或是直接從網路上裝下來  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install git+https://github.com/wcchin/colouringmap.git#egg&lt;span class="o"&gt;=&lt;/span&gt;colouringmap
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;使用&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;geopandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;gpd&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;colouringmap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;theme_mapping&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt; 
+
+&lt;span class="c"&gt;## 讀取資料&lt;/span&gt;
+&lt;span class="n"&gt;gdf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;testdata/county.shp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## a polygon file, encoding is utf-8, projection Twd1997/TM2&lt;/span&gt;
+&lt;span class="c"&gt;#gdf = gdf.to_crs(crs) ## reproject to a valid projection&amp;#39;s crs&lt;/span&gt;
+
+&lt;span class="c"&gt;## 準備 level_list(分層 list), colour_list (設色 list), 及 colour_tuples&lt;/span&gt;
+&lt;span class="n"&gt;level_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_tuples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;colouring_sequence&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colorbysequence&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;area&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;natural_break&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;break_N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_group&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cmocean_sequential&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Turbid_10&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;## 準備好 matplotlib fig and ax&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_facecolor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cornflowerblue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# set the background to a blue color&lt;/span&gt;
+
+&lt;span class="c"&gt;## 產生面的分層設色圖&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;simple_mapping&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gdf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;colour_tuples&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;colour_tuples&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;area&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;colouringmap.theme_mapping 有三個主要的 functions: colouring_sequence (針對連續的統計數字的欄位作分層設色), colouring_category (應用預先準備好的分層、或是列別變項，若是後者建議用 category 類的調色盤), and simple_mapping (繪製簡單的分層設色圖)。 &lt;/p&gt;
+&lt;p&gt;colouringmap.breaking_levels 有一個主要的 function: get_levels, 這會針對一個欄位來進行分層，需要提供的 argument 包括分層方法、分幾層、或預先設定的分層切點，並且會產生兩個 list : 分層的 list (level_list) 及 切點值的 list (cuts point values)。 &lt;/p&gt;
+&lt;p&gt;colouringmap.get_colours 則有一個主要 function: colour_list, 針對分層 list (一個用整數來反映分層順序的 list)， 及分層顏色的設定 (color_group, colour_name, reverse)，並且回傳一樣長的 list， 其中記錄每一個面空間單元所對應的顏色， 及一個跟分層數(例如分 5層，就是5)一樣長的 list 記錄着顏色及分層所對應的意義，供製作圖例。 &lt;/p&gt;
+&lt;h3&gt;其他資訊&lt;/h3&gt;
+&lt;h4&gt;關於顏色&lt;/h4&gt;
+&lt;p&gt;顏色都是從 palettable 中取得，目前其版本爲 3.0.0。 &lt;/p&gt;
+&lt;p&gt;可用的 color_group 包括:
+- 'cmocean_diverging'
+- 'cmocean_sequential'
+- 'colorbrewer_diverging'
+- 'colorbrewer_qualitative'
+- 'colorbrewer_sequential'
+- 'cubehelix'
+- 'matplotlib'
+- 'mycarta'
+- 'tableau'
+- 'wesanderson'&lt;/p&gt;
+&lt;p&gt;可用的 color_name 請查看: https://jiffyclub.github.io/palettable/&lt;/p&gt;
+&lt;h4&gt;關於分層方法&lt;/h4&gt;
+&lt;p&gt;可用的分層方法包括：
+- 'manual' # 需要提供切點 list (類似 [20, 40, 60, 70, 100] 如果欄位的值在 0 到 100 之間)，最大的值應該要大於或等於欄位中的最大值，否則也會自動被加到最後。
+- 'equal_interval' # 需要提供想要分幾組
+- 'quantile' # 需要提供切點的數量 (例如 4 則會產生 .25,.50,.75, 1.)，或是預設的分幾層的列表, 例如 [.25, .50, .75, 1.]。
+- 'standard_deviation' # 必須提供要分幾組, 若 len(alist)%2==0, 則最初的平均值也會放在這裏面。
+- 'natural_break' # 必須提供切點的數量
+- 'head_tail_break' # 必須提供切點數量, 已進行簡化，以讓分組的數量可以被控制。&lt;/p&gt;
+&lt;h3&gt;License&lt;/h3&gt;
+&lt;p&gt;MIT License&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2017 Wei Chien Benny Chin, Department of Geography, National Taiwan University&lt;/p&gt;
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p&gt;
+&lt;p&gt;The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.&lt;/p&gt;
+&lt;p&gt;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.&lt;/p&gt;</content><category term="svg"></category><category term="python"></category><category term="map"></category><category term="chorolepth"></category></entry><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
 &lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;  &lt;/p&gt;
 &lt;ul&gt;
@@ -171,7 +455,62 @@ One good thing from a well-XX generator is that they have a lot of fully functio
 The link is as follow: &lt;a href="https://wcchin.github.io/tgod/"&gt;TGOD github page&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It is a python package that automatic convert some Taiwan Open Data api to dataframe.&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have been working on this project since last few weeks.&lt;br&gt;
 The link is as follow: &lt;a href="https://wcchin.github.io/tgod/"&gt;TGOD github page&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It is a python package that automatic convert some Taiwan Open Data api to dataframe.&lt;/p&gt;</content></entry><entry><title>Flow-based PageRank</title><link href="https://wcchin.github.io/flow-based-pagerank.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-02-20:/flow-based-pagerank.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;It is a python package that automatic convert some Taiwan Open Data api to dataframe.&lt;/p&gt;</content></entry><entry><title>tgod</title><link href="https://wcchin.github.io/tgod.html" rel="alternate"></link><published>2017-04-14T00:00:00+08:00</published><updated>2017-04-14T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-14:/tgod.html</id><summary type="html">&lt;hr&gt;
+&lt;h2&gt;Taiwan Geographic Open Data (tgod)&lt;/h2&gt;
+&lt;h2&gt;臺灣地理開放資料介接工具 (for python)&lt;/h2&gt;
+&lt;h3&gt;背景&lt;/h3&gt;
+&lt;p&gt;這專案的目的在於提供將臺灣地理相關的開放資料抓下來，並轉成 pandas.dataframe 的一個小工具。
+主要是因爲各公家單位準備的開放資料的格式都不太一樣，即使是同一個單位，不同的資料也會有不同的格式設定，包括有些會壓縮... 之類。
+所以我想說將資料直接整理成表單的 dataframe 格式，對於後續分析、應用、甚至再轉成特定格式(JSON/XML)，應該都會相對直觀與容易。&lt;/p&gt;
+&lt;p&gt;目前我已整理的資料表主要有臺北市、新北市、高雄市的一些交通相關資料表。項目及資料來源記錄在 data_info.ods 中。
+未來有時間的時候會試着將其他資料的介接也整理起來。&lt;/p&gt;
+&lt;h3&gt;簡單說明&lt;/h3&gt;
+&lt;p&gt;這專案分成兩大部分 (預計):
+- 第一部分，主要是 (近)即時更新的資料，包括公車、Youbike 等資訊，這部分仰賴開放資料的 API (JSON, XML …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h2&gt;Taiwan Geographic Open Data (tgod)&lt;/h2&gt;
+&lt;h2&gt;臺灣地理開放資料介接工具 (for python)&lt;/h2&gt;
+&lt;h3&gt;背景&lt;/h3&gt;
+&lt;p&gt;這專案的目的在於提供將臺灣地理相關的開放資料抓下來，並轉成 pandas.dataframe 的一個小工具。
+主要是因爲各公家單位準備的開放資料的格式都不太一樣，即使是同一個單位，不同的資料也會有不同的格式設定，包括有些會壓縮... 之類。
+所以我想說將資料直接整理成表單的 dataframe 格式，對於後續分析、應用、甚至再轉成特定格式(JSON/XML)，應該都會相對直觀與容易。&lt;/p&gt;
+&lt;p&gt;目前我已整理的資料表主要有臺北市、新北市、高雄市的一些交通相關資料表。項目及資料來源記錄在 data_info.ods 中。
+未來有時間的時候會試着將其他資料的介接也整理起來。&lt;/p&gt;
+&lt;h3&gt;簡單說明&lt;/h3&gt;
+&lt;p&gt;這專案分成兩大部分 (預計):
+- 第一部分，主要是 (近)即時更新的資料，包括公車、Youbike 等資訊，這部分仰賴開放資料的 API (JSON, XML)，透過人工的針對資料欄位作處理之後生成 dataframe 格式；同時也自動增加 unix timestamp 欄位作爲後續應用。&lt;br&gt;
+    這部分目前整理了臺北市、新北市、高雄市部分的交通開放資料。
+- 第二部分，主要是將一些常用的空間資料，包括行政區 (從縣市到最小統計區)、國道省道、鐵路路線、火車站、捷運站等，可以獲取的官方開放的空間資料，整理成壓縮的pbf 格式 放到專案中，以供後續只要透過一些function 及 key 就可以直接叫出這些資料(GeoDataFrame 格式)。&lt;/p&gt;
+&lt;h3&gt;使用 (Usage)&lt;/h3&gt;
+&lt;p&gt;使用方法可參考 testing.py、 testing_static.py 
+或者簡單來說：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;即時資料的臺北市公車位置資料:&lt;/p&gt;
+&lt;p&gt;```python&lt;/p&gt;
+&lt;p&gt;from tgod import taipei_transport as tt
+busdf = tt.bus()
+print busdf.head(10)&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;靜態的空間資料 (取屏東最小統計區資料):&lt;/p&gt;
+&lt;p&gt;```python&lt;/p&gt;
+&lt;p&gt;from tgod import get_map
+gdf = get_map.get_boundary('bsu0_pingtung')
+print gdf.head()&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;依賴工具 (dependencies)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;pandas (目標格式是 pandas DataFrame)&lt;/li&gt;
+&lt;li&gt;geopandas (所以包括其依賴的 fiona、shapely、 pyproj ... windows 使用者請自行安裝好~~)&lt;/li&gt;
+&lt;li&gt;geobuf (爲了這專案才發現的一個新玩意，換句話說我也不熟...)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;2017-03-30 - v 0.0.1 : 初步建立整個架構&lt;/p&gt;
+&lt;h3&gt;License&lt;/h3&gt;
+&lt;p&gt;tgod is distributed under a 3-clause ("Simplified" or "New") BSD license. &lt;/p&gt;</content><category term="open data"></category><category term="python"></category><category term="map"></category></entry><entry><title>Flow-based PageRank</title><link href="https://wcchin.github.io/flow-based-pagerank.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-02-20:/flow-based-pagerank.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;FBPR&lt;/p&gt;
 &lt;h3&gt;published article and applications&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://wcchin.github.io/publications/PHYSA_166902/" target="blank"&gt;Wen, T. H., Chin, W. C. B., Lai, P. C. (2017). Understanding the topological characteristics and flow complexity of urban traffic congestion. Physica A: Statistical Mechanics and its Applications 473: 166-177. DOI http://dx.doi.org/10.1016/j.physa.2017.01.035&lt;/a&gt;&lt;/p&gt;
