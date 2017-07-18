@@ -59,43 +59,43 @@
 
 
 <p>setup the file and file setup</p>
-<div class="highlight"><pre><span class="n">intersf</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">inter_TP_1m</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
-<span class="n">flowsf</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">flow_TP_1m</span><span class="p">.</span><span class="n">csv</span><span class="err">&#39;</span>
-<span class="n">inters_fs</span> <span class="o">=</span> <span class="p">{</span> <span class="err">&#39;</span><span class="n">node1</span><span class="sc">&#39;:&#39;</span><span class="n">n1</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">node2</span><span class="sc">&#39;:&#39;</span><span class="n">n2</span><span class="err">&#39;</span> <span class="p">}</span>
-<span class="n">flows_fs</span> <span class="o">=</span> <span class="p">{</span><span class="err">&#39;</span><span class="n">node</span><span class="sc">&#39;:&#39;</span><span class="n">rid</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">volume</span><span class="sc">&#39;:&#39;</span><span class="n">flow</span><span class="err">&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span class="n">intersf</span> <span class="p">=</span> <span class="s">&#39;inter_TP_1m.csv&#39;</span>
+<span class="n">flowsf</span> <span class="p">=</span> <span class="s">&#39;flow_TP_1m.csv&#39;</span>
+<span class="n">inters_fs</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&#39;node1&#39;</span><span class="p">:</span><span class="s">&#39;n1&#39;</span><span class="p">,</span> <span class="s">&#39;node2&#39;</span><span class="p">:</span><span class="s">&#39;n2&#39;</span> <span class="p">}</span>
+<span class="n">flows_fs</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;node&#39;</span><span class="p">:</span><span class="s">&#39;rid&#39;</span><span class="p">,</span> <span class="s">&#39;volume&#39;</span><span class="p">:</span><span class="s">&#39;flow&#39;</span><span class="p">}</span>
 </pre></div>
 
 
 <p>initializing the FBPR</p>
-<div class="highlight"><pre><span class="n">fbpr</span> <span class="o">=</span> <span class="n">FBPR</span><span class="p">(</span><span class="n">intersf</span><span class="p">,</span> <span class="n">flowsf</span><span class="p">,</span> <span class="n">inters_fs</span><span class="o">=</span><span class="n">inters_fs</span><span class="p">,</span> <span class="n">flows_fs</span><span class="o">=</span><span class="n">flows_fs</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">fbpr</span> <span class="p">=</span> <span class="n">FBPR</span><span class="p">(</span><span class="n">intersf</span><span class="p">,</span> <span class="n">flowsf</span><span class="p">,</span> <span class="n">inters_fs</span><span class="p">=</span><span class="n">inters_fs</span><span class="p">,</span> <span class="n">flows_fs</span><span class="p">=</span><span class="n">flows_fs</span><span class="p">)</span>
 </pre></div>
 
 
 <p>initialize the solutions sets, run once</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">init_solutions</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">set_count</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">init_solutions</span><span class="p">(</span><span class="n">pool_size</span><span class="p">=</span>3<span class="p">,</span> <span class="n">set_count</span><span class="p">=</span>3<span class="p">)</span>
 </pre></div>
 
 
 <p>run all sets</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">run_all</span><span class="p">(</span><span class="n">max_generation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_PRiter</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">run_pool</span><span class="o">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="o">=</span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">run_all</span><span class="p">(</span><span class="n">max_generation</span><span class="p">=</span>20<span class="p">,</span> <span class="n">max_PRiter</span><span class="p">=</span>500<span class="p">,</span> <span class="n">run_pool</span><span class="p">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="p">=</span><span class="n">False</span><span class="p">)</span>
 </pre></div>
 
 
 <p>run one set (e.g. first set)</p>
-<div class="highlight"><pre><span class="n">run_set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_generation</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">max_PRiter</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">run_pool</span><span class="o">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="o">=</span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">run_set</span><span class="p">(</span>0<span class="p">,</span> <span class="n">max_generation</span><span class="p">=</span>20<span class="p">,</span> <span class="n">max_PRiter</span><span class="p">=</span>500<span class="p">,</span> <span class="n">run_pool</span><span class="p">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="p">=</span><span class="n">False</span><span class="p">)</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="n">True</span><span class="p">)</span> <span class="err">##</span> <span class="n">export</span> <span class="n">the</span> <span class="n">dataframe</span>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="p">=</span><span class="n">True</span><span class="p">)</span> ## <span class="n">export</span> <span class="n">the</span> <span class="n">dataframe</span>
 
-<span class="n">optimal_sol_df</span> <span class="o">=</span> <span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="o">=</span><span class="n">False</span><span class="p">)</span> <span class="err">##</span> <span class="k">return</span> <span class="n">the</span> <span class="n">dataframe</span>
+<span class="n">optimal_sol_df</span> <span class="p">=</span> <span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="p">=</span><span class="n">False</span><span class="p">)</span> ## <span class="k">return</span> <span class="n">the</span> <span class="n">dataframe</span>
 </pre></div>
 
 
 <p>check the performance of each set</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>0<span class="p">)</span>
+<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>1<span class="p">)</span>
+<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>2<span class="p">)</span>
 </pre></div>
 
 

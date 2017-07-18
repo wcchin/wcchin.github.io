@@ -1,5 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Project</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/project.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-06-08T00:00:00+08:00</updated><entry><title>colouringmap</title><link href="https://wcchin.github.io/colouringmap.html" rel="alternate"></link><published>2017-06-08T00:00:00+08:00</published><updated>2017-06-08T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-06-08:/colouringmap.html</id><summary type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Project</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/project.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-07-18T00:00:00+08:00</updated><entry><title>pyreveal</title><link href="https://wcchin.github.io/pyreveal.html" rel="alternate"></link><published>2017-07-18T00:00:00+08:00</published><updated>2017-07-18T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-07-18:/pyreveal.html</id><summary type="html">&lt;hr&gt;
+&lt;h1&gt;pyreveal&lt;/h1&gt;
+&lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;h2&gt;Why another converter?&lt;/h2&gt;
+&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h1&gt;pyreveal&lt;/h1&gt;
+&lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;h2&gt;Why another converter?&lt;/h2&gt;
+&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape&lt;/a&gt; automatically. So, the nbconvert can do the conversion from notebook to reveal.js. &lt;/p&gt;
+&lt;p&gt;But, I don't understand why they keep the cell tags, which make it a pain while customizing the themes, and the custom.css, that following the tutorials or answers from stackoverflow to customize the reveal.js (the js), the codes will not work for the nbconvert version of slides.html. &lt;/p&gt;
+&lt;p&gt;Plus, the speaker notes function is still not working for jupyter+nbconvert. &lt;/p&gt;
+&lt;p&gt;Therefore, I decided to write a converter that take a simple md, and convert it to reveal.js slides using jinja2. &lt;/p&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;a demo is &lt;a href="https://wcc-slides.netlify.com/2017/pyreveal/demo.slides.html#/" target="blank"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;The codes that generate the demo slides is in the slide_dir directory.&lt;/p&gt;
+&lt;h2&gt;Install&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/wcchin/pyreveal.git
+&lt;span class="nb"&gt;cd &lt;/span&gt;pyreveal
+pip install -e .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Using&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;cd your_slides_dir&lt;/li&gt;
+&lt;li&gt;create a file named whatever.md (with .md extension)&lt;/li&gt;
+&lt;li&gt;follow the instruction in the following sections and write the slides content inside the whatever.md &lt;/li&gt;
+&lt;li&gt;run the command, see the following "usage" section&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;slides configuration&lt;/h3&gt;
+&lt;p&gt;pyreveal will read the first several lines of the whatever.md file and get the metadata as the configs, using the &lt;a href="https://github.com/waylan/docdata" target="blank"&gt;&lt;strong&gt;docdata&lt;/strong&gt;&lt;/a&gt; package . &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt; &lt;span class="n"&gt;Presentation&lt;/span&gt; &lt;span class="n"&gt;Framework&lt;/span&gt;
+&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;black&lt;/span&gt;
+&lt;span class="n"&gt;transition&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;concave&lt;/span&gt;
+&lt;span class="n"&gt;cr_word&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;author&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;2017&lt;/span&gt;
+&lt;span class="n"&gt;cr_color&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;rgba&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;205&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;205&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;205&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;toc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;to_pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;reveal_path&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;configs:
+- title: will be put at the &lt;title&gt; part of the &lt;head&gt;
+- theme: available: black (default), white, league, sky, beige, simple, serif, blood, night, moon, solarized and... (THERE ARE MORE THEME FROM MY THEME DIR)
+- transition: none(default), fade, slide, convex, concave, zoom, page
+- cr_word: CopyRight word (optional), the words that appear at the footer
+- cr_color: color for the cr_word (optional), default to 'rgba(205,205,205,0.0)'
+- toc: use the table of content plugin (not tested yet)
+- to_pdf: default to false, if true, will create a pdf version of the slides, using phantomjs. to use the to_pdf function, please check and install phantomjs following the &lt;a href="https://github.com/astefanutti/decktape"&gt;decktape instruction&lt;/a&gt; and &lt;a href="http://phantomjs.org/" target="blank"&gt;phantomjs instruction&lt;/a&gt;.
+- reveal_path: optional, default to 'reveal.js'(the same directory as the output html)&lt;/p&gt;
+&lt;h3&gt;the special keyword for generating slides and some other functions&lt;/h3&gt;
+&lt;p&gt;pyreveal use a list of escape keyword to generate the function for reveal.js:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;keyword&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;where, the &lt;em&gt;keyword&lt;/em&gt; include: right, down, data&lt;em&gt;, style&lt;/em&gt;, fragment, notes&lt;/p&gt;
+&lt;h3&gt;slides break&lt;/h3&gt;
+&lt;p&gt;there are two types of slides break:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;right&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the following slide will appear at right, i.e. a new slide (section).&lt;/p&gt;
+&lt;p&gt;OR, &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;down&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the following slide will appear at bottom, i.e. a subslide. &lt;/p&gt;
+&lt;h3&gt;slide background and style&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;just same as the reveal.js, they use data-background or something similar to change the per-slide styles.
+Therefore, pyreveal will check if there is a ---data-something, then it will put the data-something into and something like the &lt;section data-something&gt; will be generate. &lt;/p&gt;
+&lt;p&gt;The same goes for style. &lt;/p&gt;
+&lt;p&gt;For more detail, check the corresponding demo.md file that generate something similar to the demo in the original reveal.js website. &lt;/p&gt;
+&lt;h3&gt;fragment&lt;/h3&gt;
+&lt;p&gt;for fragment, pyreveal also use something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;fragment&lt;/span&gt;
+&lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;appear&lt;/span&gt; &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;down&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;press&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;fragment_grow&lt;/span&gt;
+&lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;grow&lt;/span&gt; &lt;span class="n"&gt;next&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pyreveal will just put the tag after the '---' (with replacing the '_' with a blank space) into the &lt;p class="{{ here }}"&gt;. So all kind of fragment styles will be supported as they should be in the reveal.js. &lt;/p&gt;
+&lt;p&gt;Just some minor different, that shows in the demo file, the word "highlight" does not sit at there at first.&lt;/p&gt;
+&lt;h3&gt;speaker notes&lt;/h3&gt;
+&lt;p&gt;finally, the speaker notes. &lt;/p&gt;
+&lt;p&gt;the speaker notes should be put at the last of each slide, after the tag.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;&lt;span class="n"&gt;notes&lt;/span&gt;
+&lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;speaker&lt;/span&gt; &lt;span class="n"&gt;notes&lt;/span&gt;
+&lt;span class="n"&gt;line&lt;/span&gt; 2 
+&lt;span class="n"&gt;line&lt;/span&gt; 3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;custom.css&lt;/h3&gt;
+&lt;p&gt;Same as the output of the nbconvert, the output of the pyreveal will also try to read a custom.css at the same directory of the output html file. 
+So, it is possible and easy to change something for the slides, e.g. change the fonts. &lt;/p&gt;
+&lt;h3&gt;usage&lt;/h3&gt;
+&lt;p&gt;run this and done.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python -m pyreveal -i whatever.md
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Next plan&lt;/h2&gt;
+&lt;p&gt;Next thing to do should be try to read the jupyter notebook file, and convert the slides content from notebook to the reveal.js html. 
+Because I still hope that the &lt;cell&gt; tags should be remove, and the speaker notes should be fixed.&lt;br&gt;
+&lt;/p&gt;
+&lt;h2&gt;addition themes&lt;/h2&gt;
+&lt;p&gt;I have added some themes, using the google material design color palette. 
+They are:
+- material_colorset_dark
+- material_colorset_light&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;colorset&lt;/em&gt; include: amber, blue, bluegrey, brown, cyan, deeporange, deeppurple, green, grey, indigo, lightblue, lightgreen, lime, orange, pink, purple, red, teal, yellow. &lt;/p&gt;
+&lt;p&gt;e.g.:
+- material_amber_dark
+- material_blue_dark
+- material_green_dark
+- material_indigo_dark
+- material_grey_light
+- material_red_light
+- material_purple_light&lt;/p&gt;
+&lt;p&gt;Please try.&lt;/p&gt;
+&lt;h3&gt;License&lt;/h3&gt;
+&lt;p&gt;MIT License&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2017 Wei Chien Benny Chin, Department of Geography, National Taiwan University&lt;/p&gt;
+&lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:&lt;/p&gt;
+&lt;p&gt;The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.&lt;/p&gt;
+&lt;p&gt;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.&lt;/p&gt;</content><category term="svg"></category><category term="python"></category><category term="markdown"></category><category term="slides"></category><category term="reveal.js"></category></entry><entry><title>colouringmap</title><link href="https://wcchin.github.io/colouringmap.html" rel="alternate"></link><published>2017-06-08T00:00:00+08:00</published><updated>2017-06-08T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-06-08:/colouringmap.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;&lt;a href="#eng_version"&gt;english version&lt;/a&gt; -- &lt;a href="#zh_version"&gt;中文版&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a name="eng_version"&gt;&lt;/p&gt;
 &lt;h1&gt;colouringmap&lt;/h1&gt;
@@ -126,7 +273,8 @@ pip install -e .
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;或是直接從網路上裝下來  &lt;/p&gt;
+&lt;p&gt;或是直接從網路上裝下來&lt;br&gt;
+&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pip install git+https://github.com/wcchin/colouringmap.git#egg&lt;span class="o"&gt;=&lt;/span&gt;colouringmap
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -349,43 +497,43 @@ print gdf.head()&lt;/p&gt;
 
 
 &lt;p&gt;setup the file and file setup&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;intersf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;inter_TP_1m&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;flowsf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;flow_TP_1m&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;inters_fs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;node1&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;node2&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;flows_fs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;rid&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;volume&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;flow&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;intersf&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;inter_TP_1m.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;flowsf&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;flow_TP_1m.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;inters_fs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;node1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;n1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;node2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;n2&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;flows_fs&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;node&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;rid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;volume&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;flow&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;initializing the FBPR&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FBPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;intersf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flowsf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inters_fs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;inters_fs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flows_fs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;flows_fs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FBPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;intersf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flowsf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inters_fs&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;inters_fs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;flows_fs&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;flows_fs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;initialize the solutions sets, run once&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_solutions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pool_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;set_count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_solutions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pool_size&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;3&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;set_count&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;3&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;run all sets&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_generation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_PRiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run_pool&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_iter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_generation&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;20&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_PRiter&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;500&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run_pool&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_iter&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;run one set (e.g. first set)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;run_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_generation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_PRiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run_pool&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_iter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;run_set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;0&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_generation&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;20&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_PRiter&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;500&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run_pool&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_iter&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_optimal_sol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_optimal_sol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; ## &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;
 
-&lt;span class="n"&gt;optimal_sol_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_optimal_sol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;
+&lt;span class="n"&gt;optimal_sol_df&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_optimal_sol&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;export&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; ## &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;check the performance of each set&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;0&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fbpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ga_performance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set_no&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;2&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -438,7 +586,7 @@ SOFTWARE.&lt;/p&gt;</content><category term="spatial"></category><category term=
 &lt;h2&gt;installing GPRas&lt;/h2&gt;
 &lt;p&gt;on windows:&lt;/p&gt;
 &lt;p&gt;install shapely first. can use conda if you are using anaconda(miniconda).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;scitools&lt;/span&gt; &lt;span class="n"&gt;shapely&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.5.13&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;conda&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;scitools&lt;/span&gt; &lt;span class="n"&gt;shapely&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;.&lt;/span&gt;5&lt;span class="p"&gt;.&lt;/span&gt;13
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -472,15 +620,15 @@ First download these from here: http://www.lfd.uci.edu/~gohlke/pythonlibs/&lt;/p
 &lt;p&gt;Two ways of data input: csv file, nx.Graph object&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;for csv file&lt;/strong&gt;:
 prepare the file paths and file setup info&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;nodefile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;test_data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;TP_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;linkfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;test_data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;TP_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;node_filesetup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;node_id&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;nid&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;xcor&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;xcor&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ycor&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ycor&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;link_filesetup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ori&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ori&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;des&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;des&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;weight&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;:&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;nodefile&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;test_data/TP_nodes.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;linkfile&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;test_data/TP_links.csv&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;node_filesetup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;node_id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;nid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;xcor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;xcor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ycor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ycor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;link_filesetup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ori&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ori&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;des&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;des&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;weight&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;time&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;create the spatial_graph object&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gpr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -491,33 +639,33 @@ prepare the file paths and file setup info&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;for nx.Graph object&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;networkx&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;
-&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;reading&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="n"&gt;creating&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;
-&lt;span class="n"&gt;ndf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nodefile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;nii&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;node_id&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;nxx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;xcor&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;nyy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ycor&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;nodes_lis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;xx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;yyy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;yy&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;xx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;yy&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nxx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nyy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;edf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linkfile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;eoo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;edf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;link_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ori&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;edd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;edf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;link_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;des&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;edges_lis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eoo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;edd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt; ## &lt;span class="n"&gt;just&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;reading&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="n"&gt;creating&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;
+&lt;span class="n"&gt;ndf&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nodefile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;nii&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;node_id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;nxx&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;xcor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;nyy&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ndf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ycor&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;nodes_lis&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;xx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;yyy&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;yy&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;xx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;yy&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nii&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nxx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nyy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;edf&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linkfile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;eoo&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;edf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;link_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ori&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;edd&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;edf&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;link_filesetup&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;des&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]].&lt;/span&gt;&lt;span class="n"&gt;tolist&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;edges_lis&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;oo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eoo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;edd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
 
-&lt;span class="n"&gt;G&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;G&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_nodes_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nodes_lis&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edges_from&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;edges_lis&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="cp"&gt;## graph setup info&lt;/span&gt;
-&lt;span class="n"&gt;node_setup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xcor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;xxx&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ycor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;yyy&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;link_setup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
+## &lt;span class="n"&gt;graph&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;
+&lt;span class="n"&gt;node_setup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xcor&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;xxx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ycor&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;yyy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; ## &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;nodes&lt;/span&gt; &lt;span class="n"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;link_setup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;None&lt;/span&gt;
 
-&lt;span class="n"&gt;sg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sgc&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sgc&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_nx&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node_setup&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;link_setup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;prepare and calculate&lt;/h3&gt;
 &lt;p&gt;First, initialize the parameters&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iteration&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gamma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Initialize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iteration&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;5000&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;.,&lt;/span&gt; &lt;span class="nb"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;.,&lt;/span&gt; &lt;span class="nb"&gt;gamma&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;1&lt;span class="p"&gt;.)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -528,27 +676,27 @@ prepare the file paths and file setup info&lt;/p&gt;
 
 &lt;p&gt;Calculate each of them using updated parameters&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PR&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DDPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eDDPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gamma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eGPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gamma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DDPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;3&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eDDPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;gamma&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;6&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eGPR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;3&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;gamma&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;these calculation will change the parameters for summary output, but not the default paramters (for calculation with no paramter setup, eg. alpha=None), which are set from the initialization.&lt;/p&gt;
 &lt;h3&gt;get the results in Pandas DataFrame format&lt;/h3&gt;
 &lt;p&gt;get summary df&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;summary_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_summary&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;summary_df&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_summary&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;summary_df&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;get the nodes concentration results&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;result_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_results&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;result_df&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_results&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; ## &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; 6
 &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;result_df&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="n"&gt;part_result_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_results&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;pr&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;wpr&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;only&lt;/span&gt; &lt;span class="n"&gt;PR&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;WPR&lt;/span&gt;
+&lt;span class="n"&gt;part_result_df&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_results&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;=[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;pr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;wpr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; ## &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;only&lt;/span&gt; &lt;span class="n"&gt;PR&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;WPR&lt;/span&gt;
 &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;part_result_df&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -556,54 +704,54 @@ prepare the file paths and file setup info&lt;/p&gt;
 &lt;h3&gt;export results&lt;/h3&gt;
 &lt;p&gt;the results can be export directly to csv format and shapfile format&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;summary table&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;temp_summary&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;result/temp_summary.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;strong&gt;to csv file&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;temp_output_dd_g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ddpr&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;gpr&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;result/temp_output_dd_g.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;=[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ddpr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;gpr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 
-&lt;span class="cp"&gt;# also same as to_csv() with items=None&lt;/span&gt;
-&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;All_to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;temp_output&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+# &lt;span class="n"&gt;also&lt;/span&gt; &lt;span class="n"&gt;same&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;All_to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;result/temp_output.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;strong&gt;to shp file&lt;/strong&gt;
 prepare a crs string, or it will be default to None&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;crs67&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;proj&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tmerc&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;lat_0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;lon_0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;121&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.9999&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;x_0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;250000&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y_0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;ellps&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;aust_SA&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;towgs84&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;752&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;358&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;179&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.0000011698&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.0000018398&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.0000009822&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.00002329&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;units&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;no_defs&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;crs67&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752,-358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;export the files, which include a point shpfile for nodes and the concentration results, and a line shpfile for edge (no result inside, just for mapping)&lt;/p&gt;
 &lt;p&gt;output two of the results (PR and WPR) into one file&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename_prefix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;temp_shp_pr_wpr&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;crs67&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;pr&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;wpr&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename_prefix&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;result/temp_shp_pr_wpr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;crs67&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;=[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;pr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;wpr&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;output all 6 PRs&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;All_to_shps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename_prefix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;temp_shp&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;crs67&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;All_to_shps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename_prefix&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;result/temp_shp&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;crs&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;crs67&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;to networkx graph object&lt;/h3&gt;
 &lt;p&gt;similar to the previous export&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;PRs&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; ## &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;all&lt;/span&gt; 6 &lt;span class="n"&gt;PRs&lt;/span&gt;
 
-&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DDPR&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;=[&lt;/span&gt;&amp;quot;&lt;span class="n"&gt;DDPR&lt;/span&gt;&amp;quot;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;demo for drawing the networkx object&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyplot&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;
 
-&lt;span class="n"&gt;ss&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nodes_iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;DDPR_score&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;5000.&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ss&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nodes_iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;DDPR_score&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;5000&lt;span class="p"&gt;.)&lt;/span&gt;
 
-&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_networkx_nodes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_networkx_edges&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_aspect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;equal&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_networkx_nodes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node_size&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;draw_networkx_edges&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;3&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_aspect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;equal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -612,69 +760,69 @@ prepare a crs string, or it will be default to None&lt;/p&gt;
 &lt;h2&gt;file structure&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Geographical&lt;/span&gt; &lt;span class="n"&gt;PageRank&lt;/span&gt; &lt;span class="n"&gt;Algorithms&lt;/span&gt;
 &lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;bdist&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x86_64&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;lib&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRa&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPR_algorithms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;input_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;input_funcs&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;DataImport_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;FileReading_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;output_funcs&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt;         &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;dist&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="mf"&gt;.7&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;none&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whl&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;example_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;demo&lt;/span&gt; &lt;span class="n"&gt;results&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;test_data&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;KH_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;KH_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;TC_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;TC_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;TP_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;TP_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRa&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPR_algorithms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;input_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;input_funcs&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;DataImport_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;FileReading_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;output_funcs&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;│  &lt;/span&gt;     &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;dependency_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;PKG&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;SOURCES&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;│  &lt;/span&gt; &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;top_level&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;LICENSE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;MANIFEST&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
-&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+├── &lt;span class="n"&gt;build&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;bdist&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x86_64&lt;/span&gt;
+│   └── &lt;span class="n"&gt;lib&lt;/span&gt;
+│       └── &lt;span class="n"&gt;GPRas&lt;/span&gt;
+│           ├── &lt;span class="n"&gt;GPRa&lt;/span&gt;
+│           │   ├── &lt;span class="n"&gt;GPR_algorithms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   ├── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   ├── &lt;span class="n"&gt;input_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   ├── &lt;span class="n"&gt;input_funcs&lt;/span&gt;
+│           │   │   ├── &lt;span class="n"&gt;DataImport_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   │   ├── &lt;span class="n"&gt;FileReading_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   │   └── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   ├── &lt;span class="n"&gt;output_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │   └── &lt;span class="n"&gt;output_funcs&lt;/span&gt;
+│           │       ├── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │       ├── &lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │       ├── &lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           │       └── &lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           ├── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│           └── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+├── &lt;span class="n"&gt;dist&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;1&lt;span class="p"&gt;.&lt;/span&gt;0&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;7&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;1&lt;span class="p"&gt;.&lt;/span&gt;0&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;py2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;none&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whl&lt;/span&gt;
+│   └── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;1&lt;span class="p"&gt;.&lt;/span&gt;0&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
+├── &lt;span class="n"&gt;GPRas&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;example&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;example_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;result&lt;/span&gt;
+│   │   │   └── &lt;span class="n"&gt;demo&lt;/span&gt; &lt;span class="n"&gt;results&lt;/span&gt;
+│   │   └── &lt;span class="n"&gt;test_data&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;KH_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;KH_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;TC_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;TC_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;TP_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   │       └── &lt;span class="n"&gt;TP_nodes&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;GPRa&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;GPR_algorithms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;input_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;input_funcs&lt;/span&gt;
+│   │   │   ├── &lt;span class="n"&gt;DataImport_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   │   ├── &lt;span class="n"&gt;FileReading_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   │   └── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   ├── &lt;span class="n"&gt;output_func&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │   └── &lt;span class="n"&gt;output_funcs&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │       ├── &lt;span class="n"&gt;to_nx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   │       └── &lt;span class="n"&gt;to_shps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+│   └── &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+├── &lt;span class="n"&gt;GPRas&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;egg&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;dependency_links&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;PKG&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;INFO&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;requires&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+│   ├── &lt;span class="n"&gt;SOURCES&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+│   └── &lt;span class="n"&gt;top_level&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+├── &lt;span class="n"&gt;LICENSE&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+├── &lt;span class="n"&gt;MANIFEST&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;
+├── &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+└── &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

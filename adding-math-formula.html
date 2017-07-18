@@ -10,7 +10,7 @@
         
 <meta name="description" content="&lt;hr&gt;
 &lt;p&gt;Testing &lt;a href=&#34;https://www.mathjax.org&#34; target=&#34;_blank&#34;&gt;MathJax&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;math&#34;&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/div&gt;
+&lt;p&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/p&gt;
 &lt;p&gt;The &#34;installing&#34; steps is simple:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;include the CDN in &lt;head&gt; ... &lt;/head&gt;, in the case of mynt&#39;s quick start template, this could be added in the page.header.html file.&lt;/li&gt;
@@ -111,71 +111,14 @@
         <section class="article">
             <hr>
 <p>Testing <a href="https://www.mathjax.org" target="_blank">MathJax</a></p>
-<div class="math">$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$</div>
+<p>$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$</p>
 <p>The "installing" steps is simple:</p>
 <ol>
 <li>include the CDN in <head> ... </head>, in the case of mynt's quick start template, this could be added in the page.header.html file.</li>
 <li>type the formula in tex's syntax, using the double $ as the entering and exiting characters, so that the formula is between double $ pair. </li>
 <li>note that in default setting, the inline math mode is not supported, namely the single $ pair. To use this, some code is needed to be added to overwrite this setting. </li>
 </ol>
-<p>note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. </p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>    
+<p>note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. </p>    
         </section>
             <div id="disqus_thread"></div>
             <script type="text/javascript">
@@ -245,8 +188,8 @@
         <p class="tag-cloud">
             <a href="https://wcchin.github.io/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
             <a href="https://wcchin.github.io/tag/python.html"><span class="label">python</span></a>
-            <a href="https://wcchin.github.io/tag/network.html"><span class="label">network</span></a>
             <a href="https://wcchin.github.io/tag/svg.html"><span class="label">svg</span></a>
+            <a href="https://wcchin.github.io/tag/network.html"><span class="label">network</span></a>
             <a href="https://wcchin.github.io/tag/open-data.html"><span class="label">open data</span></a>
             <a href="https://wcchin.github.io/tag/pagerank.html"><span class="label">PageRank</span></a>
             <a href="https://wcchin.github.io/tag/webpage.html"><span class="label">webpage</span></a>
@@ -264,14 +207,17 @@
             <a href="https://wcchin.github.io/tag/tapitas.html"><span class="label">TaPiTaS</span></a>
             <a href="https://wcchin.github.io/tag/ipython.html"><span class="label">ipython</span></a>
             <a href="https://wcchin.github.io/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="https://wcchin.github.io/tag/reveal.js.html"><span class="label">reveal.js</span></a>
             <a href="https://wcchin.github.io/tag/dengue.html"><span class="label">dengue</span></a>
             <a href="https://wcchin.github.io/tag/network-analysis.html"><span class="label">network analysis</span></a>
             <a href="https://wcchin.github.io/tag/vmapper.html"><span class="label">vmapper</span></a>
-            <a href="https://wcchin.github.io/tag/writings.html"><span class="label">writings</span></a>
+            <a href="https://wcchin.github.io/tag/markdown.html"><span class="label">markdown</span></a>
             <a href="https://wcchin.github.io/tag/vd.html"><span class="label">VD</span></a>
             <a href="https://wcchin.github.io/tag/gh-pages.html"><span class="label">gh-pages</span></a>
             <a href="https://wcchin.github.io/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="https://wcchin.github.io/tag/writings.html"><span class="label">writings</span></a>
             <a href="https://wcchin.github.io/tag/export.html"><span class="label">export</span></a>
+            <a href="https://wcchin.github.io/tag/visualisation.html"><span class="label">visualisation</span></a>
             <a href="https://wcchin.github.io/tag/timelag.html"><span class="label">timelag</span></a>
             <a href="https://wcchin.github.io/tag/colouringmap.html"><span class="label">colouringmap</span></a>
             <a href="https://wcchin.github.io/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
@@ -282,18 +228,15 @@
             <a href="https://wcchin.github.io/tag/fbpr.html"><span class="label">FBPR</span></a>
             <a href="https://wcchin.github.io/tag/bus.html"><span class="label">bus</span></a>
             <a href="https://wcchin.github.io/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="https://wcchin.github.io/tag/slides.html"><span class="label">slides</span></a>
             <a href="https://wcchin.github.io/tag/youbike.html"><span class="label">youbike</span></a>
             <a href="https://wcchin.github.io/tag/article.html"><span class="label">article</span></a>
             <a href="https://wcchin.github.io/tag/publication.html"><span class="label">publication</span></a>
             <a href="https://wcchin.github.io/tag/chorolepth.html"><span class="label">chorolepth</span></a>
             <a href="https://wcchin.github.io/tag/github.html"><span class="label">github</span></a>
             <a href="https://wcchin.github.io/tag/jupyter.html"><span class="label">jupyter</span></a>
-            <a href="https://wcchin.github.io/tag/revealjs.html"><span class="label">revealjs</span></a>
             <a href="https://wcchin.github.io/tag/mrt.html"><span class="label">MRT</span></a>
             <a href="https://wcchin.github.io/tag/documentation.html"><span class="label">documentation</span></a>
-            <a href="https://wcchin.github.io/tag/flow.html"><span class="label">flow</span></a>
-            <a href="https://wcchin.github.io/tag/disease-diffusion.html"><span class="label">disease diffusion</span></a>
-            <a href="https://wcchin.github.io/tag/gephi.html"><span class="label">gephi</span></a>
             &nbsp;&hellip;
         </p>
     </div>
@@ -384,8 +327,8 @@
         <p class="tag-cloud">
             <a href="https://wcchin.github.io/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
             <a href="https://wcchin.github.io/tag/python.html"><span class="label">python</span></a>
-            <a href="https://wcchin.github.io/tag/network.html"><span class="label">network</span></a>
             <a href="https://wcchin.github.io/tag/svg.html"><span class="label">svg</span></a>
+            <a href="https://wcchin.github.io/tag/network.html"><span class="label">network</span></a>
             <a href="https://wcchin.github.io/tag/open-data.html"><span class="label">open data</span></a>
             <a href="https://wcchin.github.io/tag/pagerank.html"><span class="label">PageRank</span></a>
             <a href="https://wcchin.github.io/tag/webpage.html"><span class="label">webpage</span></a>
@@ -403,14 +346,17 @@
             <a href="https://wcchin.github.io/tag/tapitas.html"><span class="label">TaPiTaS</span></a>
             <a href="https://wcchin.github.io/tag/ipython.html"><span class="label">ipython</span></a>
             <a href="https://wcchin.github.io/tag/diffusion.html"><span class="label">diffusion</span></a>
+            <a href="https://wcchin.github.io/tag/reveal.js.html"><span class="label">reveal.js</span></a>
             <a href="https://wcchin.github.io/tag/dengue.html"><span class="label">dengue</span></a>
             <a href="https://wcchin.github.io/tag/network-analysis.html"><span class="label">network analysis</span></a>
             <a href="https://wcchin.github.io/tag/vmapper.html"><span class="label">vmapper</span></a>
-            <a href="https://wcchin.github.io/tag/writings.html"><span class="label">writings</span></a>
+            <a href="https://wcchin.github.io/tag/markdown.html"><span class="label">markdown</span></a>
             <a href="https://wcchin.github.io/tag/vd.html"><span class="label">VD</span></a>
             <a href="https://wcchin.github.io/tag/gh-pages.html"><span class="label">gh-pages</span></a>
             <a href="https://wcchin.github.io/tag/gravity.html"><span class="label">gravity</span></a>
+            <a href="https://wcchin.github.io/tag/writings.html"><span class="label">writings</span></a>
             <a href="https://wcchin.github.io/tag/export.html"><span class="label">export</span></a>
+            <a href="https://wcchin.github.io/tag/visualisation.html"><span class="label">visualisation</span></a>
             <a href="https://wcchin.github.io/tag/timelag.html"><span class="label">timelag</span></a>
             <a href="https://wcchin.github.io/tag/colouringmap.html"><span class="label">colouringmap</span></a>
             <a href="https://wcchin.github.io/tag/transmission-risk.html"><span class="label">transmission risk</span></a>
@@ -421,18 +367,15 @@
             <a href="https://wcchin.github.io/tag/fbpr.html"><span class="label">FBPR</span></a>
             <a href="https://wcchin.github.io/tag/bus.html"><span class="label">bus</span></a>
             <a href="https://wcchin.github.io/tag/urban-traffic.html"><span class="label">urban traffic</span></a>
+            <a href="https://wcchin.github.io/tag/slides.html"><span class="label">slides</span></a>
             <a href="https://wcchin.github.io/tag/youbike.html"><span class="label">youbike</span></a>
             <a href="https://wcchin.github.io/tag/article.html"><span class="label">article</span></a>
             <a href="https://wcchin.github.io/tag/publication.html"><span class="label">publication</span></a>
             <a href="https://wcchin.github.io/tag/chorolepth.html"><span class="label">chorolepth</span></a>
             <a href="https://wcchin.github.io/tag/github.html"><span class="label">github</span></a>
             <a href="https://wcchin.github.io/tag/jupyter.html"><span class="label">jupyter</span></a>
-            <a href="https://wcchin.github.io/tag/revealjs.html"><span class="label">revealjs</span></a>
             <a href="https://wcchin.github.io/tag/mrt.html"><span class="label">MRT</span></a>
             <a href="https://wcchin.github.io/tag/documentation.html"><span class="label">documentation</span></a>
-            <a href="https://wcchin.github.io/tag/flow.html"><span class="label">flow</span></a>
-            <a href="https://wcchin.github.io/tag/disease-diffusion.html"><span class="label">disease diffusion</span></a>
-            <a href="https://wcchin.github.io/tag/gephi.html"><span class="label">gephi</span></a>
             &nbsp;&hellip;
         </p>
     </div>

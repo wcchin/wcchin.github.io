@@ -87,9 +87,10 @@ The firstly added layer will be draw first, so it will be the lowest on the map.
 &lt;p&gt;&lt;img alt="screenshot of the svg map" src="/images/demo_colouring_vmapper.png" title="svg map with colouringmap and vmapper"&gt;&lt;/p&gt;
 &lt;p&gt;and the demo of svg:&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/testing_taipei_crime_map2.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/testing_taipei_crime_map2.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/testing_taipei_crime_map2.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;updated (2017-06-10)&lt;/em&gt;:&lt;br&gt;
-updated to include legend and text with the latest version of vmapper.&lt;/p&gt;</content><category term="colouringmap"></category><category term="vmapper"></category><category term="svg"></category><category term="python"></category></entry><entry><title>Applying space-time info. to explore disease process</title><link href="https://wcchin.github.io/applying-space-time-info-to-explore-disease-process.html" rel="alternate"></link><published>2017-05-23T00:00:00+08:00</published><updated>2017-05-23T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-23:/applying-space-time-info-to-explore-disease-process.html</id><summary type="html">&lt;hr&gt;
+updated to include legend and text with the latest version of vmapper.&lt;/p&gt;</content><category term="colouringmap"></category><category term="vmapper"></category><category term="svg"></category><category term="python"></category><category term="visualisation"></category></entry><entry><title>Applying space-time info. to explore disease process</title><link href="https://wcchin.github.io/applying-space-time-info-to-explore-disease-process.html" rel="alternate"></link><published>2017-05-23T00:00:00+08:00</published><updated>2017-05-23T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-23:/applying-space-time-info-to-explore-disease-process.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;Abstract:
 Dengue Fever (DF) data is recorded as a space-time point data, i.e. each record contains a spatial location, and a temporal location. Previous studies often use clustering analysis method to analyze this type of disease case data, to search for spatial or space-time cluster areas (hot-spots), and connect …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Abstract:
@@ -112,12 +113,14 @@ Therefore, the aim of this case study is to detect sub-clusters from the annual 
 &lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The example is shown here:&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/vmapperexample.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Vmapper is a simple python library for creating map in python, from reading spatial data source to exporting map.
 &lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The example is shown here:&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/vmapperexample.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="svg"></category><category term="map"></category><category term="vmapper"></category></entry><entry><title>Playing with TGOD</title><link href="https://wcchin.github.io/playing-with-tgod.html" rel="alternate"></link><published>2017-04-16T00:00:00+08:00</published><updated>2017-04-16T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-16:/playing-with-tgod.html</id><summary type="html">&lt;hr&gt;
+&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</content><category term="svg"></category><category term="map"></category><category term="vmapper"></category></entry><entry><title>Playing with TGOD</title><link href="https://wcchin.github.io/playing-with-tgod.html" rel="alternate"></link><published>2017-04-16T00:00:00+08:00</published><updated>2017-04-16T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-16:/playing-with-tgod.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;TGOD is a python package that can download some Taiwan open data. Here I am playing with the Taipei bus api and youbike api. The result is as the link show: 
 &lt;a href="http:140.112.64.67:2170"&gt;a demo site of the usage of TGOD&lt;/a&gt;. The demo site is created using Flask and skeleton css.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="alt text" src="/images/demo_site_170416.png" title="a demo site"&gt;&lt;/p&gt;
@@ -211,7 +214,8 @@ So the plan has been changed. I only use different colors to separate the chaine
 &lt;p&gt;BTW, a legend is added, and the typo in footer is corrected.&lt;/p&gt;
 &lt;h2&gt;The result&lt;/h2&gt;
 &lt;p&gt;Open a new windows with this &lt;a href="/svgs/event_4_morph_ellipse.svg"&gt; link &lt;/a&gt; to get a better view. 
-&lt;object id="svg1" data="/svgs/event_4_morph_ellipse.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;  &lt;/p&gt;
+&lt;object id="svg1" data="/svgs/event_4_morph_ellipse.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;h2&gt;reference&lt;/h2&gt;
 &lt;p&gt;how to calculate the standard ellipse
 &lt;a href="http://resources.esri.com/help/9.3/arcgisdesktop/com/gp_toolref/spatial_statistics_tools/how_directional_distribution_colon_standard_deviational_ellipse_spatial_statistics_works.htm" target="_blank"&gt;How Directional Distribution: Standard Deviational Ellipse (Spatial Statistics) works (by esri) &lt;/a&gt;&lt;/p&gt;
@@ -226,11 +230,13 @@ So the plan has been changed. I only use different colors to separate the chaine
 &lt;h2&gt;The data&lt;/h2&gt;
 &lt;p&gt;Lets take a look on the data -- the happening of cases, using the animated svg to present:
 &lt;object id="svg1" data="/svgs/prog_event_3.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/prog_event_3.svg"&gt; The dengue cases. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/prog_event_3.svg"&gt; The dengue cases. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;h2&gt;The result&lt;/h2&gt;
 &lt;p&gt;After the space-time clustering and progression tracking, this is the result, please wait for a few minutes, because the earlier cases did not form cluster, so it will have nothing to show at the begining:
 &lt;object id="svg1" data="/svgs/prog_map_3.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/prog_map_3.svg"&gt; The space-time clusters and progressions. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="python"></category><category term="svg"></category><category term="dengue"></category></entry><entry><title>'Processing' human movements in Taipei City</title><link href="https://wcchin.github.io/processing-human-movements-in-taipei-city.html" rel="alternate"></link><published>2016-07-12T00:00:00+08:00</published><updated>2016-07-12T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-07-12:/processing-human-movements-in-taipei-city.html</id><summary type="html">&lt;hr&gt;
+&lt;a href="/svgs/prog_map_3.svg"&gt; The space-time clusters and progressions. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</content><category term="python"></category><category term="svg"></category><category term="dengue"></category></entry><entry><title>'Processing' human movements in Taipei City</title><link href="https://wcchin.github.io/processing-human-movements-in-taipei-city.html" rel="alternate"></link><published>2016-07-12T00:00:00+08:00</published><updated>2016-07-12T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-07-12:/processing-human-movements-in-taipei-city.html</id><summary type="html">&lt;hr&gt;
 &lt;h2&gt;working on Taipei City's open data&lt;/h2&gt;
 &lt;p&gt;Taipei City's open data contain quite a lots and useful data about &lt;a href="https://taipeicity.github.io/traffic_realtime/"&gt;human movement&lt;/a&gt;, which included vehicle detector for street vehicles number, bus location data, bike sharing service available situation. 
 Beside this, we have also obtained the bike sharing rental information, which include the …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
@@ -268,15 +274,20 @@ It is a bilateral matrix, so using each row/column of the matrix as the nodes, a
 &lt;h2&gt;Results&lt;/h2&gt;
 &lt;p&gt;The year 1960, 1970, 1980, 1990, 2000 were included from the data source. So they were mapped separately.&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/workfile_4_1960.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/workfile_4_1960.svg"&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/workfile_4_1960.svg"&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/workfile_4_1970.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/workfile_4_1970.svg"&gt; Year 1970. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/workfile_4_1970.svg"&gt; Year 1970. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/workfile_4_1980.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/workfile_4_1980.svg"&gt; Year 1980. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/workfile_4_1980.svg"&gt; Year 1980. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/workfile_4_1990.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/workfile_4_1990.svg"&gt; Year 1990. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;
+&lt;a href="/svgs/workfile_4_1990.svg"&gt; Year 1990. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/workfile_4_2000.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/workfile_4_2000.svg"&gt; Year 2000. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="python"></category><category term="svg"></category></entry><entry><title>the animated svg for viewing Bike Sharing OD relationship</title><link href="https://wcchin.github.io/the-animated-svg-for-viewing-bike-sharing-od-relationship.html" rel="alternate"></link><published>2016-07-09T00:00:00+08:00</published><updated>2016-07-09T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-07-09:/the-animated-svg-for-viewing-bike-sharing-od-relationship.html</id><summary type="html">&lt;hr&gt;
+&lt;a href="/svgs/workfile_4_2000.svg"&gt; Year 2000. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</content><category term="python"></category><category term="svg"></category></entry><entry><title>the animated svg for viewing Bike Sharing OD relationship</title><link href="https://wcchin.github.io/the-animated-svg-for-viewing-bike-sharing-od-relationship.html" rel="alternate"></link><published>2016-07-09T00:00:00+08:00</published><updated>2016-07-09T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-07-09:/the-animated-svg-for-viewing-bike-sharing-od-relationship.html</id><summary type="html">&lt;hr&gt;
 &lt;h2&gt;animated svg&lt;/h2&gt;
 &lt;p&gt;At first, I use processing for showing the spatial-temporal distribution of the bike sharing origin-destination movements.
 The animation is recorded as in video: &lt;a href="https://drive.google.com/file/d/0B41yDf_RGLPSTFZrLXpmMW02TTA/view?usp=sharing"&gt;go to google drive&lt;/a&gt;&lt;/p&gt;
@@ -289,7 +300,8 @@ The animation is recorded as in video: &lt;a href="https://drive.google.com/file
 &lt;p&gt;So, I search for the simple animation script in svg: &lt;a href="https://mdn.mozillademos.org/files/3261/animateMotion.svg"&gt;simple demo for animation in svg&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is the result: &lt;/p&gt;
 &lt;p&gt;&lt;object id="svg1" data="/svgs/ubike_od_20150101_2.svg" type="image/svg+xml" style="width: 650px; height: 800px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/ubike_od_20150101_2.svg"&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</content><category term="python"></category><category term="svg"></category><category term="processing"></category></entry><entry><title>the nearest neighbours in two dimensions space</title><link href="https://wcchin.github.io/the-nearest-neighbours-in-two-dimensions-space.html" rel="alternate"></link><published>2016-04-22T00:00:00+08:00</published><updated>2016-04-22T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-04-22:/the-nearest-neighbours-in-two-dimensions-space.html</id><summary type="html">&lt;hr&gt;
+&lt;a href="/svgs/ubike_od_20150101_2.svg"&gt; Year 1960. click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;&lt;br&gt;
+&lt;/p&gt;</content><category term="python"></category><category term="svg"></category><category term="processing"></category></entry><entry><title>the nearest neighbours in two dimensions space</title><link href="https://wcchin.github.io/the-nearest-neighbours-in-two-dimensions-space.html" rel="alternate"></link><published>2016-04-22T00:00:00+08:00</published><updated>2016-04-22T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-04-22:/the-nearest-neighbours-in-two-dimensions-space.html</id><summary type="html">&lt;hr&gt;
 &lt;h2&gt;nearest neighbours&lt;/h2&gt;
 &lt;p&gt;Which points are the nearest neighbours, or top N nearest neighbours, are the frequently used procedures in point data analysis. 
 Sometimes, we might need to find the neighbours in-radius of some distance. &lt;/p&gt;
@@ -385,7 +397,7 @@ Tiddlers are linked to the related tiddlers, just the same as the "wiki" system.
 &lt;p&gt;I am new to the 'git' world (a github noob). I use github as a space to store some things that I want to share with public. This website is stored in the gh-pages master branch. I have another repository that is also used as gh-pages, but not as the master branch. So I am taking this note to remind myself how to sync the branchs.&lt;/p&gt;
 &lt;p&gt;The following codes would push things from local to the master branch:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;
-&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;what&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt; &lt;span class="n"&gt;been&lt;/span&gt; &lt;span class="n"&gt;changed&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;the message about what have been changed&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -407,7 +419,8 @@ https://username.github.io/repositoryname/filename.html&lt;/p&gt;</content><cate
 &lt;p&gt;This website is generated by using mynt -- a static site generator writen in python. Mynt will convert markdown text file to html by using the corresponding layout. &lt;a href="http://mynt.uhnomoli.com/"&gt;Mynt's website&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;p&gt;Mynt is a python2 package, so python2 should be installed in the computer before installing and using mynt. (I am not sure if it works with python3.)&lt;/p&gt;
-&lt;p&gt;To install mynt, type this in command line:  &lt;/p&gt;
+&lt;p&gt;To install mynt, type this in command line:&lt;br&gt;
+&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;mynt&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -415,7 +428,7 @@ https://username.github.io/repositoryname/filename.html&lt;/p&gt;</content><cate
 &lt;h2&gt;Initialize a new project/website&lt;/h2&gt;
 &lt;p&gt;To start a new website at a local directory &lt;code&gt;~/project&lt;/code&gt; with the name &lt;code&gt;site-name&lt;/code&gt;, in command line:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="cp"&gt;## or force remove the existing project before create new project&lt;/span&gt;
+## &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;
 &lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -423,37 +436,37 @@ https://username.github.io/repositoryname/filename.html&lt;/p&gt;</content><cate
 &lt;h3&gt;Website directory structure&lt;/h3&gt;
 &lt;p&gt;Mynt will create the following directories and files in the &lt;code&gt;site-name&lt;/code&gt; directory after the initialize:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yml&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;feed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;
-&lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;archives&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;_assets&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;pygments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└───&lt;/span&gt;&lt;span class="n"&gt;_sass&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sass&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sass&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;images&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;favicon&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ico&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;sbg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└───&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="n"&gt;mynt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="err"&gt;└───&lt;/span&gt;&lt;span class="n"&gt;_src&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;                   &lt;span class="n"&gt;mynt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
-&lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;_posts&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="mi"&gt;2011&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mo"&gt;04&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;works&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
-&lt;span class="err"&gt;└───&lt;/span&gt;&lt;span class="n"&gt;_templates&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;archive&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;
+│   &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yml&lt;/span&gt;
+│   &lt;span class="n"&gt;feed&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;
+│   &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│
+├───&lt;span class="n"&gt;archives&lt;/span&gt;
+│       &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+├───&lt;span class="n"&gt;_assets&lt;/span&gt;
+│       ├───&lt;span class="n"&gt;css&lt;/span&gt;
+│       │   │   &lt;span class="n"&gt;pygments&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+│       │   │   &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+│       │   └───&lt;span class="n"&gt;_sass&lt;/span&gt;
+│       │           &lt;span class="n"&gt;_base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sass&lt;/span&gt;
+│       │           &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+│       │           &lt;span class="n"&gt;screen&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sass&lt;/span&gt;
+│       ├───&lt;span class="n"&gt;images&lt;/span&gt;
+│       │       &lt;span class="n"&gt;bg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+│       │       &lt;span class="n"&gt;favicon&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ico&lt;/span&gt;
+│       │       &lt;span class="n"&gt;sbg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;
+│       └───&lt;span class="n"&gt;js&lt;/span&gt;
+│           │   &lt;span class="n"&gt;mynt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+│           └───&lt;span class="n"&gt;_src&lt;/span&gt;
+│                   &lt;span class="n"&gt;mynt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+├───&lt;span class="n"&gt;_posts&lt;/span&gt;
+│       2011&lt;span class="o"&gt;-&lt;/span&gt;12&lt;span class="o"&gt;-&lt;/span&gt;04&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;It&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;works&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+└───&lt;span class="n"&gt;_templates&lt;/span&gt;
+│       &lt;span class="n"&gt;archive&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│       &lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│       &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│       &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│       &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -469,16 +482,16 @@ https://username.github.io/repositoryname/filename.html&lt;/p&gt;</content><cate
 &lt;p&gt;Posts should be place under the &lt;code&gt;_posts&lt;/code&gt; directory. There is a demo file come with the &lt;code&gt;init&lt;/code&gt;. The demo file's name included the date when it is written (2011-12-04), which format should be followed while creating new post file (.md), to tell mynt when the post is written, so mynt would know how to sort the posts. The following part of the filename will be a part of the filename for the generated html files, which means it will appear at the address bar while people are looking at it.&lt;/p&gt;
 &lt;p&gt;Create a new file with file name like &lt;code&gt;2015-10-31-some-name.md&lt;/code&gt;. The header and post content of the file should looks like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;---&lt;/span&gt;
-&lt;span class="nl"&gt;title:&lt;/span&gt; &lt;span class="n"&gt;hey&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt;
-&lt;span class="nl"&gt;layout:&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="nl"&gt;tags:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;testing&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hey&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt;
+&lt;span class="n"&gt;layout&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="n"&gt;tags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;testing&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="o"&gt;---&lt;/span&gt;
 
-&lt;span class="cp"&gt;## a sectiontitle&lt;/span&gt;
+## &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;sectiontitle&lt;/span&gt;
 &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="n"&gt;goes&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; 
 
-&lt;span class="cp"&gt;### a subsection title&lt;/span&gt;
-&lt;span class="n"&gt;blah&lt;/span&gt; &lt;span class="n"&gt;blah&lt;/span&gt; &lt;span class="n"&gt;blah&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;
+### &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;subsection&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;
+&lt;span class="n"&gt;blah&lt;/span&gt; &lt;span class="n"&gt;blah&lt;/span&gt; &lt;span class="n"&gt;blah&lt;/span&gt;&lt;span class="c"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;Use&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -501,12 +514,12 @@ https://username.github.io/repositoryname/filename.html&lt;/p&gt;</content><cate
 &lt;p&gt;that &lt;code&gt;funbox.tag.html&lt;/code&gt; file should also be added in the &lt;code&gt;_templates&lt;/code&gt; directory. (you could just copy and paste the &lt;code&gt;tag.html&lt;/code&gt; and rename it)
 Then, add the following directories (beside &lt;code&gt;_posts&lt;/code&gt;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;
-&lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;_containers&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└───&lt;/span&gt;&lt;span class="n"&gt;funbox&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;           &lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a_first_file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
-&lt;span class="err"&gt;├───&lt;/span&gt;&lt;span class="n"&gt;_templates&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;funboxpost&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="n"&gt;funbox&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+├───&lt;span class="n"&gt;_containers&lt;/span&gt;
+│   └───&lt;span class="n"&gt;funbox&lt;/span&gt;
+│           2015&lt;span class="o"&gt;-&lt;/span&gt;10&lt;span class="o"&gt;-&lt;/span&gt;31&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a_first_file&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+├───&lt;span class="n"&gt;_templates&lt;/span&gt;
+│       &lt;span class="n"&gt;funboxpost&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+│       &lt;span class="n"&gt;funbox&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -514,7 +527,7 @@ Then, add the following directories (beside &lt;code&gt;_posts&lt;/code&gt;):&lt
 &lt;h2&gt;Layout templating and sytling&lt;/h2&gt;
 &lt;p&gt;Mynt use the jinja2 templating engine. So, the layout files should be written or modified according to jinja2 style templating syntax. &lt;/p&gt;
 &lt;p&gt;The styles -- the css and js files, should be place in the &lt;code&gt;_assets/css&lt;/code&gt; and &lt;code&gt;_assets/js&lt;/code&gt;. To get them, let say the &lt;code&gt;_assets/css/skeleton.css&lt;/code&gt;, use:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;{{&lt;/span&gt; &lt;span class="n"&gt;get_asset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;skeleton&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;}}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;get_asset&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;css/skeleton.css&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -524,7 +537,7 @@ Then, add the following directories (beside &lt;code&gt;_posts&lt;/code&gt;):&lt
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;
 
 &lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;
-&lt;span class="cp"&gt;## or, if the output/target is already exist, force overwriting it:&lt;/span&gt;
+## &lt;span class="n"&gt;or&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;already&lt;/span&gt; &lt;span class="n"&gt;exist&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;force&lt;/span&gt; &lt;span class="n"&gt;overwriting&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
 &lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -533,8 +546,8 @@ Then, add the following directories (beside &lt;code&gt;_posts&lt;/code&gt;):&lt
 &lt;h2&gt;Preview the website/post before publishing&lt;/h2&gt;
 &lt;p&gt;Mynt come with a simple function (debug mode) for previewing:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;
-&lt;span class="cp"&gt;## or, to change the preview port&lt;/span&gt;
-&lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;8001&lt;/span&gt;
+## &lt;span class="n"&gt;or&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;preview&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;
+&lt;span class="n"&gt;mynt&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; 8001
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -554,7 +567,8 @@ In april 2013, the algorithms were first proposed in an international conference
 After that, the formal research on these algorithms were stop, and some other things keep comming up. 
 Some further experiments were done. The codes were rewritten in matlab, then in python. I also made a GUI for the algorithms in Python. 
 Although most of the testings did not give good results that worth noting, but, the understanding on the algorithms has became more clear. &lt;/p&gt;
-&lt;p&gt;The article was submitted to the PLoSONE in the may 2015. After several times of revising, it was accepted in september after I came back from the FOSS4G conference at Seoul.  &lt;/p&gt;
+&lt;p&gt;The article was submitted to the PLoSONE in the may 2015. After several times of revising, it was accepted in september after I came back from the FOSS4G conference at Seoul.&lt;br&gt;
+&lt;/p&gt;
 &lt;p&gt;The article is about developing two algorithms for analyzing geospatial network, to see where people or moving agents would be gathering in the connected geographical space. 
 The algorithms were modified from the PageRank algorithm, in the similar way as the Weighted PageRank did. Two key elements were added, the geographical distance between nodes, and the attractiveness of each node. &lt;/p&gt;
 &lt;p&gt;Two "experiments" were conducted. One of them is a national-scale, inter-cities network. And the other is a series of city-scale, within-city networks. &lt;/p&gt;
@@ -716,8 +730,8 @@ jupyter, nbconvert have to be installed in the computer.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;open a jupyter from terminal:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="n"&gt;miniconda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.9.1&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="n"&gt;miniconda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;3&lt;span class="p"&gt;.&lt;/span&gt;9&lt;span class="p"&gt;.&lt;/span&gt;1
+$ &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -730,8 +744,8 @@ jupyter, nbconvert have to be installed in the computer.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;open a jupyter from terminal:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="n"&gt;miniconda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.9.1&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="n"&gt;miniconda&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;3&lt;span class="p"&gt;.&lt;/span&gt;9&lt;span class="p"&gt;.&lt;/span&gt;1
+$ &lt;span class="n"&gt;ipython&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -761,9 +775,9 @@ jupyter, nbconvert have to be installed in the computer.&lt;/p&gt;
 &lt;p&gt;type this in terminal, suppose the .ipynb file's name is &lt;code&gt;filename&lt;/code&gt;:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;nbconvert&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;slides&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;http://cdn.jsdelivr.net/reveal.js/2.5.0&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="err"&gt;##&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;nbconvert&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;slides&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;http://cdn.jsdelivr.net/reveal.js/2.5.0&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ &lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;nbconvert&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;slides&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &amp;quot;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;cdn&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsdelivr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;2&lt;span class="p"&gt;.&lt;/span&gt;5&lt;span class="p"&gt;.&lt;/span&gt;0&amp;quot;
+$ ## &lt;span class="n"&gt;or&lt;/span&gt;
+$ &lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;nbconvert&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;slides&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipynb&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt; &amp;quot;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;cdn&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jsdelivr&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;2&lt;span class="p"&gt;.&lt;/span&gt;5&lt;span class="p"&gt;.&lt;/span&gt;0&amp;quot; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -792,77 +806,20 @@ jupyter, nbconvert have to be installed in the computer.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;iframe width="800" height="600" src="/assets/ipyslides/testing_slides.slides.html?theme=sky?transition=convex" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="ipython"></category></entry><entry><title>Adding math formula</title><link href="https://wcchin.github.io/adding-math-formula.html" rel="alternate"></link><published>2015-08-21T00:00:00+08:00</published><updated>2015-08-21T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2015-08-21:/adding-math-formula.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;Testing &lt;a href="https://www.mathjax.org" target="_blank"&gt;MathJax&lt;/a&gt;&lt;/p&gt;
-&lt;div class="math"&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/div&gt;
+&lt;p&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/p&gt;
 &lt;p&gt;The "installing" steps is simple:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;include the CDN in &lt;head&gt; ... &lt;/head&gt;, in the case of mynt's quick start template, this could be added in the page.header.html file.&lt;/li&gt;
 &lt;li&gt;type the formula in tex's syntax, using the double $ as …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;hr&gt;
 &lt;p&gt;Testing &lt;a href="https://www.mathjax.org" target="_blank"&gt;MathJax&lt;/a&gt;&lt;/p&gt;
-&lt;div class="math"&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/div&gt;
+&lt;p&gt;$$ GPR_{t}A = W_{AB} \times \frac{GPR_{t-1}B}{out_B} $$&lt;/p&gt;
 &lt;p&gt;The "installing" steps is simple:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;include the CDN in &lt;head&gt; ... &lt;/head&gt;, in the case of mynt's quick start template, this could be added in the page.header.html file.&lt;/li&gt;
 &lt;li&gt;type the formula in tex's syntax, using the double $ as the entering and exiting characters, so that the formula is between double $ pair. &lt;/li&gt;
 &lt;li&gt;note that in default setting, the inline math mode is not supported, namely the single $ pair. To use this, some code is needed to be added to overwrite this setting. &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. &lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</content><category term="webpage"></category></entry><entry><title>Adding commenting system</title><link href="https://wcchin.github.io/adding-commenting-system.html" rel="alternate"></link><published>2015-08-20T00:00:00+08:00</published><updated>2015-08-20T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2015-08-20:/adding-commenting-system.html</id><summary type="html">&lt;hr&gt;
+&lt;p&gt;note: I tried to install the mathjax js in asset, and it is simple and worked. But, the generating time becomes longer, like a few seconds, maybe is because of the files that come with the js are quite large. So, I changed back to use the officially provided CDN. &lt;/p&gt;</content><category term="webpage"></category></entry><entry><title>Adding commenting system</title><link href="https://wcchin.github.io/adding-commenting-system.html" rel="alternate"></link><published>2015-08-20T00:00:00+08:00</published><updated>2015-08-20T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2015-08-20:/adding-commenting-system.html</id><summary type="html">&lt;hr&gt;
 &lt;p&gt;In order to get feedbacks from friends, I added the Disqus commenting system in this site.&lt;/p&gt;
 &lt;p&gt;Adding a Disqus comment system in a static website is not difficult:&lt;/p&gt;
 &lt;ol&gt;
