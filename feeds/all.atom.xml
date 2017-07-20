@@ -2,10 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/all.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-07-18T00:00:00+08:00</updated><entry><title>pyreveal</title><link href="https://wcchin.github.io/pyreveal.html" rel="alternate"></link><published>2017-07-18T00:00:00+08:00</published><updated>2017-07-18T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-07-18:/pyreveal.html</id><summary type="html">&lt;hr&gt;
 &lt;h1&gt;pyreveal&lt;/h1&gt;
 &lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;h2&gt;a demo&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/226295024" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;h2&gt;Why another converter?&lt;/h2&gt;
-&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h1&gt;pyreveal&lt;/h1&gt;
 &lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;h2&gt;a demo&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/226295024" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;h2&gt;Why another converter?&lt;/h2&gt;
 &lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape&lt;/a&gt; automatically. So, the nbconvert can do the conversion from notebook to reveal.js. &lt;/p&gt;
 &lt;p&gt;But, I don't understand why they keep the cell tags, which make it a pain while customizing the themes, and the custom.css, that following the tutorials or answers from stackoverflow to customize the reveal.js (the js), the codes will not work for the nbconvert version of slides.html. &lt;/p&gt;
@@ -42,7 +46,7 @@ pip install -e .
 
 
 &lt;p&gt;configs:
-- title: will be put at the &lt;title&gt; part of the &lt;head&gt;
+- title: will be put at the &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; part of the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of the html
 - theme: available: black (default), white, league, sky, beige, simple, serif, blood, night, moon, solarized and... (THERE ARE MORE THEME FROM MY THEME DIR)
 - transition: none(default), fade, slide, convex, concave, zoom, page
 - cr_word: CopyRight word (optional), the words that appear at the footer

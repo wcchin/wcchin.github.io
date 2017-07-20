@@ -41,6 +41,8 @@
          <hr>
 <h1>pyreveal</h1>
 <p>a python package for converting markdown to reveal.js slides.</p>
+<h2>a demo</h2>
+<p><iframe src="https://player.vimeo.com/video/226295024" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
 <h2>Why another converter?</h2>
 <p>Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using <a href="https://github.com/astefanutti/decktape" target="blank">phantomjs+decktape</a> automatically. So, the nbconvert can do the conversion from notebook to reveal.js. </p>
 <p>But, I don't understand why they keep the cell tags, which make it a pain while customizing the themes, and the custom.css, that following the tutorials or answers from stackoverflow to customize the reveal.js (the js), the codes will not work for the nbconvert version of slides.html. </p>
@@ -77,7 +79,7 @@ pip install -e .
 
 
 <p>configs:
-- title: will be put at the <title> part of the <head>
+- title: will be put at the <code>&lt;title&gt;</code> part of the <code>&lt;head&gt;</code> of the html
 - theme: available: black (default), white, league, sky, beige, simple, serif, blood, night, moon, solarized and... (THERE ARE MORE THEME FROM MY THEME DIR)
 - transition: none(default), fade, slide, convex, concave, zoom, page
 - cr_word: CopyRight word (optional), the words that appear at the footer
