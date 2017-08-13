@@ -46,56 +46,56 @@
 <a href="http://wcchin.github.io/publications/BookChap_ComplexSocietalSystem/" target="blank">Wen, T. H., Chin, W. C. B. &amp; Lai, P. C. (2017). Link structure analysis of urban street networks for delineating traffic impact areas. In M. Nemiche, M. Essaaidi (eds.), Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18. Part 2: 203-220. DOI 10.1007/978-3-319-46164-9_10, ISBN 978-3-319-46164-9.</a></p>
 <h2>Install it</h2>
 <p>after download and unzip the repo:</p>
-<div class="highlight"><pre><span class="n">cd</span> <span class="n">the_directory</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="p">.</span>
+<div class="highlight"><pre><span></span>cd the_directory
+pip install .
 </pre></div>
 
 
 <h2>Using it</h2>
 <p>using this package</p>
 <p>import it</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">fbpr</span> <span class="n">import</span> <span class="n">FBPR</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fbpr</span> <span class="kn">import</span> <span class="n">FBPR</span>
 </pre></div>
 
 
 <p>setup the file and file setup</p>
-<div class="highlight"><pre><span class="n">intersf</span> <span class="p">=</span> <span class="s">&#39;inter_TP_1m.csv&#39;</span>
-<span class="n">flowsf</span> <span class="p">=</span> <span class="s">&#39;flow_TP_1m.csv&#39;</span>
-<span class="n">inters_fs</span> <span class="p">=</span> <span class="p">{</span> <span class="s">&#39;node1&#39;</span><span class="p">:</span><span class="s">&#39;n1&#39;</span><span class="p">,</span> <span class="s">&#39;node2&#39;</span><span class="p">:</span><span class="s">&#39;n2&#39;</span> <span class="p">}</span>
-<span class="n">flows_fs</span> <span class="p">=</span> <span class="p">{</span><span class="s">&#39;node&#39;</span><span class="p">:</span><span class="s">&#39;rid&#39;</span><span class="p">,</span> <span class="s">&#39;volume&#39;</span><span class="p">:</span><span class="s">&#39;flow&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span>intersf = &#39;inter_TP_1m.csv&#39;
+flowsf = &#39;flow_TP_1m.csv&#39;
+inters_fs = { &#39;node1&#39;:&#39;n1&#39;, &#39;node2&#39;:&#39;n2&#39; }
+flows_fs = {&#39;node&#39;:&#39;rid&#39;, &#39;volume&#39;:&#39;flow&#39;}
 </pre></div>
 
 
 <p>initializing the FBPR</p>
-<div class="highlight"><pre><span class="n">fbpr</span> <span class="p">=</span> <span class="n">FBPR</span><span class="p">(</span><span class="n">intersf</span><span class="p">,</span> <span class="n">flowsf</span><span class="p">,</span> <span class="n">inters_fs</span><span class="p">=</span><span class="n">inters_fs</span><span class="p">,</span> <span class="n">flows_fs</span><span class="p">=</span><span class="n">flows_fs</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>fbpr = FBPR(intersf, flowsf, inters_fs=inters_fs, flows_fs=flows_fs)
 </pre></div>
 
 
 <p>initialize the solutions sets, run once</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">init_solutions</span><span class="p">(</span><span class="n">pool_size</span><span class="p">=</span>3<span class="p">,</span> <span class="n">set_count</span><span class="p">=</span>3<span class="p">)</span>
+<div class="highlight"><pre><span></span>fbpr.init_solutions(pool_size=3, set_count=3)
 </pre></div>
 
 
 <p>run all sets</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">run_all</span><span class="p">(</span><span class="n">max_generation</span><span class="p">=</span>20<span class="p">,</span> <span class="n">max_PRiter</span><span class="p">=</span>500<span class="p">,</span> <span class="n">run_pool</span><span class="p">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="p">=</span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>fbpr.run_all(max_generation=20, max_PRiter=500, run_pool=True, save_iter=False)
 </pre></div>
 
 
 <p>run one set (e.g. first set)</p>
-<div class="highlight"><pre><span class="n">run_set</span><span class="p">(</span>0<span class="p">,</span> <span class="n">max_generation</span><span class="p">=</span>20<span class="p">,</span> <span class="n">max_PRiter</span><span class="p">=</span>500<span class="p">,</span> <span class="n">run_pool</span><span class="p">=</span><span class="n">True</span><span class="p">,</span> <span class="n">save_iter</span><span class="p">=</span><span class="n">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>run_set(0, max_generation=20, max_PRiter=500, run_pool=True, save_iter=False)
 </pre></div>
 
 
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="p">=</span><span class="n">True</span><span class="p">)</span> ## <span class="n">export</span> <span class="n">the</span> <span class="n">dataframe</span>
+<div class="highlight"><pre><span></span>fbpr.get_optimal_sol(export=True) ## export the dataframe
 
-<span class="n">optimal_sol_df</span> <span class="p">=</span> <span class="n">fbpr</span><span class="p">.</span><span class="n">get_optimal_sol</span><span class="p">(</span><span class="n">export</span><span class="p">=</span><span class="n">False</span><span class="p">)</span> ## <span class="k">return</span> <span class="n">the</span> <span class="n">dataframe</span>
+optimal_sol_df = fbpr.get_optimal_sol(export=False) ## return the dataframe
 </pre></div>
 
 
 <p>check the performance of each set</p>
-<div class="highlight"><pre><span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>0<span class="p">)</span>
-<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>1<span class="p">)</span>
-<span class="n">fbpr</span><span class="p">.</span><span class="n">ga_performance</span><span class="p">(</span><span class="n">set_no</span><span class="p">=</span>2<span class="p">)</span>
+<div class="highlight"><pre><span></span>fbpr.ga_performance(set_no=0)
+fbpr.ga_performance(set_no=1)
+fbpr.ga_performance(set_no=2)
 </pre></div>
 
 

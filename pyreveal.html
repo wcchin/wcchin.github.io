@@ -52,8 +52,8 @@
 <p>a demo is <a href="https://wcc-slides.netlify.com/2017/pyreveal/demo.slides.html#/" target="blank">here</a>. </p>
 <p>The codes that generate the demo slides is in the slide_dir directory.</p>
 <h2>Install</h2>
-<div class="highlight"><pre>git clone https://github.com/wcchin/pyreveal.git
-<span class="nb">cd </span>pyreveal
+<div class="highlight"><pre><span></span>git clone https://github.com/wcchin/pyreveal.git
+<span class="nb">cd</span> pyreveal
 pip install -e .
 </pre></div>
 
@@ -67,7 +67,7 @@ pip install -e .
 </ol>
 <h3>slides configuration</h3>
 <p>pyreveal will read the first several lines of the whatever.md file and get the metadata as the configs, using the <a href="https://github.com/waylan/docdata" target="blank"><strong>docdata</strong></a> package . </p>
-<div class="highlight"><pre><span class="n">title</span><span class="o">:</span> <span class="n">reveal</span><span class="o">.</span><span class="na">js</span> <span class="n">The</span> <span class="n">HTML</span> <span class="n">Presentation</span> <span class="n">Framework</span>
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">reveal</span><span class="o">.</span><span class="na">js</span> <span class="n">The</span> <span class="n">HTML</span> <span class="n">Presentation</span> <span class="n">Framework</span>
 <span class="n">theme</span><span class="o">:</span> <span class="n">black</span>
 <span class="n">transition</span><span class="o">:</span> <span class="n">concave</span>
 <span class="n">cr_word</span><span class="o">:</span> <span class="n">author</span> <span class="o">-</span> <span class="mi">2017</span>
@@ -89,27 +89,27 @@ pip install -e .
 - reveal_path: optional, default to 'reveal.js'(the same directory as the output html)</p>
 <h3>the special keyword for generating slides and some other functions</h3>
 <p>pyreveal use a list of escape keyword to generate the function for reveal.js:</p>
-<div class="highlight"><pre><span class="o">---</span><span class="n">keyword</span>
+<div class="highlight"><pre><span></span>---keyword
 </pre></div>
 
 
 <p>where, the <em>keyword</em> include: right, down, data<em>, style</em>, fragment, notes</p>
 <h3>slides break</h3>
 <p>there are two types of slides break:</p>
-<div class="highlight"><pre><span class="o">---</span><span class="n">right</span>
+<div class="highlight"><pre><span></span>---right
 </pre></div>
 
 
 <p>the following slide will appear at right, i.e. a new slide (section).</p>
 <p>OR, </p>
-<div class="highlight"><pre><span class="o">---</span><span class="n">down</span>
+<div class="highlight"><pre><span></span>---down
 </pre></div>
 
 
 <p>the following slide will appear at bottom, i.e. a subslide. </p>
 <h3>slide background and style</h3>
-<div class="highlight"><pre><span class="o">---</span><span class="n">data</span><span class="o">*</span>
-<span class="o">---</span><span class="n">style</span><span class="o">*</span>
+<div class="highlight"><pre><span></span>---data*
+---style*
 </pre></div>
 
 
@@ -119,10 +119,10 @@ Therefore, pyreveal will check if there is a ---data-something, then it will put
 <p>For more detail, check the corresponding demo.md file that generate something similar to the demo in the original reveal.js website. </p>
 <h3>fragment</h3>
 <p>for fragment, pyreveal also use something like this:</p>
-<div class="highlight"><pre><span class="o">---</span><span class="n">fragment</span>
-<span class="n">this</span> <span class="n">will</span> <span class="n">appear</span> <span class="n">after</span> <span class="n">right</span> <span class="n">or</span> <span class="n">down</span> <span class="n">is</span> <span class="n">press</span>
-<span class="o">---</span><span class="n">fragment_grow</span>
-<span class="n">this</span> <span class="n">will</span> <span class="n">grow</span> <span class="n">next</span>
+<div class="highlight"><pre><span></span>---fragment
+this will appear after right or down is press
+---fragment_grow
+this will grow next
 </pre></div>
 
 
@@ -131,10 +131,10 @@ Therefore, pyreveal will check if there is a ---data-something, then it will put
 <h3>speaker notes</h3>
 <p>finally, the speaker notes. </p>
 <p>the speaker notes should be put at the last of each slide, after the tag.</p>
-<div class="highlight"><pre><span class="o">---</span><span class="n">notes</span>
-<span class="n">this</span> <span class="n">is</span> <span class="n">the</span> <span class="n">speaker</span> <span class="n">notes</span>
-<span class="n">line</span> 2 
-<span class="n">line</span> 3
+<div class="highlight"><pre><span></span>---notes
+this is the speaker notes
+line 2 
+line 3
 </pre></div>
 
 
@@ -143,14 +143,13 @@ Therefore, pyreveal will check if there is a ---data-something, then it will put
 So, it is possible and easy to change something for the slides, e.g. change the fonts. </p>
 <h3>usage</h3>
 <p>run this and done.</p>
-<div class="highlight"><pre>python -m pyreveal -i whatever.md
+<div class="highlight"><pre><span></span>python -m pyreveal -i whatever.md
 </pre></div>
 
 
 <h2>Next plan</h2>
 <p>Next thing to do should be try to read the jupyter notebook file, and convert the slides content from notebook to the reveal.js html. 
-Because I still hope that the <cell> tags should be remove, and the speaker notes should be fixed.<br>
-</p>
+Because I still hope that the <cell> tags should be remove, and the speaker notes should be fixed.  </p>
 <h2>addition themes</h2>
 <p>I have added some themes, using the google material design color palette. 
 They are:

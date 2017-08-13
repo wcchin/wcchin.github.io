@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Presentation</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/presentation.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-05-25T00:00:00+08:00</updated><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
 &lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;&lt;br&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Conference:  The Annual Meeting of the Taiwan Chapter of Society for Risk Analysis (SRA‐Taiwan)&lt;/li&gt;
 &lt;li&gt;Year: 2017&lt;/li&gt;
 &lt;li&gt;Date: May 25-26, 1300-1400 (Poster Session)&lt;/li&gt;
 &lt;li&gt;Location: Taichung City Hall, Taichung City …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;&lt;br&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Conference:  The Annual Meeting of the Taiwan Chapter of Society for Risk Analysis (SRA‐Taiwan)&lt;/li&gt;
 &lt;li&gt;Year: 2017&lt;/li&gt;
@@ -27,8 +25,7 @@
 &lt;p&gt;Therefore, the aim of this case study is to detect sub-clusters from the annual DF cases and identify processes between the sub-clusters.&lt;/p&gt;
 &lt;h4&gt;Link&lt;/h4&gt;
 &lt;p&gt;&lt;a href="http://srataiwan.fundot.tw/activity_show.aspx?id=20"&gt;about the conference&lt;/a&gt;&lt;br&gt;
-&lt;a href="http://srataiwan.fundot.tw/activity_show.aspx?id=28"&gt;conference schedule&lt;/a&gt;&lt;br&gt;
-&lt;/p&gt;
+&lt;a href="http://srataiwan.fundot.tw/activity_show.aspx?id=28"&gt;conference schedule&lt;/a&gt;  &lt;/p&gt;
 &lt;h4&gt;Poster&lt;/h4&gt;
 &lt;p&gt;&lt;a href="pdfs/poster_tsra_2017.pdf"&gt;Poster link&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Supplementary info&lt;/h4&gt;
@@ -171,11 +168,9 @@ http://wcchin.github.io/ipyslides/foss4g2015/FOSS4G_seoul2015.slides.html?theme=
 &lt;h3&gt;關鍵字&lt;/h3&gt;
 &lt;p&gt;PageRank, 距離遞減, 引力模型, 地理空間網絡&lt;/p&gt;
 &lt;h4&gt;Presentation -&lt;/h4&gt;
-&lt;p&gt;&lt;a href="svgs/geogsoc_2014.svg" target="blank"&gt; 研討會簡報檔 &lt;/a&gt;&lt;br&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;a href="svgs/geogsoc_2014.svg" target="blank"&gt; 研討會簡報檔 &lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;點擊滑鼠左鍵下一頁，右鍵上一頁，中鍵(滾輪)大綱跳頁
-&lt;object id="svg1" data="svgs/geogsoc_2014.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt; &lt;br&gt;
-&lt;/p&gt;</content><category term="network"></category><category term="pagerank"></category></entry><entry><title>Geographically modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network</title><link href="https://wcchin.github.io/geographically-modified-pagerank-algorithm-measuring-the-importance-of-nodes-in-a-geospatial-network.html" rel="alternate"></link><published>2013-04-09T00:00:00+08:00</published><updated>2013-04-09T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2013-04-09:/geographically-modified-pagerank-algorithm-measuring-the-importance-of-nodes-in-a-geospatial-network.html</id><summary type="html">&lt;hr&gt;
+&lt;object id="svg1" data="svgs/geogsoc_2014.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;   &lt;/p&gt;</content><category term="network"></category><category term="pagerank"></category></entry><entry><title>Geographically modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network</title><link href="https://wcchin.github.io/geographically-modified-pagerank-algorithm-measuring-the-importance-of-nodes-in-a-geospatial-network.html" rel="alternate"></link><published>2013-04-09T00:00:00+08:00</published><updated>2013-04-09T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2013-04-09:/geographically-modified-pagerank-algorithm-measuring-the-importance-of-nodes-in-a-geospatial-network.html</id><summary type="html">&lt;hr&gt;
 &lt;h4&gt;Geographically modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Conference: AAG Annual Meeting&lt;/li&gt;
@@ -222,8 +217,7 @@ http://wcchin.github.io/ipyslides/foss4g2015/FOSS4G_seoul2015.slides.html?theme=
 &lt;li&gt;Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;Abstract&lt;/h4&gt;
-&lt;p&gt;This paper used PageRank concept to analyse cities network, to understand the shift of network cities’ position after the construction of Taiwan High-Speed-Rail (THSR). The integration of network analysis and spatial analysis shows advantages in capturing transitive effect and spatial dependence effect, which has made the cities spatial interaction modeling analysis could better represent the interactive relationship between cities. THSR is an important development in recent year, which across several counties in Taiwan, and has caused significant changes and affects on the interactions between regionals. Thus, this paper focuses on changes in internal structure of cities network’s topological dynamics after the construction of THSR. This paper was divided into 3 parts: in the first part, we constructed 2 sets of cities network as relationships of cities before and after the THSR, and analysed these networks with PageRank, Weighted PageRank, Distance-Inverse PageRank, Gravity PageRank; in the second part, we try to compare the distribution of the change of rank after the construction of THSR between these models; finally, we used Dual Kernel Density Estimation to analyse spatial-temporal changes of rank after the construction of THSR. In conclusion, we found that the results of 4 models varied between each other, which suggested these models could capture different characteristics and effects of cities network.&lt;br&gt;
-&lt;/p&gt;
+&lt;p&gt;This paper used PageRank concept to analyse cities network, to understand the shift of network cities’ position after the construction of Taiwan High-Speed-Rail (THSR). The integration of network analysis and spatial analysis shows advantages in capturing transitive effect and spatial dependence effect, which has made the cities spatial interaction modeling analysis could better represent the interactive relationship between cities. THSR is an important development in recent year, which across several counties in Taiwan, and has caused significant changes and affects on the interactions between regionals. Thus, this paper focuses on changes in internal structure of cities network’s topological dynamics after the construction of THSR. This paper was divided into 3 parts: in the first part, we constructed 2 sets of cities network as relationships of cities before and after the THSR, and analysed these networks with PageRank, Weighted PageRank, Distance-Inverse PageRank, Gravity PageRank; in the second part, we try to compare the distribution of the change of rank after the construction of THSR between these models; finally, we used Dual Kernel Density Estimation to analyse spatial-temporal changes of rank after the construction of THSR. In conclusion, we found that the results of 4 models varied between each other, which suggested these models could capture different characteristics and effects of cities network.  &lt;/p&gt;
 &lt;h4&gt;Keywords&lt;/h4&gt;
 &lt;p&gt;Cities network analysis, network topological dynamic, Taiwan High Speed Rail, PageRank, Weighted PageRank&lt;/p&gt;
 &lt;h4&gt;摘要:&lt;/h4&gt;
