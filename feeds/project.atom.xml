@@ -172,10 +172,14 @@ SOFTWARE.&lt;/p&gt;</content><category term="python"></category><category term="
 &lt;p&gt;ps: This is designed to use with vmapper, a vector mapping tool in python that generate svg map. But since mapping the variable into map is a common job, so I separated this part as an individual tool for working with geopandas geodataframe.&lt;/p&gt;
 &lt;h3&gt;dependencies&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;geopandas: everything is based on geopandas&lt;/li&gt;
+&lt;li&gt;matplotlib/descartes/shapely: the foundation of the mapping&lt;/li&gt;
 &lt;li&gt;numpy: quantile breaks&lt;/li&gt;
 &lt;li&gt;jenkspy: natural break&lt;/li&gt;
 &lt;li&gt;palettable: getting color map&lt;/li&gt;
+&lt;li&gt;matplotlib_scalebar: for making the scale bar&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;installing geopandas can be hard for those who use Windows. (actually is the Fiona that is hard to be installed). Good Luck.&lt;/p&gt;
 &lt;h3&gt;install&lt;/h3&gt;
 &lt;p&gt;this package is in alpha, so it is a good idea to install in editable mode (-e)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/wcchin/colouringmap.git
@@ -190,6 +194,18 @@ pip install -e .
 
 
 &lt;h3&gt;usage&lt;/h3&gt;
+&lt;h4&gt;Tutorial in ipynb mode&lt;/h4&gt;
+&lt;p&gt;check the example directories: https://github.com/wcchin/colouringmap/tree/master/example&lt;/p&gt;
+&lt;p&gt;for better usage description.&lt;/p&gt;
+&lt;p&gt;Content table:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;break the numbers into levels: https://github.com/wcchin/colouringmap/blob/master/example/breaking%20a%20variable%20to%20levels.ipynb&lt;/li&gt;
+&lt;li&gt;making category map: https://github.com/wcchin/colouringmap/blob/master/example/make_category_map.ipynb&lt;/li&gt;
+&lt;li&gt;making a sequential map: https://github.com/wcchin/colouringmap/blob/master/example/make_sequential_map.ipynb&lt;/li&gt;
+&lt;li&gt;drawing points (most frequently used functions): https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%201).ipynb&lt;/li&gt;
+&lt;li&gt;drawing points (according to a numeric column/sequence): https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%202).ipynb&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;quick example&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;geopandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;gpd&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;colouringmap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;theme_mapping&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt; 
 
@@ -264,10 +280,14 @@ pip install -e .
 不過後來想到其實「分層」，及「設色」兩個動作在畫地圖時很常會用到，所以就將這工具獨立出來。後續會再花點時間把功能加入到 vmapper 中。&lt;/p&gt;
 &lt;h3&gt;dependencies&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;geopandas: 所有東西基本上都是基於 geopandas&lt;/li&gt;
+&lt;li&gt;matplotlib/descartes/shapely: 畫地圖的基礎&lt;/li&gt;
 &lt;li&gt;numpy: quantile breaks &lt;/li&gt;
 &lt;li&gt;jenkspy: natural break &lt;/li&gt;
 &lt;li&gt;palettable: 調色盤，這小工具會用這調色盤來獲取顏色的值&lt;/li&gt;
+&lt;li&gt;matplotlib_scalebar: 加入地圖的比例尺&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;在 Windows 安裝 geopandas 可能會有點複雜 (其實是 Fiona 不容易安裝)。 保重。&lt;/p&gt;
 &lt;h3&gt;安裝&lt;/h3&gt;
 &lt;p&gt;這套件還在 alpha 階段, 推薦用 editable mode (-e)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/wcchin/colouringmap.git
@@ -282,6 +302,17 @@ pip install -e .
 
 
 &lt;h3&gt;使用&lt;/h3&gt;
+&lt;h4&gt;ipynb 版較詳細教學&lt;/h4&gt;
+&lt;p&gt;詳細的操作方式及範例，請參考這資料夾中的說明: https://github.com/wcchin/colouringmap/tree/master/example&lt;/p&gt;
+&lt;p&gt;教學鏈接:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;對一個數字列作分類: https://github.com/wcchin/colouringmap/blob/master/example/breaking%20a%20variable%20to%20levels.ipynb&lt;/li&gt;
+&lt;li&gt;作一個類別圖面量圖(有一個欄位記錄polygon的類別): https://github.com/wcchin/colouringmap/blob/master/example/make_category_map.ipynb&lt;/li&gt;
+&lt;li&gt;作一個分層設色圖(有一個欄位記錄著一個數字的變項資訊): https://github.com/wcchin/colouringmap/blob/master/example/make_sequential_map.ipynb&lt;/li&gt;
+&lt;li&gt;畫點資料 (常用的基本點功能): https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%201).ipynb&lt;/li&gt;
+&lt;li&gt;畫點資料 (類似分層設色圖，不過這是畫在點上): https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%202).ipynb&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;快速簡單例子&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;geopandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;gpd&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;colouringmap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;theme_mapping&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tm&lt;/span&gt; 
 
