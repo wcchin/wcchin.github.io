@@ -65,7 +65,7 @@
 <h2>installing GPRas</h2>
 <p>on windows:</p>
 <p>install shapely first. can use conda if you are using anaconda(miniconda).</p>
-<div class="highlight"><pre><span></span>conda install -c scitools shapely=1.5.13
+<div class="highlight"><pre>conda install -c scitools shapely=1.5.13
 </pre></div>
 
 
@@ -77,21 +77,21 @@ First download these from here: http://www.lfd.uci.edu/~gohlke/pythonlibs/</p>
 <li>Fiona</li>
 </ul>
 <p>Then, install them with pip install</p>
-<div class="highlight"><pre><span></span>pip install xxx-GDAL--.whl
+<div class="highlight"><pre>pip install xxx-GDAL--.whl
 pip install xxx-pyproj--.whl
 pip install xxx-Fiona--.whl
 </pre></div>
 
 
 <p>Then, install GPRas</p>
-<div class="highlight"><pre><span></span>pip install GPRas
+<div class="highlight"><pre>pip install GPRas
 </pre></div>
 
 
 <p>==============================</p>
 <h2>Usage</h2>
 <p>import the module</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">GPRas</span> <span class="kn">as</span> <span class="nn">gpr</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">GPRas</span> <span class="kn">as</span> <span class="nn">gpr</span>
 </pre></div>
 
 
@@ -99,7 +99,7 @@ pip install xxx-Fiona--.whl
 <p>Two ways of data input: csv file, nx.Graph object</p>
 <p><strong>for csv file</strong>:
 prepare the file paths and file setup info</p>
-<div class="highlight"><pre><span></span>nodefile = &#39;test_data/TP_nodes.csv&#39;
+<div class="highlight"><pre>nodefile = &#39;test_data/TP_nodes.csv&#39;
 linkfile = &#39;test_data/TP_links.csv&#39;
 node_filesetup = {&#39;node_id&#39;:&#39;nid&#39;, &#39;xcor&#39;:&#39;xcor&#39;, &#39;ycor&#39;:&#39;ycor&#39;}
 link_filesetup = {&#39;ori&#39;:&#39;ori&#39;, &#39;des&#39;:&#39;des&#39;, &#39;weight&#39;:&#39;time&#39;}
@@ -107,34 +107,34 @@ link_filesetup = {&#39;ori&#39;:&#39;ori&#39;, &#39;des&#39;:&#39;des&#39;, &#39
 
 
 <p>create the spatial_graph object</p>
-<div class="highlight"><pre><span></span>sg = gpr.GPRas()
+<div class="highlight"><pre>sg = gpr.GPRas()
 </pre></div>
 
 
 <p>set the dataset from csv files</p>
-<div class="highlight"><pre><span></span>sg.dataset.from_csv(nodefile, linkfile, node_filesetup, link_filesetup)
+<div class="highlight"><pre>sg.dataset.from_csv(nodefile, linkfile, node_filesetup, link_filesetup)
 </pre></div>
 
 
 <p><strong>for nx.Graph object</strong></p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c1">## just for the reading of file before creating nx.Graph</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span> <span class="c">## just for the reading of file before creating nx.Graph</span>
 <span class="n">ndf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">nodefile</span><span class="p">)</span>
-<span class="n">nii</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s1">&#39;node_id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">nxx</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s1">&#39;xcor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">nyy</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s1">&#39;ycor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nii</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s">&#39;node_id&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nxx</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s">&#39;xcor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">nyy</span> <span class="o">=</span> <span class="n">ndf</span><span class="p">[</span><span class="n">node_filesetup</span><span class="p">[</span><span class="s">&#39;ycor&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">nodes_lis</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">ii</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">xxx</span><span class="o">=</span><span class="n">xx</span><span class="p">,</span><span class="n">yyy</span><span class="o">=</span><span class="n">yy</span><span class="p">))</span> <span class="k">for</span> <span class="n">ii</span><span class="p">,</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nii</span><span class="p">,</span><span class="n">nxx</span><span class="p">,</span><span class="n">nyy</span><span class="p">)</span> <span class="p">]</span>
 <span class="n">edf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">linkfile</span><span class="p">)</span>
-<span class="n">eoo</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="s1">&#39;ori&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">edd</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="s1">&#39;des&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">eoo</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="s">&#39;ori&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">edd</span> <span class="o">=</span> <span class="n">edf</span><span class="p">[</span><span class="n">link_filesetup</span><span class="p">[</span><span class="s">&#39;des&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">edges_lis</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">oo</span><span class="p">,</span><span class="n">dd</span><span class="p">)</span> <span class="k">for</span> <span class="n">oo</span><span class="p">,</span><span class="n">dd</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">eoo</span><span class="p">,</span><span class="n">edd</span><span class="p">)</span> <span class="p">]</span>
 
 <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">nodes_lis</span><span class="p">)</span>
 <span class="n">ag</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">edges_lis</span><span class="p">)</span>
 
-<span class="c1">## graph setup info</span>
-<span class="n">node_setup</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">xcor</span><span class="o">=</span><span class="s1">&#39;xxx&#39;</span><span class="p">,</span> <span class="n">ycor</span><span class="o">=</span><span class="s1">&#39;yyy&#39;</span><span class="p">)</span> <span class="c1">## x,y columns from the nodes attr.</span>
+<span class="c">## graph setup info</span>
+<span class="n">node_setup</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">xcor</span><span class="o">=</span><span class="s">&#39;xxx&#39;</span><span class="p">,</span> <span class="n">ycor</span><span class="o">=</span><span class="s">&#39;yyy&#39;</span><span class="p">)</span> <span class="c">## x,y columns from the nodes attr.</span>
 <span class="n">link_setup</span> <span class="o">=</span> <span class="bp">None</span>
 
 <span class="n">sg</span> <span class="o">=</span> <span class="n">sgc</span><span class="p">()</span>
@@ -144,17 +144,17 @@ link_filesetup = {&#39;ori&#39;:&#39;ori&#39;, &#39;des&#39;:&#39;des&#39;, &#39
 
 <h3>prepare and calculate</h3>
 <p>First, initialize the parameters</p>
-<div class="highlight"><pre><span></span>sg.Initialize(iteration=5000, alpha=1., beta=1., gamma=1.)
+<div class="highlight"><pre>sg.Initialize(iteration=5000, alpha=1., beta=1., gamma=1.)
 </pre></div>
 
 
 <p>Calculate all of them (6 PRs) using the above parameter</p>
-<div class="highlight"><pre><span></span>sg.CalculateAll()
+<div class="highlight"><pre>sg.CalculateAll()
 </pre></div>
 
 
 <p>Calculate each of them using updated parameters</p>
-<div class="highlight"><pre><span></span>sg.PR()
+<div class="highlight"><pre>sg.PR()
 sg.WPR(alpha=2, update=True)
 sg.DDPR(beta=2, update=True)
 sg.GPR(alpha=3, beta=2, update=True)
@@ -166,13 +166,13 @@ sg.eGPR(alpha=3, gamma=0.2, update=True)
 <p>these calculation will change the parameters for summary output, but not the default paramters (for calculation with no paramter setup, eg. alpha=None), which are set from the initialization.</p>
 <h3>get the results in Pandas DataFrame format</h3>
 <p>get summary df</p>
-<div class="highlight"><pre><span></span>summary_df = sg.get_summary()
+<div class="highlight"><pre>summary_df = sg.get_summary()
 print summary_df.head()
 </pre></div>
 
 
 <p>get the nodes concentration results</p>
-<div class="highlight"><pre><span></span>result_df = sg.get_results() ## default to all 6
+<div class="highlight"><pre>result_df = sg.get_results() ## default to all 6
 print result_df.head()
 
 part_result_df = sg.get_results(items=[&#39;pr&#39;, &#39;wpr&#39;]) ## export only PR and WPR
@@ -183,12 +183,12 @@ print part_result_df.head()
 <h3>export results</h3>
 <p>the results can be export directly to csv format and shapfile format</p>
 <p><strong>summary table</strong></p>
-<div class="highlight"><pre><span></span>sg.output_summary(filename=&#39;result/temp_summary.csv&#39;)
+<div class="highlight"><pre>sg.output_summary(filename=&#39;result/temp_summary.csv&#39;)
 </pre></div>
 
 
 <p><strong>to csv file</strong></p>
-<div class="highlight"><pre><span></span>sg.to_csv(filename=&#39;result/temp_output_dd_g.csv&#39;, items=[&#39;ddpr&#39;,&#39;gpr&#39;])
+<div class="highlight"><pre>sg.to_csv(filename=&#39;result/temp_output_dd_g.csv&#39;, items=[&#39;ddpr&#39;,&#39;gpr&#39;])
 
 # also same as to_csv() with items=None
 sg.All_to_csv(filename=&#39;result/temp_output.csv&#39;)
@@ -197,47 +197,47 @@ sg.All_to_csv(filename=&#39;result/temp_output.csv&#39;)
 
 <p><strong>to shp file</strong>
 prepare a crs string, or it will be default to None</p>
-<div class="highlight"><pre><span></span>crs67 = &#39;+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752,-358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs&#39;
+<div class="highlight"><pre>crs67 = &#39;+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752,-358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs&#39;
 </pre></div>
 
 
 <p>export the files, which include a point shpfile for nodes and the concentration results, and a line shpfile for edge (no result inside, just for mapping)</p>
 <p>output two of the results (PR and WPR) into one file</p>
-<div class="highlight"><pre><span></span>sg.to_shps(filename_prefix=&#39;result/temp_shp_pr_wpr&#39;, crs=crs67, items=[&#39;pr&#39;,&#39;wpr&#39;])
+<div class="highlight"><pre>sg.to_shps(filename_prefix=&#39;result/temp_shp_pr_wpr&#39;, crs=crs67, items=[&#39;pr&#39;,&#39;wpr&#39;])
 </pre></div>
 
 
 <p>output all 6 PRs</p>
-<div class="highlight"><pre><span></span>sg.All_to_shps(filename_prefix=&#39;result/temp_shp&#39;, crs=crs67)
+<div class="highlight"><pre>sg.All_to_shps(filename_prefix=&#39;result/temp_shp&#39;, crs=crs67)
 </pre></div>
 
 
 <h3>to networkx graph object</h3>
 <p>similar to the previous export</p>
-<div class="highlight"><pre><span></span>ag,pos = sg.to_nx() ## default to all 6 PRs
+<div class="highlight"><pre>ag,pos = sg.to_nx() ## default to all 6 PRs
 
 ag,pos = sg.to_nx(items=[&quot;DDPR&quot;])
 </pre></div>
 
 
 <p>demo for drawing the networkx object</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="n">ss</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">n</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="n">ag</span><span class="o">.</span><span class="n">nodes_iter</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
-    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;DDPR_score&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">5000.</span><span class="p">)</span>
+    <span class="n">ss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">&#39;DDPR_score&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">5000.</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="n">ss</span><span class="p">)</span>
 <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">ag</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s">&#39;equal&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
 <p>==============================</p>
 <h2>file structure</h2>
-<div class="highlight"><pre><span></span>Geographical PageRank Algorithms
+<div class="highlight"><pre>Geographical PageRank Algorithms
 .
 ├── build
 │   ├── bdist.linux-x86_64

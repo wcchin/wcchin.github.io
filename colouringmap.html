@@ -64,14 +64,14 @@
 <p>installing geopandas can be hard for those who use Windows. (actually is the Fiona that is hard to be installed). Good Luck.</p>
 <h3>install</h3>
 <p>this package is in alpha, so it is a good idea to install in editable mode (-e)</p>
-<div class="highlight"><pre><span></span>git clone https://github.com/wcchin/colouringmap.git
-<span class="nb">cd</span> colouringmap/
+<div class="highlight"><pre>git clone https://github.com/wcchin/colouringmap.git
+<span class="nb">cd </span>colouringmap/
 pip install -e .
 </pre></div>
 
 
 <p>or </p>
-<div class="highlight"><pre><span></span>pip install git+https://github.com/wcchin/colouringmap.git#egg<span class="o">=</span>colouringmap
+<div class="highlight"><pre>pip install git+https://github.com/wcchin/colouringmap.git#egg<span class="o">=</span>colouringmap
 </pre></div>
 
 
@@ -88,22 +88,22 @@ pip install -e .
 <li><a href="https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%202).ipynb">drawing points (according to a numeric column/sequence)</a></li>
 </ol>
 <h4>quick example</h4>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gpd</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gpd</span>
 <span class="kn">from</span> <span class="nn">colouringmap</span> <span class="kn">import</span> <span class="n">theme_mapping</span> <span class="k">as</span> <span class="n">tm</span> 
 
-<span class="c1">## reading files</span>
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;testdata/county.shp&#39;</span><span class="p">)</span> <span class="c1">## a polygon file, encoding is utf-8, projection Twd1997/TM2</span>
-<span class="c1">#gdf = gdf.to_crs(crs) ## reproject to a valid projection&#39;s crs</span>
+<span class="c">## reading files</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">&#39;testdata/county.shp&#39;</span><span class="p">)</span> <span class="c">## a polygon file, encoding is utf-8, projection Twd1997/TM2</span>
+<span class="c">#gdf = gdf.to_crs(crs) ## reproject to a valid projection&#39;s crs</span>
 
-<span class="c1">## prepare the level_list, colour_list, and colour_tuples</span>
-<span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s1">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s1">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s1">&#39;Turbid_10&#39;</span><span class="p">)</span>
+<span class="c">## prepare the level_list, colour_list, and colour_tuples</span>
+<span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s">&#39;area&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s">&#39;Turbid_10&#39;</span><span class="p">)</span>
 
-<span class="c1">## preparing the matplotlib fig and ax</span>
+<span class="c">## preparing the matplotlib fig and ax</span>
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">)</span> <span class="c1"># set the background to a blue color</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s">&#39;cornflowerblue&#39;</span><span class="p">)</span> <span class="c"># set the background to a blue color</span>
 
-<span class="c1">## making the polygon map</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">simple_mapping</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">colour_tuples</span><span class="o">=</span><span class="n">colour_tuples</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">)</span>
+<span class="c">## making the polygon map</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">simple_mapping</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">colour_tuples</span><span class="o">=</span><span class="n">colour_tuples</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&#39;area&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
@@ -172,14 +172,14 @@ pip install -e .
 <p>在 Windows 安裝 geopandas 可能會有點複雜 (其實是 Fiona 不容易安裝)。 保重。</p>
 <h3>安裝</h3>
 <p>這套件還在 alpha 階段, 推薦用 editable mode (-e)</p>
-<div class="highlight"><pre><span></span>git clone https://github.com/wcchin/colouringmap.git
-<span class="nb">cd</span> colouringmap/
+<div class="highlight"><pre>git clone https://github.com/wcchin/colouringmap.git
+<span class="nb">cd </span>colouringmap/
 pip install -e .
 </pre></div>
 
 
 <p>或是直接從網路上裝下來  </p>
-<div class="highlight"><pre><span></span>pip install git+https://github.com/wcchin/colouringmap.git#egg<span class="o">=</span>colouringmap
+<div class="highlight"><pre>pip install git+https://github.com/wcchin/colouringmap.git#egg<span class="o">=</span>colouringmap
 </pre></div>
 
 
@@ -195,22 +195,22 @@ pip install -e .
 <li><a href="https://github.com/wcchin/colouringmap/blob/master/example/drawing%20points%20(part%202).ipynb">畫點資料 (類似分層設色圖，不過這是畫在點上)</a></li>
 </ol>
 <h4>快速簡單例子</h4>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gpd</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gpd</span>
 <span class="kn">from</span> <span class="nn">colouringmap</span> <span class="kn">import</span> <span class="n">theme_mapping</span> <span class="k">as</span> <span class="n">tm</span> 
 
-<span class="c1">## 讀取資料</span>
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;testdata/county.shp&#39;</span><span class="p">)</span> <span class="c1">## a polygon file, encoding is utf-8, projection Twd1997/TM2</span>
-<span class="c1">#gdf = gdf.to_crs(crs) ## reproject to a valid projection&#39;s crs</span>
+<span class="c">## 讀取資料</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">&#39;testdata/county.shp&#39;</span><span class="p">)</span> <span class="c">## a polygon file, encoding is utf-8, projection Twd1997/TM2</span>
+<span class="c">#gdf = gdf.to_crs(crs) ## reproject to a valid projection&#39;s crs</span>
 
-<span class="c1">## 準備 level_list(分層 list), colour_list (設色 list), 及 colour_tuples</span>
-<span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s1">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s1">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s1">&#39;Turbid_10&#39;</span><span class="p">)</span>
+<span class="c">## 準備 level_list(分層 list), colour_list (設色 list), 及 colour_tuples</span>
+<span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s">&#39;area&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s">&#39;Turbid_10&#39;</span><span class="p">)</span>
 
-<span class="c1">## 準備好 matplotlib fig and ax</span>
+<span class="c">## 準備好 matplotlib fig and ax</span>
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;cornflowerblue&#39;</span><span class="p">)</span> <span class="c1"># set the background to a blue color</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s">&#39;cornflowerblue&#39;</span><span class="p">)</span> <span class="c"># set the background to a blue color</span>
 
-<span class="c1">## 產生面的分層設色圖</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">simple_mapping</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">colour_tuples</span><span class="o">=</span><span class="n">colour_tuples</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">)</span>
+<span class="c">## 產生面的分層設色圖</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">simple_mapping</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">colour_tuples</span><span class="o">=</span><span class="n">colour_tuples</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">&#39;area&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 

@@ -129,32 +129,32 @@ The idea is to divide the points into two groups in each level, smaller item go 
 source points are the points that is going to search for the nearest destinations (base points), let says, the location of the people. 
 The aim is to locate the shops that is nearby to each person. 
 So, it would be for each person, search one time.</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">spatial</span>
 
-<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># x coordinates of base points...</span>
-<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># y coordinates of base points...</span>
+<span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c"># x coordinates of base points...</span>
+<span class="n">ylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="c"># y coordinates of base points...</span>
 
-<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c1"># x coordinates for the three people</span>
-<span class="n">py</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">6.3</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span> <span class="c1"># y coordinates for the three people</span>
+<span class="n">px</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span> <span class="c"># x coordinates for the three people</span>
+<span class="n">py</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">6.3</span><span class="p">,</span> <span class="mf">9.8</span><span class="p">]</span> <span class="c"># y coordinates for the three people</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xlist</span><span class="p">,</span><span class="n">ylist</span><span class="p">)</span>
 <span class="n">pts</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">px</span><span class="p">,</span><span class="n">py</span><span class="p">)</span>
 <span class="n">tree</span> <span class="o">=</span> <span class="n">spatial</span><span class="o">.</span><span class="n">KDTree</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># the nearby radius for searching</span>
+<span class="n">nn_radius</span> <span class="o">=</span> <span class="mi">3</span> <span class="c"># the nearby radius for searching</span>
 <span class="n">nlist</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">pts</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">nn_radius</span><span class="p">)</span> 
-<span class="c1"># If x is a single point, returns a list of the indices of the neighbors of x. </span>
-<span class="c1"># If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
-<span class="c1"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
+<span class="c"># If x is a single point, returns a list of the indices of the neighbors of x. </span>
+<span class="c"># If x is an array of points, returns an object array of shape tuple containing lists of neighbors.</span>
+<span class="c"># in this case, it will return an array of list, which represent the index of the nearby neighbours in the data list. </span>
 </pre></div>
 
 
 <p>besides query_ball_point, there are other methods (from <a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html#scipy.spatial.KDTree">scipy</a>):</p>
-<div class="highlight"><pre><span></span><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c1">#Count how many nearby pairs can be formed.</span>
-<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c1">#Query the kd-tree for nearest neighbors</span>
-<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c1">#Find all pairs of points whose distance is at most r</span>
-<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c1">#Find all pairs of points within a distance.</span>
-<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c1">#Compute a sparse distance matrix</span>
+<div class="highlight"><pre><span class="n">count_neighbors</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">])</span>  <span class="c">#Count how many nearby pairs can be formed.</span>
+<span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">[,</span> <span class="n">k</span><span class="p">,</span> <span class="n">eps</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">distance_upper_bound</span><span class="p">])</span> <span class="c">#Query the kd-tree for nearest neighbors</span>
+<span class="n">query_ball_tree</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span> <span class="c">#Find all pairs of points whose distance is at most r</span>
+<span class="n">query_pairs</span><span class="p">(</span><span class="n">r</span><span class="p">[,</span> <span class="n">p</span><span class="p">,</span> <span class="n">eps</span><span class="p">])</span>    <span class="c">#Find all pairs of points within a distance.</span>
+<span class="n">sparse_distance_matrix</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">max_distance</span><span class="p">)</span> <span class="c">#Compute a sparse distance matrix</span>
 </pre></div>
 
 
@@ -209,10 +209,10 @@ So, it would be for each person, search one time.</p>
         <a href="https://wcchin.github.io/tag/network.html" class="btn btn-sm">network</a>
       </label>
       <label class="chip">
-        <a href="https://wcchin.github.io/tag/svg.html" class="btn btn-sm">svg</a>
+        <a href="https://wcchin.github.io/tag/open-data.html" class="btn btn-sm">open data</a>
       </label>
       <label class="chip">
-        <a href="https://wcchin.github.io/tag/open-data.html" class="btn btn-sm">open data</a>
+        <a href="https://wcchin.github.io/tag/svg.html" class="btn btn-sm">svg</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/pagerank.html" class="btn btn-sm">PageRank</a>
@@ -230,6 +230,15 @@ So, it would be for each person, search one time.</p>
         <a href="https://wcchin.github.io/tag/processing.html" class="btn btn-sm">processing</a>
       </label>
       <label class="chip">
+        <a href="https://wcchin.github.io/tag/dengue-fever.html" class="btn btn-sm">Dengue Fever</a>
+      </label>
+      <label class="chip">
+        <a href="https://wcchin.github.io/tag/tapitas.html" class="btn btn-sm">TaPiTaS</a>
+      </label>
+      <label class="chip">
+        <a href="https://wcchin.github.io/tag/network-analysis.html" class="btn btn-sm">network analysis</a>
+      </label>
+      <label class="chip">
         <a href="https://wcchin.github.io/tag/spatial-temporal.html" class="btn btn-sm">spatial-temporal</a>
       </label>
       <label class="chip">
@@ -245,16 +254,13 @@ So, it would be for each person, search one time.</p>
         <a href="https://wcchin.github.io/tag/spatial.html" class="btn btn-sm">spatial</a>
       </label>
       <label class="chip">
+        <a href="https://wcchin.github.io/tag/kaohsiung-city.html" class="btn btn-sm">Kaohsiung City</a>
+      </label>
+      <label class="chip">
         <a href="https://wcchin.github.io/tag/movement.html" class="btn btn-sm">movement</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/transportation.html" class="btn btn-sm">transportation</a>
-      </label>
-      <label class="chip">
-        <a href="https://wcchin.github.io/tag/dengue-fever.html" class="btn btn-sm">Dengue Fever</a>
-      </label>
-      <label class="chip">
-        <a href="https://wcchin.github.io/tag/tapitas.html" class="btn btn-sm">TaPiTaS</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/ipython.html" class="btn btn-sm">ipython</a>
@@ -266,10 +272,10 @@ So, it would be for each person, search one time.</p>
         <a href="https://wcchin.github.io/tag/reveal.js.html" class="btn btn-sm">reveal.js</a>
       </label>
       <label class="chip">
-        <a href="https://wcchin.github.io/tag/dengue.html" class="btn btn-sm">dengue</a>
+        <a href="https://wcchin.github.io/tag/disease-diffusion.html" class="btn btn-sm">disease diffusion</a>
       </label>
       <label class="chip">
-        <a href="https://wcchin.github.io/tag/network-analysis.html" class="btn btn-sm">network analysis</a>
+        <a href="https://wcchin.github.io/tag/dengue.html" class="btn btn-sm">dengue</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/vmapper.html" class="btn btn-sm">vmapper</a>
@@ -279,6 +285,9 @@ So, it would be for each person, search one time.</p>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/vd.html" class="btn btn-sm">VD</a>
+      </label>
+      <label class="chip">
+        <a href="https://wcchin.github.io/tag/twitter.html" class="btn btn-sm">Twitter</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/gh-pages.html" class="btn btn-sm">gh-pages</a>
@@ -309,9 +318,6 @@ So, it would be for each person, search one time.</p>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/health.html" class="btn btn-sm">health</a>
-      </label>
-      <label class="chip">
-        <a href="https://wcchin.github.io/tag/kaohsiung-city.html" class="btn btn-sm">Kaohsiung City</a>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/gpr.html" class="btn btn-sm">GPR</a>
@@ -345,12 +351,6 @@ So, it would be for each person, search one time.</p>
       </label>
       <label class="chip">
         <a href="https://wcchin.github.io/tag/jupyter.html" class="btn btn-sm">jupyter</a>
-      </label>
-      <label class="chip">
-        <a href="https://wcchin.github.io/tag/mrt.html" class="btn btn-sm">MRT</a>
-      </label>
-      <label class="chip">
-        <a href="https://wcchin.github.io/tag/documentation.html" class="btn btn-sm">documentation</a>
       </label>
       &nbsp;&hellip;
     </p>

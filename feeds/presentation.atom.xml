@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Presentation</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/presentation.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-05-25T00:00:00+08:00</updated><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Presentation</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/presentation.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-09-26T00:00:00+08:00</updated><entry><title>Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo.</title><link href="https://wcchin.github.io/lifestyle-of-a-city-an-urban-life-footprint-analysis-using-twitter-data-in-tokyo.html" rel="alternate"></link><published>2017-09-26T00:00:00+08:00</published><updated>2017-09-26T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-09-26:/lifestyle-of-a-city-an-urban-life-footprint-analysis-using-twitter-data-in-tokyo.html</id><summary type="html">&lt;hr&gt;
+&lt;h4&gt;Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  Tsukuba Global Science Week&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: September 27, 0930-1600&lt;/li&gt;
+&lt;li&gt;Location: Tsukuba International Congress Center, University of Tsukuba, Tsukuba, Japan&lt;/li&gt;
+&lt;li&gt;Room: 405B&lt;/li&gt;
+&lt;li&gt;Language: English&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;With the increasing uses of social media …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h4&gt;Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  Tsukuba Global Science Week&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: September 27, 0930-1600&lt;/li&gt;
+&lt;li&gt;Location: Tsukuba International Congress Center, University of Tsukuba, Tsukuba, Japan&lt;/li&gt;
+&lt;li&gt;Room: 405B&lt;/li&gt;
+&lt;li&gt;Language: English&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;With the increasing uses of social media in everyday life, the living footprint of people is embedded in the social media records. The geotagged posts in social media recorded the where and when the users were. Therefore, the analysis of a large number of social media data can help to understand the human activity patterns, and which is useful for revealing the regional functions of the urban. Using Manhattan and Tokyo as the case study area, this study intended to use the twitter data to discover the human activity patterns within the cities, and analyze the connections between the locations. The strong connectivity is defined as if the two locations are visited by a large number of same people. Then, this study used community detection to search for the highly connected locations, which represent the areas with high intensity of human movements, i.e. the home-ranges or living-zones. The temporal dynamic of the aggregated users’ activities is used to analyze the regional functions of the areas. In summary, this study intended to reveal the urban’s patterns of living by using the social media data. &lt;/p&gt;
+&lt;h4&gt;Link&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://www.kokuren.tsukuba.ac.jp/TGSW2017/"&gt;about the conference&lt;/a&gt;  &lt;/p&gt;
+&lt;h4&gt;Presentation&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://bit.ly/tgsw17_lifestyleofcity"&gt;Slide link&lt;/a&gt;&lt;/p&gt;</content><category term="Twitter"></category><category term="network analysis"></category><category term="urban lifestyle"></category><category term="human activity"></category></entry><entry><title>Exploring space-time diffusion process of Dengue Fever in Kaohsiung City, Taiwan.</title><link href="https://wcchin.github.io/exploring-space-time-diffusion-process-of-dengue-fever-in-kaohsiung-city-taiwan.html" rel="alternate"></link><published>2017-09-09T00:00:00+08:00</published><updated>2017-09-09T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-09-09:/exploring-space-time-diffusion-process-of-dengue-fever-in-kaohsiung-city-taiwan.html</id><summary type="html">&lt;hr&gt;
+&lt;h4&gt;Exploring space-time diffusion process of Dengue Fever in Kaohsiung City, Taiwan.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  7th Asian Seminar in Regional Science (ASRS)&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: September 09, 0900-1030 (Oral Session)&lt;/li&gt;
+&lt;li&gt;Location: Department of Geography, NTU, Taipei City, Taiwan&lt;/li&gt;
+&lt;li&gt;Room: 103&lt;/li&gt;
+&lt;li&gt;Language: English&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Background : 
+Located in East Asia …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;h4&gt;Exploring space-time diffusion process of Dengue Fever in Kaohsiung City, Taiwan.&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Conference:  7th Asian Seminar in Regional Science (ASRS)&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;Date: September 09, 0900-1030 (Oral Session)&lt;/li&gt;
+&lt;li&gt;Location: Department of Geography, NTU, Taipei City, Taiwan&lt;/li&gt;
+&lt;li&gt;Room: 103&lt;/li&gt;
+&lt;li&gt;Language: English&lt;/li&gt;
+&lt;li&gt;Authors: Wei-Chien Benny-Chin, Tzai-Hung Wen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Background : 
+Located in East Asia, Taiwan straddles the tropical and subtropical zones. The number of Dengue Fever cases in Taiwan shows an annual cyclical pattern, which mainly starts in the early summer and ends in the late winter of the next year. The locations of past Dengue Fever outbreak are mostly concentrated in southern Taiwan due to the temperature suitability for the breeding of mosquitoes, including Kaohsiung City. Dengue Fever is a vector-borne disease, where the transmission process has a human-mosquito-human cycle. Therefore, a temporal lag must be in between the time a case is infected and the time when the case become infectious. &lt;/p&gt;
+&lt;p&gt;A diffusion process can be considered as the movement of linked events through space and time. However, previous clustering analysis methods have focused only on the space-time proximity characteristic, that is how close each pair of the nodes are to each other in both spatial and temporal dimensions, but have neglected the temporal lag of the movement of events. In this study, we argue that the temporal lag between events is a key to uncover the process of diffusion movement. Using the properties of temporal lag could help to clarify the types of close relationships between cases, and provide a way to identify the progression within an epidemic outbreak.&lt;/p&gt;
+&lt;p&gt;Objectives :
+The objective of this study is to explore the space-time diffusion process of Dengue Fever in KaoHsiung City, Taiwan. Using the a recently develop algorithm, TaPiTaS, we utilize the temporal lag between cases to detect sub-clusters and progession chains for visualizing the diffusion process. &lt;/p&gt;
+&lt;p&gt;Methodology :
+Based on the spatial distance and temporal interval between cases, this algorithm detects sub-clusters, namely a group of point events that have high probability of having common sources, identifies progression links that show the directions and relationships between sub-clusters, and tracks progression chains that indicate the connected components of sub-clusters. Data with 18 years of indigenous Dengue Fever cases was used in this study. &lt;/p&gt;
+&lt;p&gt;Results :
+Regardless of the significant differences in the total number of cases, the median number and the median absolute deviation of the sub-cluster sizes and durations over the 18 years are similar: sub-clusters consist of about 2 to 4 cases, and the duration median is 5 days (4 days MAD). The chain sizes and durations are also similar through the 18 years regardless of the differences in terms of the total size of cases. The chain sizes consist of 2 to 3 sub-clusters and the duration median is one month (2 weeks MAD).
+The location and temporal range of sub-clusters are presented, along with the progression links. &lt;/p&gt;
+&lt;h4&gt;Link&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://7thasrs.weebly.com"&gt;about the conference&lt;/a&gt;  &lt;/p&gt;
+&lt;h4&gt;Presentation&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://bit.ly/asrs2017chin"&gt;Slide link&lt;/a&gt;&lt;/p&gt;</content><category term="Dengue Fever"></category><category term="disease diffusion"></category><category term="open data"></category><category term="TaPiTaS"></category><category term="Kaohsiung City"></category></entry><entry><title>Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.</title><link href="https://wcchin.github.io/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html" rel="alternate"></link><published>2017-05-25T00:00:00+08:00</published><updated>2017-05-25T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-05-25:/applying-space-time-information-to-explore-disease-processes-the-dynamic-patterns-of-dengue-fever-in-kaohsiung-city-1998-2015.html</id><summary type="html">&lt;hr&gt;
 &lt;h4&gt;Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015.&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Excellent Student Poster Award&lt;/strong&gt;  &lt;/p&gt;
 &lt;ul&gt;
