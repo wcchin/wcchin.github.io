@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/</loc>
-<lastmod>2017-09-26T23:37:50-00:00</lastmod>
+<lastmod>2017-10-05T03:15:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/archives.html</loc>
-<lastmod>2017-09-26T23:37:50-00:00</lastmod>
+<lastmod>2017-10-05T03:15:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/tags.html</loc>
-<lastmod>2017-09-26T23:37:50-00:00</lastmod>
+<lastmod>2017-10-05T03:15:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/categories.html</loc>
-<lastmod>2017-09-26T23:37:50-00:00</lastmod>
+<lastmod>2017-10-05T03:15:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/pages/about-the-mini-lab-and-i.html</loc>
-<lastmod>2017-09-26T23:37:50-00:00</lastmod>
+<lastmod>2017-10-05T03:15:06-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/a-geo-computational-algorithm-for-exploring-the-structure-of-diffusion-progression-in-time-and-space.html</loc>
+<lastmod>2017-10-03T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -411,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/category/publication.html</loc>
-<lastmod>2017-01-06T00:00:00+08:06</lastmod>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -635,7 +642,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/dengue-fever.html</loc>
-<lastmod>2017-09-09T00:00:00+08:06</lastmod>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -650,6 +657,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://wcchin.github.io/tag/slides.html</loc>
 <lastmod>2017-07-18T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/tag/diffusion-progression.html</loc>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -670,7 +684,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/tapitas.html</loc>
-<lastmod>2017-09-09T00:00:00+08:06</lastmod>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -767,6 +781,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/disease.html</loc>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/tag/disease-diffusion.html</loc>
 <lastmod>2017-09-09T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -817,7 +838,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/author/benny-chin.html</loc>
-<lastmod>2017-09-26T00:00:00+08:06</lastmod>
+<lastmod>2017-10-03T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
