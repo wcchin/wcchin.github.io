@@ -127,51 +127,51 @@ After that, you can choose to map the spatial features with the colours using ma
 <p>Or, you can choose to use the vmapper package to create a map in vector file format - svg. Svg can be used in inkscape for further figure processing. It is also the native format for inkscape. </p>
 <hr>
 <p>First of all, import the packages that will be used in this tutorial.</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">colouringmap</span> <span class="kn">import</span> <span class="n">theme_mapping</span> <span class="k">as</span> <span class="n">tm</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">colouringmap</span> <span class="kn">import</span> <span class="n">theme_mapping</span> <span class="k">as</span> <span class="n">tm</span>
 <span class="kn">import</span> <span class="nn">vmapper</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">geopandas</span> <span class="kn">as</span> <span class="nn">gpd</span>
-<span class="kn">from</span> <span class="nn">shapely.ops</span> <span class="kn">import</span> <span class="n">cascaded_union</span> <span class="c">## this is for disolving the goemetry of basic statistic unit into townships</span>
+<span class="kn">from</span> <span class="nn">shapely.ops</span> <span class="kn">import</span> <span class="n">cascaded_union</span> <span class="c1">## this is for disolving the goemetry of basic statistic unit into townships</span>
 </pre></div>
 
 
 <p>Then, read the data into the environment</p>
-<div class="highlight"><pre><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">&#39;/path/to/file/vil_67_N_C.shp&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;/path/to/file/vil_67_N_C.shp&#39;</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 
 <p>Then, prepare the density values</p>
-<div class="highlight"><pre><span class="n">aa</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="n">aa</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">area</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">cc</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">NUMPOINTS</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">cdens</span> <span class="o">=</span> <span class="p">[</span> <span class="n">c</span><span class="o">*</span><span class="mi">10000</span><span class="o">/</span><span class="n">a</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">a</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span><span class="n">aa</span><span class="p">)</span> <span class="p">]</span>
-<span class="n">gdf</span><span class="p">[</span><span class="s">&#39;cdens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cdens</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;cdens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cdens</span>
 </pre></div>
 
 
 <p>Now, use the colouring_sequence function to generate the level list, and also the colour list, that have the same length and in the same order as the gdf. level_list contain the level of each row, and colour_list has the colour of each row. Each row is a geometry of the spatial entities. The breaking method used here is the natural break, which is the default break for ESRI arcgis, and the break number is set to 7. The color scale map that is used in this package is imported from the <a href="https://jiffyclub.github.io/palettable/" target="blank">Palettable for python</a>, v3.0.0. So, you can go there and search for the color group and name from there, and check how is them called in this package in <a href="https://github.com/wcchin/colouringmap" target="blank">here</a>, where you can also find the list of valid break method. </p>
-<div class="highlight"><pre><span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s">&#39;cdens&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s">&#39;Turbid_10&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">level_list</span><span class="p">,</span> <span class="n">colour_list</span><span class="p">,</span> <span class="n">colour_tuples</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">colouring_sequence</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">colorbysequence</span><span class="o">=</span><span class="s1">&#39;cdens&#39;</span><span class="p">,</span> <span class="n">break_method</span><span class="o">=</span><span class="s1">&#39;natural_break&#39;</span><span class="p">,</span> <span class="n">break_N</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">color_group</span><span class="o">=</span><span class="s1">&#39;cmocean_sequential&#39;</span><span class="p">,</span> <span class="n">color_name</span><span class="o">=</span><span class="s1">&#39;Turbid_10&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>The following demo how to prepare the label for each row of spatial feature. </p>
-<div class="highlight"><pre><span class="n">cn</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">countyname</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="n">cn</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">countyname</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">tn</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">townname</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">vn</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">villagenam</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">namelab</span> <span class="o">=</span> <span class="p">[</span> <span class="n">c</span><span class="o">+</span><span class="n">t</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s">&#39;:count=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cn</span><span class="p">,</span><span class="n">tn</span><span class="p">,</span><span class="n">vn</span><span class="p">,</span><span class="n">cc</span><span class="p">)</span> <span class="p">]</span>
-<span class="n">gdf</span><span class="p">[</span><span class="s">&#39;nlabel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">namelab</span>
-<span class="n">gdf</span><span class="p">[</span><span class="s">&#39;level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">level_list</span>
-<span class="n">gdf</span><span class="p">[</span><span class="s">&#39;colour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">colour_list</span>
+<span class="n">namelab</span> <span class="o">=</span> <span class="p">[</span> <span class="n">c</span><span class="o">+</span><span class="n">t</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s1">&#39;:count=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cn</span><span class="p">,</span><span class="n">tn</span><span class="p">,</span><span class="n">vn</span><span class="p">,</span><span class="n">cc</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;nlabel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">namelab</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">level_list</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;colour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">colour_list</span>
 </pre></div>
 
 
 <p>The spatial feature is smaller in the previous section. So, we want to dissolve them and forming a larger area that represent the larger administrative boundary, to map it together with the smaller resolution choropleth map. So later we will overlap these geodataframe and make the larger one transparent. </p>
-<div class="highlight"><pre><span class="n">tnset</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="n">tnset</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">tn</span><span class="p">))</span>
 <span class="n">t_geom</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tnset</span><span class="p">:</span>
-    <span class="n">temp</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="p">[</span><span class="s">&#39;townname&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">]</span>
-    <span class="n">temp_g</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="s">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;townname&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">]</span>
+    <span class="n">temp_g</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
     <span class="n">town_bound</span> <span class="o">=</span> <span class="n">cascaded_union</span><span class="p">(</span><span class="n">temp_g</span><span class="p">)</span>
     <span class="n">t_geom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">town_bound</span><span class="p">)</span>
 <span class="n">tdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">tname</span><span class="o">=</span><span class="n">tnset</span><span class="p">))</span>
@@ -180,23 +180,23 @@ After that, you can choose to map the spatial features with the colours using ma
 
 
 <p>The following shows how to generate svg map with vmapper. First, prepare a map, that will be an interactive map (zoom, pan using mouse directly). </p>
-<div class="highlight"><pre><span class="n">m</span> <span class="o">=</span> <span class="n">vmapper</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">interactive</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c">## interactive will use the SVGPan.js, which will be copy automatically</span>
+<div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">vmapper</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">interactive</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1">## interactive will use the SVGPan.js, which will be copy automatically</span>
 </pre></div>
 
 
 <p>Then, add the larger layer to the map, which color is set to 'transparent', so it will not has fill color.
 The firstly added layer will be draw first, so it will be the lowest on the map. </p>
-<div class="highlight"><pre><span class="n">m</span><span class="o">.</span><span class="n">add_geodataframe</span><span class="p">(</span><span class="n">tgdf</span><span class="p">,</span> <span class="n">layername</span><span class="o">=</span><span class="s">&#39;township&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">strokewidth</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">strokecolor</span><span class="o">=</span><span class="s">&#39;#000&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;transparent&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">add_geodataframe</span><span class="p">(</span><span class="n">tgdf</span><span class="p">,</span> <span class="n">layername</span><span class="o">=</span><span class="s1">&#39;township&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">strokewidth</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">strokecolor</span><span class="o">=</span><span class="s1">&#39;#000&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;transparent&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Then, add the smaller resolution layer (finer). This one will set the color for each row, assigned from the colouringmap package, and also include the label created from above. </p>
-<div class="highlight"><pre><span class="n">m</span><span class="o">.</span><span class="n">add_geodataframe</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">layername</span><span class="o">=</span><span class="s">&#39;crime_density&#39;</span><span class="p">,</span> <span class="n">draw_setting</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">labelby</span><span class="o">=</span><span class="s">&#39;nlabel&#39;</span><span class="p">,</span> <span class="n">idby</span><span class="o">=</span><span class="s">&#39;VILLCODE&#39;</span><span class="p">,</span> <span class="n">colorby</span><span class="o">=</span><span class="s">&#39;colour&#39;</span><span class="p">),</span>  <span class="n">hovercolor</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">hoveropacity</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">hoverstroke</span><span class="o">=</span><span class="s">&quot;#FF0&quot;</span><span class="p">,</span><span class="n">hoverswidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">strokecolor</span><span class="o">=</span><span class="s">&quot;#FFF&quot;</span><span class="p">,</span> <span class="n">strokewidth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">showlabel</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">add_geodataframe</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">layername</span><span class="o">=</span><span class="s1">&#39;crime_density&#39;</span><span class="p">,</span> <span class="n">draw_setting</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">labelby</span><span class="o">=</span><span class="s1">&#39;nlabel&#39;</span><span class="p">,</span> <span class="n">idby</span><span class="o">=</span><span class="s1">&#39;VILLCODE&#39;</span><span class="p">,</span> <span class="n">colorby</span><span class="o">=</span><span class="s1">&#39;colour&#39;</span><span class="p">),</span>  <span class="n">hovercolor</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">hoveropacity</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span><span class="n">hoverstroke</span><span class="o">=</span><span class="s2">&quot;#FF0&quot;</span><span class="p">,</span><span class="n">hoverswidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">strokecolor</span><span class="o">=</span><span class="s2">&quot;#FFF&quot;</span><span class="p">,</span> <span class="n">strokewidth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">showlabel</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Finally, export them to a file, to the current folder (your current working directory).</p>
-<div class="highlight"><pre><span class="n">m</span><span class="o">.</span><span class="n">export_to_file</span><span class="p">(</span><span class="s">&#39;testing_taipei_crime_map2.svg&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">export_to_file</span><span class="p">(</span><span class="s1">&#39;testing_taipei_crime_map2.svg&#39;</span><span class="p">)</span>
 </pre></div>
 
 
@@ -416,7 +416,7 @@ updated to include legend and text with the latest version of vmapper.</p>
   <div class="divider"></div>
   <div class="column col-6">
     <div class="text-left">
-      &copy; 2017 Benny Chin  <span class="typcn typcn-globe-outline"></span> 
+      &copy; 2018 Benny Chin  <span class="typcn typcn-globe-outline"></span> 
       <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
     </div>
   </div>
@@ -428,7 +428,7 @@ updated to include legend and text with the latest version of vmapper.</p>
   </div>
 </div>          </footer>
         </div><!-- column col-9 -->
-        <div class="column col-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background: url('/images/bg2.png'); background-size:cover; background-position: center;">
+        <div class="column col-3 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background: url('/images/bg3.jpg'); background-size:cover; background-position: center;">
         <!-- right pane -->
   <h5 class='text-center'>About</h5>
   <div class="container">
