@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/</loc>
-<lastmod>2018-09-18T10:30:07-00:00</lastmod>
+<lastmod>2019-04-12T22:56:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/archives.html</loc>
-<lastmod>2018-09-18T10:30:07-00:00</lastmod>
+<lastmod>2019-04-12T22:56:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/tags.html</loc>
-<lastmod>2018-09-18T10:30:07-00:00</lastmod>
+<lastmod>2019-04-12T22:56:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://wcchin.github.io/categories.html</loc>
-<lastmod>2018-09-18T10:30:07-00:00</lastmod>
+<lastmod>2019-04-12T22:56:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/pages/about-the-mini-lab-and-i.html</loc>
-<lastmod>2018-09-18T10:30:07-00:00</lastmod>
+<lastmod>2019-04-12T22:56:20-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/epirank-modeling-bidirectional-disease-spread-in-asymmetric-commuting-networks.html</loc>
+<lastmod>2019-04-01T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -418,7 +425,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/category/publication.html</loc>
-<lastmod>2017-10-03T00:00:00+08:06</lastmod>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -480,8 +487,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://wcchin.github.io/tag/gravity.html</loc>
-<lastmod>2016-04-27T00:00:00+08:06</lastmod>
+<loc>https://wcchin.github.io/tag/infectious.html</loc>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -543,8 +550,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/gravity.html</loc>
+<lastmod>2016-04-27T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/tag/transmission-risk.html</loc>
 <lastmod>2016-09-24T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://wcchin.github.io/tag/diffusion-network.html</loc>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -718,6 +739,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://wcchin.github.io/tag/epirank.html</loc>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://wcchin.github.io/tag/chorolepth.html</loc>
 <lastmod>2017-06-08T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -782,7 +810,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/tag/disease.html</loc>
-<lastmod>2017-10-03T00:00:00+08:06</lastmod>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -838,7 +866,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://wcchin.github.io/author/benny-chin.html</loc>
-<lastmod>2017-10-03T00:00:00+08:06</lastmod>
+<lastmod>2019-04-01T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
