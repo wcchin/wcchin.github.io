@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+html {
+  font-family: 'Raleway',sans-serif;
+}
+
+body {
+  font-family: 'Raleway',sans-serif;
+}
+/**/
+div #footer {
+  background:#e0e0e0;
+}
+
+div #header {
+  background:#e0e0e0;
+}
+
+
+.btn {
+  background: none;
+  border: 0rem;
+}

@@ -1,0 +1,23 @@
+<header class="navbar">
+  <section class="navbar-section">
+    <!--<a href="/index.html" class="navbar-brand mr-10"><strong>Home</strong></a>-->
+    {% for p in pages %}
+      <a href="{{ SITEURL }}/{{ p.url }}" class="btn btn-link">{{ p.title }}</a>
+    {% endfor %}
+  </section>
+  <section class="navbar-center">
+    <!-- centered logo or brand -->
+    <a href="/index.html" class="navbar-brand mr-10"><strong><span class="typcn typcn-globe-outline"></span> {{ SITENAME }}</strong></a>
+  </section>
+  <section class="navbar-section">
+    {% for cat, null in categories %}
+      <a href="{{ SITEURL }}/{{ cat.url }}" class="btn btn-link">{{ cat }}</a>
+    {% endfor %}
+    <!--
+    <div class="input-group input-inline">
+      <input class="form-input" type="text" placeholder="search" />
+      <button class="btn btn-primary input-group-btn">Search</button>
+    </div>
+    -->
+  </section>
+</header>

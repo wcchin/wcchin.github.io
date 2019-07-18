@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% import 'macros.html' as macros %}
+<div class="columns">
+  {% for i in range(6) %}
+    {% if articles|length>i %}
+      <div class="column col-6">
+        {{ macros.article_summary(articles[i], SITEURL, DISQUS_SITENAME) }}
+      </div> <!-- column col-6 -->
+    {% endif %}
+  <!-- an article card done -->
+  {% endfor %}
+</div> <!-- columns for cards -->
+
+<a href="{{ SITEURL }}/archives.html" class="btn btn-primary btn-lg">Older Articles&hellip;</a>
+{% endblock content %}

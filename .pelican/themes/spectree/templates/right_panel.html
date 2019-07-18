@@ -1,0 +1,50 @@
+{% if SITE_DESCRIPTION or EMAIL or SOCIAL %}
+  <h5 class='text-center'>About</h5>
+  <div class="container">
+    <div class="columns">
+      <div class="column col-3">
+        {% if PROFILE_IMAGE %}
+          <a class="th" href="{{ PROFILE_IMAGE|replace('{filename}',SITEURL)|replace('|filename|',SITEURL) }}">
+            <figure class="avatar avatar-xl" data-initial="{{ AUTHOR[0] }}">
+              <img src="{{ PROFILE_IMAGE|replace('{filename}',SITEURL)|replace('|filename|',SITEURL) }}" />
+            </figure>
+          </a>
+        {% endif %}
+      </div>
+      <div class="column col-9">
+        {{ SITE_DESCRIPTION }}
+      </div>
+    </div> <!-- /div columns -->
+  </div> <!-- /div container -->
+
+  <div class="container">
+    <div class="columns">
+      <div class="column col-10">
+        {% if EMAIL or SOCIAL %}
+        <div class="btn-group btn-group-block">
+          {% if EMAIL%}
+          <a href="mailto:{{ EMAIL}}" class="btn btn-link"><i class="fa fa-envelope"></i>&nbsp; Email</a>
+          {% endif %}
+          {% for name,link in SOCIAL %}
+          <a href="{{ link }}" class="btn btn-link"><i class="fa fa-{{ name|lower }}"></i>&nbsp; {{ name }}</a>
+          {% endfor %}
+        </div> <!-- /div btn-group -->
+        {% endif %}
+        {% if LINKS %}
+        <h5 class='text-center'>Links</h5>
+        <div class="btn-group btn-group-block">
+          {% for name, url in LINKS %}
+            <a href="{{ url }}" class="btn btn-link">{{ name }}</a>
+          {% endfor %}
+        </div> <!-- /div btn-group -->
+        {% endif %}
+        <!-- for revolvermaps -->
+        <div style="text-align: center;">
+          <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=59lz2fd3mqo&amp;m=2&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=0" async="async"></script>
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" seamless="seamless" 
+        src="https://colmdoyle.github.io/gh-activity/gh-activity.html?user=wcchin&type=user" width="300" height="250"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %} <!-- something above the "About" -->

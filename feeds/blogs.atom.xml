@@ -107,12 +107,7 @@ Therefore, the aim of this case study is to detect sub-clusters from the annual 
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/210724798"&gt;Dengue Fever 2014&lt;/a&gt; from &lt;a href="https://vimeo.com/user11082431"&gt;Benny Chin&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/210724814" width="640" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/210724814"&gt;Dengue Fever 2015&lt;/a&gt; from &lt;a href="https://vimeo.com/user11082431"&gt;Benny Chin&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</content><category term="open data"></category><category term="demo"></category><category term="TaPiTaS"></category><category term="Dengue Fever"></category></entry><entry><title>Restructured vmapper</title><link href="https://wcchin.github.io/restructured-vmapper.html" rel="alternate"></link><published>2017-04-22T00:00:00+08:00</published><updated>2017-04-22T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-22:/restructured-vmapper.html</id><summary type="html">&lt;hr&gt;
-&lt;p&gt;Vmapper is a simple python library for creating map in python, from reading spatial data source to exporting map.
-&lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;The example is shown here:&lt;/p&gt;
-&lt;p&gt;&lt;object id="svg1" data="/svgs/vmapperexample.svg" type="image/svg+xml" style="width: 650px; height: 480px"&gt;&lt;/object&gt;&lt;br&gt;
-&lt;a href="/svgs/vmapperexample.svg"&gt; click this and try to pan or zoom-in with your mouse scroll wheel. &lt;/a&gt;  &lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/210724814"&gt;Dengue Fever 2015&lt;/a&gt; from &lt;a href="https://vimeo.com/user11082431"&gt;Benny Chin&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</content><category term="open data"></category><category term="demo"></category><category term="TaPiTaS"></category><category term="Dengue Fever"></category></entry><entry><title>Restructured vmapper</title><link href="https://wcchin.github.io/restructured-vmapper.html" rel="alternate"></link><published>2017-04-22T00:00:00+08:00</published><updated>2017-04-22T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-04-22:/restructured-vmapper.html</id><content type="html">&lt;hr&gt;
 &lt;p&gt;Vmapper is a simple python library for creating map in python, from reading spatial data source to exporting map.
 &lt;a href="/vmapper.html"&gt;check this project page&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The example is shown here:&lt;/p&gt;
@@ -153,11 +148,7 @@ One good thing from a well-XX generator is that they have a lot of fully functio
 &lt;li&gt;
 &lt;p&gt;writing another paper, that took me a lot of times; and also preparing for my Ph.D proposal. &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content><category term="MRT"></category><category term="open data"></category><category term="visualization"></category><category term="writings"></category></entry><entry><title>Working on Taipei City Open data -- Vehicle Detector (VD)</title><link href="https://wcchin.github.io/working-on-taipei-city-open-data-vehicle-detector-vd.html" rel="alternate"></link><published>2016-12-30T00:00:00+08:00</published><updated>2016-12-30T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-12-30:/working-on-taipei-city-open-data-vehicle-detector-vd.html</id><summary type="html">&lt;hr&gt;
-&lt;p&gt;using python and matplotlib, matplotlib animation function.&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/197269715" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href="https://vimeo.com/197269715"&gt;Taipei City Vehicle Detector (total volume) data in June 2016&lt;/a&gt; from &lt;a href="https://vimeo.com/user11082431"&gt;Benny Chin&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;/ol&gt;</content><category term="MRT"></category><category term="open data"></category><category term="visualization"></category><category term="writings"></category></entry><entry><title>Working on Taipei City Open data -- Vehicle Detector (VD)</title><link href="https://wcchin.github.io/working-on-taipei-city-open-data-vehicle-detector-vd.html" rel="alternate"></link><published>2016-12-30T00:00:00+08:00</published><updated>2016-12-30T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2016-12-30:/working-on-taipei-city-open-data-vehicle-detector-vd.html</id><content type="html">&lt;hr&gt;
 &lt;p&gt;using python and matplotlib, matplotlib animation function.&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/197269715" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 

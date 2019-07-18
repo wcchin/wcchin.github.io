@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }}{%endblock%}
+{% block description %}
+<meta name="description" content="{{ article.summary|e }}" />
+{% if article.tags %}
+<meta name="keywords" content=" {% for tag in article.tags %}{{ tag }} {% endfor %} "/>
+{% endif %}
+{% endblock description %}
+
+{% block content %}
+<div class="columns">
+  <div class="column col-12">
+    <h2>{{ article.title }}</h2>
+    <div class="article_meta">
+      <span class="label"><i class="fa fa-calendar"></i>&nbsp; {{ article.locale_date }}</span>
+      <span class="label"><i class="fa fa-folder-open"></i>&nbsp; <a href="{{ url }}/{{ article.category.url }}" class="btn">{{ article.category }}</a></span>
+      {% if disque %}
+      <label class="chip"><i class="fa fa-comments"></i>&nbsp; <a href="{{ url }}/{{ article.url }}#disqus_thread" rel="bookmark" title="Disqus Comments" class="btn btn-sm">{{ article.title }}</a></label>
+      {% endif %}
+      {% if article.tags %}
+      <span>
+        <i class="fa fa-tags"></i>&nbsp;
+        {% for tag in article.tags %}
+          <label class="chip"><a href="{{ url }}/{{ tag.url }}" class="btn btn-sm">{{ tag }}</a></label>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </div>
+    {% if article.share_post and article.status != 'draft' %}
+    <section>
+      <p id="post-share-links">
+        Share on:
+        <a href="{{article.share_post['twitter']}}" target="_blank" title="Share on Twitter" class="btn btn-primary btn-sm"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a>
+
+        <a href="{{article.share_post['facebook']}}" target="_blank" title="Share on Facebook" class="btn btn-primary btn-sm"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
+
+        <a href="{{article.share_post['google-plus']}}" target="_blank" title="Share on Google Plus" class="btn btn-primary btn-sm"><i class="fa fa-google-plus-square" aria-hidden="true"></i> Google+</a>
+
+        <a href="{{article.share_post['email']}}" target="_blank" title="Share via Email" class="btn btn-primary btn-sm"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+
+        <a href="{{article.share_post['diaspora']}}" target="_blank" title="Share on Diaspora" class="btn btn-primary btn-sm"><i class="fa fa-share-square" aria-hidden="true"></i> Diaspora*</a>
+      </p>
+    </section>
+    {% endif %}
+    <section class="article">
+      {{ article.content }}    
+    </section>
+    {% if DISQUS_SITENAME %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = '{{ DISQUS_SITENAME }}';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = '{{ DISQUS_SITENAME }}';
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+    {% endif %}
+    <div class="divider"></div>
+  </div>
+</div>
+{% endblock content %}
