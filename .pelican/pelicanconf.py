@@ -19,13 +19,14 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-THEME = "./themes/spectree"#"../../pelican-themes/attila"#"./themes/spectree"
+THEME = "./themes/spectree"
 OUTPUT_PATH = '../'
 
 # Blogroll
 LINKS = (('My Google Scholar', 'https://scholar.google.com.tw/citations?user=P2IJvyQAAAAJ&hl=zh-TW'),
-         ('National Taiwan University', 'geog.ntu.edu.tw'),
-         ('Lab for Geospatial Computational Science', 'http://wenlab.geog.ntu.edu.tw/'),
+		 ('Some current works', 'https://chin-minilab.surge.sh'), 
+         ('Singapore University of Technology and Design', 'https://sutd.edu.sg/'),
+         ('Applied Complexity Group (ACG) ', 'https://people.sutd.edu.sg/acg/home/'),
          ('Benny.foto', 'http://wcchin.github.io/foto/'),)
 
 # Social widget
@@ -41,7 +42,7 @@ PAGINATED_TEMPLATES = {'categories': 8, 'archives': 8}
 PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives', 'tag', 'category', 'author')
 STATIC_PATHS = ['images', 'svgs', 'pdfs']
 PROFILE_IMAGE = '/images/benny.jpg'
-SITE_DESCRIPTION = 'I am Wei-Chien-Benny Chin, a PhD research fellow at Department of Geography, National Taiwan University. I work in the lab for geospatial & computational science, which focuses on using the spatial data for studying the people living in the geographical space.'
+SITE_DESCRIPTION = 'I am Wei-Chien-Benny Chin, a PhD research fellow at Signgapore University of Technology and Design. I work with the Applied Complexity Group, doing researches on vertical movements and agent-based modelling in urban spatial analysis.'
 BACKDROP_IMAGE = '/images/bg3.jpg'
 DISQUS_SITENAME = 'chinminilab'
 YEAR = 2019
