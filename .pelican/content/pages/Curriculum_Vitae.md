@@ -5,7 +5,7 @@ Date: 2017-06-05
 
 # 陳威全
 # Wei Chien Benny Chin
-<a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a></a> ; wcchin.88@gmail.com; +886-2-3366-5847  
+<a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a> ; wcchin.88@gmail.com  
 3.306-S05 - Applied Complexity Group, Computationally Intensive Design Lab,  
 International Design Centre (IDC). Singapore University of Technology & Design.  
 Building 3, 8 Somapah Road Singapore 487372.  
@@ -14,8 +14,8 @@ Building 3, 8 Somapah Road Singapore 487372.
 
 ---
 
-[CV in pdf](/pdfs/curriculum_vitae.pdf)  
-[Academic portfolio](/pdfs/academic_portfolio.pdf)
+[CV in pdf](/pdfs/chin_curriculum_vitae.pdf)  
+[Academic portfolio](/pdfs/chin_academic_portfolio.pdf)
 
 ---
 
