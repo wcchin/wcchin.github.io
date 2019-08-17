@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Chin.Mini Lab - Project</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/project.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2017-07-18T00:00:00+08:00</updated><subtitle>a Geographer, Cartographer, &amp; GIScientist</subtitle><entry><title>pyreveal</title><link href="https://wcchin.github.io/pyreveal.html" rel="alternate"></link><published>2017-07-18T00:00:00+08:00</published><updated>2017-07-18T00:00:00+08:00</updated><author><name>Benny Chin</name></author><id>tag:wcchin.github.io,2017-07-18:/pyreveal.html</id><summary type="html">&lt;hr&gt;
 &lt;h1&gt;pyreveal&lt;/h1&gt;
-&lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a python package for converting markdown to reveal.js slides&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;a demo&lt;/h2&gt;
-&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/226295024" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;h2&gt;Why another converter?&lt;/h2&gt;
-&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/226295024"&gt;&lt;img alt="pyreveal demo video" src="http://wcchin.github.io/images/pyrev_demo_vimeo.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;After some time&lt;/h2&gt;
+&lt;p&gt;About two years ago, I wrote pyreveal to automate the conversion from MD to slides in html powered with reveal.js (with my own flavor of syntax). After that, I was busying on my …&lt;/p&gt;</summary><content type="html">&lt;hr&gt;
 &lt;h1&gt;pyreveal&lt;/h1&gt;
-&lt;p&gt;a python package for converting markdown to reveal.js slides.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a python package for converting markdown to reveal.js slides&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;a demo&lt;/h2&gt;
-&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/226295024" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/226295024"&gt;&lt;img alt="pyreveal demo video" src="http://wcchin.github.io/images/pyrev_demo_vimeo.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;After some time&lt;/h2&gt;
+&lt;p&gt;About two years ago, I wrote pyreveal to automate the conversion from MD to slides in html powered with reveal.js (with my own flavor of syntax). After that, I was busying on my researches and dissertation writing etc., thus abandoned this project for a while. &lt;/p&gt;
+&lt;p&gt;During the two years, I tried some other ways to generate slides. For my formal presentations (my defense and interviews) I used Google Slides, because it is more stable and easy to change (drag and drop etc). For some smaller discussion, I tried Marp (which is a great project). There are quite a lot of alternative out there. I love Marp and even thinking on writing my own theme to use with it. But then I realize that they stop the development and maintenances of Marp desktop app. They are moving forward to newer ecosystem, and the desktop app is part of the future product, i.e. currently no available. Their documentation on using the alternative cloud version is not that complete, I can't find an easy way to do it (like read the instruction and done by 10 mins), so I give up on them for now (and keep the discontinued Marp desktop app for some quick use situation). &lt;/p&gt;
+&lt;p&gt;GitPitch is another promising and &lt;strong&gt;seems like&lt;/strong&gt; a very good piece of work. The cloud version works as simple as forking the example. But there is some confusion in the documentation. I am trying to use their so called "&lt;strong&gt;GitPitch Desktop Free Edition&lt;/strong&gt;" that is listed under the "&lt;strong&gt;Free - The basic plan for everyone on GitHub, GitLab, and Bitbucket - $ 0&lt;/strong&gt;. But I wasted 1 hour to read the doc and install docker blablabla.... and to find the &lt;em&gt;GitPitch Desktop Access Management&lt;/em&gt; for to get the approval for downloading the docker image. After wasted 1 hour on it, I gave up on them. &lt;strong&gt;ALL desktop application leads to the subscribe on non-free plan&lt;/strong&gt;. Well, I actually don't like so much on the docker way to start the desktop app also....&lt;/p&gt;
+&lt;p&gt;So, without other quick way to generate slides from MD for now, I back to my old project. &lt;/p&gt;
+&lt;p&gt;This time, I updated the reveal.js version, added some really nice plugin (menu, simple-menu, katex, verticator, pdfexport, and title-footer). The toc plugin is replaced by the menu and simple-menu. To use the simple-menu, I added a new way (syntax, i.e. ---chapter=) to name the chapter in the python script; to use the tex style equation, the katex needed to be copied to the current slide html dir; and of course fixed some small bugs. &lt;/p&gt;
+&lt;p&gt;One big change I have done this time is dropped the Phantom.js and decktape.js, to keep things as simple as possible (no need to npm install any thing now). I also copied the docdata into the pyreveal package, because I don't know why pip install docdata will lead to some weird situation. This would be more intuitive and less dependencies nightmare. &lt;/p&gt;
+&lt;p&gt;The current dependencies included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;jinja2&lt;/li&gt;
+&lt;li&gt;markdown&lt;/li&gt;
+&lt;li&gt;watchdog&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Why another converter?&lt;/h2&gt;
-&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape&lt;/a&gt; automatically. So, the nbconvert can do the conversion from notebook to reveal.js. &lt;/p&gt;
+&lt;p&gt;Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file~~, and convert to pdf using &lt;a href="https://github.com/astefanutti/decktape" target="blank"&gt;phantomjs+decktape&lt;/a&gt; automatically~~. So, the nbconvert can do the conversion from notebook to reveal.js. &lt;/p&gt;
 &lt;p&gt;But, I don't understand why they keep the cell tags, which make it a pain while customizing the themes, and the custom.css, that following the tutorials or answers from stackoverflow to customize the reveal.js (the js), the codes will not work for the nbconvert version of slides.html. &lt;/p&gt;
-&lt;p&gt;Plus, the speaker notes function is still not working for jupyter+nbconvert. &lt;/p&gt;
+&lt;p&gt;Plus, the speaker notes function is still not working for jupyter+nbconvert. ~~not sure about this for now~~&lt;/p&gt;
+&lt;p&gt;One more thing, if you change the contents in the notebook cell, you will need to run the nbconvert command again to generate the static html file. 
+What we need, is that the static html file can be generated automatically, and we can see the result as soon as we change the md file.&lt;/p&gt;
 &lt;p&gt;Therefore, I decided to write a converter that take a simple md, and convert it to reveal.js slides using jinja2. &lt;/p&gt;
+&lt;h1&gt;Getting started&lt;/h1&gt;
 &lt;h2&gt;Demo&lt;/h2&gt;
 &lt;p&gt;a demo is &lt;a href="https://wcc-slides.netlify.com/2017/pyreveal/demo.slides.html#/" target="blank"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The codes that generate the demo slides is in the slide_dir directory.&lt;/p&gt;
@@ -31,8 +47,11 @@ pip install -e .
 &lt;li&gt;create a file named whatever.md (with .md extension)&lt;/li&gt;
 &lt;li&gt;follow the instruction in the following sections and write the slides content inside the whatever.md &lt;/li&gt;
 &lt;li&gt;run the command, see the following "usage" section&lt;/li&gt;
+&lt;li&gt;if the '-w' is used in the command, the slides will change according to the modification of the whatever.md file (and custom.css). &lt;/li&gt;
+&lt;li&gt;done&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;slides configuration&lt;/h3&gt;
+&lt;h1&gt;Documentation&lt;/h1&gt;
+&lt;h2&gt;slides configuration&lt;/h2&gt;
 &lt;p&gt;pyreveal will read the first several lines of the whatever.md file and get the metadata as the configs, using the &lt;a href="https://github.com/waylan/docdata" target="blank"&gt;&lt;strong&gt;docdata&lt;/strong&gt;&lt;/a&gt; package . &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;reveal&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;js&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt; &lt;span class="n"&gt;Presentation&lt;/span&gt; &lt;span class="n"&gt;Framework&lt;/span&gt;
 &lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;black&lt;/span&gt;
@@ -54,14 +73,14 @@ pip install -e .
 - toc: use the table of content plugin (not tested yet)
 - to_pdf: default to false, if true, will create a pdf version of the slides, using phantomjs. to use the to_pdf function, please check and install phantomjs following the &lt;a href="https://github.com/astefanutti/decktape"&gt;decktape instruction&lt;/a&gt; and &lt;a href="http://phantomjs.org/" target="blank"&gt;phantomjs instruction&lt;/a&gt;.
 - reveal_path: optional, default to 'reveal.js'(the same directory as the output html)&lt;/p&gt;
-&lt;h3&gt;the special keyword for generating slides and some other functions&lt;/h3&gt;
+&lt;h2&gt;the special keyword for generating slides and some other functions&lt;/h2&gt;
 &lt;p&gt;pyreveal use a list of escape keyword to generate the function for reveal.js:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---keyword
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;where, the &lt;em&gt;keyword&lt;/em&gt; include: right, down, data&lt;em&gt;, style&lt;/em&gt;, fragment, notes&lt;/p&gt;
-&lt;h3&gt;slides break&lt;/h3&gt;
+&lt;h2&gt;slides break&lt;/h2&gt;
 &lt;p&gt;there are two types of slides break:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---right
 &lt;/pre&gt;&lt;/div&gt;
@@ -74,7 +93,7 @@ pip install -e .
 
 
 &lt;p&gt;the following slide will appear at bottom, i.e. a subslide. &lt;/p&gt;
-&lt;h3&gt;slide background and style&lt;/h3&gt;
+&lt;h2&gt;slide background and style&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---data*
 ---style*
 &lt;/pre&gt;&lt;/div&gt;
@@ -84,7 +103,7 @@ pip install -e .
 Therefore, pyreveal will check if there is a ---data-something, then it will put the data-something into and something like the &lt;section data-something&gt; will be generate. &lt;/p&gt;
 &lt;p&gt;The same goes for style. &lt;/p&gt;
 &lt;p&gt;For more detail, check the corresponding demo.md file that generate something similar to the demo in the original reveal.js website. &lt;/p&gt;
-&lt;h3&gt;fragment&lt;/h3&gt;
+&lt;h2&gt;fragment&lt;/h2&gt;
 &lt;p&gt;for fragment, pyreveal also use something like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---fragment
 this will appear after right or down is press
@@ -95,7 +114,7 @@ this will grow next
 
 &lt;p&gt;pyreveal will just put the tag after the '---' (with replacing the '_' with a blank space) into the &lt;p class="{{ here }}"&gt;. So all kind of fragment styles will be supported as they should be in the reveal.js. &lt;/p&gt;
 &lt;p&gt;Just some minor different, that shows in the demo file, the word "highlight" does not sit at there at first.&lt;/p&gt;
-&lt;h3&gt;speaker notes&lt;/h3&gt;
+&lt;h2&gt;speaker notes&lt;/h2&gt;
 &lt;p&gt;finally, the speaker notes. &lt;/p&gt;
 &lt;p&gt;the speaker notes should be put at the last of each slide, after the tag.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---notes
@@ -105,16 +124,67 @@ line 3
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;custom.css&lt;/h3&gt;
-&lt;p&gt;Same as the output of the nbconvert, the output of the pyreveal will also try to read a custom.css at the same directory of the output html file. 
-So, it is possible and easy to change something for the slides, e.g. change the fonts. &lt;/p&gt;
-&lt;h3&gt;usage&lt;/h3&gt;
-&lt;p&gt;run this and done.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python -m pyreveal -i whatever.md
+&lt;h1&gt;something new&lt;/h1&gt;
+&lt;h2&gt;to use simple-menu&lt;/h2&gt;
+&lt;p&gt;simple-menu is the links on top of the slide, check this plugin page: &lt;a href="https://github.com/Martinomagnifico/reveal.js-simplemenu"&gt;the plugin for a simple and nice top or bottom menu bar&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;at the very top of the md file, add:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;use_simplemenu&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;span class="n"&gt;menu_bottom&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Next plan&lt;/h2&gt;
+&lt;p&gt;or true if you want the menu at the bottom, change menu_bottom to: true&lt;/p&gt;
+&lt;p&gt;if the use_simplemenu is set to false, it will force the slide to ignore the chapter name and not showing them. &lt;/p&gt;
+&lt;p&gt;on each top slide, add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;---chapter=some fancy title
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the "some fancy title" will be on the top of the slide now&lt;/p&gt;
+&lt;h2&gt;to use menu&lt;/h2&gt;
+&lt;p&gt;menu is the one that can be toggle by clicking the button at the bottom left, and it appear on the left hand side, as a slides tree. &lt;a href="https://github.com/denehyg/reveal.js-menu"&gt;the plugin for slide-out menu for reveal.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;to use this, simply add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;use_menu&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at the top setting area. &lt;/p&gt;
+&lt;h2&gt;to use katex&lt;/h2&gt;
+&lt;p&gt;if there is any latex equation, remember to add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;use_katex&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;at the top setting area. &lt;a href="https://github.com/JeremyHeleine/KaTeX-for-reveal.js"&gt;Katex for reveal.js plugin&lt;/a&gt;. &lt;/p&gt;
+&lt;h2&gt;to NOT use the footer title&lt;/h2&gt;
+&lt;p&gt;I just realize in the previous version, it is force to use the footer. So if not using it, remember to set:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cr_word: --
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;it is two dashes. This will be recognize as not using them, thus not showing the title as previous version will do. &lt;/p&gt;
+&lt;h1&gt;Usage&lt;/h1&gt;
+&lt;h2&gt;run&lt;/h2&gt;
+&lt;p&gt;run this and done.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyreveal -i whatever.md -w
+&lt;span class="c1"&gt;#or add python -m in front&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The two arguments:
+- -i: take a markdown file that contain the slides content (i.e. what you have prepared using the guidelines). 
+- -w: watch the change (optional), and rerun the function if any changes happened, this is very useful for making the slide. press ctrl+c to exit watch. &lt;/p&gt;
+&lt;p&gt;If the md file is in a sub-directory, simple use:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyreveal -i subdir/whatever.md -w
+&lt;span class="c1"&gt;#or add python -m in front&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will also work. And this is handy if the reveal path is set at the upper level (e.g. "../reveal.js") for share usage. &lt;/p&gt;
+&lt;h2&gt;custom.css&lt;/h2&gt;
+&lt;p&gt;Same as the output of the nbconvert, the output of the pyreveal will also try to read a custom.css at the same directory of the output html file. 
+So, it is possible and easy to change something for the slides, e.g. change the fonts. &lt;/p&gt;
+&lt;h1&gt;Next plan&lt;/h1&gt;
 &lt;p&gt;Next thing to do should be try to read the jupyter notebook file, and convert the slides content from notebook to the reveal.js html. 
 Because I still hope that the &lt;cell&gt; tags should be remove, and the speaker notes should be fixed.  &lt;/p&gt;
 &lt;h2&gt;addition themes&lt;/h2&gt;
