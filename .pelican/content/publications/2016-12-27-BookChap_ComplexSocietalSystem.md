@@ -13,3 +13,5 @@ With the growing number of developing large-scale cities, traffic congestion has
 Wen, T. H., **Chin, W. C. B.** & Lai, P. C. (2017). Link structure analysis of urban street networks for delineating traffic impact areas. In *M. Nemiche, M. Essaaidi (eds.), Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. DOI: [https://dx.doi.org/10.1007/978-3-319-46164-9_10](https://dx.doi.org/10.1007/978-3-319-46164-9_10) , ISBN 978-3-319-46164-9. 
 
 <a href="http://www.springer.com/us/book/9783319461632" target="_blank">Link to book page (Springer)</a>
+
+<a href="https://bitbucket.org/wcchin/fbpr" target="_blank">Link to FBPR python codes</a>
