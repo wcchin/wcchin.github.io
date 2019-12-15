@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Geographical PageRank Algorithms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/projects/fonts.css">
+    <link rel="stylesheet" href="/projects/theme.css">
+    <link rel="stylesheet" href="/projects/pygments.css">
+    
+    
+  </head>
+
+  <body class="node-gpras node">
+
+    <header class="masthead">
+      <h1><a href="/projects/index.html">Chin's Open Projects</a></h1>
+      
+        <p class="tagline">A list of my projects and simple descriptions</p>
+      
+      
+      <nav class="menu">
+        <input id="menu-check" type="checkbox"/>
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+<li><a href="/projects/index.html">Home</a></li>
+<li><a href="/projects/gpras.html">alg.GPRas</a></li>
+<li><a href="/projects/fbpr.html">alg.FBPR</a></li>
+<li><a href="/projects/tapitas.html">alg.TaPiTaS</a></li>
+<li><a href="/projects/heta.html">alg.HETA</a></li>
+<li><a href="/projects/pyreveal.html">web.pyreveal</a></li>
+<li><a href="/projects/carlae.html">web.Carlae</a></li>
+<li><a href="/projects/colouringmap.html">map.colouringmap</a></li>
+<li><a href="/projects/vmapper.html">map.vmapper</a></li>
+<li><a href="/projects/tgod.html">map.tgod</a></li>
+</ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        <h1>Geographical PageRank Algorithms</h1>
+        
+          <p class="subtitle">Algorithms for measuring concentration distribution in a spatial network.</p>
+        
+        
+        <p align="center">
+        
+        GPRas | 
+        
+        
+        <a href="https://bitbucket.org/wcchin/gpras"> <i>Repository</i> </a> | 
+        
+        
+        <a href="https://pypi.python.org/pypi/GPRas"> <i>Pypi page</i> </a> |
+        
+        
+        <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139509"> <i>Paper page</i> </a>
+        
+        
+        </p>
+        
+        <hr>
+      </header>
+      <h3>published article and applications</h3>
+<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139509" target="blank">Chin, W. C. B., &amp; Wen, T. H. (2015). Geographically Modified PageRank Algorithms: Identifying the Spatial Concentration of Human Movement in a Geospatial Network. PLoS ONE 10(10): e0139509. DOI:10.1371/journal.pone.0139509.</a></p>
+<h2>Intro.</h2>
+<p>The algorithm can be used to calculate these from a spatial network, i.e. network with x, y coordinates that can be used to calculate distance (i.e. projected accordingly from longitude and latitude):</p>
+<ul>
+<li>PR</li>
+<li>WPR</li>
+<li>DDPR (proposed in the PloSOne article above)</li>
+<li>GPR (proposed in the PloSOne article above)</li>
+<li>eDDPR (proposed in the PloSOne article above)</li>
+<li>eGPR (proposed in the PloSOne article above)</li>
+</ul>
+<p>==============================</p>
+<h2>dependencies</h2>
+<ul>
+<li>numpy</li>
+<li>pandas</li>
+<li>geopandas</li>
+<li>shapely</li>
+<li>networkx</li>
+</ul>
+<p>==============================</p>
+<h2>installing GPRas</h2>
+<p>on windows:</p>
+<p>install shapely first. can use conda if you are using anaconda(miniconda).</p>
+<pre><code>conda install -c scitools shapely=1.5.13
+</code></pre>
+
+<p>Geopandas is needed to be installed before installing this, which could be hard to install.
+First download these from here: http://www.lfd.uci.edu/~gohlke/pythonlibs/</p>
+<ul>
+<li>GDAL</li>
+<li>pyproj</li>
+<li>Fiona</li>
+</ul>
+<p>Then, install them with pip install</p>
+<pre><code class="sh">pip install xxx-GDAL--.whl
+pip install xxx-pyproj--.whl
+pip install xxx-Fiona--.whl
+</code></pre>
+
+<p>Then, install GPRas</p>
+<pre><code class="sh">pip install GPRas
+</code></pre>
+
+<p>==============================</p>
+<h2>Usage</h2>
+<p>import the module</p>
+<pre><code class="python">import GPRas as gpr
+</code></pre>
+
+<h3>data input and create the spatial graph concentration object</h3>
+<p>Two ways of data input: csv file, nx.Graph object</p>
+<p><strong>for csv file</strong>:
+prepare the file paths and file setup info</p>
+<pre><code class="python">nodefile = 'test_data/TP_nodes.csv'  
+linkfile = 'test_data/TP_links.csv'  
+node_filesetup = {'node_id':'nid', 'xcor':'xcor', 'ycor':'ycor'}  
+link_filesetup = {'ori':'ori', 'des':'des', 'weight':'time'}
+</code></pre>
+
+<p>create the spatial_graph object</p>
+<pre><code class="python">sg = gpr.GPRas()
+</code></pre>
+
+<p>set the dataset from csv files</p>
+<pre><code class="python">sg.dataset.from_csv(nodefile, linkfile, node_filesetup, link_filesetup)
+</code></pre>
+
+<p><strong>for nx.Graph object</strong></p>
+<pre><code class="python">import networkx as nx
+import pandas as pd ## just for the reading of file before creating nx.Graph
+ndf = pd.read_csv(nodefile)
+nii = ndf[node_filesetup['node_id']].tolist()
+nxx = ndf[node_filesetup['xcor']].tolist()
+nyy = ndf[node_filesetup['ycor']].tolist()
+nodes_lis = [ (ii, dict(xxx=xx,yyy=yy)) for ii,xx,yy in zip(nii,nxx,nyy) ]
+edf = pd.read_csv(linkfile)
+eoo = edf[link_filesetup['ori']].tolist()
+edd = edf[link_filesetup['des']].tolist()
+edges_lis = [ (oo,dd) for oo,dd in zip(eoo,edd) ]
+
+G = nx.Graph()
+G.add_nodes_from(nodes_lis)
+ag.add_edges_from(edges_lis)
+
+## graph setup info
+node_setup = dict(xcor='xxx', ycor='yyy') ## x,y columns from the nodes attr.
+link_setup = None
+
+sg = sgc()
+sg.dataset.from_nx(ag, node_setup, link_setup)
+</code></pre>
+
+<h3>prepare and calculate</h3>
+<p>First, initialize the parameters</p>
+<pre><code class="python">sg.Initialize(iteration=5000, alpha=1., beta=1., gamma=1.)
+</code></pre>
+
+<p>Calculate all of them (6 PRs) using the above parameter</p>
+<pre><code class="python">sg.CalculateAll()
+</code></pre>
+
+<p>Calculate each of them using updated parameters</p>
+<pre><code class="python">sg.PR()
+sg.WPR(alpha=2, update=True)
+sg.DDPR(beta=2, update=True)
+sg.GPR(alpha=3, beta=2, update=True)
+sg.eDDPR(gamma=0.6, update=True)
+sg.eGPR(alpha=3, gamma=0.2, update=True)
+</code></pre>
+
+<p>these calculation will change the parameters for summary output, but not the default paramters (for calculation with no paramter setup, eg. alpha=None), which are set from the initialization.</p>
+<h3>get the results in Pandas DataFrame format</h3>
+<p>get summary df</p>
+<pre><code class="python">summary_df = sg.get_summary()
+print summary_df.head()
+</code></pre>
+
+<p>get the nodes concentration results</p>
+<pre><code class="python">result_df = sg.get_results() ## default to all 6
+print result_df.head()
+
+part_result_df = sg.get_results(items=['pr', 'wpr']) ## export only PR and WPR
+print part_result_df.head()
+</code></pre>
+
+<h3>export results</h3>
+<p>the results can be export directly to csv format and shapfile format</p>
+<p><strong>summary table</strong></p>
+<pre><code class="python">sg.output_summary(filename='result/temp_summary.csv')
+</code></pre>
+
+<p><strong>to csv file</strong></p>
+<pre><code class="python">sg.to_csv(filename='result/temp_output_dd_g.csv', items=['ddpr','gpr'])
+
+# also same as to_csv() with items=None
+sg.All_to_csv(filename='result/temp_output.csv')
+</code></pre>
+
+<p><strong>to shp file</strong>
+prepare a crs string, or it will be default to None</p>
+<pre><code class="python">crs67 = '+proj=tmerc +lat_0=0 +lon_0=121 +k=0.9999 +x_0=250000 +y_0=0 +ellps=aust_SA +towgs84=-752,-358,-179,-0.0000011698,0.0000018398,0.0000009822,0.00002329 +units=m +no_defs'
+</code></pre>
+
+<p>export the files, which include a point shpfile for nodes and the concentration results, and a line shpfile for edge (no result inside, just for mapping)</p>
+<p>output two of the results (PR and WPR) into one file</p>
+<pre><code class="python">sg.to_shps(filename_prefix='result/temp_shp_pr_wpr', crs=crs67, items=['pr','wpr'])
+</code></pre>
+
+<p>output all 6 PRs</p>
+<pre><code class="python">sg.All_to_shps(filename_prefix='result/temp_shp', crs=crs67)
+</code></pre>
+
+<h3>to networkx graph object</h3>
+<p>similar to the previous export</p>
+<pre><code class="python">ag,pos = sg.to_nx() ## default to all 6 PRs
+
+ag,pos = sg.to_nx(items=[&quot;DDPR&quot;])
+</code></pre>
+
+<p>demo for drawing the networkx object</p>
+<pre><code class="python">import matplotlib.pyplot as plt
+
+ss = []
+for n,d in ag.nodes_iter(data=True):
+    ss.append(d['DDPR_score']*5000.)
+
+fig,ax = plt.subplots()
+nx.draw_networkx_nodes(ag, pos=pos, node_size=ss)
+nx.draw_networkx_edges(ag, pos=pos, alpha=0.3)
+ax.set_aspect('equal')
+plt.show()
+</code></pre>
+
+<p>==============================</p>
+<h2>file structure</h2>
+<pre><code>Geographical PageRank Algorithms
+.
+├── build
+│   ├── bdist.linux-x86_64
+│   └── lib
+│       └── GPRas
+│           ├── GPRa
+│           │   ├── GPR_algorithms.py
+│           │   ├── __init__.py
+│           │   ├── input_func.py
+│           │   ├── input_funcs
+│           │   │   ├── DataImport_nx.py
+│           │   │   ├── FileReading_csv.py
+│           │   │   └── __init__.py
+│           │   ├── output_func.py
+│           │   └── output_funcs
+│           │       ├── __init__.py
+│           │       ├── to_csv.py
+│           │       ├── to_nx.py
+│           │       └── to_shps.py
+│           ├── GPRas.py
+│           └── __init__.py
+├── dist
+│   ├── GPRas-0.1.0-py2.7.egg
+│   ├── GPRas-0.1.0-py2-none-any.whl
+│   └── GPRas-0.1.0.tar.gz
+├── GPRas
+│   ├── example
+│   │   ├── example_nx.py
+│   │   ├── example.py
+│   │   ├── result
+│   │   │   └── demo results
+│   │   └── test_data
+│   │       ├── KH_links.csv
+│   │       ├── KH_nodes.csv
+│   │       ├── TC_links.csv
+│   │       ├── TC_nodes.csv
+│   │       ├── TP_links.csv
+│   │       └── TP_nodes.csv
+│   ├── GPRa
+│   │   ├── GPR_algorithms.py
+│   │   ├── __init__.py
+│   │   ├── input_func.py
+│   │   ├── input_funcs
+│   │   │   ├── DataImport_nx.py
+│   │   │   ├── FileReading_csv.py
+│   │   │   └── __init__.py
+│   │   ├── output_func.py
+│   │   └── output_funcs
+│   │       ├── __init__.py
+│   │       ├── to_csv.py
+│   │       ├── to_nx.py
+│   │       └── to_shps.py
+│   ├── GPRas.py
+│   └── __init__.py
+├── GPRas.egg-info
+│   ├── dependency_links.txt
+│   ├── PKG-INFO
+│   ├── requires.txt
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── LICENSE.txt
+├── MANIFEST.in
+├── README.md
+└── setup.py
+
+</code></pre>
+
+<h3>License</h3>
+<p>MIT License</p>
+<p>Copyright (c) 2017 Wei Chien Benny Chin, Department of Geography, National Taiwan University</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+    </article>
+
+    
+
+  </body>
+</html>
