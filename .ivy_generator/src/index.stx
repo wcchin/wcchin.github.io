@@ -1,0 +1,21 @@
+---
+meta title: Chin's Open Projects
+menu title: Home
+title: Chin's Open Projects
+subtitle: A list of my projects and simple descriptions
+---
+
+This site contain a list of Benny Chin's works. 
+
+The projects contains:
+
+* [alg.GPRas](@root/gpras//)
+* [alg.FBPR](@root/fbpr//)
+* [alg.TaPiTaS](@root/tapitas//)
+* [alg.HETA](@root/heta//)
+* [web.pyreveal](@root/pyreveal//)
+* [web.Carlae](@root/carlae//)
+* [map.colouringmap](@root/colouringmap//)
+* [map.vmapper](@root/vmapper//)
+* [map.tgod](@root/tgod//)
+
