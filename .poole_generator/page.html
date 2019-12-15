@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Chin-Mini-Lab</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/typicons/typicons.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/github-prettify-theme.css">
+  <script src="js/site.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+
+
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="resources/images/favicon.png">
+
+</head>
+<body class="code-snippets-visible">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+	<div class="row">
+	  <div style="margin-top: 25%; text-align: center;">
+		<h1><font size="5">Chin's</font> {{ hx(page["title"]) }}</h1>
+	  </div>
+	  <div style="text-align: right;">
+		<h5>{{ hx(page["date"]) }}</h5>
+	  </div>
+	  <!--
+	  <div class="one column" style="margin-top: 25%"><h1><span class="typcn typcn-globe-outline"></span></h1></div>
+	  <div class="nine columns" style="margin-top: 25%; text-align: center;">
+		<h1>{{ hx(page["title"]) }}</h1>
+	  </div>
+	  <div class="two columns" style="margin-top: 25%; text-align: right;">{{ hx(page["date"]) }}</div>-->
+	</div>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          {%
+            mpages = [p for p in pages if "menu-position" in p]
+            mpages.sort(key=lambda p: int(p["menu-position"]))
+            entry = '<li class="navbar-item"><a class="navbar-link" href="%s">%s</a></li>'
+            for p in mpages:
+                #style = p["title"] == page["title"] and "active" or ""
+                print(entry % (p["url"], hx(p["title"])))
+          %}
+          <!--
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
+                </li>
+              </ul>
+            </div>
+          </li>-->
+        </ul>
+      </div>
+    </nav>
+    
+	<div class="row">
+    <div class="docs-section" id="intro">
+      {{ __content__ }}
+    </div>
+    </div>
+
+
+
+  </div>
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-65836543-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+</body>
+</html>

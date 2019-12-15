@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Chin-Mini-Lab</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="/css/typicons/typicons.min.css">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/github-prettify-theme.css">
+  <script src="/js/site.js"></script>
+  <script src="/js/jquery.fancybox.min.js"></script>
+
+
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/resources/images/favicon.png">
+
+</head>
+<body class="code-snippets-visible">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+	<div class="row">
+	  <div style="margin-top: 25%; text-align: center;">
+		<h1><font size="5">Chin's</font> Dynamic heatmap of NSE data</h1>
+	  </div>
+	  <div style="text-align: right;">
+		<h5>2019-07-25</h5>
+	  </div>
+	  <!--
+	  <div class="one column" style="margin-top: 25%"><h1><span class="typcn typcn-globe-outline"></span></h1></div>
+	  <div class="nine columns" style="margin-top: 25%; text-align: center;">
+		<h1>Dynamic heatmap of NSE data</h1>
+	  </div>
+	  <div class="two columns" style="margin-top: 25%; text-align: right;">2019-07-25</div>-->
+	</div>
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="/index.html">Hello World</a></li>
+<li class="navbar-item"><a class="navbar-link" href="/Publications.html">Publications</a></li>
+<li class="navbar-item"><a class="navbar-link" href="/Open_projects.html">Open Projects</a></li>
+<li class="navbar-item"><a class="navbar-link" href="/Curriculum_Vitae.html">Curriculum Vitae</a></li>
+<li class="navbar-item"><a class="navbar-link" href="/blog.html">Blog</a></li>
+          <!--
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
+                </li>
+              </ul>
+            </div>
+          </li>-->
+        </ul>
+      </div>
+    </nav>
+    
+	<div class="row">
+    <div class="docs-section" id="intro">
+      <h1>Dynamic Heat Map</h1>
+<p>A series of heat map showing the density of the students in week 4 Tuesday to Thursday (3days) samples, using different time steps: </p>
+<ol>
+<li>density in every 1 minutes: <a href="/resources/nse/HeatMap_w4_hr_mi1.html">1 minute heat map</a></li>
+<li>density in every 5 minutes: <a href="/resources/nse/HeatMap_w4_hr_mi5.html">5 minute heat map</a></li>
+<li>density in every 10 minutes: <a href="/resources/nse/HeatMap_w4_hr_mi10.html">10 minute heat map</a></li>
+<li>density in every 15 minutes: <a href="/resources/nse/HeatMap_w4_hr_mi15.html">15 minute heat map</a></li>
+<li>density in every 30 minutes: <a href="/resources/nse/HeatMap_w4_hr_mi30.html">30 minute heat map</a></li>
+</ol>
+<p>Change the slide bar at the bottom (right of the time slide bar) from 3fps to 10fps for faster view.</p>
+<p>For Tuesday only:
+1. density in every 1 minutes: <a href="/resources/nse/HeatMap_w4_20160524_Tue_hr_mi1.html">1 minute heat map</a>
+2. density in every 5 minutes: <a href="/resources/nse/HeatMap_w4_20160524_Tue_hr_mi5.html">5 minute heat map</a>
+3. density in every 10 minutes: <a href="/resources/nse/HeatMap_w4_20160524_Tue_hr_mi10.html">10 minute heat map</a>
+4. density in every 15 minutes: <a href="/resources/nse/HeatMap_w4_20160524_Tue_hr_mi15.html">15 minute heat map</a>
+5. density in every 30 minutes: <a href="/resources/nse/HeatMap_w4_20160524_Tue_hr_mi30.html">30 minute heat map</a></p>
+    </div>
+    </div>
+
+
+
+  </div>
+
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-65836543-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  
+  
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+</body>
+</html>
