@@ -3,13 +3,16 @@
 # optionally with nested sub-lists.
 ---
 
-* [Home](@root/)
-* [alg.GPRas](@root/gpras//)
-* [alg.FBPR](@root/fbpr//)
-* [alg.TaPiTaS](@root/tapitas//)
-* [alg.HETA](@root/heta//)
-* [web.pyreveal](@root/pyreveal//)
-* [web.Carlae](@root/carlae//)
-* [map.colouringmap](@root/colouringmap//)
-* [map.vmapper](@root/vmapper//)
-* [map.tgod](@root/tgod//)
+* [Home](/)
+* **algorithm**
+	* [GPRas](@root/gpras//)
+	* [FBPR](@root/fbpr//)
+	* [TaPiTaS](@root/tapitas//)
+	* [HETA](@root/heta//)
+* **web related**
+	* [pyreveal](@root/pyreveal//)
+	* [Carlae](@root/carlae//)
+* **map making**
+	* [colouringmap](@root/colouringmap//)
+	* [vmapper](@root/vmapper//)
+	* [tgod](@root/tgod//)
