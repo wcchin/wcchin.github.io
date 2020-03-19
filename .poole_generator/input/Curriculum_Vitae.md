@@ -42,7 +42,7 @@ menu-position: 3
 
 ## Publications
 ### SSCI Journal Article  
-- Huang C. Y., **Chin, W. C. B.**, Fu, Y. H., & Tsai, Y. S. (in press) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. *Physica A: Statistical Mechanics and its Applications*  DOI: 10.1016/j.physa.2019.04.263
+- Huang C. Y., **Chin, W. C. B.**, Fu, Y. H., & Tsai, Y. S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. *Physica A: Statistical Mechanics and its Applications*  DOI: 10.1016/j.physa.2019.04.263
 - Huang C. Y., **Chin, W. C. B.**, Wen, T. H., Fu, Y. H., & Tsai, Y. S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. *Scientific Reports* 9: 5415. DOI: 10.1038/s41598-019-41719-8  
   (Journal rank: 10/64 in Multidisciplinary Sciences)   
 - **Chin, W. C. B.**, Wen, T. H., Sabel, C. E., & Wang, I. H. (2017) A geo-computational algorithm for exploring the structure of diffusion progression in time and space. *Scientific Reports* 7: 12565. DOI: 10.1038/s41598-017-12852-z  
