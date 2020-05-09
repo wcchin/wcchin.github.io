@@ -1,7 +1,7 @@
 
 title: Hello World
 menu-position: 0
-date: 2020-03-19
+date: 2020-05-09
 ---
 
 This is a simple website for sharing my works, including some observations and findings. 
@@ -27,6 +27,14 @@ Thank you.
 <span class="typcn typcn-mail"></span>: 
 <a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span> gmail </a> | 
 <a href="mailto:wcchin88@yahoo.com"><span class="typcn typcn-social-at-circular"></span> yahoo </a> | 
-<a href="mailto:benny-chin@sutd.edu.sg"><span class="typcn typcn-social-at-circular"></span> My SUTD email </a> .
+<a href="mailto:benny-chin@sutd.edu.sg"><span class="typcn typcn-social-at-circular"></span> My SUTD email </a> . 
 
+My profile: 
+<a href="www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i>ResearchGate </a> | 
+<a href="www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span> Linkedin </a> | 
+<a href="https://github.com/wcchin/" target="_blank"><span class="typcn typcn-social-github"></span> Github </a> | 
+<a href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i>ORCID </a> | 
+<a href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i>Google Scholar </a> | 
+<a href="https://medium.com/@wcchin.88" target="_blank"><span class="typcn typcn-pen"></span>Medium </a>  
 
+<span id="badgeCont104"><script type="text/javascript" src="https://publons.com/mashlets?el=badgeCont104&rid=AAH-2292-2019"></script></span>
