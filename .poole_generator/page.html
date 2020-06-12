@@ -51,11 +51,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 	<div class="row">
-	  <div style="margin-top: 25%; text-align: center;">
-		<h1><font size="5">Chin's</font> {{ hx(page["title"]) }}</h1>
+	  <div style="margin-top: 5%; text-align: center;">
+		<h1 style="color:#000080;"><font size="5">Chin's</font> {{ hx(page["title"]) }}</h1>
 	  </div>
 	  <div style="text-align: right;">
-		<h5>{{ hx(page["date"]) }}</h5>
+		<h5 style="color:#000080;">{{ hx(page["date"]) }}</h5>
 	  </div>
 	  <!--
 	  <div class="one column" style="margin-top: 25%"><h1><span class="typcn typcn-globe-outline"></span></h1></div>
@@ -71,7 +71,7 @@
           {%
             mpages = [p for p in pages if "menu-position" in p]
             mpages.sort(key=lambda p: int(p["menu-position"]))
-            entry = '<li class="navbar-item"><a class="navbar-link" href="%s">%s</a></li>'
+            entry = '<li class="navbar-item"><a class="navbar-link" href="%s" style="color:#000080;">%s</a></li>'
             for p in mpages:
                 #style = p["title"] == page["title"] and "active" or ""
                 print(entry % (p["url"], hx(p["title"])))

@@ -75,7 +75,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 
 
 ### Manuscript in preparation/Ongoing study    
-- Spatial super-spreader and susceptible in human movement network. (finalizing manuscript).
+- Spatial super-spreader and susceptible in human movement network. (under review).
 - The effects of point clustering properties on spatial scaling patterns. (manuscript in preparation).  
 - Urban verticallity (running analyses).
 - A two-levels agent based model of social segregation. (rethinking model).
