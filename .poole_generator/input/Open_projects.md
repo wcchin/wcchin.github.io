@@ -7,6 +7,9 @@ date: 2020-05-09
 wcchin **[projects](/projects)**  
 (updated: 2020-05-09)
 
+My Github contributions (open project). 
+<a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.moshimo.works/images/wcchin.png" > </a>
+
 ---
 
 ## Products of researches and projects
