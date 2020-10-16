@@ -7,15 +7,23 @@ menu-position: 1
 ---
 
 Wei Chien Benny Chin  
-(updated: 2020-05-09)
+(updated: 2020-10-16)
 
-Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a>) if you need fulltext of the non-open-access articles. 
+Most papers are avaiable online as open access paper. 
+Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a>) if you need fulltext of the non-open-access articles or have difficulties on getting the official latest version of paper. 
 
 ---
 
 # Publications
 ### SSCI Journal Article  
--  Huang C. Y., **Chin, W. C. B.** (2020) Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns. *IEEE Access*. 
+ 
+-  **Chin, W. C. B.**, & Bouffanais, R. (2020 Accepted) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* in press. 
+  <i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).<i class="ai ai-open-access"></i>  
+  <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
+  <p align="center"><img width="750" src="resources/publications/article_spatial_superspreaders_srep.png"></p>  
+  ---
+  
+-  Huang C. Y., **Chin, W. C. B.** (2020) Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns. *IEEE Access* 8: 71021-71040. 
   <i class="ai ai-doi"></i>: [10.1109/ACCESS.2020.2986017](https://doi.org/10.1109/ACCESS.2020.2986017)<i class="ai ai-open-access"></i>
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1109/ACCESS.2020.2986017" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="750" src="resources/publications/article_hata_ieeeaccess.png"></p>  
@@ -94,19 +102,18 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   
   
 ### arXiv / medRxiv
-- Chin, W. C. B., & Bouffanais, R. (2020). Spatial super-spreaders and super-susceptibles in human movement networks. 
-  <i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).
-  <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
 - Chin, W. C. B., & Huang C. Y. (2020). Using EpiRank for Analyzing Emerging Coronavirus Epidemic Patterns. 
   medRxiv <i class="ai ai-doi"></i>: [10.1101/2020.04.20.20072736](https://doi.org/10.1101/2020.04.20.20072736).
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1101/2020.04.20.20072736" data-hide-no-mentions="true" class="altmetric-embed"></div>  
 
 
 ### Manuscript in preparation/Ongoing study    
-- Spatial super-spreader and susceptible in human movement network. (under review).
 - The effects of point clustering properties on spatial scaling patterns. (manuscript in preparation).  
-- Urban verticallity (running analyses).
-- A two-levels agent based model of social segregation. (rethinking model).
+- A two-levels agent based model of social segregation. (rethinking model).  
+- Fractal skylines series (in preparation)  
+- Vertical displacement activities series (in preparation)  
+- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (submitted book chapter, under review)  
+- Emotional response through COVID-19 in Singapore (submitted book chapter, under review)  
 
 
 ## Conferences Presentations

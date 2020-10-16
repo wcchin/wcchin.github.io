@@ -10,16 +10,17 @@ menu-position: 3
 Post-doctoral researcher, Singapore University of Technology and Design. 
 
 <a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a> ; wcchin.88@gmail.com; benny_chin@sutd.edu.sg.
-(updated: 2020-04-08)
+(updated: 2020-10-16)
 
 ---
 
-[CV in pdf](https://wcchin.github.io/pdfs/curriculum_vitae.pdf)  
-[Academic portfolio](https://wcchin.github.io/pdfs/academic_portfolio.pdf)
+[CV in pdf](https://wcchin.github.io/pdfs/benny_cv_academic.pdf)  
+[Academic portfolio](https://wcchin.github.io/pdfs/benny_portfolio.pdf)  
 
 ---
 
 ## Research Interests
+- Geocomputation
 - Methods for spatial analysis on point patterns
 - Methods for space-time analysis for understanding the development of point events
 - Geospatial network analysis and transportation geography
@@ -44,7 +45,8 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 
 ## Publications
 ### SSCI Journal Article  
-- Huang, C. Y., **Chin, W. C. B.** (2020) Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns. *IEEE Access*. DOI: 10.1109/ACCESS.2020.2986017
+-  **Chin, W. C. B.**, & Bouffanais, R. (2020 Accepted) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* in press. arXiv: 2005.05063.
+- Huang, C. Y., **Chin, W. C. B.** (2020) Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns. *IEEE Access* 8: 71021-71040. DOI: 10.1109/ACCESS.2020.2986017
 - Huang, C. Y., **Chin, W. C. B.**, Fu, Y. H., & Tsai, Y. S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. *Physica A: Statistical Mechanics and its Applications*  DOI: 10.1016/j.physa.2019.04.263
 - Huang, C. Y., **Chin, W. C. B.**, Wen, T. H., Fu, Y. H., & Tsai, Y. S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. *Scientific Reports* 9: 5415. DOI: 10.1038/s41598-019-41719-8  
   (Journal rank: 10/64 in Multidisciplinary Sciences)   
@@ -68,12 +70,13 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - 郭年真，林民浩，陳威全，溫在弘 (2016)。剖析台灣民眾的就醫流動：利用引力模式評估就醫距離與醫療資源分布的影響。*台灣衛誌* 35(2)：136-151。DOI: 10.6288/TJPH201635104086   
   (eng. info) Lin, M. H., Kuo, R. N., Chin, W. C. B., & Wen, T. H. (2015). Profiling the patient flow for seeking healthcare in Taiwan: using gravity modeling to investigate the influences of travel distance and healthcare resources. *Taiwan Journal of Public Health* 35(2): 136-151. DOI:10.6288/TJPH201635104086.  
 
-
 ### Manuscript in preparation/Ongoing study    
-- Spatial super-spreaders and super-susceptibles in human movement network.  (manuscript in preparation)
-- The effects of point clustering properties on spatial scaling patterns. (rethinking manuscript structure)
-- Urban verticallity (running analyses)
-
+- The effects of point clustering properties on spatial scaling patterns. (manuscript in preparation).  
+- A two-levels agent based model of social segregation. (rethinking model).  
+- Fractal skylines series (in preparation)  
+- Vertical displacement activities series (in preparation)  
+- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (submitted book chapter, under review)  
+- Emotional response through COVID-19 in Singapore (submitted book chapter, under review)  
 
 ## Conferences Presentations
 - 2018 - Delineating communities of cities in space and times, in **18th Chinese Cartography Academic Conference**, Taipei, Taiwan.
