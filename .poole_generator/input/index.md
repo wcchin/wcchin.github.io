@@ -55,10 +55,10 @@ date: 2020-05-09
 
 ##### About Benny
 
-First, I'm a geographer. I'm a Malaysian. I was born in Penang. When I was 9, I moved to Selangor with my family. I continued my study at Taipei after graduated from Pin Hwa High School, Klang. I finished my undergraduate and master degree in NTU, Taiwan. I worked as a research assistance before I continued studying as a PhD. student. 
-Maybe moving around, meeting new people, and blending in different cultures, made me a geographer that like to explore the connections between places.  
+First, I'm a geographer. I'm a <u>Malaysian</u>. I was born in <u>Penang</u>. When I was 9, I moved to <u>Selangor</u> with my family. I continued my study at <u>Taipei</u> after graduated from Pin Hwa High School, Klang. I finished my undergraduate and master degree in <u>NTU, Taiwan</u>. I worked as a research assistance before I continued studying as a PhD. student. Then, I went back to my family who had resided to <u>Johor, Malaysia</u>. And now, I work as a research fellow at <u>SUTD, Singapore</u>. 
+Maybe moving around, meeting new people, and blending in different cultures, made me a geographer who's nature is to explore the world and places.  
 
-Second, I'm a cartographer. I made maps most of the time ever since I was a graduate student. I made maps for text book, for summited articles authored by my advisor and friends, and two large maps (wall size) for the Geography Department, NTU. Those are static-printed map. In addition, I also make interactive-web map. I joined a research project which used web-map as the main tool for the early-warning system. I also created a medical resource accessibility map for participating a medical-map contest.  
+Second, I'm a cartographer. I made maps most of the time ever since I was a graduate student. I made maps for text book, for summited articles authored by my advisor and friends, and two large maps (wall size) for the Geography Department, NTU. Those are static-printed map. In addition, I also make interactive-web map. I joined a research project which used web-map as the main tool for the early-warning system.  
 
 Third, I'm a GIScientist. GIS is not just a mapping system. It is a system for gathering and presenting geographical information, and a platform for exploring the geographical-spaces. There are already so many analyzing methods for solving many types of problems. But, I believe this is just the beginning of the rising GIS. In the age of BIG DATA, with the help of computing power, there are still uncountable information await for digging from the geographical data. 
 
@@ -68,7 +68,7 @@ Therefore, I made this website to gather some ideas come into my head, to keep s
 
 Thank you. 
 
-<img width="150" src="resources/images/benny.jpg">
+<img width="150" src="resources/images/benny.jpg" alt="me at Wuling Farm, Taichung, Taiwan.">
 
 **_Wei Chien Benny, Chin_**  
 <span class="typcn typcn-mail"></span>: 
