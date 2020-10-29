@@ -18,8 +18,10 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 ### SSCI Journal Article  
  
 -  **Chin, W. C. B.**, & Bouffanais, R. (2020 Accepted) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* in press. 
-  <i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).<i class="ai ai-open-access"></i>  
-  <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
+  <i class="ai ai-doi"></i>: [10.1038/s41598-020-75697-z](https://doi.org/10.1038/s41598-020-75697-z)<i class="ai ai-open-access"></i>  
+  <!--<i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).<i class="ai ai-open-access"></i>-->  
+  citation for arXiv: <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
+  citation for final: <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-020-75697-z" data-hide-no-mentions="true" class="altmetric-embed"></div> 
   <p align="center"><img width="750" src="resources/publications/article_spatial_superspreaders_srep.png"></p>  
   ---
   
