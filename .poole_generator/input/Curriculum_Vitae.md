@@ -1,6 +1,6 @@
 
 title: Curriculum Vitae
-date: 2020-05-09
+date: 2020-11-27
 menu-position: 3
 ---
 
@@ -10,7 +10,7 @@ menu-position: 3
 Post-doctoral researcher, Singapore University of Technology and Design. 
 
 <a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a> ; wcchin.88@gmail.com; benny_chin@sutd.edu.sg.
-(updated: 2020-10-16)
+(updated: 2020-11-27)
 
 ---
 
@@ -45,7 +45,8 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 
 ## Publications
 ### SSCI Journal Article  
--  **Chin, W. C. B.**, & Bouffanais, R. (2020 Accepted) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* in press. arXiv: 2005.05063.
+- Manivannan, A., **Chin, W. C. B.**, Barrat, A., and Bouffanais, R. (2020) On the Challenges and Potential of Using Barometric Sensors to Track Human Activity. *Sensors* 20(23): 6786. DOI: 10.3390/s20236786
+- **Chin, W. C. B.**, & Bouffanais, R. (2020) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* 10: 18642. DOI: 10.1038/s41598-020-75697-z
 - Huang, C. Y., **Chin, W. C. B.** (2020) Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns. *IEEE Access* 8: 71021-71040. DOI: 10.1109/ACCESS.2020.2986017
 - Huang, C. Y., **Chin, W. C. B.**, Fu, Y. H., & Tsai, Y. S. (2019) Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links. *Physica A: Statistical Mechanics and its Applications*  DOI: 10.1016/j.physa.2019.04.263
 - Huang, C. Y., **Chin, W. C. B.**, Wen, T. H., Fu, Y. H., & Tsai, Y. S. (2019) EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks. *Scientific Reports* 9: 5415. DOI: 10.1038/s41598-019-41719-8  
@@ -60,8 +61,6 @@ Post-doctoral researcher, Singapore University of Technology and Design.
   (Journal rank: 15/64 in Multidisciplinary Sciences)
 - Wen, T. H., & **Chin, W. C. B.** (2015). Incorporation of Spatial Interactions in Location Networks to Identify Critical Geo-Referenced Routes for Assessing Disease Control Measures on a Large-Scale Campus. *International journal of environmental research and public health* 12(4): 4170-4184.  DOI: 10.3390/ijerph120404170    
 - Lee, J., Lay, J. G., **Chin, W. C. B.**, Chi, Y. L., & Hsueh, Y. H. (2014). An Experiment to Model Spatial Diffusion Process with Nearest Neighbor Analysis and Regression Estimation. *International Journal of Applied Geospatial Research* 5(1), 1-15. DOI: 10.4018/ijagr.2014010101  
-
-
 
 ### Book Chapter
 - Wen, T. H., **Chin, W. C. B.**, & Lai, P. C. (2016). Link structure analysis of urban street networks for delineating traffic impact areas. In M. Nemiche, M. Essaaidi (eds.), *Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. Springer: Switzerland. DOI: 10.1007/978-3-319-46164-9_10, ISBN: 978-3-319-46164-9.  

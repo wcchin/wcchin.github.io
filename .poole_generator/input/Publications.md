@@ -1,13 +1,13 @@
 
 
 title: Publications
-date: 2020-05-09
+date: 2020-11-27
 
 menu-position: 1
 ---
 
 Wei Chien Benny Chin  
-(updated: 2020-10-16)
+(updated: 2020-11-27)
 
 Most papers are avaiable online as open access paper. 
 Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a>) if you need fulltext of the non-open-access articles or have difficulties on getting the official latest version of paper. 
@@ -16,12 +16,20 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 
 # Publications
 ### SSCI Journal Article  
+
+-  Manivannan, A., **Chin, W. C. B.**, Barrat, A., and Bouffanais, R. (2020) On the Challenges and Potential of Using Barometric Sensors to Track Human Activity. *Sensors* 20(23): 6786. 
+  <i class="ai ai-doi"></i>: [10.3390/s20236786](https://doi.org/10.3390/s20236786)<i class="ai ai-open-access"></i>(registering)  
+  URL <i class="ai ai-open-access"></i>: [https://www.mdpi.com/1424-8220/20/23/6786](https://www.mdpi.com/1424-8220/20/23/6786)<i class="ai ai-open-access"></i>  
+  <div data-badge-popover="right" data-badge-type="1" data-doi="10.3390/s20236786" data-hide-no-mentions="true" class="altmetric-embed"></div> 
+  <p align="center"><img width="750" src="resources/publications/article_barometer_challenges_mdpisensors.png"></p>  
+  ---
  
--  **Chin, W. C. B.**, & Bouffanais, R. (2020 Accepted) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* in press. 
+-  **Chin, W. C. B.**, & Bouffanais, R. (2020) Spatial super-spreaders and super-susceptibles in human movement networks. *Scientific Reports* 10: 18642. 
   <i class="ai ai-doi"></i>: [10.1038/s41598-020-75697-z](https://doi.org/10.1038/s41598-020-75697-z)<i class="ai ai-open-access"></i>  
+  (Journal rank: 10/64 in Multidisciplinary Sciences)
   <!--<i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).<i class="ai ai-open-access"></i>-->  
-  citation for arXiv: <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
-  citation for final: <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-020-75697-z" data-hide-no-mentions="true" class="altmetric-embed"></div> 
+  <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
+  <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-020-75697-z" data-hide-no-mentions="true" class="altmetric-embed"></div> 
   <p align="center"><img width="750" src="resources/publications/article_spatial_superspreaders_srep.png"></p>  
   ---
   
