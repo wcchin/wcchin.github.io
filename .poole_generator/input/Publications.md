@@ -185,6 +185,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="conference">&nbsp;</div>
 <div>&nbsp;</div>
 ## Conferences Presentations
+- 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
 - 2018 - Delineating communities of cities in space and times, in **18th Chinese Cartography Academic Conference**, Taipei, Taiwan.
 - 2017 - Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo, in **TGSW 2017**, Tsukuba, Japan. **Young Scientist Award**  
   Link: [http://bit.ly/tgsw17_lifestyleofcity](http://bit.ly/tgsw17_lifestyleofcity)    
