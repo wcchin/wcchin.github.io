@@ -65,6 +65,7 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - Lee, J., Lay, J. G., **Chin, W. C. B.**, Chi, Y. L., & Hsueh, Y. H. (2014). **An Experiment to Model Spatial Diffusion Process with Nearest Neighbor Analysis and Regression Estimation**. *International Journal of Applied Geospatial Research* 5(1), 1-15. DOI: 10.4018/ijagr.2014010101.  
 
 ### Book Chapter
+- Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
 - Wen, T. H., **Chin, W. C. B.**, & Lai, P. C. (2016). **Link structure analysis of urban street networks for delineating traffic impact areas**. In M. Nemiche, M. Essaaidi (eds.), *Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. Springer: Switzerland. DOI: 10.1007/978-3-319-46164-9_10, ISBN: 978-3-319-46164-9.  
 
 ### TSSCI Journal Article  
@@ -77,7 +78,6 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - Fractal skylines series (in preparation)  
 - Vertical displacement activities series (in preparation)  
 - A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (submitted book chapter, under review)  
-- Emotional response through COVID-19 in Singapore (submitted book chapter, under review)  
 
 ## Conferences Presentations
 - 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
