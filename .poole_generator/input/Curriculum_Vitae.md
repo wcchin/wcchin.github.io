@@ -14,7 +14,7 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 
 ---
 
-[CV in pdf](https://wcchin.github.io/pdfs/benny_cv_academic.pdf)  
+[CV in pdf](https://wcchin.github.io/pdfs/benny_cv_academic_latest.pdf)  
 [Academic portfolio](https://wcchin.github.io/pdfs/benny_portfolio.pdf)  
 
 ---
@@ -77,7 +77,7 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - A two-levels agent based model of social segregation. (rethinking model).  
 - Fractal skylines series (in preparation)  
 - Vertical displacement activities series (in preparation)  
-- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (submitted book chapter, under review)  
+- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (second revision)   
 
 ## Conferences Presentations
 - 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
