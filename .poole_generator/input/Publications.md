@@ -1,7 +1,7 @@
 
 
 title: Publications
-date: 2020-12-01
+date: 2020-12-25
 
 menu-position: 1
 ---
@@ -15,6 +15,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 
 ---
 
+<a href="#p2021">2021</a> | 
 <a href="#p2020">2020</a> | 
 <a href="#p2019">2019</a> | 
 <a href="#p2018">2018</a> | 
@@ -29,6 +30,23 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 
 
 # Publications
+
+
+<div id="p2021">&nbsp;</div>
+### 2021
+### Book Chapter  
+- Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
+  <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
+  <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
+  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_emotion_humandynamic.png"></p>  -->
+  ---
+- Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
+  <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
+  <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
+  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_emotion_humandynamic.png"></p>  -->
+  ---
+<a href="#ptop">Back to top</a> 
+
 <div id="p2020">&nbsp;</div>
 ### 2020
 #### SSCI Journal Article  
@@ -51,13 +69,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1109/ACCESS.2020.2986017" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="750" src="resources/publications/article_hata_ieeeaccess.png"></p>  
   ---
-### Book Chapter
-- Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
-  <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
-  <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
-  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_emotion_humandynamic.png"></p>  -->
-  ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
 
 <div id="p2019">&nbsp;</div>
 <div>&nbsp;</div>
@@ -74,7 +86,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-019-41719-8" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="450" src="resources/publications/article_epirank_srep.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
   
 <div id="p2018">&nbsp;</div>
 <div>&nbsp;</div>
@@ -85,7 +97,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   (Dean's Award (Ph.D.), College of Science, National Taiwan University)  
   <p align="center"><img width="900" src="resources/publications/phd_prqtree_dissertation.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
   
 <div id="p2017">&nbsp;</div>
 <div>&nbsp;</div>
@@ -103,7 +115,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1016/j.physa.2017.01.035" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="600" src="resources/publications/article_fbpr_physicaa.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
   
 <div id="p2016">&nbsp;</div>
 <div>&nbsp;</div>
@@ -129,7 +141,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.6288/TJPH201635104086" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_patientflow_tjph.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
   
   
 <div id="p2015">&nbsp;</div>
@@ -147,7 +159,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.3390/ijerph120404170" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_campusnet_ijerph.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
   
 <div id="p2014">&nbsp;</div>
 <div>&nbsp;</div>
@@ -158,7 +170,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.4018/ijagr.2014010101" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_diffusionexp_ijagr.png"></p>  
   ---
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
 
 
   
@@ -169,7 +181,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   medRxiv <i class="ai ai-doi"></i>: [10.1101/2020.04.20.20072736](https://doi.org/10.1101/2020.04.20.20072736).
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1101/2020.04.20.20072736" data-hide-no-mentions="true" class="altmetric-embed"></div>  
 
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
 
 <div id="preparation">&nbsp;</div>
 <div>&nbsp;</div>
@@ -178,9 +190,8 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 - A two-levels agent based model of social segregation. (rethinking model).  
 - Fractal skylines series (in preparation)  
 - Vertical displacement activities series (in preparation)  
-- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (second revision)  
 
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 
 
 <div id="conference">&nbsp;</div>
 <div>&nbsp;</div>
@@ -211,4 +222,4 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   Integration of PageRank and Spatial Interaction Modeling to Analyze Topological Dynamics of Networked Cities, in **Annual Meeting of The Geography Society of China located in Taipei**, Taipei, Taiwan.  
   Link: [http://bit.ly/cityPR2012](http://bit.ly/cityPR2012)  
 
-<a href="#ptop">back to top</a> 
+<a href="#ptop">Back to top</a> 

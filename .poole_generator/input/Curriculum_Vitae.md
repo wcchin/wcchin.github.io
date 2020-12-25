@@ -1,6 +1,6 @@
 
 title: Curriculum Vitae
-date: 2020-12-01
+date: 2020-12-25
 menu-position: 3
 ---
 
@@ -66,6 +66,7 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 
 ### Book Chapter
 - Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
+- Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
 - Wen, T. H., **Chin, W. C. B.**, & Lai, P. C. (2016). **Link structure analysis of urban street networks for delineating traffic impact areas**. In M. Nemiche, M. Essaaidi (eds.), *Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. Springer: Switzerland. DOI: 10.1007/978-3-319-46164-9_10, ISBN: 978-3-319-46164-9.  
 
 ### TSSCI Journal Article  
@@ -77,7 +78,6 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - A two-levels agent based model of social segregation. (rethinking model).  
 - Fractal skylines series (in preparation)  
 - Vertical displacement activities series (in preparation)  
-- A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore (second revision)   
 
 ## Conferences Presentations
 - 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
