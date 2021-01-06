@@ -9,8 +9,10 @@ menu-position: 3
 # Wei Chien Benny Chin
 Post-doctoral researcher, Singapore University of Technology and Design. 
 
-<a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a> ; wcchin.88@gmail.com; benny_chin@sutd.edu.sg.
-(updated: 2020-12-01)
+<a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a> | 
+<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a> | 
+<a href="mailto:benny_chin@sutd.edu.sg"><span class="typcn typcn-social-at-circular"></span>benny_chin@sutd.edu.sg</a>.
+<!-- (updated: 2020-12-01) -->
 
 ---
 

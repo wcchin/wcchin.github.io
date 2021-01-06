@@ -7,13 +7,14 @@ menu-position: 1
 ---
 
 <div id="ptop">&nbsp;</div>
+<!-- 
 Wei Chien Benny Chin  
-(updated: 2020-12-09)
 
 Most papers are avaiable online as open access paper. 
 Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a>) if you need fulltext of the non-open-access articles or have difficulties on getting the official latest version of paper. 
 
 ---
+-->
 
 <a href="#p2021">2021</a> | 
 <a href="#p2020">2020</a> | 
