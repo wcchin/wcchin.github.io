@@ -1,6 +1,6 @@
 
 title: Curriculum Vitae
-date: 2020-12-25
+date: 2021-01-07
 menu-position: 3
 ---
 
@@ -80,7 +80,7 @@ Post-doctoral researcher, Singapore University of Technology and Design.
 - Vertical displacement activities series (in preparation)  
 
 ## Conferences Presentations
-- 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
+- 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. [10.5281/zenodo.4419178](https://doi.org/10.5281/zenodo.4419178) 
 - 2018 - Delineating communities of cities in space and times, in **18th Chinese Cartography Academic Conference**, Taipei, Taiwan.
 - 2017 - Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo, in **TGSW 2017**, Tsukuba, Japan. **Young Scientist Award**  
   Link: http://bit.ly/tgsw17_lifestyleofcity  

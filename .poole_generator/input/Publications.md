@@ -1,7 +1,7 @@
 
 
 title: Publications
-date: 2020-12-25
+date: 2021-01-07
 
 menu-position: 1
 ---
@@ -43,21 +43,21 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 - Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
   <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
   <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
-  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_emotion_humandynamic.png"></p>  -->
+  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_vulnerability_humandynamic.png"></p>  -->
   ---
 <a href="#ptop">Back to top</a> 
 
 <div id="p2020">&nbsp;</div>
 ### 2020
-#### SSCI Journal Article  
+#### Journal Article  
 -  Manivannan, A., **Chin, W. C. B.**, Barrat, A., and Bouffanais, R. (2020) **On the Challenges and Potential of Using Barometric Sensors to Track Human Activity**. *Sensors* 20(23): 6786. 
-  <i class="ai ai-doi"></i>: [10.3390/s20236786](https://doi.org/10.3390/s20236786)<i class="ai ai-open-access"></i>  
+  <i class="ai ai-doi"></i>: [![DOI: 10.3390/s20236786](https://zenodo.org/badge/DOI/10.3390/s20236786.svg)](https://doi.org/10.3390/s20236786.svg))<i class="ai ai-open-access"></i>  
   <!--URL <i class="ai ai-open-access"></i>: [https://www.mdpi.com/1424-8220/20/23/6786](https://www.mdpi.com/1424-8220/20/23/6786)<i class="ai ai-open-access"></i>-->  
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.3390/s20236786" data-hide-no-mentions="true" class="altmetric-embed"></div> 
   <p align="center"><img width="750" src="resources/publications/article_barometer_challenges_mdpisensors.png"></p>  
   ---
 -  **Chin, W. C. B.**, & Bouffanais, R. (2020) **Spatial super-spreaders and super-susceptibles in human movement networks**. *Scientific Reports* 10: 18642. 
-  <i class="ai ai-doi"></i>: [10.1038/s41598-020-75697-z](https://doi.org/10.1038/s41598-020-75697-z)<i class="ai ai-open-access"></i>  
+  <i class="ai ai-doi"></i>: [![DOI: 10.1038/s41598-020-75697-z](https://zenodo.org/badge/DOI/10.1038/s41598-020-75697-z.svg)](https://doi.org/10.1038/s41598-020-75697-z)<i class="ai ai-open-access"></i>  
   (Journal rank: 10/64 in Multidisciplinary Sciences)
   <!--<i class="ai ai-arxiv"></i>: [2005.05063](https://arxiv.org/abs/2005.05063).<i class="ai ai-open-access"></i>-->  
   <div data-badge-popover="right" data-badge-type="1" data-doi="2005.05063" data-hide-no-mentions="true" class="altmetric-embed"></div>  
@@ -65,7 +65,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
   <p align="center"><img width="750" src="resources/publications/article_spatial_superspreaders_srep.png"></p>  
   ---
 -  Huang C. Y., **Chin, W. C. B.** (2020) **Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns**. *IEEE Access* 8: 71021-71040. 
-  <i class="ai ai-doi"></i>: [10.1109/ACCESS.2020.2986017](https://doi.org/10.1109/ACCESS.2020.2986017)<i class="ai ai-open-access"></i>
+  <i class="ai ai-doi"></i>: [![DOI: 10.1109/ACCESS.2020.2986017](https://zenodo.org/badge/DOI/10.1109/ACCESS.2020.2986017.svg)](https://doi.org/10.1109/ACCESS.2020.2986017)<i class="ai ai-open-access"></i>
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1109/ACCESS.2020.2986017" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="750" src="resources/publications/article_hata_ieeeaccess.png"></p>  
   ---
@@ -74,14 +74,14 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2019">&nbsp;</div>
 <div>&nbsp;</div>
 ### 2019  
-#### SSCI Journal Article  
+#### Journal Article  
 - Huang C. Y., **Chin, W. C. B.**, Fu, Y. H., & Tsai, Y. S. (2019) **Beyond Bond Links in Complex Networks: Local Bridges, Global Bridges and Silk Links**. *Physica A: Statistical Mechanics and its Applications* 536: 121027.  
-  <i class="ai ai-doi"></i>: [10.1016/j.physa.2019.04.263](https://doi.org/10.1016/j.physa.2019.04.263)<i class="ai ai-open-access"></i>
+  <i class="ai ai-doi"></i>: [![DOI: 10.1016/j.physa.2019.04.263](https://zenodo.org/badge/DOI/10.1016/j.physa.2019.04.263.svg)](https://doi.org/10.1016/j.physa.2019.04.263)<i class="ai ai-open-access"></i>
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1016/j.physa.2019.04.263" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="600" src="resources/publications/article_heta_physicaa.png"></p>  
   ---
 - Huang C. Y., **Chin, W. C. B.**, Wen, T. H., Fu, Y. H., & Tsai, Y. S. (2019) **EpiRank: Modeling Bidirectional Disease Spread in Asymmetric Commuting Networks**. *Scientific Reports* 9: 5415.  
-  <i class="ai ai-doi"></i>: [10.1038/s41598-019-41719-8](https://doi.org/10.1038/s41598-019-41719-8)<i class="ai ai-open-access"></i>  
+  <i class="ai ai-doi"></i>: [![DOI: 10.1038/s41598-019-41719-8](https://zenodo.org/badge/DOI/10.1038/s41598-019-41719-8.svg)](https://doi.org/10.1038/s41598-019-41719-8)<i class="ai ai-open-access"></i>  
   (Journal rank: 10/64 in Multidisciplinary Sciences)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-019-41719-8" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="450" src="resources/publications/article_epirank_srep.png"></p>  
@@ -93,7 +93,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 ### 2018
 #### Ph.D. Dissertation  
 - **Chin, W. C. B.** (2018) **The scaling properties of point clustering phenomena**. Department of Geography, National Taiwan University. 
-  <i class="ai ai-doi"></i>: [10.6342/NTU201802404](https://doi.org/10.6342/NTU201802404)<!--<i class="ai ai-open-access"></i>-->  
+  <i class="ai ai-doi"></i>: [![DOI: 10.6342/NTU201802404](https://zenodo.org/badge/DOI/10.6342/NTU201802404.svg)](https://doi.org/10.6342/NTU201802404)<!--<i class="ai ai-open-access"></i>-->  
   (Dean's Award (Ph.D.), College of Science, National Taiwan University)  
   <p align="center"><img width="900" src="resources/publications/phd_prqtree_dissertation.png"></p>  
   ---
@@ -102,15 +102,15 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2017">&nbsp;</div>
 <div>&nbsp;</div>
 ### 2017
-#### SSCI Journal Article  
+#### Journal Article  
 - **Chin, W. C. B.**, Wen, T. H., Sabel, C. E., & Wang, I. H. (2017) **A geo-computational algorithm for exploring the structure of diffusion progression in time and space**. *Scientific Reports* 7: 12565. 
-  <i class="ai ai-doi"></i>: [10.1038/s41598-017-12852-z](https://doi.org/10.1038/s41598-017-12852-z)<i class="ai ai-open-access"></i>  
+  <i class="ai ai-doi"></i>: [![DOI: 10.1038/s41598-017-12852-z](https://zenodo.org/badge/DOI/10.1038/s41598-017-12852-z.svg)](https://doi.org/10.1038/s41598-017-12852-z)<i class="ai ai-open-access"></i>  
   (Journal rank: 10/64 in Multidisciplinary Sciences)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1038/s41598-017-12852-z" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="900" src="resources/publications/article_tapitas_srep.png"></p>  
   ---
 - Wen, T. H., **Chin, W. C. B.**, & Lai, P. C. (2017) **Understanding the topological characteristics and flow complexity of urban traffic congestion**. *Physica A: Statistical Mechanics and its Applications* 473: 166-177. 
-  <i class="ai ai-doi"></i>: [10.1016/j.physa.2017.01.035](https://doi.org/10.1016/j.physa.2017.01.035)   
+  <i class="ai ai-doi"></i>: [![DOI: 10.1016/j.physa.2017.01.035](https://zenodo.org/badge/DOI/10.1016/j.physa.2017.01.035.svg)](https://doi.org/10.1016/j.physa.2017.01.035)   
   (Journal rank: 23/79 in Physics, Multidisciplinary Science)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1016/j.physa.2017.01.035" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="600" src="resources/publications/article_fbpr_physicaa.png"></p>  
@@ -120,24 +120,24 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2016">&nbsp;</div>
 <div>&nbsp;</div>
 ### 2016
-#### SSCI Journal Article  
+#### Journal Article  
 - Wen, T. H., Tsai, C. T., & **Chin, W. C. B.** (2016). **Evaluating the role of disease importation in the spatiotemporal transmission of indigenous dengue outbreak**. *Applied Geography* 76: 137-146. 
-  <i class="ai ai-doi"></i>: [10.1016/j.apgeog.2016.09.020](https://doi.org/10.1016/j.apgeog.2016.09.020)   
+  <i class="ai ai-doi"></i>: [![DOI: 10.1016/j.apgeog.2016.09.020](https://zenodo.org/badge/DOI/10.1016/j.apgeog.2016.09.020.svg)](https://doi.org/10.1016/j.apgeog.2016.09.020)   
   (Journal rank: 10/77 in Geography)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1016/j.apgeog.2016.09.020" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="900" src="resources/publications/article_dengue_odpair_japg.png"></p>  
   ---
 #### Book Chapter
 - Wen, T. H., **Chin, W. C. B.**, & Lai, P. C. (2016). **Link structure analysis of urban street networks for delineating traffic impact areas**. In M. Nemiche, M. Essaaidi (eds.), *Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. Springer: Switzerland. 
-  <i class="ai ai-doi"></i>: [10.1007/978-3-319-46164-9_10](https://doi.org/10.1007/978-3-319-46164-9_10), ISBN: 978-3-319-46164-9.
+  <i class="ai ai-doi"></i>: [![DOI: 10.1007/978-3-319-46164-9_10](https://zenodo.org/badge/DOI/10.1007/978-3-319-46164-9_10.svg)](https://doi.org/10.1007/978-3-319-46164-9_10), ISBN: 978-3-319-46164-9.
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1007/978-3-319-46164-9_10" data-hide-no-mentions="true" class="altmetric-embed"></div>    
   <p align="center"><img width="800" src="resources/publications/bookchap_fbpr_compsocsys.png"></p>  
   ---
 ### TSSCI Journal Article  
 - 郭年真，林民浩，陳威全，溫在弘 (2016)。剖析台灣民眾的就醫流動：利用引力模式評估就醫距離與醫療資源分布的影響。*台灣衛誌* 35(2)：136-151。
-  <i class="ai ai-doi"></i>: [10.6288/TJPH201635104086](https://doi.org/10.6288/TJPH201635104086).  
+  <i class="ai ai-doi"></i>: [![DOI: 10.6288/TJPH201635104086](https://zenodo.org/badge/DOI/10.6288/TJPH201635104086.svg)](https://doi.org/10.6288/TJPH201635104086).  
   (eng. info) Lin, M. H., Kuo, R. N., Chin, W. C. B., & Wen, T. H. (2015). **Profiling the patient flow for seeking healthcare in Taiwan: using gravity modeling to investigate the influences of travel distance and healthcare resources** (in chinese). *Taiwan Journal of Public Health* 35(2): 136-151. 
-  <i class="ai ai-doi"></i>:[10.6288/TJPH201635104086](https://doi.org/10.6288/TJPH201635104086).
+  <i class="ai ai-doi"></i>:[![DOI: 10.6288/TJPH201635104086](https://zenodo.org/badge/DOI/10.6288/TJPH201635104086.svg)](https://doi.org/10.6288/TJPH201635104086).
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.6288/TJPH201635104086" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_patientflow_tjph.png"></p>  
   ---
@@ -147,15 +147,15 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2015">&nbsp;</div>
 <div>&nbsp;</div>
 ### 2015
-#### SSCI Journal Article  
+#### Journal Article  
 - **Chin, W. C. B.**, & Wen, T. H. (2015). **Geographically Modified PageRank Algorithms: Identifying the Spatial Concentration of Human Movement in a Geospatial Network**. *PLoS ONE* 10(10): e0139509. 
-  <i class="ai ai-doi"></i>: [10.1371/journal.pone.0139509](https://doi.org/10.1371/journal.pone.0139509)<i class="ai ai-open-access"></i>
+  <i class="ai ai-doi"></i>: [![DOI: 10.1371/journal.pone.0139509](https://zenodo.org/badge/DOI/10.1371/journal.pone.0139509.svg)](https://doi.org/10.1371/journal.pone.0139509)<i class="ai ai-open-access"></i>
   (Journal rank: 15/64 in Multidisciplinary Sciences)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1371/journal.pone.0139509" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_gpr_plosone.png"></p>  
   ---
 - Wen, T. H., & **Chin, W. C. B.** (2015). **Incorporation of Spatial Interactions in Location Networks to Identify Critical Geo-Referenced Routes for Assessing Disease Control Measures on a Large-Scale Campus**. *International Journal of Environmental Research and Public Health* 12(4): 4170-4184.  
-  <i class="ai ai-doi"></i>: [10.3390/ijerph120404170](https://doi.org/10.3390/ijerph120404170)
+  <i class="ai ai-doi"></i>: [![DOI: 10.3390/ijerph120404170](https://zenodo.org/badge/DOI/10.3390/ijerph120404170.svg)](https://doi.org/10.3390/ijerph120404170)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.3390/ijerph120404170" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_campusnet_ijerph.png"></p>  
   ---
@@ -164,9 +164,9 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2014">&nbsp;</div>
 <div>&nbsp;</div>
 ### 2014
-#### SSCI Journal Article  
+#### Journal Article  
 - Lee, J., Lay, J. G., **Chin, W. C. B.**, Chi, Y. L., & Hsueh, Y. H. (2014). **An Experiment to Model Spatial Diffusion Process with Nearest Neighbor Analysis and Regression Estimation**. *International Journal of Applied Geospatial Research* 5(1), 1-15. 
-  <i class="ai ai-doi"></i>: [10.4018/ijagr.2014010101](https://doi.org/10.4018/ijagr.2014010101)
+  <i class="ai ai-doi"></i>: [![DOI: 10.4018/ijagr.2014010101](https://zenodo.org/badge/DOI/10.4018/ijagr.2014010101.svg)](https://doi.org/10.4018/ijagr.2014010101)
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.4018/ijagr.2014010101" data-hide-no-mentions="true" class="altmetric-embed"></div>  
   <p align="center"><img width="800" src="resources/publications/article_diffusionexp_ijagr.png"></p>  
   ---
@@ -178,7 +178,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div>&nbsp;</div>
 ### arXiv / medRxiv
 - Chin, W. C. B., & Huang C. Y. (2020). **Using EpiRank for Analyzing Emerging Coronavirus Epidemic Patterns**. 
-  medRxiv <i class="ai ai-doi"></i>: [10.1101/2020.04.20.20072736](https://doi.org/10.1101/2020.04.20.20072736).
+  medRxiv <i class="ai ai-doi"></i>: [![DOI: 10.1101/2020.04.20.20072736](https://zenodo.org/badge/DOI/10.1101/2020.04.20.20072736.svg)](https://doi.org/10.1101/2020.04.20.20072736).
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.1101/2020.04.20.20072736" data-hide-no-mentions="true" class="altmetric-embed"></div>  
 
 <a href="#ptop">Back to top</a> 
@@ -196,7 +196,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="conference">&nbsp;</div>
 <div>&nbsp;</div>
 ## Conferences Presentations
-- 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. 
+- 2020 - Identification of super-spreaders and super-susceptibles locations from directed and weighted human movement networks for disease control and prevention, in **Conference on Complex Systems 2020**, Online. [![DOI: 10.5281/zenodo.4419178](https://zenodo.org/badge/DOI/10.5281/zenodo.4419178.svg)](https://doi.org/10.5281/zenodo.4419178)
 - 2018 - Delineating communities of cities in space and times, in **18th Chinese Cartography Academic Conference**, Taipei, Taiwan.
 - 2017 - Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo, in **TGSW 2017**, Tsukuba, Japan. **Young Scientist Award**  
   Link: [http://bit.ly/tgsw17_lifestyleofcity](http://bit.ly/tgsw17_lifestyleofcity)    
