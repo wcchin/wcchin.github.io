@@ -150,9 +150,11 @@ body {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222; }
+    color: #000080; }
   .navbar-link.active {
     color: #33C3F0; }
+  .navbar-link:hover {
+    color: #0FA0CE; }
   .has-docked-nav .navbar {
     position: fixed;
     top: 0;

@@ -6,9 +6,9 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Chin-Mini-Lab</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>Chin's Mini Lab</title>
+  <meta name="description" content="Personal webpage">
+  <meta name="author" content="Benny Chin">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,9 +25,10 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/typicons/typicons.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">-->
-	<link rel="stylesheet" href="css/academicons/academicons.min.css">
-	
+  <link rel="stylesheet" href="css/toggle_nav.css">
+  <!--<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">-->
+  <link rel="stylesheet" href="css/academicons/academicons.min.css">
+  
 
 
   <!-- Scripts
@@ -52,13 +53,29 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 	<div class="row">
+        
+    <button class="menubutton"><span class="typcn typcn-th-menu"></span></button>
+    <nav class="menu">
+      <ul class="menu-list">
+        {%
+          mpages = [p for p in pages if "menu-position" in p]
+          mpages.sort(key=lambda p: int(p["menu-position"]))
+          entry = '<li><a class="menu-link" href="%s">%s</a></li>'
+          for p in mpages:
+              #style = p["title"] == page["title"] and "active" or ""
+              print(entry % (p["url"], hx(p["title"])))
+        %}
+      </ul>
+    </nav>
+    
 	  <div style="margin-top: 5%; text-align: center;">
 		<h1 style="color:#000080;"><font size="5">Chin's</font> {{ hx(page["title"]) }}</h1>
 	  </div>
 	  <div style="text-align: right;">
 		<h5 style="color:#000080;">{{ hx(page["date"]) }}</h5>
 	  </div>
-	  <!--
+      <!-- KEEP this to show how dropdown in header bar works -->
+	  <!-- 
 	  <div class="one column" style="margin-top: 25%"><h1><span class="typcn typcn-globe-outline"></span></h1></div>
 	  <div class="nine columns" style="margin-top: 25%; text-align: center;">
 		<h1>{{ hx(page["title"]) }}</h1>
@@ -72,7 +89,7 @@
           {%
             mpages = [p for p in pages if "menu-position" in p]
             mpages.sort(key=lambda p: int(p["menu-position"]))
-            entry = '<li class="navbar-item"><a class="navbar-link" href="%s" style="color:#000080;">%s</a></li>'
+            entry = '<li class="navbar-item"><a class="navbar-link" href="%s">%s</a></li>'
             for p in mpages:
                 #style = p["title"] == page["title"] and "active" or ""
                 print(entry % (p["url"], hx(p["title"])))
@@ -86,27 +103,13 @@
                 <li class="popover-item">
                   <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
                 </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
-                </li>
               </ul>
             </div>
           </li>-->
         </ul>
       </div>
     </nav>
+    
     
 	<div class="row">
     <div class="docs-section" id="intro">
