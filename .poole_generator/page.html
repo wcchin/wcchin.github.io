@@ -60,7 +60,7 @@
         {%
           mpages = [p for p in pages if "menu-position" in p]
           mpages.sort(key=lambda p: int(p["menu-position"]))
-          entry = '<li><a class="menu-link" href="%s">%s</a></li>'
+          entry = '<li class="menu-item"><a class="menu-link" href="%s">%s</a></li>'
           for p in mpages:
               #style = p["title"] == page["title"] and "active" or ""
               print(entry % (p["url"], hx(p["title"])))

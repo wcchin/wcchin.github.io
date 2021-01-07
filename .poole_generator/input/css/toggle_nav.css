@@ -16,8 +16,24 @@ button:focus + .menu {
 
 }
 
+.menubutton {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  right: 0px;
+}
+
 .menu-list {
   list-style: none;
+  position: fixed;
+  z-index: 999;
+  top: 40px;
+  right: 0px;
+}
+
+.menu-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0px 0;
 }
 
 .menu-link {
@@ -26,6 +42,7 @@ button:focus + .menu {
   font-weight: 600;
   letter-spacing: .1rem;
   margin-right: 35px;
+  margin-left: 35px;
   text-decoration: none;
   color: #000080; }
 
