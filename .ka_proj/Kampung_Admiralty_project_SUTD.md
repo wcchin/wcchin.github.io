@@ -19,9 +19,15 @@ This is a data collection app designed to collect sensor data from invited volun
 
 All private information and data collected using this app will be kept anonymous, and no identifiable information is collected. This application is only intended for the volunteer population recruited by **Advanced Architecture Lab** (AAL) of **Singapore University of Technology and Design** (SUTD), Singapore. The team behind the data collection has earned the certification by **Collaborative Institutional Training Initiative** (CITI) for the program **Social & Behavioural Research** to understand research ethics. The project ‘**Vertical Cities: Complex Emergent Patterns of Movement and Space Use in High‐Density Urban Contexts**’ is authorized and governed by the privacy and ethics policy of SUTD’s Institutional Review Board (IRB) under the application number - IRB‐20‐00353.
 
-
-
 *SUTD Vertical Cities – Data Collection* is a data collection app designed to collect sensor data from invited volunteers for academic research. The app collects barometer and accelerometer sensor data. It also scans for Bluetooth signals emitted by beacons (manufactured by Kontakt), stores them in internal storage, and uploads the data to the cloud frequently when connected to Wi-Fi. 
+
+
+Personal and Sensitive Information:
+
+- Location permission: access to location in the background is necessary for the app to collect data (Bluetooth scans) in all conditions – even when the app is not in use.
+- Storage permission: access to storage is important for the app to create a folder and store the sensor data collected (barometer, accelerometer, and Bluetooth scans).
+
+Consent: By giving consent to the in-app disclosure when entering the app, you agree to allow the app permission displayed to be used for an uninterrupted data collection process as long as the app is installed in the mobile.
 
 
 
@@ -57,11 +63,9 @@ Any privacy issues?
 - No GPS location data is collected. Location permission is used to access Bluetooth scanning only.
 
 
-
 Where is the data stored?
 
 The collected sensor data is stored in the internal storage temporarily and it is uploaded to the cloud server maintained by AAL, SUTD when connected to Wi-Fi.
-
 
 
 Who is handling the data?
