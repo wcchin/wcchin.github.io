@@ -36,15 +36,17 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 <div id="p2021">&nbsp;</div>
 ### 2021
 ### Book Chapter  
-- Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
-  <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
+- Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, Book Series: Human Dynamics in Smart Cities, (accepted). Springer: Switzerland. 
+  <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), Book <i class="ai ai-doi"></i>: [![DOI: 10.1007/978-3-030-72808-3](https://zenodo.org/badge/DOI/10.1007/978-3-030-72808-3.svg)](https://doi.org/10.1007/978-3-030-72808-3), ISBN: 978-3-030-72807-6. 
   <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
-  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_emotion_humandynamic.png"></p>  -->
+  <p align="center"><img width="800" src="resources/publications/bookchap_emotion_mappingcovid19st.png"></p> 
+  Expected publication date: 2021/7
   ---
-- Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Human Dynamics in Smart Cities*, (accepted). Springer: Switzerland. 
-  <!-- <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), ISBN: tba. -->
+- Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, Book Series: Human Dynamics in Smart Cities, (accepted). Springer: Switzerland. 
+  <i class="ai ai-doi"></i>: [tba](https://doi.org/tba), Book <i class="ai ai-doi"></i>: [![DOI: 10.1007/978-3-030-72808-3](https://zenodo.org/badge/DOI/10.1007/978-3-030-72808-3.svg)](https://doi.org/10.1007/978-3-030-72808-3), ISBN: 978-3-030-72807-6. 
   <!-- <div data-badge-popover="right" data-badge-type="1" data-doi="tba" data-hide-no-mentions="true" class="altmetric-embed"></div>   --> 
-  <!-- <p align="center"><img width="800" src="resources/publications/bookchap_vulnerability_humandynamic.png"></p>  -->
+  <p align="center"><img width="800" src="resources/publications/bookchap_vulnerability_mappingcovid19st.png"></p> 
+  Expected publication date: 2021/7
   ---
 <a href="#ptop">Back to top</a> 
 
@@ -52,7 +54,7 @@ Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn
 ### 2020
 #### Journal Article  
 -  Manivannan, A., **Chin, W. C. B.**, Barrat, A., and Bouffanais, R. (2020) **On the Challenges and Potential of Using Barometric Sensors to Track Human Activity**. *Sensors* 20(23): 6786. 
-  <i class="ai ai-doi"></i>: [![DOI: 10.3390/s20236786](https://zenodo.org/badge/DOI/10.3390/s20236786.svg)](https://doi.org/10.3390/s20236786))<i class="ai ai-open-access"></i>  
+  <i class="ai ai-doi"></i>: [![DOI: 10.3390/s20236786](https://zenodo.org/badge/DOI/10.3390/s20236786.svg)](https://doi.org/10.3390/s20236786)<i class="ai ai-open-access"></i>  
   <!--URL <i class="ai ai-open-access"></i>: [https://www.mdpi.com/1424-8220/20/23/6786](https://www.mdpi.com/1424-8220/20/23/6786)<i class="ai ai-open-access"></i>-->  
   <div data-badge-popover="right" data-badge-type="1" data-doi="10.3390/s20236786" data-hide-no-mentions="true" class="altmetric-embed"></div> 
   <p align="center"><img width="750" src="resources/publications/article_barometer_challenges_mdpisensors.png"></p>  
