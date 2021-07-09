@@ -1,0 +1,61 @@
+<% data.publications.forEach(function(publication) { %>
+  <% if(!publication.draft) { %>
+    <div class="card article fade-in">
+      <header class="card-header">
+        <p class="card-header-title">
+        <% if(publication.journal) { %>
+          <%= publication.journal %>
+        <% } %>
+        </p>
+        <p class="card-header-title">
+        <% if(publication.year) { %>
+            <%= publication.year %>
+        <% } %>
+        </p>
+        <p class="card-header-title">
+        <% if(publication.cat) { %>
+            <%= publication.cat %>
+        <% } %>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="media">
+          <!--<div class="media-center">
+            <img src="http://i.pravatar.cc/300" class="author-image" alt="Placeholder image">
+          </div>-->
+          <div class="media-content has-text-centered">
+            <a href="<%= publication.permalink %>">
+              <p class="title article-title">
+                <%= publication.title %>
+              </p>
+            </a>
+            <div class="tags has-addons level-item">
+              <% if(publication.author) { %>
+                <p class="subtitle is-4"><%= publication.author %></p>
+              <% } %>
+            </div> 
+          </div>
+        </div>
+        <div class="content article-body">
+          <% if(publication.excerpt) { %>
+            <p><%= publication.excerpt %>...</p>
+          <% } %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">
+          <span>
+            <a href="<%= publication.permalink %>">View Abstract</a>
+          </span>
+        </p>
+        <p class="card-footer-item">
+          <span>
+            <% if(publication.doi) { %>
+            DOI: <a href="https://doi.org/<%= publication.doi %>"><%= publication.doi %></a>
+            <% } %>
+          </span>
+        </p>
+      </footer>
+    </div>
+  <% } %>
+<% }) %>

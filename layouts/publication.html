@@ -1,0 +1,55 @@
+<div class="card article fade-in">
+  <div class="card-content">
+    <div class="media">
+      <!--<div class="media-center">
+        <img src="http://i.pravatar.cc/300" class="author-image" alt="Placeholder image">
+      </div>-->
+      <div class="tags">
+        <% if(data.tags) { %>
+          <% data.tags.forEach(function(tag) { %>
+            <% if(tag) { %>
+              <a href="#/publications?tag=<%= tag %>">
+                <span class="tag is-rounded is-info"><%= tag %></span>
+              </a>
+            <% } %>
+          <% }) %>
+        <% } %>
+      </div>
+    </div>
+    <div class="media-content has-text-centered">
+      <p class="title article-title">
+        <%= data.title %>
+      </p>
+      <p class="subtitle is-6 article-subtitle">
+        <% if(data.author) { %>
+          <%= data.author %> 
+        <% } %>
+        <% if(data.year) { %>
+          &nbsp;(<%= data.year %>)
+        <% } %>
+      </p>
+    </div>
+    <div class="content article-body">
+      <p align="right"><a href="https://doi.org/<%= data.doi %>"><img src="https://zenodo.org/badge/DOI/<%= data.doi %>.svg"></a></p>
+      <% if(data.image) { %>
+        <p align="center"><img width="750" src="<%= data.image %>"></p>
+      <% } %>
+      <h1>Paper</h1>
+      <% if(data.refline) { %>
+        <%= data.refline %>
+      <% } else { %>
+        <%= data.author %> (<%= data.year %>). <b><%= data.title %></b>, <i><%= data.journal %></i>. <%= data.versionissue %>: <%= data.page %>.
+      <% } %>
+      <% if(data.abstract) { %>
+        <h1>Abstract</h1>
+        <%= data.abstract %>
+      <% } %>
+      <%= data.body %>
+      <hr>
+      <p>
+      Read article here: <a href="https://doi.org/<%= data.doi %>"><%= data.title %>, <i><%= data.journal %></a></i>. 
+      Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>Gmail </a>) if you need my full paper.  
+      </p>
+    </div>
+  </div>
+</div>
