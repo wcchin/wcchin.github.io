@@ -896,6 +896,9 @@ var CMS = (function () {
             if (type.indexOf('post') === 0) {
               _this2.collections[type][type].reverse();
             } // Execute after all content is loaded
+            if (type.indexOf('publication') === 0) {
+              _this2.collections[type][type].reverse();
+            } // Execute after all content is loaded
 
 
             if (types.length == promises.length) {
