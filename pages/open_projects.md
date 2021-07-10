@@ -11,18 +11,10 @@ My Github contributions (open project).
 
 <div class="tabs is-toggle is-toggle-rounded is-centered">
   <ul>
-    <li class="is-active">
-      <a onclick="openTab(event, 'Algorithm')"><span class="is-small typcn typcn-chart-pie"></span>Algorithm</a>
-    </li>
-    <li>
-      <a onclick="openTab(event, 'Tools')"><span class="is-small typcn typcn-spanner"></i></span>Tools</a>
-    </li>
-    <li>
-      <a onclick="openTab(event, 'Research')"><span class="is-small typcn typcn-mortar-board"></span>Research</a>
-    </li><!--
-    <li>
-      <a onclick="openTab(event, 'Other')"><span class="icon is-small typcn typcn-social-github"></span>Other</a>
-    </li>-->
+    <li class="tablink is-active"><a onclick="openTab(event, 'Algorithm')"><span class="is-small typcn typcn-chart-pie"></span>Algorithm</a></li>
+    <li class="tablink"><a onclick="openTab(event, 'Tools')"><span class="is-small typcn typcn-spanner"></i></span>Tools</a></li>
+    <li class="tablink"><a onclick="openTab(event, 'Research')"><span class="is-small typcn typcn-mortar-board"></span>Research</a></li><!--
+    <li class="tablink"><a onclick="openTab(event, 'Other')"><span class="icon is-small typcn typcn-social-github"></span>Other</a></li>-->
   </ul>
 </div>
 <div class="block">
