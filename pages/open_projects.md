@@ -9,66 +9,152 @@ My Github contributions (open project).
 <a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.moshimo.works/images/wcchin.png" > </a>
 
 
+<div class="tabs is-toggle is-toggle-rounded is-centered">
+  <ul>
+    <li class="is-active">
+      <a onclick="openTab(event, 'Algorithm')"><span class="is-small typcn typcn-chart-pie"></span>Algorithm</a>
+    </li>
+    <li>
+      <a onclick="openTab(event, 'Tools')"><span class="is-small typcn typcn-spanner"></i></span>Tools</a>
+    </li>
+    <li>
+      <a onclick="openTab(event, 'Research')"><span class="is-small typcn typcn-mortar-board"></span>Research</a>
+    </li><!--
+    <li>
+      <a onclick="openTab(event, 'Other')"><span class="icon is-small typcn typcn-social-github"></span>Other</a>
+    </li>-->
+  </ul>
+</div>
+<div class="block">
+	
+<!-- Tab content -->
+<div id="Algorithm" class="box tabcontent active" style="display:block">
+  <h2>Algorithm & Analysis</h2>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Geographical PageRank (GPR)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-gpr')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-gpr" class="card-content is-hidden">
+			<div class="content is-medium">a python package that provide functions of algorithms for measuring concentration distribution in a spatial network.
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-gpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/geographical-pagerank-algorithms.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/gpras" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Flow-based PageRank (FBPR)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-fbpr')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-fbpr" class="card-content is-hidden">
+			<div class="content is-medium">a python package that run an algorithm that calibrate the weight and PR score to meet the flow. 
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-fbpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/flow-based-pagerank.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/fbpr" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">TaPiTaS (tapitas)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-tapitas')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-tapitas" class="card-content is-hidden">
+			<div class="content is-medium">a data exploration and visualization algorithm for understanding diffusion process.
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-tapitas2" class="card-footer is-hidden"><a href="https://bitbucket.org/wcchin/tapitas" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/tapitas" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Hierarchical Edge Type Analysis (HETA)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-heta')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-heta" class="card-content is-hidden">
+			<div class="content is-medium">An algorithm for evaluating the strength of edges.  
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-heta2" class="card-footer is-hidden"><a href="https://wcchin.github.io/HETA/index.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/HETA" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Hierarchical Arc Type Analysis (HATA)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-hata')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-hata" class="card-content is-hidden">
+			<div class="content is-medium">An algorithm for evaluating the strength of directed arcs.
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-hata2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/hata.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/HATA" class="card-footer-item">Repository</a></footer>
+	</div>
+</div>
 
-# Products of researches and projects
-* Geographical PageRank (GPR) -  
-  Description: a python package that provide functions of algorithms for measuring concentration distribution in a spatial network.  
-  Project page: [https://wcchin.github.io/geographical-pagerank-algorithms.html](https://wcchin.github.io/geographical-pagerank-algorithms.html)  
-  Repository: [https://bitbucket.org/wcchin/gpras](https://bitbucket.org/wcchin/gpras)  
-  License: MIT license  
+<div id="Tools" class="box tabcontent" style="display:none">
+  <h2>Tools</h2>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Taiwan Geographic Open Data (TGOD)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-tgod')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-tgod" class="card-content is-hidden">
+			<div class="content is-medium">a python package that wrap some of the Taiwan open data real-time api, and some static map layers files inside the package, that can be called through some functions and get the data in dataframe  or geodataframe format.  
+				<span class="tag is-dark">BSD-3-clause license</span></div>
+		</div>
+		<footer id="card-tgod2" class="card-footer is-hidden"><a href="https://wcchin.github.io/tgod/" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/tgod" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Carlae</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-carlae')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-carlae" class="card-content is-hidden">
+			<div class="content is-medium">a python package that generate single page website for github projects from a simple markdown file. 
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-carlae2" class="card-footer is-hidden"><a href="https://wcchin.github.io/carlae/" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/carlae" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">pyreveal</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-pyreveal')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-pyreveal" class="card-content is-hidden">
+			<div class="content is-medium">a python package that generate slides using markdown and reveal.js.  
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-pyreveal2" class="card-footer is-hidden"><a href="https://wcchin.github.io/pyreveal/index.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/pyreveal" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">Vector MAP ProducER (vmapper)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-vmapper')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-vmapper" class="card-content is-hidden">
+			<div class="content is-medium">a simple python library for creating SVG map in python.  
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-vmapper2" class="card-footer is-hidden"><a href="https://wcchin.github.io/vmapper.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/vmapper" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-5">ColouringMap (colouringmap)</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-colouringmap')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-colouringmap" class="card-content is-hidden">
+			<div class="content is-medium">a convenient mapping tool for generating categories and colors for making choropleth map from geopandas gdf.  
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-colouringmap2" class="card-footer is-hidden"><a href="https://wcchin.github.io/colouringmap.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/colouringmap" class="card-footer-item">Repository</a></footer>
+	</div>
+</div>
 
-* Flow-based PageRank (FBPR) -  
-  Description: a python package that run an algorithm that calibrate the weight and PR score to meet the flow.  
-  Project page: [https://wcchin.github.io/flow-based-pagerank.html](https://wcchin.github.io/flow-based-pagerank.html)  
-  repository: [https://bitbucket.org/wcchin/fbpr](https://bitbucket.org/wcchin/fbpr)  
-  License: MIT license  
+<div id="Research" class="box tabcontent" style="display:none">
+  <h2>Research Projects</h2>
+  <p>Place holder for research related project, including super-spreader paper's data and info (published in srep).</p>
+</div>
+<!--
+<div id="Other" class="box tabcontent" style="display:none">
+  <h3>Other</h3>
+  <p>Nothing</p>
+</div>
+-->
 
-* Taiwan Geographic Open Data (TGOD) -  
-  Description: a python package that wrap some of the Taiwan open data real-time api, and some static map layers files inside the package, that can be called through some functions and get the data in dataframe  or geodataframe format.  
-  Project page: [https://wcchin.github.io/tgod/](https://wcchin.github.io/tgod/)  
-  Repository: [https://github.com/wcchin/tgod](https://github.com/wcchin/tgod)  
-  License: BSD-3-clause license.
-
-* TaPiTaS (tapitas) -  
-  Description: a data exploration and visualization algorithm for understanding diffusion process.  
-  Project page: [https://bitbucket.org/wcchin/tapitas](https://bitbucket.org/wcchin/tapitas)  
-  Repository: [https://bitbucket.org/wcchin/tapitas](https://bitbucket.org/wcchin/tapitas)  
-  License: MIT license  
-
-* Hierarchical Edge Type Analysis (HETA) -  
-  Description: An algorithm for evaluating the strength of edges.  
-  Project page: [https://wcchin.github.io/HETA/index.html](https://wcchin.github.io/HETA/index.html)  
-  Repository: [https://github.com/wcchin/HETA](https://github.com/wcchin/HETA)  
-  License: MIT license  
-
-* Hierarchical Arc Type Analysis (HATA) -  
-  Description: An algorithm for evaluating the strength of directed arcs.  
-  Project page: [https://wcchin.github.io/projects/hata.html](https://wcchin.github.io/projects/hata.html)  
-  Repository: [https://github.com/wcchin/HATA](https://github.com/wcchin/HATA)  
-  License: MIT license  
-
-
-# Other interesting and convenient tools 
-- Carlae -  
-  Description: a python package that generate single page website for github projects from a simple markdown file.  
-  Project page: [https://wcchin.github.io/carlae/](https://wcchin.github.io/carlae/)   
-  Repository: [https://github.com/wcchin/carlae](https://github.com/wcchin/carlae)  
-  License: MIT license  
-
-- pyreveal - 
-  Description: a python package that generate slides using markdown and reveal.js.  
-  Project page: [https://wcchin.github.io/pyreveal/index.html](https://wcchin.github.io/pyreveal/index.html)   
-  Repository: [https://github.com/wcchin/pyreveal](https://github.com/wcchin/pyreveal)  
-  License: MIT license  
-
-- Vector MAP ProducER (vmapper) -  
-  Description: a simple python library for creating SVG map in python.  
-  Project page: [https://wcchin.github.io/vmapper.html](https://wcchin.github.io/vmapper.html)  
-  Repository: [https://github.com/wcchin/vmapper](https://github.com/wcchin/vmapper)  
-  License: MIT license  
-
-- ColouringMap (colouringmap) -  
-  Description: a convenient mapping tool for generating categories and colors for making choropleth map from geopandas gdf.  
-  Project page: [https://wcchin.github.io/colouringmap.html](https://wcchin.github.io/colouringmap.html)  
-  Repository: [https://github.com/wcchin/colouringmap](https://github.com/wcchin/colouringmap)  
-  License: MIT license  
+</div>
