@@ -9,7 +9,7 @@
           <% data.tags.forEach(function(tag) { %>
             <% if(tag) { %>
               <a href="#/publications?tag=<%= tag %>">
-                <span class="tag is-rounded is-info"><%= tag %></span>
+                <span class="tag is-rounded is-info"><p class="is-size-6" ><%= tag %></p></span>
               </a>
             <% } %>
           <% }) %>
@@ -17,10 +17,10 @@
       </div>
     </div>
     <div class="media-content has-text-centered">
-      <p class="title article-title">
+      <p class="title article-title is-size-3">
         <%= data.title %>
       </p>
-      <p class="subtitle is-6 article-subtitle">
+      <p class="subtitle is-5 article-subtitle">
         <% if(data.author) { %>
           <%= data.author %> 
         <% } %>
@@ -35,14 +35,18 @@
         <p align="center"><img width="750" src="<%= data.image %>"></p>
       <% } %>
       <h1>Paper</h1>
+      <p class="is-size-5" align="justify">
       <% if(data.refline) { %>
         <%= data.refline %>
       <% } else { %>
         <%= data.author %> (<%= data.year %>). <b><%= data.title %></b>, <i><%= data.journal %></i>. <%= data.versionissue %>: <%= data.page %>.
       <% } %>
+      </p>
       <% if(data.abstract) { %>
         <h1>Abstract</h1>
+        <p class="is-size-5" align="justify">
         <%= data.abstract %>
+        </p>
       <% } %>
       <%= data.body %>
       <hr>
