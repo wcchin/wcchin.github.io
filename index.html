@@ -18,6 +18,7 @@
     <!-- Bulma Version 0.7.2-->
     <link rel="stylesheet" href="./css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/bulma-blog.css">
+    <link rel="stylesheet" href="./css/custom.css" />
     <link href="./css/animations.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/typicons/typicons.min.css">
     <link rel="stylesheet" href="./css/academicons/academicons.min.css">
@@ -26,11 +27,14 @@
   </head>
   <body>
     <!-- START NAV -->
+    <section class="hero is-info is-medium is-bold has-background">
+			<img alt="bg" class="hero-background is-transparent" src="resources/images/network-bg.jpg" />
+	<div class="hero-head">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
-            <img src="resources/images/favicon.png" width="24" height="48" alt="Chin"> Home
+            <span class="typcn typcn-home-outline"></span> Home
           </a>
           <span class="navbar-burger burger" data-target="navbarMenu">
             <span></span>
@@ -44,44 +48,44 @@
               About
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a class="navbar-link" style="color:#ffffff;background-color:transparent;">
                 Publications
               </a>
               <div class="navbar-dropdown">
-                <a class="navbar-item" href="#/publications">
+                <a class="navbar-item" href="#/publications" style="color:#000000;">
                   Publications (All)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2021">
+                <a class="navbar-item" href="#/publications?tag=2021" style="color:#000000;">
                   2021 (2)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2020">
+                <a class="navbar-item" href="#/publications?tag=2020" style="color:#000000;">
                   2020 (4)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2019">
+                <a class="navbar-item" href="#/publications?tag=2019" style="color:#000000;">
                   2019 (2)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2018">
+                <a class="navbar-item" href="#/publications?tag=2018" style="color:#000000;">
                   2018 (1)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2017">
+                <a class="navbar-item" href="#/publications?tag=2017" style="color:#000000;">
                   2017 (2)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2016">
+                <a class="navbar-item" href="#/publications?tag=2016" style="color:#000000;">
                   2016 (3)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2015">
+                <a class="navbar-item" href="#/publications?tag=2015" style="color:#000000;">
                   2015 (2)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=2014">
+                <a class="navbar-item" href="#/publications?tag=2014" style="color:#000000;">
                   2014 (1)
                 </a>
-                <a class="navbar-item" href="#/publications?tag=arXiv">
-                  arXiv
+                <a class="navbar-item" href="#/publications?tag=arXiv" style="color:#000000;">
+                  arXiv/medRxiv
                 </a>
-                <a class="navbar-item" href="#/pages/inpreparation">
-                  In preparation
+                <a class="navbar-item" href="#/pages/inpreparation" style="color:#000000;">
+                  Work in progress
                 </a>
-                <a class="navbar-item" href="#/pages/conferences">
+                <a class="navbar-item" href="#/pages/conferences" style="color:#000000;">
                   Conferences
                 </a>
               </div>
@@ -105,14 +109,14 @@
         </div>
       </div>
     </nav>
+	</div>
     <!-- END NAV -->
-    <section class="hero is-info is-medium is-bold">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title is-size-1">
-          Benny Chin 陳威全
-          </h1>
-					<h2>a Geographer, Cartographer, & GIScientist</h2>
+          <p class="title is-size-1">
+          <a href="#">Benny Chin 陳威全</a>
+          </p>
+					<p class="subtitle is-size-3">a <span class="typcn typcn-compass"></span> Geographer, <span class="typcn typcn-map"></span>Cartographer, & <span class="typcn typcn-globe-outline"></span>GIScientist</p>
         </div>
       </div>
     </section>
@@ -131,7 +135,7 @@
 			<footer class="footer">
 				<div class="content has-text-centered">
 					<p>
-						<a href="https://wcchin.github.io"><strong>WCB Chin</strong></a>. Generated using CMS.js, & hosted on Github pages. 
+						<a href="https://wcchin.github.io"><strong>Wei Chien Benny Chin</strong></a>. Generated using <a href="https://chrisdiana.dev/cms.js/" target="blank">CMS.js</a> & <a href="https://bulma.io/" target="blank">Bulma CSS framework</a>. Hosted on <a href="https://pages.github.com/" target="blank">Github Pages</a>. 
 						<div>
 							<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=59lz2fd3mqo&amp;m=8&amp;c=baff00&amp;cr1=ff0000&amp;sx=43" async="async">
 							</script>
