@@ -42,6 +42,9 @@ var config = {
     name: 'publications',
       layout: { list: 'publication-list', single: 'publication' },
     },{
+    name: 'mediums',
+      layout: { list: 'medium-list', single: 'medium' },
+    },{
       name: 'pages',
       layout: { list: 'page-list', single: 'page' },
     },
