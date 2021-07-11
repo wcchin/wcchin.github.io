@@ -13,7 +13,7 @@ title: About
 	<p class="level-item has-text-centered"><a href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i>ORCID </a></p>
 	<p class="level-item has-text-centered"><a href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i>Google Scholar </a></p>
 	<p class="level-item has-text-centered"><a href="https://medium.com/@wcchin.88" target="_blank"><span class="typcn typcn-pen"></span>Medium </a></p>
-	<p class="level-item has-text-centered"><span id="badgeCont357"></span></p>
+	<!--<p class="level-item has-text-centered"><span id="badgeCont357"></span></p>-->
 </div>
 
 

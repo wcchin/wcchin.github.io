@@ -1,0 +1,46 @@
+<% data.mediums.forEach(function(post) { %>
+  <% if(!post.draft) { %>
+    <div class="card article fade-in">
+      <div class="card-image">
+        <figure class="image">
+          <img src="<%= post.image %>" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-center">
+            <img src="resources/images/benny.jpg" class="author-image" alt="Placeholder image">
+          </div>
+          <div class="media-content has-text-centered">
+            <a href="<%= post.permalink %>">
+              <p class="title article-title">
+                <%= post.title_en %> - 
+                <%= post.title_zh %>
+              </p>
+            </a>
+            <div class="tags has-addons level-item">
+              <% if(post.author) { %>
+                <span class="tag is-rounded is-info"><%= post.author %></span>
+              <% } %>
+              <% if(post.date_en) { %>
+                <span class="tag is-rounded">English: <%= post.date_en %> </span>
+              <% } %>
+              <% if(post.date_zh) { %>
+                <span class="tag is-rounded">中文：<%= post.date_zh %> </span>
+              <% } %>
+            </div> 
+          </div>
+        </div>
+        <div class="content article-body">
+          <% if(post.excerpt_en) { %>
+            <p><%= post.excerpt_en %></p>
+          <% } %>
+          <% if(post.excerpt_zh) { %>
+            <p><%= post.excerpt_zh %></p>
+          <% } %>
+        </div>
+      </div>
+      <footer class="card-footer"><p class="card-footer-item"><a href="<%= post.url_en %>">Full article on Medium</a></p><p class="card-footer-item"><a href="<%= post.url_zh %>">在 Medium 上閱讀</a></p><p class="card-footer-item"><a href="<%= post.permalink %>">Abstract/文章概要</a></p></footer>
+    </div>
+  <% } %>
+<% }) %>

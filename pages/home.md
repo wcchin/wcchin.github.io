@@ -30,7 +30,7 @@ title: HELLO WORLD!
         <p class="title" align="center">Medium<br />articles</p>
         <p class="subtitle" align="center">part-time writting</p>
       </div>
-      <footer class="card-footer"><p class="card-footer-item"><a href="./#/pages/medium">Have a look</a></p></footer>
+      <footer class="card-footer"><p class="card-footer-item"><a href="./#/mediums">Have a look</a></p></footer>
     </div>
   </div>
 </div>
