@@ -184,7 +184,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2018</strong></p></div>
 			<div class="content"> 
 				<p class="is-size-5"><strong>Ph.D. Dissertation</strong></p>
-				Chin, W. C. B. (2018) The scaling properties of point clustering phenomena. Department of Geography, National Taiwan University. Dean's Award (Ph.D.), College of Science, National Taiwan University. DOI: [10.6342/NTU201802404](https://doi.org/10.6342/NTU201802404).
+				Chin, W. C. B. (2018) **The scaling properties of point clustering phenomena**. Department of Geography, National Taiwan University. Dean's Award (Ph.D.), College of Science, National Taiwan University. DOI: [10.6342/NTU201802404](https://doi.org/10.6342/NTU201802404).
 			<hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
 			</div>
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2017</strong></p></div>
