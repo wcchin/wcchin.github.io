@@ -2,8 +2,8 @@
 title: Open Projects
 ---
 
-wcchin **[projects](/projects)**  
-(updated: 2020-05-09)
+<p class="has-text-right">(updated: 2020-05-09)</p>
+For more details: **[projects](/projects)**  
 
 My Github contributions (open project). 
 <a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.moshimo.works/images/wcchin.png" > </a>
@@ -17,6 +17,7 @@ My Github contributions (open project).
     <li class="tablink"><a onclick="openTab(event, 'Other')"><span class="icon is-small typcn typcn-social-github"></span>Other</a></li>-->
   </ul>
 </div>
+
 <div class="block">
 	
 <!-- Tab content -->
