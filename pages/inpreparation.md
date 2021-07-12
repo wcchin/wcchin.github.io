@@ -1,8 +1,10 @@
 ---
 title: Work in progress
+category: inpreparation
 ---
 
-* The spatial scaling patterns of point events distribution (manuscript in preparation).  
+* Spatial scaling patterns of points distribution (manuscript in preparation).  
 * Horizontal and Vertical movement network in Kampung Admiralty (manuscript in preparation).  
-* Fractal skylines series (manuscript in preparation). 
-* Vertical displacement activities series (work in progress)  
+* Fractal skylines and verticality (manuscript in preparation). 
+* Human vertical displacement activities analysis (work in progress)  
+* Extraction of vertical displacement activities (submitted)
