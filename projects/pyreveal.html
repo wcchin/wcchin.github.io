@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pyreveal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/projects/fonts.css">
+    <link rel="stylesheet" href="/projects/theme.css">
+    <link rel="stylesheet" href="/projects/pygments.css">
+    
+    
+  </head>
+
+  <body class="node-pyreveal node">
+
+    <header class="masthead">
+      <h1><a href="/projects/index.html">Chin's Open Projects</a></h1>
+      
+        <p class="tagline">A list of my projects and simple descriptions</p>
+      
+      
+      <nav class="menu">
+        <input id="menu-check" type="checkbox"/>
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+<li><a href="/">Home</a></li>
+<li><strong>algorithm</strong><ul>
+<li><a href="/projects/gpras.html">GPRas</a></li>
+<li><a href="/projects/fbpr.html">FBPR</a></li>
+<li><a href="/projects/tapitas.html">TaPiTaS</a></li>
+<li><a href="/projects/heta.html">HETA</a></li>
+</ul>
+</li>
+<li><strong>web related</strong><ul>
+<li><a href="/projects/pyreveal.html">pyreveal</a></li>
+<li><a href="/projects/carlae.html">Carlae</a></li>
+</ul>
+</li>
+<li><strong>map making</strong><ul>
+<li><a href="/projects/colouringmap.html">colouringmap</a></li>
+<li><a href="/projects/vmapper.html">vmapper</a></li>
+<li><a href="/projects/tgod.html">tgod</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+        <h1>pyreveal</h1>
+        
+          <p class="subtitle">a python package for converting markdown to reveal.js slides.</p>
+        
+        
+        <p align="center">
+        
+        pyreveal | 
+        
+        
+        <a href="https://github.com/wcchin/pyreveal"> <i>Repository</i> </a> | 
+        
+        
+        <a href="not-available-yet"> <i>Pypi page</i> </a> |
+        
+        
+        
+        </p>
+        
+        <hr>
+      </header>
+      <h2>a demo</h2>
+<p><a href="https://vimeo.com/226295024"><img alt="pyreveal demo video" src="http://wcchin.github.io/images/pyrev_demo_vimeo.png" /></a></p>
+<h2>After some time</h2>
+<p>About two years ago, I wrote pyreveal to automate the conversion from MD to slides in html powered with reveal.js (with my own flavor of syntax). After that, I was busying on my researches and dissertation writing etc., thus abandoned this project for a while. </p>
+<p>During the two years, I tried some other ways to generate slides. For my formal presentations (my defense and interviews) I used Google Slides, because it is more stable and easy to change (drag and drop etc). For some smaller discussion, I tried Marp (which is a great project). There are quite a lot of alternative out there. I love Marp and even thinking on writing my own theme to use with it. But then I realize that they stop the development and maintenances of Marp desktop app. They are moving forward to newer ecosystem, and the desktop app is part of the future product, i.e. currently no available. Their documentation on using the alternative cloud version is not that complete, I can't find an easy way to do it (like read the instruction and done by 10 mins), so I give up on them for now (and keep the discontinued Marp desktop app for some quick use situation). </p>
+<p>GitPitch is another promising and <strong>seems like</strong> a very good piece of work. The cloud version works as simple as forking the example. But there is some confusion in the documentation. I am trying to use their so called "<strong>GitPitch Desktop Free Edition</strong>" that is listed under the "<strong>Free - The basic plan for everyone on GitHub, GitLab, and Bitbucket - $ 0</strong>. But I wasted 1 hour to read the doc and install docker blablabla.... and to find the <em>GitPitch Desktop Access Management</em> for to get the approval for downloading the docker image. After wasted 1 hour on it, I gave up on them. <strong>ALL desktop application leads to the subscribe on non-free plan</strong>. Well, I actually don't like so much on the docker way to start the desktop app also....</p>
+<p>So, without other quick way to generate slides from MD for now, I back to my old project. </p>
+<p>This time, I updated the reveal.js version, added some really nice plugin (menu, simple-menu, katex, verticator, pdfexport, and title-footer). The toc plugin is replaced by the menu and simple-menu. To use the simple-menu, I added a new way (syntax, i.e. ---chapter=) to name the chapter in the python script; to use the tex style equation, the katex needed to be copied to the current slide html dir; and of course fixed some small bugs. </p>
+<p>One big change I have done this time is dropped the Phantom.js and decktape.js, to keep things as simple as possible (no need to npm install any thing now). I also copied the docdata into the pyreveal package, because I don't know why pip install docdata will lead to some weird situation. This would be more intuitive and less dependencies nightmare. </p>
+<p>The current dependencies included:</p>
+<ul>
+<li>jinja2</li>
+<li>markdown</li>
+<li>watchdog</li>
+</ul>
+<h2>Why another converter?</h2>
+<p>Previously, I was(am) using jupyter to create a notebook with slides, and convert it using jupyter+nbconvert, and even wrote some codes to customize the output html file~~, and convert to pdf using <a href="https://github.com/astefanutti/decktape" target="blank">phantomjs+decktape</a> automatically~~. So, the nbconvert can do the conversion from notebook to reveal.js. </p>
+<p>But, I don't understand why they keep the cell tags, which make it a pain while customizing the themes, and the custom.css, that following the tutorials or answers from stackoverflow to customize the reveal.js (the js), the codes will not work for the nbconvert version of slides.html. </p>
+<p>Plus, the speaker notes function is still not working for jupyter+nbconvert. ~~not sure about this for now~~</p>
+<p>One more thing, if you change the contents in the notebook cell, you will need to run the nbconvert command again to generate the static html file. 
+What we need, is that the static html file can be generated automatically, and we can see the result as soon as we change the md file.</p>
+<p>Therefore, I decided to write a converter that take a simple md, and convert it to reveal.js slides using jinja2. </p>
+<h1>Getting started</h1>
+<h2>Demo</h2>
+<p>a demo is <a href="https://wcc-slides.netlify.com/2017/pyreveal/demo.slides.html#/" target="blank">here</a>. </p>
+<p>The codes that generate the demo slides is in the slide_dir directory.</p>
+<h2>Install</h2>
+<pre><code class="sh">
+git clone https://github.com/wcchin/pyreveal.git
+cd pyreveal
+pip install -e .
+
+</code></pre>
+
+<h2>Using</h2>
+<ol>
+<li>cd your_slides_dir</li>
+<li>create a file named whatever.md (with .md extension)</li>
+<li>follow the instruction in the following sections and write the slides content inside the whatever.md </li>
+<li>run the command, see the following "usage" section</li>
+<li>if the '-w' is used in the command, the slides will change according to the modification of the whatever.md file (and custom.css). </li>
+<li>done</li>
+</ol>
+<h1>Documentation</h1>
+<h2>slides configuration</h2>
+<p>pyreveal will read the first several lines of the whatever.md file and get the metadata as the configs, using the <a href="https://github.com/waylan/docdata" target="blank"><strong>docdata</strong></a> package . </p>
+<pre><code class="markdown">
+title: reveal.js The HTML Presentation Framework
+theme: black
+transition: concave
+cr_word: author - 2017
+cr_color: rgba(205,205,205,0.0)
+toc: False
+to_pdf: false
+reveal_path: reveal.js
+
+</code></pre>
+
+<p>configs:
+- title: will be put at the <code>&lt;title&gt;</code> part of the <code>&lt;head&gt;</code> of the html
+- theme: available: black (default), white, league, sky, beige, simple, serif, blood, night, moon, solarized and... (THERE ARE MORE THEME FROM MY THEME DIR)
+- transition: none(default), fade, slide, convex, concave, zoom, page
+- cr_word: CopyRight word (optional), the words that appear at the footer
+- cr_color: color for the cr_word (optional), default to 'rgba(205,205,205,0.0)'
+- toc: use the table of content plugin (not tested yet)
+- to_pdf: default to false, if true, will create a pdf version of the slides, using phantomjs. to use the to_pdf function, please check and install phantomjs following the <a href="https://github.com/astefanutti/decktape">decktape instruction</a> and <a href="http://phantomjs.org/" target="blank">phantomjs instruction</a>.
+- reveal_path: optional, default to 'reveal.js'(the same directory as the output html)</p>
+<h2>the special keyword for generating slides and some other functions</h2>
+<p>pyreveal use a list of escape keyword to generate the function for reveal.js:</p>
+<pre><code class="markdown">
+---keyword
+
+</code></pre>
+
+<p>where, the <em>keyword</em> include: right, down, data<em>, style</em>, fragment, notes</p>
+<h2>slides break</h2>
+<p>there are two types of slides break:</p>
+<pre><code class="markdown">
+---right
+
+</code></pre>
+
+<p>the following slide will appear at right, i.e. a new slide (section).</p>
+<p>OR, </p>
+<pre><code class="markdown">
+---down
+
+</code></pre>
+
+<p>the following slide will appear at bottom, i.e. a subslide. </p>
+<h2>slide background and style</h2>
+<pre><code class="markdown">
+---data*
+---style*
+
+</code></pre>
+
+<p>just same as the reveal.js, they use data-background or something similar to change the per-slide styles.
+Therefore, pyreveal will check if there is a ---data-something, then it will put the data-something into and something like the <section data-something> will be generate. </p>
+<p>The same goes for style. </p>
+<p>For more detail, check the corresponding demo.md file that generate something similar to the demo in the original reveal.js website. </p>
+<h2>fragment</h2>
+<p>for fragment, pyreveal also use something like this:</p>
+<pre><code class="markdown">
+---fragment
+this will appear after right or down is press
+---fragment_grow
+this will grow next
+
+</code></pre>
+
+<p>pyreveal will just put the tag after the '---' (with replacing the '_' with a blank space) into the <p class="{{ here }}">. So all kind of fragment styles will be supported as they should be in the reveal.js. </p>
+<p>Just some minor different, that shows in the demo file, the word "highlight" does not sit at there at first.</p>
+<h2>speaker notes</h2>
+<p>finally, the speaker notes. </p>
+<p>the speaker notes should be put at the last of each slide, after the tag.</p>
+<pre><code class="markdown">
+---notes
+this is the speaker notes
+line 2 
+line 3
+
+</code></pre>
+
+<h1>something new</h1>
+<h2>to use simple-menu</h2>
+<p>simple-menu is the links on top of the slide, check this plugin page: <a href="https://github.com/Martinomagnifico/reveal.js-simplemenu">the plugin for a simple and nice top or bottom menu bar</a>.</p>
+<p>at the very top of the md file, add:</p>
+<pre><code class="markdown">use_simplemenu: true
+menu_bottom: false 
+</code></pre>
+
+<p>or true if you want the menu at the bottom, change menu_bottom to: true</p>
+<p>if the use_simplemenu is set to false, it will force the slide to ignore the chapter name and not showing them. </p>
+<p>on each top slide, add</p>
+<pre><code class="markdown">---chapter=some fancy title
+</code></pre>
+
+<p>the "some fancy title" will be on the top of the slide now</p>
+<h2>to use menu</h2>
+<p>menu is the one that can be toggle by clicking the button at the bottom left, and it appear on the left hand side, as a slides tree. <a href="https://github.com/denehyg/reveal.js-menu">the plugin for slide-out menu for reveal.js</a>.</p>
+<p>to use this, simply add</p>
+<pre><code class="markdown">use_menu: true
+</code></pre>
+
+<p>at the top setting area. </p>
+<h2>to use katex</h2>
+<p>if there is any latex equation, remember to add</p>
+<pre><code class="markdown">use_katex: true
+</code></pre>
+
+<p>at the top setting area. <a href="https://github.com/JeremyHeleine/KaTeX-for-reveal.js">Katex for reveal.js plugin</a>. </p>
+<h2>to NOT use the footer title</h2>
+<p>I just realize in the previous version, it is force to use the footer. So if not using it, remember to set:</p>
+<pre><code class="markdown">cr_word: --
+</code></pre>
+
+<p>it is two dashes. This will be recognize as not using them, thus not showing the title as previous version will do. </p>
+<h1>Usage</h1>
+<h2>run</h2>
+<p>run this and done.</p>
+<pre><code class="sh">pyreveal -i whatever.md -w
+#or add python -m in front
+</code></pre>
+
+<p>The two arguments:
+- -i: take a markdown file that contain the slides content (i.e. what you have prepared using the guidelines). 
+- -w: watch the change (optional), and rerun the function if any changes happened, this is very useful for making the slide. press ctrl+c to exit watch. </p>
+<p>If the md file is in a sub-directory, simple use:</p>
+<pre><code class="sh">pyreveal -i subdir/whatever.md -w
+#or add python -m in front
+</code></pre>
+
+<p>This will also work. And this is handy if the reveal path is set at the upper level (e.g. "../reveal.js") for share usage. </p>
+<h2>custom.css</h2>
+<p>Same as the output of the nbconvert, the output of the pyreveal will also try to read a custom.css at the same directory of the output html file. 
+So, it is possible and easy to change something for the slides, e.g. change the fonts. </p>
+<h1>Next plan</h1>
+<p>Next thing to do should be try to read the jupyter notebook file, and convert the slides content from notebook to the reveal.js html. 
+Because I still hope that the <cell> tags should be remove, and the speaker notes should be fixed.  </p>
+<h2>addition themes</h2>
+<p>I have added some themes, using the google material design color palette. 
+They are:
+- material_colorset_dark
+- material_colorset_light</p>
+<p>The <em>colorset</em> include: amber, blue, bluegrey, brown, cyan, deeporange, deeppurple, green, grey, indigo, lightblue, lightgreen, lime, orange, pink, purple, red, teal, yellow. </p>
+<p>e.g.:
+- material_amber_dark
+- material_blue_dark
+- material_green_dark
+- material_indigo_dark
+- material_grey_light
+- material_red_light
+- material_purple_light</p>
+<p>Please try.</p>
+<h3>License</h3>
+<p>MIT License</p>
+<p>Copyright (c) 2017 Wei Chien Benny Chin, Department of Geography, National Taiwan University</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+    </article>
+
+    
+
+  </body>
+</html>
