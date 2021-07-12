@@ -151,7 +151,7 @@ My Github contributions (open project).
 	<div id="card-superspreader-data" class="card-content is-hidden">
 		<div class="content is-medium">This repository is prepared for storing the raw data, processed data, supporting files, and analysis results for the paper Identifying spatial super-spreader and spatial super susceptible locations from human movement networks.  
 	</div>
-	<footer id="card-superspreader-data" class="card-footer is-hidden"><a href="github.com/wcchin/Spatial_Spreader_Susceptible_data" class="card-footer-item">Repository</a><a href="https://doi.org/10.1038/s41598-020-75697-z" class="card-footer-item">Article page</a></footer>
+	<footer id="card-superspreader-data2" class="card-footer is-hidden"><a href="github.com/wcchin/Spatial_Spreader_Susceptible_data" class="card-footer-item">Repository</a><a href="https://doi.org/10.1038/s41598-020-75697-z" class="card-footer-item">Article page</a></footer>
 </div>
 </div>
 <!--
