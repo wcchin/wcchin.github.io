@@ -13,4 +13,5 @@ page:
 image: resources/publications/.png
 abstract: 
 tags: 20xx
+draft: true
 ---

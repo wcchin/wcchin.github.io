@@ -12,5 +12,6 @@ tags: 20xx
 image: resources/publications/.png
 refline: 
 abstract: 
+draft: true
 ---
 
