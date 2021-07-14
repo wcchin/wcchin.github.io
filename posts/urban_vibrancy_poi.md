@@ -1,0 +1,10 @@
+---
+layout: post
+title: Urban Vibrancy POI
+excerpt: a kepler.gl map for showing the poi distribution  
+tags: Project, Map
+author: Benny
+---
+
+A kepler.gl map for showing the poi distribution  
+link: [Kepler.gl map](https://wcchin.github.io/resources/urban_vibrancy/map_poi.html)
