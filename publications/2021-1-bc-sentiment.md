@@ -2,7 +2,7 @@
 layout: publication
 title: Emotional response through COVID-19 in Singapore
 excerpt: During the global pandemic of COVID-19, all affected countries have taken a series of contingent measures to thwart the spreading of the virus. Singapore is one of the countries affected by the first wave of the COVID-19 outbreak in January 2020. It entered the “Circuit Breaker” (CB) period on 7 April 2020 when most workplaces were closed and all schools moved to full day home-based learning.
-date: 2021-07-31
+date: 2021-07-15
 year: 2021
 author: Yan, Yingwei, Chin, W. C. B., Leong, C.-H., Wang, Y.-C., Feng, C.-C.
 journal: Mapping COVID-19 in Space and Time
