@@ -162,8 +162,8 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2021</strong></p></div>
 			<div class="content">
 				<p class="is-size-5"><strong>Book chapter</strong></p>
-				Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (2021, in press) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI (book): [10.1007/978-3-030-72808-3](https://doi.org/10.1007/978-3-030-72808-3).
-				Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (2021, in press) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI (book): [10.1007/978-3-030-72808-3](https://doi.org/10.1007/978-3-030-72808-3).
+				Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (2021) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI: [10.1007/978-3-030-72808-3_5](https://doi.org/10.1007/978-3-030-72808-3_5).
+				Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (2021) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI: [10.1007/978-3-030-72808-3_6](https://doi.org/10.1007/978-3-030-72808-3_6).
 			<hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
 			</div>
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2020</strong></p></div>
