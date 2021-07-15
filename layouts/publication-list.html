@@ -35,6 +35,11 @@
                 <p class="subtitle is-4"><%= publication.author %></p>
               <% } %>
             </div> 
+            <div class="tags has-addons level-item">
+              <% if(publication.date) { %>
+                <span class="tag is-rounded is-info"><%= publication.date %> </span>
+              <% } %>
+            </div> 
           </div>
         </div>
         <div class="content article-body">
