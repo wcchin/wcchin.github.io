@@ -8,6 +8,7 @@ author: Chin, W. C. B.
 journal: National Taiwan University Dissertation
 cat: Ph.D. Dissertation
 doi: 10.6342/NTU201802404
+researchgate: 
 tags: 2018, Point pattern, Thesis, Scaling
 image: resources/publications/phd_prqtree_dissertation.png
 refline: Chin, W. C. B. (2018) The scaling properties of point clustering phenomena. Department of Geography, National Taiwan University. Dean's Award (Ph.D.), College of Science, National Taiwan University. 

@@ -8,6 +8,7 @@ author: Wen, T. H., & Chin, W. C. B.
 journal: International Journal of Environmental Research and Public Health
 cat: Journal Article
 doi: 10.3390/ijerph120404170
+researchgate: www.researchgate.net/publication/275046539_Incorporation_of_Spatial_Interactions_in_Location_Networks_to_Identify_Critical_Geo-Referenced_Routes_for_Assessing_Disease_Control_Measures_on_a_Large-Scale_Campus
 versionissue: 12(4)
 page: 4170-4184
 image: resources/publications/article_campusnet_ijerph.png

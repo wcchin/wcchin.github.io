@@ -8,6 +8,7 @@ author: Chin, W. C. B., & Huang C. Y.
 journal: medRxiv
 cat: arXiv
 doi: 10.1101/2020.04.20.20072736
+researchgate: 
 versionissue: None
 page: None
 image: resources/publications/medRxiv_epirank.jpg

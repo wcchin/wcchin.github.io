@@ -8,6 +8,7 @@ author: Wen, T. H., Tsai, C. T., & Chin, W. C. B.
 journal: Applied Geography
 cat: Journal Article
 doi: 10.1016/j.apgeog.2016.09.020
+researchgate: www.researchgate.net/publication/308601722_Evaluating_the_role_of_disease_importation_in_the_spatiotemporal_transmission_of_indigenous_dengue_outbreak
 versionissue: 76
 page: 137-146
 image: resources/publications/article_dengue_odpair_japg.png

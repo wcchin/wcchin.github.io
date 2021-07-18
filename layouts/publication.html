@@ -51,8 +51,12 @@
       <%= data.body %>
       <hr>
       <p>
-      Read article here: <a href="https://doi.org/<%= data.doi %>"><%= data.title %>, <i><%= data.journal %></a></i>. 
-      Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>Gmail </a>) if you need my full paper.  
+      Read article here: 
+				<ul>
+					<li>Official website: <a href="https://doi.org/<%= data.doi %>"><%= data.title %>, <i><%= data.journal %></a></i>, </li> 
+					<% if(data.researchgate) { %><li>ResearchGate: <a href="https://<%= data.researchgate %>">Abstract and full text (on request or downloadable directly)</a>,</li> <% } %>
+					<li>Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>by Gmail </a>). </li>
+				</ul>
       </p>
     </div>
   </div>

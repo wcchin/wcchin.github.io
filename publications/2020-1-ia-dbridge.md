@@ -8,6 +8,7 @@ author: Huang C. Y., Chin, W. C. B.
 journal: IEEE Access
 cat: Journal Article
 doi: 10.1109/ACCESS.2020.2986017
+researchgate: www.researchgate.net/publication/340466579_Distinguishing_Arc_Types_to_Understand_Complex_Network_Strength_Structures_and_Hierarchical_Connectivity_Patterns
 versionissue: 8
 page: 71021-71040
 image: resources/publications/article_hata_ieeeaccess.png

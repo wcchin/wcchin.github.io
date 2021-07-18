@@ -8,6 +8,7 @@ author:
 journal: 
 cat: Book Chapter
 doi: 
+researchgate: 
 tags: 20xx
 image: resources/publications/.png
 refline: 

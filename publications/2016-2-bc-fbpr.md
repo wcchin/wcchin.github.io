@@ -8,6 +8,7 @@ author: Wen, T. H., Chin, W. C. B., & Lai, P. C.
 journal: Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18
 cat: Book Chapter
 doi: 10.1007/978-3-319-46164-9_10
+researchgate: www.researchgate.net/publication/312340759_Link_Structure_Analysis_of_Urban_Street_Networks_for_Delineating_Traffic_Impact_Areas
 tags: 2016, FBPR, Book Chapter, Taiwan, Traffic
 image: resources/publications/bookchap_fbpr_compsocsys.png
 refline: Wen, T. H., Chin, W. C. B., & Lai, P. C. (2016). Link structure analysis of urban street networks for delineating traffic impact areas. In M. Nemiche, M. Essaaidi (eds.), *Advances in Complex Societal, Environmental and Engineered Systems, Nonlinear Systems and Complexity 18*. Part 2: 203-220. Springer: Switzerland. 

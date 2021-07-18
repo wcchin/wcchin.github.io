@@ -8,6 +8,7 @@ author: Chin, W. C. B., Wen, T. H., Sabel, C. E., & Wang, I. H.
 journal: Scientific Reports
 cat: Journal Article
 doi: 10.1038/s41598-017-12852-z
+researchgate: www.researchgate.net/publication/320189951_A_geo-computational_algorithm_for_exploring_the_structure_of_diffusion_progression_in_time_and_space
 versionissue: 7
 page: 12565
 image: resources/publications/article_tapitas_srep.png

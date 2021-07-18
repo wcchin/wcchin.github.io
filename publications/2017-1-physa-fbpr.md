@@ -8,6 +8,7 @@ author: Wen, T. H., Chin, W. C. B., & Lai, P. C.
 journal: Physica A: Statistical Mechanics and its Applications
 cat: Journal Article
 doi: 10.1016/j.physa.2017.01.035
+researchgate: www.researchgate.net/publication/312147907_Understanding_the_topological_characteristics_and_flow_complexity_of_urban_traffic_congestion
 versionissue: 473
 page: 166-177
 image: resources/publications/article_fbpr_physicaa.png

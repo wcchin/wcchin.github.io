@@ -8,6 +8,7 @@ author: Manivannan, A., Chin, W. C. B., Barrat, A., and Bouffanais, R.
 journal: Sensors
 cat: Journal Article
 doi: 10.3390/s20236786
+researchgate: www.researchgate.net/publication/346425653_On_the_Challenges_and_Potential_of_Using_Barometric_Sensors_to_Track_Human_Activity
 versionissue: 20(23)
 page: 6786
 image: resources/publications/article_barometer_challenges_mdpisensors.png

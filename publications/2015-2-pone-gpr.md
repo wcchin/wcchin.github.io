@@ -8,6 +8,7 @@ author: Chin, W. C. B., & Wen, T. H.
 journal: PLOS ONE
 cat: Journal Article
 doi: 10.1371/journal.pone.0139509
+researchgate: www.researchgate.net/publication/282607430_Geographically_Modified_PageRank_Algorithms_Identifying_the_Spatial_Concentration_of_Human_Movement_in_a_Geospatial_Network
 versionissue: 10(10)
 page: e0139509
 image: resources/publications/article_gpr_plosone.png

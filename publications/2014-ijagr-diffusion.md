@@ -8,6 +8,7 @@ author: Lee, J., Lay, J. G., Chin, W. C. B., Chi, Y. L., & Hsueh, Y. H.
 journal: International Journal of Applied Geospatial Research
 cat: Journal Article
 doi: 10.4018/ijagr.2014010101
+researchgate: www.researchgate.net/publication/270640226_An_Experiment_to_Model_Spatial_Diffusion_Process_with_Nearest_Neighbor_Analysis_and_Regression_Estimation
 versionissue: 5(1)
 page: 1-15
 image: resources/publications/article_diffusionexp_ijagr.png

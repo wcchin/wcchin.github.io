@@ -8,6 +8,7 @@ author:
 journal: 
 cat: Journal Article
 doi: 
+researchgate: 
 versionissue: 
 page: 
 image: resources/publications/.png

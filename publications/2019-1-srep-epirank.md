@@ -8,6 +8,7 @@ author: Huang C. Y., Chin, W. C. B., Wen, T. H., Fu, Y. H., & Tsai, Y. S.
 journal: Scientific Reports
 cat: Journal Article
 doi: 10.1038/s41598-019-41719-8
+researchgate: www.researchgate.net/publication/332131602_EpiRank_Modeling_Bidirectional_Disease_Spread_in_Asymmetric_Commuting_Networks
 versionissue: 9
 page: 5415
 image: resources/publications/article_epirank_srep.png

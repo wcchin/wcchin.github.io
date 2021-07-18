@@ -8,6 +8,7 @@ author: Chin, W. C. B., & Bouffanais, R.
 journal: Scientific Reports
 cat: Journal Article
 doi: 10.1038/s41598-020-75697-z
+researchgate: www.researchgate.net/publication/346481200_Spatial_super-spreaders_and_super-susceptibles_in_human_movement_networks
 versionissue: 10
 page: 18642
 image: resources/publications/article_spatial_superspreaders_srep.png

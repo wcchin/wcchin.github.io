@@ -8,6 +8,7 @@ author: 林民浩，郭年真，陳威全，溫在弘
 journal: 台灣衛誌
 cat: Journal Article
 doi: 10.6288/TJPH201635104086
+researchgate: www.researchgate.net/publication/306214886_Profiling_the_patient_flow_for_seeking_healthcare_in_Taiwan_Using_gravity_modeling_to_investigate_the_influences_of_travel_distance_and_healthcare_resources
 versionissue: 35(2)
 page: 136-151
 image: resources/publications/article_patientflow_tjph.png

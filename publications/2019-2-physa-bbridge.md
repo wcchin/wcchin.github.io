@@ -8,6 +8,7 @@ author: Huang C. Y., Chin, W. C. B., Fu, Y. H., & Tsai, Y. S.
 journal: Physica A: Statistical Mechanics and its Applications
 cat: Journal Article
 doi: 10.1016/j.physa.2019.04.263
+researchgate: www.researchgate.net/publication/332957469_Beyond_bond_links_in_complex_networksLocal_bridges_global_bridges_and_silk_links
 versionissue: 536
 page: 121027
 image: resources/publications/article_heta_physicaa.png
