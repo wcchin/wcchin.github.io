@@ -32,7 +32,7 @@ My Github contributions (open project).
 			<div class="content is-medium">a python package that provide functions of algorithms for measuring concentration distribution in a spatial network.
 				<span class="tag is-dark">MIT license</span></div>
 		</div>
-		<footer id="card-gpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/geographical-pagerank-algorithms.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/gpras" class="card-footer-item">Repository</a></footer>
+		<footer id="card-gpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/gpras.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/gpras" class="card-footer-item">Repository</a></footer>
 	</div>
   <div class="card">
 		<header class="card-header">
@@ -43,7 +43,7 @@ My Github contributions (open project).
 			<div class="content is-medium">a python package that run an algorithm that calibrate the weight and PR score to meet the flow. 
 				<span class="tag is-dark">MIT license</span></div>
 		</div>
-		<footer id="card-fbpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/flow-based-pagerank.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/fbpr" class="card-footer-item">Repository</a></footer>
+		<footer id="card-fbpr2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/fbpr.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/fbpr" class="card-footer-item">Repository</a></footer>
 	</div>
   <div class="card">
 		<header class="card-header">
@@ -54,7 +54,7 @@ My Github contributions (open project).
 			<div class="content is-medium">a data exploration and visualization algorithm for understanding diffusion process.
 				<span class="tag is-dark">MIT license</span></div>
 		</div>
-		<footer id="card-tapitas2" class="card-footer is-hidden"><a href="https://bitbucket.org/wcchin/tapitas" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/tapitas" class="card-footer-item">Repository</a></footer>
+		<footer id="card-tapitas2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/tapitas.html" class="card-footer-item">Project page</a><a href="https://bitbucket.org/wcchin/tapitas" class="card-footer-item">Repository</a></footer>
 	</div>
   <div class="card">
 		<header class="card-header">
@@ -124,7 +124,7 @@ My Github contributions (open project).
 			<div class="content is-medium">a simple python library for creating SVG map in python.  
 				<span class="tag is-dark">MIT license</span></div>
 		</div>
-		<footer id="card-vmapper2" class="card-footer is-hidden"><a href="https://wcchin.github.io/vmapper.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/vmapper" class="card-footer-item">Repository</a></footer>
+		<footer id="card-vmapper2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/vmapper.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/vmapper" class="card-footer-item">Repository</a></footer>
 	</div>
   <div class="card">
 		<header class="card-header">
@@ -135,7 +135,7 @@ My Github contributions (open project).
 			<div class="content is-medium">a convenient mapping tool for generating categories and colors for making choropleth map from geopandas gdf.  
 				<span class="tag is-dark">MIT license</span></div>
 		</div>
-		<footer id="card-colouringmap2" class="card-footer is-hidden"><a href="https://wcchin.github.io/colouringmap.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/colouringmap" class="card-footer-item">Repository</a></footer>
+		<footer id="card-colouringmap2" class="card-footer is-hidden"><a href="https://wcchin.github.io/projects/colouringmap.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/colouringmap" class="card-footer-item">Repository</a></footer>
 	</div>
 </div>
 
