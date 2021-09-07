@@ -7,8 +7,8 @@ title: About
 
 
 <div class="level">
-	<p class="level-item has-text-centered"><a href="www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i>ResearchGate </a></p>
-	<p class="level-item has-text-centered"><a href="www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span> Linkedin </a></p>
+	<p class="level-item has-text-centered"><a href="https://www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i>ResearchGate </a></p>
+	<p class="level-item has-text-centered"><a href="https://www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span> Linkedin </a></p>
 	<p class="level-item has-text-centered"><a href="https://github.com/wcchin/" target="_blank"><span class="typcn typcn-social-github"></span> Github </a></p>
 	<p class="level-item has-text-centered"><a href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i>ORCID </a></p>
 	<p class="level-item has-text-centered"><a href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i>Google Scholar </a></p>
