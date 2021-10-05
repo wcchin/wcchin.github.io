@@ -275,9 +275,10 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 	</div>
 	<div class="card">
 		<header class="card-header">
-			<p class="card-header-title is-size-3">Manuscript in preparation/Ongoing study</p>
+			<p class="card-header-title is-size-3">Manuscripts in preparation</p>
 		</header>
 		<div class="card-content">
+			<div class="level"><p class="level-item has-text-centered is-size-6">Updated: 2021/10</p></div>
 			<div class="content">
 				- Human movement in Kampung Admiralty, Singapore (manuscript editing)
 				- Fractal skylines and verticality (manuscript editing)
