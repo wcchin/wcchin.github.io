@@ -252,19 +252,6 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		</div>
 	</div>
 	
-	<div class="card">
-		<header class="card-header">
-			<p class="card-header-title is-size-3">Manuscript in preparation/Ongoing study</p>
-		</header>
-		<div class="card-content">
-			<div class="content">
-				- Human movement in Kampung Admiralty, Singapore (writing manuscript)
-				- Spatial scaling patterns of points distribution (writing manuscript)
-				- Fractal skylines series (in progress)
-				- Vertical displacement activities series (1 submitted, 1 in progress)
-			</div>
-		</div>
-	</div>
 </div>
 
 
@@ -284,6 +271,20 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		</header>
 		<div class="card-content">
 			<div class="content">
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-3">Manuscript in preparation/Ongoing study</p>
+		</header>
+		<div class="card-content">
+			<div class="content">
+				- Human movement in Kampung Admiralty, Singapore (writing manuscript)
+				- Fractal skylines and verticality (writing manuscript)
+				- Vertical displacement activities series (1 submitted, 1 in progress)
+				- POI and social sensing project (2 in progress)
+				- Spatial scaling patterns of points distribution (postpone to 2022)
 			</div>
 		</div>
 	</div>
