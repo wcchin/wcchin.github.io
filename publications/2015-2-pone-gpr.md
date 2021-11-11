@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Geographically modified PageRank algorithms: Identifying the spatial concentration of human movement in a geospatial network
+title: Geographically modified PageRank algorithms： Identifying the spatial concentration of human movement in a geospatial network
 excerpt: A network approach, which simplifies geographic settings as a form of nodes and links, emphasizes the connectivity and relationships of spatial features. Topological networks of spatial features are used to explore geographical connectivity and structures. The PageRank algorithm, a network metric, is often used to help identify important locations where people or automobiles concentrate in the geographical literature. However, geographic considerations, including proximity and location attractiveness, are ignored in most network metrics.
 date: 2015-10-05
 year: 2015
