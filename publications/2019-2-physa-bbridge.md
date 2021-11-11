@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Beyond bond links in complex networks: Local bridges, global bridges and silk links
+title: Beyond bond links in complex networks： Local bridges, global bridges and silk links
 excerpt: Many network researchers use intuitive or basic definitions when discussing the importance of strong and weak links and their roles. Others use an approach best described as “if not strong, then weak” to determine the strengths and weaknesses of individual links, thus deemphasizing hierarchical network structures that allow links to express different strength levels.
 date: 2019-05-08
 year: 2019
