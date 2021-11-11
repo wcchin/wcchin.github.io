@@ -7,6 +7,7 @@ year: 2021
 author: Wei Chien Benny Chin
 journal: SSRN
 doi: 
+versionissue: Working paper
 cat: Preprint
 link: papers.ssrn.com/sol3/papers.cfm?abstract_id=3961269
 page: 3961269
