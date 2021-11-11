@@ -30,7 +30,9 @@
       </p>
     </div>
     <div class="content article-body">
-      <p align="right"><a href="https://doi.org/<%= data.doi %>"><img src="https://zenodo.org/badge/DOI/<%= data.doi %>.svg"></a></p>
+      <% if(data.doi) { %>
+        <p align="right"><a href="https://doi.org/<%= data.doi %>"><img src="https://zenodo.org/badge/DOI/<%= data.doi %>.svg"></a></p>
+      <% } %>
       <% if(data.image) { %>
         <p align="center"><img width="750" src="<%= data.image %>"></p>
       <% } %>
@@ -53,8 +55,9 @@
       <p>
       Read article here: 
 				<ul>
-					<li>Official website: <a href="https://doi.org/<%= data.doi %>"><%= data.title %>, <i><%= data.journal %></a></i>, </li> 
-					<% if(data.researchgate) { %><li>ResearchGate: <a href="https://<%= data.researchgate %>">Abstract and full text (on request or downloadable directly)</a>,</li> <% } %>
+                    <% if(data.doi) { %><li>Official website: <a href="https://doi.org/<%= data.doi %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
+                    <% if(data.link) { %><li>Link: <a href="https://<%= data.link %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
+					<% if(data.researchgate) { %><li>ResearchGate: <a href="https://<%= data.researchgate %>" target="_blank">Abstract and full text (on request or downloadable directly)</a>,</li> <% } %>
 					<li>Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>by Gmail </a>). </li>
 				</ul>
       </p>

@@ -68,6 +68,13 @@
           </span>
         </p>
         <% } %>
+        <% if(publication.link) { %>
+        <p class="card-footer-item">
+          <span>
+            <a href="https://<%= publication.link %>" target="blank">External link</a>
+          </span>
+        </p>
+        <% } %>
       </footer>
     </div>
     <% } %>
