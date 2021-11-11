@@ -9,11 +9,11 @@ title: About
 <div class="level">
 	<p class="level-item has-text-centered"><a href="https://www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i>ResearchGate </a></p>
 	<p class="level-item has-text-centered"><a href="https://www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span> Linkedin </a></p>
-	<p class="level-item has-text-centered"><a href="https://github.com/wcchin/" target="_blank"><span class="typcn typcn-social-github"></span> Github </a></p>
+	<p class="level-item has-text-centered"><a href="https://github.com/wcchin/" target="_blank"><i class="fab fa-github-alt"></i> Github </a></p>
 	<p class="level-item has-text-centered"><a href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i>ORCID </a></p>
 	<p class="level-item has-text-centered"><a href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i>Google Scholar </a></p>
     <p class="level-item has-text-centered"><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4909051" target="_blank"><i class="ai ai-ssrn ai-2x"></i> </a></p>
-	<p class="level-item has-text-centered"><a href="https://medium.com/@wcchin.88" target="_blank"><span class="typcn typcn-pen"></span>Medium </a></p>
+	<p class="level-item has-text-centered"><a href="https://medium.com/@wcchin.88" target="_blank"><i class="fab fa-medium-m"></i>Medium </a></p>
 	<!--<p class="level-item has-text-centered"><span id="badgeCont357"></span></p>-->
 </div>
 
@@ -39,5 +39,5 @@ Therefore, I made this website to gather some ideas come into my head, to keep s
 <img width="150" src="resources/images/benny.jpg" alt="me at Wuling Farm, Taichung, Taiwan.">
 
 **Wei Chien Benny, CHIN**  
-<span class="typcn typcn-mail"></span>: <a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span> Gmail </a> | <a href="mailto:wcchin88@yahoo.com"><span class="typcn typcn-social-at-circular"></span> Yahoo </a> | <a href="mailto:benny-chin@sutd.edu.sg"><span class="typcn typcn-social-at-circular"></span> SUTD email </a> . 
+<i class="fas fa-envelope"></i>: <a href="mailto:wcchin.88@gmail.com"><i class="fas fa-at"></i> Gmail </a> | <a href="mailto:wcchin88@yahoo.com"><i class="fas fa-at"></i> Yahoo </a> | <a href="mailto:benny-chin@sutd.edu.sg"><i class="fas fa-at"></i> SUTD email </a> . 
 </div>
