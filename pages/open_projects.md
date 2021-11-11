@@ -6,7 +6,7 @@ title: Open Projects
 For more details: **[projects](/projects)**  
 
 My Github contributions (open project). 
-<a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.moshimo.works/images/wcchin.png" > </a>
+<a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.appspot.com/images/wcchin.png" > </a>
 
 
 <div class="tabs is-toggle is-toggle-rounded is-centered">
