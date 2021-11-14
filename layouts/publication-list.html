@@ -57,14 +57,14 @@
         <% if(publication.researchgate) { %>
         <p class="card-footer-item">
           <span>
-            <a href="https://<%= publication.researchgate %>" target="blank">Read on ResearchGate</a>
+            <a href="https://<%= publication.researchgate %>" target="blank">Read on ResearchGate <i class="ai ai-researchgate ai-1x"></i></a>
           </span>
         </p>
         <% } %>
         <% if(publication.doi) { %>
         <p class="card-footer-item">
           <span>
-            DOI: <a href="https://doi.org/<%= publication.doi %>" target="blank"><%= publication.doi %></a>
+            <a href="https://doi.org/<%= publication.doi %>" target="blank"><i class="ai ai-doi ai-1x"></i><%= publication.doi %></a>
           </span>
         </p>
         <% } %>
