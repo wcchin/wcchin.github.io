@@ -6,7 +6,7 @@ date: 2021-11-11
 year: 2021
 author: Chin, W. C. B.
 journal: SSRN
-doi: 
+doi: 10.2139/ssrn.3961269
 versionissue: Working paper
 cat: Preprint
 link: papers.ssrn.com/sol3/papers.cfm?abstract_id=3961269
