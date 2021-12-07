@@ -1,7 +1,7 @@
 function searching(evt) {
-  dd = document.getElementById("searchDropdown");
-  searchTerm = document.getElementById("searchTerm").value;
-  resSpace = document.getElementById("searchResults");
+  var dd = document.getElementById("searchDropdown");
+  var searchTerm = document.getElementById("searchTerm").value;
+  var resSpace = document.getElementById("searchResults");
   if (searchTerm.length>0) {
 	if (!(dd.className.includes("is-active"))) {
 	  dd.className = dd.className += " is-active";
@@ -21,9 +21,15 @@ document.getElementById("searchTerm").addEventListener("blur", function() {
     document.getElementById("searchDropdown").className = document.getElementById("searchDropdown").className.replace(" is-active", "");
   }
   //document.getElementById("searchResults").innerHTML = "";
-  }, 5000);
+  }, 1000);
 });
 
+document.getElementById("searchTerm").addEventListener("focus", function() {
+	var dd = document.getElementById("searchDropdown");
+	if (!(dd.className.includes("is-active"))) {
+	  dd.className = dd.className += " is-active";
+    }
+});
 
 summaryInclude=60;
 var fuseOptions = {
