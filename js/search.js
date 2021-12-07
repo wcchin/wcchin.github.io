@@ -15,9 +15,13 @@ function searching(evt) {
 }
 
 document.getElementById("searchTerm").addEventListener("blur", function() {
-  document.getElementById("searchTerm").value = "";
-  document.getElementById("searchDropdown").className = document.getElementById("searchDropdown").className.replace(" is-active", "");
-  document.getElementById("searchResults").innerHTML = "";
+  setTimeout(function () {
+  //document.getElementById("searchTerm").value = "";
+  if (document.getElementById("searchDropdown").className.includes("is-active")) {
+    document.getElementById("searchDropdown").className = document.getElementById("searchDropdown").className.replace(" is-active", "");
+  }
+  //document.getElementById("searchResults").innerHTML = "";
+  }, 5000);
 });
 
 
