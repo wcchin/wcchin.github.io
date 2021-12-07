@@ -48,7 +48,8 @@ var config = {
       name: 'pages',
       layout: { list: 'page-list', single: 'page' },
     },
-  ],
+  ], 
+  onroute: scrollTop
 };
 
 // Initialize CMS.js

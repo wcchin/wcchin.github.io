@@ -40,3 +40,7 @@ function expandCard(evt, cardName) {
 		spn.className = spn.className.replace("typcn typcn-arrow-sorted-down", "typcn typcn-media-play-reverse");
 	}
 }
+
+var scrollTop = function() {
+	window.scrollTo(0, 0);
+};
