@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Daily life pattern of a city: Delineating activity space and time using social media data
+title: "Daily life pattern of a city: Delineating activity space and time using social media data"
 excerpt: People live in cities. However, different groups of people are active at varying times at distinct places in their daily lives, forming different activity spaces and times within a city. Previous studies focused on the distribution of the activity or the partition of regions based on similarity or strength of the interaction, but not the collective activity spaces and times of the people who live within the area.
 date: 2021-11-11
 year: 2021
