@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: EpiRank： Modeling bidirectional disease spread in asymmetric commuting networks
+title: EpiRank: Modeling bidirectional disease spread in asymmetric commuting networks
 excerpt: Commuting network flows are generally asymmetrical, with commuting behaviors bi-directionally balanced between home and work locations, and with weekday commutes providing many opportunities for the spread of infectious diseases via direct and indirect physical contact. The authors use a Markov chain model and PageRank-like algorithm to construct a novel algorithm called EpiRank to measure infection risk in a spatially confined commuting network on Taiwan island.
 date: 2019-04-01
 year: 2019
