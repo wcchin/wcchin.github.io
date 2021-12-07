@@ -58,7 +58,7 @@ function populateResults(result, searchQuery) {
 		var item = result[i].item;
 		
 		var contents = item.contents;
-		console.log(item);
+		//console.log(item);
 		var snippet = "";
 		var snippetHighlights = [];
 		var tags = [];

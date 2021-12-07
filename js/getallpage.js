@@ -55,5 +55,5 @@ function removeTags(str) {
     // Regular expression to identify HTML tags in 
     // the input string. Replacing the identified 
     // HTML tag with a null string.
-    return str.replace( /(<([^>]+)>)/ig, '').replace('\n','').replace('\t','').trim();
+    return str.replace( /(<([^>]+)>)/ig, '').replaceAll('\n','').replaceAll('\t','').trim();
 }
