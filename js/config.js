@@ -49,7 +49,7 @@ var config = {
       layout: { list: 'page-list', single: 'page' },
     },
   ], 
-  onroute: scrollTop, 
+  onroute: onRouteCheck, 
   markdownEngine: remarkable.render,
   dateFormat: function dateFormat(date) {
       return [date.getFullYear(), date.getMonth() + 1, date.getDate()].join('/');

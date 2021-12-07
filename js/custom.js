@@ -46,5 +46,21 @@ var scrollTop = function() {
 	  top: 0,
 	  left: 0,
 	  behavior: 'smooth'
-	});
-};
+	})
+}
+
+var closeMenuCheck = function() {
+	var ele1 = document.getElementById("navbarMenu");
+	var ele2 = document.getElementById("navbar-burger-lines");
+	if (ele1.className.includes("is-active")) {
+		ele1.className = ele1.className.replace(" is-active", ""); 
+	}
+	if (ele2.className.includes("is-active")) {
+		ele2.className = ele2.className.replace(" is-active", ""); 
+	}
+}
+
+var onRouteCheck = function() {
+	scrollTop();
+	closeMenuCheck();
+}
