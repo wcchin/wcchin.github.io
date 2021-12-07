@@ -468,7 +468,9 @@ var CMS = (function () {
           var attributes = {};
           yaml.split(/\n/g).forEach(function (attributeStr) {
             var attribute = attributeStr.split(':');
-            attribute[1] && (attributes[attribute[0].trim()] = attribute[1].trim());
+            var key = attribute.shift();
+            var val = attribute.join(':').trim();
+            val && (attributes[key.trim()] = val);
           });
           extend(this, attributes, null);
         }
