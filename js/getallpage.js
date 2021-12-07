@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
   var allPageList = preparePageList();
-  console.log(allPageList);
+  //console.log(allPageList);
 })
 
 function preparePageList() {
