@@ -13,54 +13,53 @@ function openTab(evt, tabName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" is-active", "");
   }
-	//window.alert(tablinks[0].className)
+    //window.alert(tablinks[0].className)
 
-	//window.alert(evt.currentTarget.parentNode.className)
+    //window.alert(evt.currentTarget.parentNode.className)
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.parentNode.className += " is-active";
 }
 
 function expandCard(evt, cardName) {
-	var i, cardcontent, spn;
-	
-	cardcontent = document.getElementById(cardName)
-	cardcontent2 = document.getElementById(cardName+"2")
-	spn = evt.currentTarget.childNodes[0]
-	//window.alert(cardcontent.length)
-	
-	
-	if (cardcontent.className.includes("is-hidden")) {
+  var i, cardcontent, spn;
+    
+  cardcontent = document.getElementById(cardName)
+  cardcontent2 = document.getElementById(cardName+"2")
+  spn = evt.currentTarget.childNodes[0]
+  //window.alert(cardcontent.length)
+    
+  if (cardcontent.className.includes("is-hidden")) {
     cardcontent.className = cardcontent.className.replace(" is-hidden", "");
     cardcontent2.className = cardcontent2.className.replace(" is-hidden", "");
-		spn.className = spn.className.replace("typcn typcn-media-play-reverse", "typcn typcn-arrow-sorted-down");
+    spn.className = spn.className.replace("typcn typcn-media-play-reverse", "typcn typcn-arrow-sorted-down");
   } else {
-		cardcontent.className = cardcontent.className += " is-hidden";
-		cardcontent2.className = cardcontent2.className += " is-hidden";
-		spn.className = spn.className.replace("typcn typcn-arrow-sorted-down", "typcn typcn-media-play-reverse");
-	}
+    cardcontent.className = cardcontent.className += " is-hidden";
+    cardcontent2.className = cardcontent2.className += " is-hidden";
+    spn.className = spn.className.replace("typcn typcn-arrow-sorted-down", "typcn typcn-media-play-reverse");
+  }
 }
 
 var scrollTop = function() {
-	window.scrollTo({
-	  top: 0,
-	  left: 0,
-	  behavior: 'smooth'
-	})
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
 }
 
 var closeMenuCheck = function() {
-	var ele1 = document.getElementById("navbarMenu");
-	var ele2 = document.getElementById("navbar-burger-lines");
-	if (ele1.className.includes("is-active")) {
-		ele1.className = ele1.className.replace(" is-active", ""); 
-	}
-	if (ele2.className.includes("is-active")) {
-		ele2.className = ele2.className.replace(" is-active", ""); 
-	}
+  var ele1 = document.getElementById("navbarMenu");
+  var ele2 = document.getElementById("navbar-burger-lines");
+  if (ele1.className.includes("is-active")) {
+    ele1.className = ele1.className.replace(" is-active", ""); 
+  }
+  if (ele2.className.includes("is-active")) {
+    ele2.className = ele2.className.replace(" is-active", ""); 
+  }
 }
 
 var onRouteCheck = function() {
-	scrollTop();
-	closeMenuCheck();
+  scrollTop();
+  closeMenuCheck();
 }

@@ -1,16 +1,15 @@
 function searching(evt) {
   var dd = document.getElementById("searchDropdown");
-  var searchTerm = document.getElementById("searchTerm").value;
-  var resSpace = document.getElementById("searchResults");
   if (searchTerm.length>0) {
-	if (!(dd.className.includes("is-active"))) {
-	  dd.className = dd.className += " is-active";
+    var searchTerm = document.getElementById("searchTerm").value;
+    var resSpace = document.getElementById("searchResults");
+    if (!(dd.className.includes("is-active"))) {
+      dd.className = dd.className += " is-active";
     }
-	var res = executeSearch(searchTerm);
-	var resStr = populateResults(res, searchTerm);
-	resSpace.innerHTML = resStr;
+    //var resStr = executeSearch(searchTerm);
+    resSpace.innerHTML = executeSearch(searchTerm);
   } else {
-	dd.className = dd.className.replace(" is-active", "");
+    dd.className = dd.className.replace(" is-active", "");
   }
 }
 
@@ -25,10 +24,10 @@ document.getElementById("searchTerm").addEventListener("blur", function() {
 });
 
 document.getElementById("searchTerm").addEventListener("focus", function() {
-	var dd = document.getElementById("searchDropdown");
-	if (!(dd.className.includes("is-active"))) {
-	  dd.className = dd.className += " is-active";
-    }
+  var dd = document.getElementById("searchDropdown");
+  if (!(dd.className.includes("is-active"))) {
+    dd.className = dd.className += " is-active";
+  }
 });
 
 summaryInclude=60;
@@ -58,50 +57,42 @@ function executeSearch(searchQuery) {
   }
   var fuse = new Fuse(allPageList, fuseOptions);
   var result = fuse.search(searchQuery);
-  return result
+  return populateResults(result, searchQuery)
 }
 
 function populateResults(result, searchQuery) {
   if (result.length>1) {
-	  var resItem = "";
-	  for (let i = 0; i < result.length; i++) {
-		var item = result[i].item;
-		
-		var contents = item.contents;
-		//console.log(item);
-		var snippet = "";
-		var snippetHighlights = [];
-		var tags = [];
-		if( fuseOptions.tokenize ){
-		  snippetHighlights.push(searchQuery);
-		} else {
-		  result[i].matches.forEach(function(matchKey,mvalue) {
-			if(mvalue.key == "tags" || mvalue.key == "categories" ){
-			  snippetHighlights.push(mvalue.value);
-			} else if (mvalue.key == "contents"){
-			  start = mvalue.indices[0][0]-summaryInclude>0?mvalue.indices[0][0]-summaryInclude:0;
-			  end = mvalue.indices[0][1]+summaryInclude<contents.length?mvalue.indices[0][1]+summaryInclude:contents.length;
-			  snippet += contents.substring(start,end);
-			  snippetHighlights.push(mvalue.value.substring(mvalue.indices[0][0],mvalue.indices[0][1]-mvalue.indices[0][0]+1));
-			}
-		  });
-		}
-
-		if(snippet.length<1){
-		  snippet += contents.substring(0,summaryInclude*2);
-		}
-		
-		var itemcontent = '<p>'+'<strong>'+item.title+'</strong><br/>'+ snippet +'</p>'
-		var itemStr = '<a href="'+ item.url +'" class="dropdown-item">'+ itemcontent +'</a>';
-		resItem +=  itemStr;
-	  }
+    var resItem = "";
+    for (let i = 0; i < result.length; i++) {
+      var item = result[i].item;
+      var contents = item.contents;
+      //console.log(item);
+      var snippet = "";
+      var snippetHighlights = [];
+      var tags = [];
+      if( fuseOptions.tokenize ){
+        snippetHighlights.push(searchQuery);
+      } else {
+        result[i].matches.forEach(function(matchKey,mvalue) {
+          if(mvalue.key == "tags" || mvalue.key == "categories" ){
+            snippetHighlights.push(mvalue.value);
+          } else if (mvalue.key == "contents"){
+            start = mvalue.indices[0][0]-summaryInclude>0?mvalue.indices[0][0]-summaryInclude:0;
+            end = mvalue.indices[0][1]+summaryInclude<contents.length?mvalue.indices[0][1]+summaryInclude:contents.length;
+            snippet += contents.substring(start,end);
+            snippetHighlights.push(mvalue.value.substring(mvalue.indices[0][0],mvalue.indices[0][1]-mvalue.indices[0][0]+1));
+          }
+        });
+      }
+      if(snippet.length<1){
+        snippet += contents.substring(0,summaryInclude*2);
+      }
+      var itemcontent = '<p>'+'<strong>'+item.title+'</strong><br/>'+ snippet +'</p>'
+      var itemStr = '<a href="'+ item.url +'" class="dropdown-item">'+ itemcontent +'</a>';
+        resItem +=  itemStr;
+    }
   } else {
-      var resItem = '<div class="dropdown-item">No results.</div>'
+    var resItem = '<div class="dropdown-item">No results.</div>'
   }
   return resItem
 }
-
-function matching(matchKey,mvalue) {
-  
-}
-
