@@ -22,7 +22,7 @@ function getPages(pageList) {
           "title": page.title,
           "contents": page.abstract, // note this different
           "tags": page.tags,
-          "categories": pageList.cat,// note this different
+          "categories": page.cat,// note this different
           "url": page.permalink,
         };
         pagesAll.push(aPage);
