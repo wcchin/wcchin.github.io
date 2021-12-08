@@ -9,6 +9,7 @@ function preparePageList() {
   var medsAll = getPages(blog.collections["mediums"]);
   var postsAll = getPages(blog.collections["posts"]);
   var allPageList = pagesAll.concat(pubsAll, medsAll, postsAll);
+  console.log(allPageList);
   return allPageList
 }
 

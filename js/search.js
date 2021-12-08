@@ -1,13 +1,12 @@
 function searching(evt) {
   var dd = document.getElementById("searchDropdown");
+  var searchTerm = document.getElementById("searchTerm").value;
   if (searchTerm.length>0) {
-    var searchTerm = document.getElementById("searchTerm").value;
-    var resSpace = document.getElementById("searchResults");
     if (!(dd.className.includes("is-active"))) {
       dd.className = dd.className += " is-active";
     }
     //var resStr = executeSearch(searchTerm);
-    resSpace.innerHTML = executeSearch(searchTerm);
+    document.getElementById("searchResults").innerHTML = executeSearch(searchTerm);
   } else {
     dd.className = dd.className.replace(" is-active", "");
   }
@@ -15,11 +14,12 @@ function searching(evt) {
 
 document.getElementById("searchTerm").addEventListener("blur", function() {
   setTimeout(function () {
-  //document.getElementById("searchTerm").value = "";
-  if (document.getElementById("searchDropdown").className.includes("is-active")) {
-    document.getElementById("searchDropdown").className = document.getElementById("searchDropdown").className.replace(" is-active", "");
-  }
-  //document.getElementById("searchResults").innerHTML = "";
+    var dd = document.getElementById("searchDropdown");
+    //document.getElementById("searchTerm").value = "";
+    if (dd.className.includes("is-active")) {
+      dd.className = dd.className.replace(" is-active", "");
+    }
+    //document.getElementById("searchResults").innerHTML = "";
   }, 1000);
 });
 
@@ -30,20 +30,20 @@ document.getElementById("searchTerm").addEventListener("focus", function() {
   }
 });
 
-summaryInclude=60;
+summaryInclude = 60;
 var fuseOptions = {
   shouldSort: true,
   includeMatches: true,
-  threshold: 0.0,
-  tokenize:true,
+  threshold: 0.4,
+  tokenize: true,
   location: 0,
   distance: 100,
   maxPatternLength: 32,
   minMatchCharLength: 1,
   keys: [
     {name:"title",weight:0.8},
-    {name:"contents",weight:0.5},
-    {name:"tags",weight:0.3},
+    {name:"contents",weight:0.7},
+    {name:"tags",weight:0.5},
     {name:"categories",weight:0.3}, 
     {name:"url",weight:0.1}
   ]
@@ -51,22 +51,21 @@ var fuseOptions = {
 
 
 function executeSearch(searchQuery) {
-  //var pages = require('./list.json');
-  if (!(allPageList)) {
-    var allPageList = preparePageList();
+  if (typeof allPageList === 'undefined') {
+    allPageList = preparePageList();
   }
   var fuse = new Fuse(allPageList, fuseOptions);
   var result = fuse.search(searchQuery);
+  console.log(result.length);
   return populateResults(result, searchQuery)
 }
 
 function populateResults(result, searchQuery) {
-  if (result.length>1) {
+  if (result.length>0) {
     var resItem = "";
     for (let i = 0; i < result.length; i++) {
       var item = result[i].item;
       var contents = item.contents;
-      //console.log(item);
       var snippet = "";
       var snippetHighlights = [];
       var tags = [];
