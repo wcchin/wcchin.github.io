@@ -86,7 +86,7 @@ function populateResults(result, searchQuery) {
       if(snippet.length<1){
         snippet += contents.substring(0,summaryInclude*2);
       }
-      var itemcontent = '<p>'+'<strong>'+item.title+'</strong><br/>'+ snippet +'</p>'
+      var itemcontent = '<p>'+'<strong>'+item.categories+'</strong> <i class="fas fa-caret-right"></i><strong>'+item.title+'</strong><br/>'+ snippet +'</p>'
       var itemStr = '<a href="'+ item.url +'" class="dropdown-item">'+ itemcontent +'</a>';
         resItem +=  itemStr;
     }
