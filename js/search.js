@@ -56,7 +56,7 @@ function executeSearch(searchQuery) {
   }
   var fuse = new Fuse(allPageList, fuseOptions);
   var result = fuse.search(searchQuery);
-  console.log(result.length);
+  //console.log(result.length);
   return populateResults(result, searchQuery)
 }
 
