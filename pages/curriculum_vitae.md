@@ -311,6 +311,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 				<p class="is-size-4"><strong>Tools</strong></p>
 				- <strong>Carlae (carlae)</strong> Description: A python package that generate single page website for github projects from a simple markdown file. Repository: [github.com/wcchin/carlae](https://github.com/wcchin/carlae)
 				- <strong>PyReveal (pyreveal)</strong> Description: a python package that generate slides using markdown and reveal.js. Repository: [github.com/wcchin/pyreveal](https://github.com/wcchin/pyreveal)
+				- <strong>PyRemark-slides (pyremark_slides)</strong> Description: a sister project of pyreveal, for using remark.js as base. Repository: [github.com/wcchin/pyremark_slides](https://github.com/wcchin/pyremark_slides)
 			</div>
 		</div>
 	</div>

@@ -117,6 +117,17 @@ My Github contributions (open project).
 	</div>
   <div class="card">
 		<header class="card-header">
+			<p class="card-header-title is-size-5">PyRemark-slides</p>
+			<button class="card-header-icon" onclick="expandCard(event, 'card-pyremark_slides')"><span class="typcn typcn-media-play-reverse"></span></button>
+		</header>
+		<div id="card-pyremark_slides" class="card-content is-hidden">
+			<div class="content is-medium">a sister project of pyreveal, for using remark.js as base.  
+				<span class="tag is-dark">MIT license</span></div>
+		</div>
+		<footer id="card-pyremark_slides2" class="card-footer is-hidden"><a href="https://wcchin.github.io/pyremark_slides/index.html" class="card-footer-item">Project page</a><a href="https://github.com/wcchin/pyremark_slides" class="card-footer-item">Repository</a></footer>
+	</div>
+  <div class="card">
+		<header class="card-header">
 			<p class="card-header-title is-size-5">Vector MAP ProducER (vmapper)</p>
 			<button class="card-header-icon" onclick="expandCard(event, 'card-vmapper')"><span class="typcn typcn-media-play-reverse"></span></button>
 		</header>
