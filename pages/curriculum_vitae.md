@@ -53,6 +53,30 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 	</div>
   <div class="card">
 		<header class="card-header">
+			<p class="card-header-title is-size-3">Work experience</p>
+		</header>
+		<div class="card-content">
+			<div class="level"><p class="level-item has-text-centered"><strong>2022/4 (Upcoming)--</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
+			<div class="content">
+				Department of Geography, National University of Singapore.
+			</div>
+			<hr>
+		</div>
+		<div class="card-content">
+			<div class="level"><p class="level-item has-text-centered"><strong>2019/6--2022/3</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
+			<div class="content">
+				Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.
+			</div>
+		</div>
+		<div class="card-content">
+			<div class="level"><p class="level-item has-text-centered"><strong>2018/9--2018/12</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
+			<div class="content">
+				Department of Geography, National Taiwan University.
+			</div>
+		</div>
+	</div>
+  <div class="card">
+		<header class="card-header">
 			<p class="card-header-title is-size-3">Education</p>
 		</header>
 		<div class="card-content">
@@ -159,12 +183,20 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<p class="card-header-title is-size-3">Publications</p>
 		</header>
 		<div class="card-content">
+			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2022</strong></p></div>
+			<div class="content">
+				<p class="is-size-5"><strong>Journal article</strong></p>
+				Manivannan, A., Willemse, E. J., Balamurali B. T., **Chin, W. C. B.**, Zhou, Y., Tunçer, B., Barrat, A., and Bouffanais, R. (2021) **A Framework for the Identification of Human Vertical Displacement Activity Based on Multi-Sensor Data**. *IEEE Sensors* In press: Early Access. DOI: [10.1109/JSEN.2022.3157806](https://doi.org/10.1109/JSEN.2022.3157806).
+      <hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
+			</div>
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2021</strong></p></div>
 			<div class="content">
 				<p class="is-size-5"><strong>Book chapter</strong></p>
 				Yan, Yingwei, **Chin, W. C. B.**, Leong, C.-H., Wang, Y.-C., Feng, C.-C. (2021) **Emotional response through COVID-19 in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI: [10.1007/978-3-030-72808-3_5](https://doi.org/10.1007/978-3-030-72808-3_5).
 				Leong, C.-H., **Chin, W. C. B.**, Feng, C.-C., Wang, Y.-C. (2021) **A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore**. In S.-L. Shaw, D. Sui (eds.), *Mapping COVID-19 in Space and Time*, part of *Human Dynamics in Smart Cities* book series. Springer: Switzerland. DOI: [10.1007/978-3-030-72808-3_6](https://doi.org/10.1007/978-3-030-72808-3_6).
-			<hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
+			  <p class="is-size-5"><strong>Preprint</strong></p>
+				**Chin, W. C. B.** (2021) **Daily life pattern of a city: Delineating activity space and time using social media data**. *SSRN preprint*. DOI: [10.2139/ssrn.3961269](https://dx.doi.org/10.2139/ssrn.3961269).
+      <hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
 			</div>
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2020</strong></p></div>
 			<div class="content">
