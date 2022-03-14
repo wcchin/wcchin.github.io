@@ -67,6 +67,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="content">
 				Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.
 			</div>
+			<hr>
 		</div>
 		<div class="card-content">
 			<div class="level"><p class="level-item has-text-centered"><strong>2018/9--2018/12</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
