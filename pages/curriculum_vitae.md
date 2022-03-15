@@ -56,6 +56,11 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<p class="card-header-title is-size-3">Work experience</p>
 		</header>
 		<div class="card-content">
+      <div class="columns">
+        <div class="column is-one-fifth">2022/4 (Upcoming)--</div>
+        <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
+        <div class="column">Department of Geography, National University of Singapore.</div>
+      </div>
 			<div class="level"><p class="level-item has-text-centered"><strong>2022/4 (Upcoming)--</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
 			<div class="content">
 				Department of Geography, National University of Singapore.
