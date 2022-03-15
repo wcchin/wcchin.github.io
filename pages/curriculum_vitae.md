@@ -61,25 +61,17 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
         <div class="column">Department of Geography, National University of Singapore.</div>
       </div>
-			<div class="level"><p class="level-item has-text-centered"><strong>2022/4 (Upcoming)--</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
-			<div class="content">
-				Department of Geography, National University of Singapore.
-			</div>
-			<hr>
-		</div>
-		<div class="card-content">
-			<div class="level"><p class="level-item has-text-centered"><strong>2019/6--2022/3</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
-			<div class="content">
-				Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.
-			</div>
-			<hr>
-		</div>
-		<div class="card-content">
-			<div class="level"><p class="level-item has-text-centered"><strong>2018/9--2018/12</strong></p><p class="level-item has-text-centered"><strong>Research Fellow</strong></p></div>
-			<div class="content">
-				Department of Geography, National Taiwan University.
-			</div>
-		</div>
+      <div class="columns">
+        <div class="column is-one-fifth">2019/6--2022/3</div>
+        <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
+        <div class="column">Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.</div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-fifth">2018/9--2018/12</div>
+        <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
+        <div class="column">Department of Geography, National Taiwan University.</div>
+      </div>
+    </div>
 	</div>
   <div class="card">
 		<header class="card-header">
