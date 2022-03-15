@@ -59,17 +59,17 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
       <div class="columns">
         <div class="column is-one-fifth">2022/4-<br>-</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
-        <div class="column">Department of Geography, National University of Singapore.</div>
+        <div class="column">Department of Geography, <br>National University of Singapore.</div>
       </div>
       <div class="columns">
         <div class="column is-one-fifth">2019/6-<br>-2022/3</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
-        <div class="column">Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.</div>
+        <div class="column">Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, <br>SGP Cities, <br>Singapore University of Technology and Design.</div>
       </div>
       <div class="columns">
         <div class="column is-one-fifth">2018/9-<br>-2018/12</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
-        <div class="column">Lab for Geospatial Computational Science, Department of Geography, National Taiwan University.</div>
+        <div class="column">Lab for Geospatial Computational Science, <br>Department of Geography, <br>National Taiwan University.</div>
       </div>
       <div class="columns">
         <div class="column is-one-fifth">2013/9-<br>-2014/8</div>
