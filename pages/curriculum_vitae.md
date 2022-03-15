@@ -118,17 +118,17 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
       <div class="columns">
         <div class="column is-2">2018</div>
         <div class="column is-4"><strong>Dean’s Award (Ph.D. Outstanding Dissertation)</strong></div>
-        <div class="column">College of Science, National Taiwan University, Taiwan.</div>
+        <div class="column">College of Science, National Taiwan University, Taiwan. <br> <strong>Project</strong>: The scaling properties of point clustering phenomena. </div>
       </div>
       <div class="columns">
         <div class="column is-2">2017</div>
         <div class="column is-4"><strong>Young Scientist Award</strong></div>
-        <div class="column">Tsukuba Global Science Week, University of Tsukuba, Japan.</div>
+        <div class="column">Tsukuba Global Science Week, University of Tsukuba, Japan. <br> <strong>Project</strong>: Lifestyle of a city: An urban life footprint analysis using Twitter data in Tokyo. </div>
       </div>
       <div class="columns">
         <div class="column is-2">2017</div>
         <div class="column is-4"><strong>Excellent Student Poster Award</strong></div>
-        <div class="column">Annual Meeting of the Taiwan Society for Risk Analysis, Taiwan.</div>
+        <div class="column">Annual Meeting of the Taiwan Society for Risk Analysis, Taiwan. <br> <strong>Project</strong>: Applying space-time information to explore disease processes: The dynamic patterns of Dengue Fever in Kaohsiung City, 1998-2015. </div>
       </div>
       <div class="columns">
         <div class="column is-2">2012, 2015, 2016, 2017</div>
@@ -138,7 +138,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
       <div class="columns">
         <div class="column is-2">2010</div>
         <div class="column is-4"><strong>College Student Research Scholarship</strong></div>
-        <div class="column">National Science Council (currently Ministry of Science and Technology), Taiwan.</div>
+        <div class="column">National Science Council (currently Ministry of Science and Technology), Taiwan. <br> <strong>Project</strong>: The spatial relationship between urbanization factors, environmental quality and health quality.</div>
       </div>
     </div>
 	</div>
