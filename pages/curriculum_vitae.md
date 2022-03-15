@@ -57,22 +57,22 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		</header>
 		<div class="card-content">
       <div class="columns">
-        <div class="column is-one-fifth">2022/4 (Upcoming)--</div>
+        <div class="column is-one-fifth">2022/4-<br>-</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
         <div class="column">Department of Geography, National University of Singapore.</div>
       </div>
       <div class="columns">
-        <div class="column is-one-fifth">2019/6--2022/3</div>
+        <div class="column is-one-fifth">2019/6-<br>-2022/3</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
         <div class="column">Applied Complexity Group & Advanced Architecture Laboratory & Sustainable Urban Mobility Research Laboratory, SGP Cities, Singapore University of Technology and Design.</div>
       </div>
       <div class="columns">
-        <div class="column is-one-fifth">2018/9--2018/12</div>
+        <div class="column is-one-fifth">2018/9-<br>-2018/12</div>
         <div class="column is-one-fifth"><strong>Research Fellow</strong></div>
         <div class="column">Lab for Geospatial Computational Science, Department of Geography, National Taiwan University.</div>
       </div>
       <div class="columns">
-        <div class="column is-one-fifth">2013/9--2014/8</div>
+        <div class="column is-one-fifth">2013/9-<br>-2014/8</div>
         <div class="column is-one-fifth"><strong>Research Assistant</strong></div>
         <div class="column">Department of Geography, National Taiwan University.</div>
       </div>
@@ -113,15 +113,34 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		<header class="card-header">
 			<p class="card-header-title is-size-3">Rewards & Scholarships</p>
 		</header>
+    
 		<div class="card-content">
-			<div class="content">
-				- 2018 - <strong>Dean’s Award (Ph.D.)</strong> - College of Science, National Taiwan University, Taiwan.
-				- 2017 - <strong>Young Scientist Award</strong> - Tsukuba Global Science Week, University of Tsukuba, Japan.
-				- 2017 - <strong>Excellent Student Poster Award</strong> - Annual Meeting of the Taiwan Society for Risk Analysis, Taiwan.
-				- 2012, 2015, 2016, 2017 - <strong>Outstanding Overseas Chinese Graduate Student Scholarship</strong>, Ministry of Education, Taiwan.
-				- 2010 - <strong>College Student Research Scholarship</strong>, National Science Council (currently Ministry of Science and Technology), Taiwan. 
-			</div>
-		</div>
+      <div class="columns">
+        <div class="column is-2">2018</div>
+        <div class="column is-4"><strong>Dean’s Award (Ph.D. Outstanding Dissertation)</strong></div>
+        <div class="column">College of Science, National Taiwan University, Taiwan.</div>
+      </div>
+      <div class="columns">
+        <div class="column is-2">2017</div>
+        <div class="column is-4"><strong>Young Scientist Award</strong></div>
+        <div class="column">Tsukuba Global Science Week, University of Tsukuba, Japan.</div>
+      </div>
+      <div class="columns">
+        <div class="column is-2">2017</div>
+        <div class="column is-4"><strong>Excellent Student Poster Award</strong></div>
+        <div class="column">Annual Meeting of the Taiwan Society for Risk Analysis, Taiwan.</div>
+      </div>
+      <div class="columns">
+        <div class="column is-2">2012, 2015, 2016, 2017</div>
+        <div class="column is-4"><strong>Outstanding Overseas Chinese Graduate Student Scholarship</strong></div>
+        <div class="column">Ministry of Education, Taiwan.</div>
+      </div>
+      <div class="columns">
+        <div class="column is-2">2010</div>
+        <div class="column is-4"><strong>College Student Research Scholarship</strong></div>
+        <div class="column">National Science Council (currently Ministry of Science and Technology), Taiwan.</div>
+      </div>
+    </div>
 	</div>
 	<div class="card">
 		<header class="card-header">
