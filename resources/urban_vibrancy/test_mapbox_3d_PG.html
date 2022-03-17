@@ -124,6 +124,12 @@ body { margin: 0; padding: 0; }
       },
       labelLayerId
     );
+    const nav = new mapboxgl.NavigationControl({
+      visualizePitch: true, 
+      showZoom: false
+    });
+    map.addControl(nav, 'top-right');
+    //map.addControl(new mapboxgl.NavigationControl());
   });
 </script>
  
