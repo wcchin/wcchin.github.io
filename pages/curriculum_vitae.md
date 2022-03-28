@@ -308,7 +308,6 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			</div>
 		</div>
 	</div>
-	
 </div>
 
 
@@ -319,14 +318,8 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		</header>
 		<div class="card-content">
 			<div class="content">
-				- Campus network study project (ARCC-EAAE 2022)
-				- POI & social sensing project
-					- Functional region identification
-					- Urban vibrancy: Interaction between built environment and human activity
-					- Urban vibrancy and social cohesion
-				- Spatial vulnerability project
-					- Singapore case (Scientific Reports 2020 and book chapter 2021)
-					- Malaysia case
+        - Spatial vulnerability: Singapore case (Scientific Reports 2020, book chapter 2021, ongoing)
+        - POI & social sensing project: The scaling of urban functions and services (side project)
 			</div>
 		</div>
 	</div>
@@ -337,11 +330,12 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 		<div class="card-content">
 			<div class="level"><p class="level-item has-text-centered is-size-6">Updated: 2021/10</p></div>
 			<div class="content">
-				- Human movement in Kampung Admiralty, Singapore (manuscript editing)
+        - POI & social sensing project: Functional region identification (manuscript preparation)
 				- Fractal skylines and verticality (manuscript editing)
-				- Vertical displacement activities series (1 submitted, 1 in progress)
-				- POI and social sensing project (2 in progress)
-				- Spatial scaling patterns of points distribution (postpone to 2022)
+				- Human movement in Kampung Admiralty, Singapore (manuscript editing)
+				- Campus network study project (ARCC-EAAE 2022 conference & paper, submitted)
+				- Spatial vulnerability: Malaysia network analysis (submitted)
+				- Spatial scaling patterns of points distribution (postpone to 2022, restarting)
 			</div>
 		</div>
 	</div>
