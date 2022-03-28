@@ -73,6 +73,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="content">
 				Department of Geography, National Taiwan University.
 				<strong>Title</strong>: The scaling properties of point clustering phenomena. 
+        <strong>Topic</strong>: Spatial scaling, spatial analysis, point distribution.
 				<strong>Advisor</strong>: Prof. Tzai-Hung Wen
 			</div>
 			<hr>
@@ -82,6 +83,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="content">
 				Department of Geography, National Taiwan University.
 				<strong>Title</strong>: Geographically Modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network. 
+        <strong>Topic</strong>: Spatial network analysis, spatial analysis, transport analysis.
 				<strong>Advisor</strong>: Prof. Tzai-Hung Wen
 			</div>
 			<hr>
@@ -91,6 +93,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="content">
 				Department of Geography, National Taiwan University.
 				<strong>Title</strong>: The Spatial Relationship between Urbanization factors, Environmental quality and Health quality. 
+        <strong>Topic</strong>: Spatial epidemiology, spatial analysis, health geography.
 				<strong>Advisor</strong>: Prof. Mei-Hui Li
 			</div>
 		</div>
