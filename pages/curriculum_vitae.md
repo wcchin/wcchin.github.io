@@ -37,20 +37,6 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 
 <!-- Tab content -->
 <div id="Education" class="box tabcontent active" style="display:block">
-	<div class="card">
-		<header class="card-header">
-			<p class="card-header-title is-size-3">Research Foci</p>
-		</header>
-		<div class="card-content">
-			<div class="content">
-				- Geocomputation
-				- Complex network analysis
-				- Spatial & temporal analysis
-				- Vertical displacement
-				- Geographical data visualisation
-			</div>
-		</div>
-	</div>
   <div class="card">
 		<header class="card-header">
 			<p class="card-header-title is-size-3">Work experience</p>
@@ -141,6 +127,20 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
         <div class="column">National Science Council (currently Ministry of Science and Technology), Taiwan. <br> <strong>Project</strong>: The spatial relationship between urbanization factors, environmental quality and health quality.</div>
       </div>
     </div>
+	</div>
+	<div class="card">
+		<header class="card-header">
+			<p class="card-header-title is-size-3">Research Foci</p>
+		</header>
+		<div class="card-content">
+			<div class="content">
+				- Geocomputation
+				- Complex network analysis
+				- Spatial & temporal analysis
+				- Vertical displacement
+				- Geographical data visualisation
+			</div>
+		</div>
 	</div>
 	<div class="card">
 		<header class="card-header">
