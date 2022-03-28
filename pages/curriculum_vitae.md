@@ -72,7 +72,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered"><strong>2014--2018</strong></p><p class="level-item has-text-centered"><strong>Ph.D.</strong></p></div>
 			<div class="content">
 				Department of Geography, National Taiwan University.
-				<strong>Topic</strong>: The scaling properties of point clustering phenomena. 
+				<strong>Title</strong>: The scaling properties of point clustering phenomena. 
 				<strong>Advisor</strong>: Prof. Tzai-Hung Wen
 			</div>
 			<hr>
@@ -81,7 +81,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered"><strong>2011--2013</strong></p><p class="level-item has-text-centered"><strong>M.Sc.</strong></p></div>
 			<div class="content">
 				Department of Geography, National Taiwan University.
-				<strong>Topic</strong>: Geographically Modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network. 
+				<strong>Title</strong>: Geographically Modified PageRank Algorithm: Measuring the importance of nodes in a geospatial network. 
 				<strong>Advisor</strong>: Prof. Tzai-Hung Wen
 			</div>
 			<hr>
@@ -90,7 +90,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered"><strong>2007--2011</strong></p><p class="level-item has-text-centered"><strong>B.Sc.</strong></p></div>
 			<div class="content">
 				Department of Geography, National Taiwan University.
-				<strong>Topic</strong>: The Spatial Relationship between Urbanization factors, Environmental quality and Health quality. 
+				<strong>Title</strong>: The Spatial Relationship between Urbanization factors, Environmental quality and Health quality. 
 				<strong>Advisor</strong>: Prof. Mei-Hui Li
 			</div>
 		</div>
