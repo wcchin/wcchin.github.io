@@ -2,7 +2,7 @@
 title: Curriculum Vitae
 ---
 
-<p class="has-text-right">(updated: 2021-07-11)</p>
+<p class="has-text-right">(updated: 2022-03-30)</p>
 
 # 陳威全  Wei Chien Benny Chin
 Post-doctoral researcher, Singapore University of Technology and Design. 
