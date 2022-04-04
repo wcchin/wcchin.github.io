@@ -2,18 +2,18 @@
 title: Curriculum Vitae
 ---
 
-<p class="has-text-right">(updated: 2022-03-30)</p>
+<p class="has-text-right">(updated: 2022-04-04)</p>
 
-# 陳威全  Wei Chien Benny Chin
+# 陳威全  Wei Chien Benny CHIN
 Post-doctoral researcher, Singapore University of Technology and Design. 
 <div class="level">
 	<p class="level-item has-text-centered"><a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a></p>
 	<p class="level-item has-text-centered"><a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a></p>
-	<p class="level-item has-text-centered"><a href="mailto:benny_chin@sutd.edu.sg"><span class="typcn typcn-social-at-circular"></span>benny_chin@sutd.edu.sg</a></p>
+	<p class="level-item has-text-centered"><a href="mailto:wcchin@nus.edu.sg"><span class="typcn typcn-social-at-circular"></span>wcchin@nus.edu.sg</a></p>
 </div>
 
 ## Short-bio
-Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geography and currently works in Singapore as a postdoctoral research fellow. He is a geographical information scientist. His research interests include computational geography, complex network, spatial scaling, and space-time patterns. He is participating in projects associated with complex human movement networks and both of the horizontal and vertical dimensions of spatial structures.
+Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geography and currently works in Singapore as a postdoctoral research fellow. He is a geographical information scientist. His research interests include computational geography, complex network, spatial scaling, and space-time patterns. He is participating in projects associated with complex human movement networks and spatial epidemiology.
 
 <div class="level">
 	<p class="level-item has-text-centered">[Full CV in pdf](https://wcchin.github.io/pdfs/benny_cv_academic_latest.pdf)</p>
