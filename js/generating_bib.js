@@ -115,7 +115,7 @@ function process_incollection(item){
     line += " (" + item["year"] + ").";
   }
   if (item.hasOwnProperty('title')) {
-    line += " " + item["title"] + ".";
+    line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('booktitle')) {
     line += " In <i>" + item["booktitle"] + "</i>.";
@@ -143,7 +143,7 @@ function process_article(item) {
     line += " (" + item["year"] + ").";
   }
   if (item.hasOwnProperty('title')) {
-    line += " " + item["title"] + ".";
+    line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('journal')) {
     line += " <i>" + item["journal"] + "</i>";
