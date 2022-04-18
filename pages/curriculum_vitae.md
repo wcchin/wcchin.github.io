@@ -211,7 +211,7 @@ Wei Chien Benny Chin is a Malaysian who holds a Taiwanese Ph.D. degree in geogra
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2022</strong></p></div>
 			<div class="content">
 				<p class="is-size-5"><strong>Journal article</strong></p>
-				Manivannan, A., Willemse, E. J., Balamurali B. T., **Chin, W. C. B.**, Zhou, Y., Tunçer, B., Barrat, A., and Bouffanais, R. (2022) **A Framework for the Identification of Human Vertical Displacement Activity Based on Multi-Sensor Data**. *IEEE Sensors* In press: Early Access. DOI: [10.1109/JSEN.2022.3157806](https://doi.org/10.1109/JSEN.2022.3157806).
+				Manivannan, A., Willemse, E. J., Balamurali B. T., **Chin, W. C. B.**, Zhou, Y., Tunçer, B., Barrat, A., and Bouffanais, R. (2022) **A Framework for the Identification of Human Vertical Displacement Activity Based on Multi-Sensor Data**. *IEEE Sensors* 22(8): 8011-8029. DOI: [10.1109/JSEN.2022.3157806](https://doi.org/10.1109/JSEN.2022.3157806).
       <hr style="width:70%;color:gray;border-top:1px dashed;margin:auto;">
 			</div>
 			<div class="level"><p class="level-item has-text-centered is-size-6"><strong>2021</strong></p></div>
