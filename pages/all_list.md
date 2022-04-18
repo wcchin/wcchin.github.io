@@ -2,5 +2,7 @@
 title: All publications
 ---
 
-<div class="bibtex_display" bibtexkey="manivannan2022framework|yan2021emotional"></div>
+<div id="bibtex_display_box">
+<span id="bibtex_display"></span>
+</div>
 
