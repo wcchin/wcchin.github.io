@@ -2,7 +2,7 @@
 title: Curriculum Vitae
 ---
 
-<p class="has-text-right">(updated: 2022-04-04)</p>
+<p class="has-text-right">(updated: 2022-04-19)</p>
 
 # 陳威全  Wei Chien Benny CHIN
 Research Fellow, GIS Unit, Department of Geography, National University of Singapore. 
@@ -34,7 +34,7 @@ Research Fellow, GIS Unit, Department of Geography, National University of Singa
     <p align="left">Me at Wuling Farm, Taichung, Taiwan.</p>
   </div>
   <div class="column is-9">
-    <b>Wei Chien Benny Chin</strong> is a Malaysian who holds a Taiwanese Ph.D. degree in geography and currently works in Singapore as a postdoctoral research fellow. He is a geographical information scientist. His research interests include computational geography, complex network, spatial scaling, and space-time patterns. He is participating in projects associated with complex human movement networks and spatial epidemiology.
+    <strong>Wei Chien Benny Chin</strong> is a Malaysian who holds a Taiwanese Ph.D. degree in geography and currently works in Singapore as a postdoctoral research fellow. He is a geographical information scientist. His research interests include computational geography, complex network, spatial scaling, and space-time patterns. He is participating in projects associated with complex human movement networks and spatial epidemiology.
   </div>
 </div>
 
