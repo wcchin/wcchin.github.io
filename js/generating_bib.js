@@ -237,8 +237,8 @@ function load_bibtex(fp) {
 
 //
 function loading_bibs() {
-  console.log("checking", 222);
-  window.onload = function() {
+  //console.log("checking", 222);
+  //window.onload = function() {
     var years = [2022, 2021, 2020, 2019, 2017, 2016, 2015, 2014];
     //var years_fp = [];
     var all_text = "";
@@ -250,7 +250,7 @@ function loading_bibs() {
     }
     //years_fp.forEach(load_bibtex);
     document.getElementById('bibtex_display').innerHTML = all_text;
-  }
+  //}
 }
 
 
