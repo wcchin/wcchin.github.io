@@ -164,36 +164,89 @@ function process_article(item) {
   return line
 };
 
+function grouping(bib_docs) {
+  var incollection = [];
+  var journal_article = [];
+  var preprint_article = [];
+  const preprint = ["SSRN", "medRxiv", "arXiv"];
+  
+  for (let i=0; i<bib_docs.length;i++){
+    let typ = bib_docs[i]["entryType"];
+    var item = bib_docs[i]["entryTags"];
+    if (typ==="incollection") {
+      incollection.push(item);
+    } else if (typ=="article" && preprint.includes(item["journal"])) {
+      preprint_article.push(item);
+    } else if (typ=="article") {
+      journal_article.push(item);
+    } else {
+      console.log("check entry type");
+    }
+  }
+  var groups = [incollection, journal_article, preprint_article];
+  return groups
+}
 
-window.onload = function() {
+function load_bibtex(fp) {
+  let yr = fp.split("_").at(-1).replace(".bib", "");
+  var text_box = '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
+  //console.log(yr);
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var bib_docs = bibtexParse.toJSON(xhr.responseText);
+      var groups = grouping(bib_docs);
+      var incollection = groups[0];
+      var journal_article = groups[1];
+      var preprint_article = groups[2];
       //console.log(bib_docs);
-      var text_response = "<hr>";
-      for (var i=0; i<bib_docs.length;i++){
-        console.log(bib_docs[i]);
-        //console.log(bib_docs[i]["entryTags"]["title"]);
-        var item = bib_docs[i]["entryTags"];
-        var typ = bib_docs[i]["entryType"];
-        var txt = "";
-        //text_response += bib_docs[i]["entryTags"]["title"] + "<br>";
-        if (typ=="article") {
-          txt = process_article(item);
-        } else if (typ=="incollection") {
-          txt = process_incollection(item);
-        } else {
-          console.log("check entry type");
+      var text_response = '';
+      if (journal_article.length>0) {
+        text_response += '<h4 class="subtitle is-4"> Journal Article </h4>';
+        for (let i=0; i<journal_article.length;i++){
+          let item = journal_article[i];
+          var txt = process_article(item);
+          text_response += txt + "<br><br>";
         }
-        text_response += txt + "<br><hr>";
       }
-      text_response += "<hr>";
-      document.getElementById('bibtex_display').innerHTML = text_response;
+      if (incollection.length>0) {
+        text_response += '<h4 class="subtitle is-4"> Book chapter </h4>';
+        for (let i=0; i<incollection.length;i++){
+          let item = incollection[i];
+          var txt = process_incollection(item);
+          text_response += txt + "<br><br>";
+        }
+      }
+      if (preprint_article.length>0) {
+        text_response += '<h4 class="subtitle is-4"> Preprint Article </h4>';
+        for (let i=0; i<preprint_article.length;i++){
+          let item = preprint_article[i];
+          var txt = process_article(item);
+          text_response += txt + "<br><br>";
+        }
+      }
+      //text_response += "<hr>";
+      document.getElementById('bibtex_'+yr).innerHTML += text_response;
     }
   }
-  xhr.open('GET', './resources/my_publications.bib');
+  xhr.open('GET', fp);
   xhr.send();
+  return text_box
+}
+
+
+window.onload = function() {
+  var years = [2022, 2021, 2020, 2019, 2017, 2016, 2015, 2014];
+  //var years_fp = [];
+  var all_text = "";
+  for (let i=0; i<years.length;i++) {
+    let yr = years[i];
+    let fp = './resources/bibtex/publications_'+yr.toString()+'.bib';
+    //years_fp.push(fp);
+    all_text += load_bibtex(fp);
+  }
+  //years_fp.forEach(load_bibtex);
+  document.getElementById('bibtex_display').innerHTML = all_text;
 }
 
 
