@@ -5,7 +5,7 @@ title: Curriculum Vitae
 <p class="has-text-right">(updated: 2022-04-04)</p>
 
 # 陳威全  Wei Chien Benny CHIN
-Post-doctoral researcher, Singapore University of Technology and Design. 
+Research Fellow, GIS Unit, Department of Geography, National University of Singapore. 
 <div class="level">
 	<p class="level-item has-text-centered"><a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a></p>
 	<p class="level-item has-text-centered"><a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>wcchin.88@gmail.com</a></p>
