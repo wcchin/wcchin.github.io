@@ -235,18 +235,22 @@ function load_bibtex(fp) {
 }
 
 
-window.onload = function() {
-  var years = [2022, 2021, 2020, 2019, 2017, 2016, 2015, 2014];
-  //var years_fp = [];
-  var all_text = "";
-  for (let i=0; i<years.length;i++) {
-    let yr = years[i];
-    let fp = './resources/bibtex/publications_'+yr.toString()+'.bib';
-    //years_fp.push(fp);
-    all_text += load_bibtex(fp);
+//
+function loading_bibs() {
+  console.log("checking", 222);
+  window.onload = function() {
+    var years = [2022, 2021, 2020, 2019, 2017, 2016, 2015, 2014];
+    //var years_fp = [];
+    var all_text = "";
+    for (let i=0; i<years.length;i++) {
+      let yr = years[i];
+      let fp = './resources/bibtex/publications_'+yr.toString()+'.bib';
+      //years_fp.push(fp);
+      all_text += load_bibtex(fp);
+    }
+    //years_fp.forEach(load_bibtex);
+    document.getElementById('bibtex_display').innerHTML = all_text;
   }
-  //years_fp.forEach(load_bibtex);
-  document.getElementById('bibtex_display').innerHTML = all_text;
 }
 
 
