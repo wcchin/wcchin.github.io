@@ -21,6 +21,7 @@ function getPages(pageList) {
         var aPage = {
           "title": page.title,
           "contents": page.abstract, // note this different
+          "author": page.author,
           "tags": page.tags,
           "categories": page.cat,// note this different
           "url": page.permalink,
@@ -34,6 +35,7 @@ function getPages(pageList) {
         var aPage = {
           "title": page.title,
           "contents": removeTags(page.body),  // note this different
+          "author": "Benny",
           "tags": page.tags,
           "categories": pageList.type, // note this different
           "url": page.permalink,
