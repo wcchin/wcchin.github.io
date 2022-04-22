@@ -6,7 +6,7 @@ date: 2018-12-03
 year: 2018
 author: Chin, W. C. B.
 journal: National Taiwan University Dissertation
-cat: Ph.D. Dissertation
+cat: Thesis
 doi: 10.6342/NTU201802404
 researchgate: 
 tags: 2018, Point pattern, Thesis, Scaling
