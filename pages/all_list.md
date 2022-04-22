@@ -11,3 +11,10 @@ title: All publications
 </div>
 <iframe onload="loading_bibs()" height="0"></iframe> 
 
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      This page is generated from <a href="./resources/my_publications.bib" target="blank">bibtex</a> using <a href="https://github.com/ORCID/bibtexParseJs" target="_blank">bibtex-parse-js</a>.
+    </p>
+  </div>
+</footer>
