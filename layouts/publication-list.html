@@ -42,10 +42,14 @@
             </div> 
           </div>
         </div>
-        <div class="content article-body">
-          <% if(publication.excerpt) { %>
-            <p align="justify"><%= publication.excerpt %>...</p>
-          <% } %>
+        <div class="content"><!--<div class="content article-body">-->
+          <div class="columns is-desktop">
+            <div class="column is-10 is-offset-1">
+              <% if(publication.excerpt) { %>
+                <p align="justify"><%= publication.excerpt %>...</p>
+              <% } %>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="card-footer">

@@ -29,38 +29,42 @@
         <% } %>
       </p>
     </div>
-    <div class="content article-body">
-      <% if(data.doi) { %>
-        <p align="right"><a href="https://doi.org/<%= data.doi %>"><img src="https://zenodo.org/badge/DOI/<%= data.doi %>.svg"></a></p>
-      <% } %>
-      <% if(data.image) { %>
-        <p align="center"><img width="750" src="<%= data.image %>"></p>
-      <% } %>
-      <h1>Paper</h1>
-      <p class="is-size-5" align="justify">
-      <% if(data.refline) { %>
-        <%= data.refline %>
-      <% } else { %>
-        <%= data.author %> (<%= data.year %>). <b><%= data.title %></b>, <i><%= data.journal %></i>. <%= data.versionissue %>: <%= data.page %>.
-      <% } %>
-      </p>
-      <% if(data.abstract) { %>
-        <h1>Abstract</h1>
-        <p class="is-size-5" align="justify">
-        <%= data.abstract %>
-        </p>
-      <% } %>
-      <%= data.body %>
-      <hr>
-      <p>
-      Read article here: 
-				<ul>
-                    <% if(data.doi) { %><li>Official website: <a href="https://doi.org/<%= data.doi %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
-                    <% if(data.link) { %><li>Link: <a href="https://<%= data.link %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
-					<% if(data.researchgate) { %><li>ResearchGate: <a href="https://<%= data.researchgate %>" target="_blank">Abstract and full text (on request or downloadable directly)</a>,</li> <% } %>
-					<li>Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>by Gmail </a>). </li>
-				</ul>
-      </p>
+    <div class="content"><!-- article-body -->
+      <div class="columns is-desktop">
+        <div class="column is-10 is-offset-1">
+          <% if(data.doi) { %>
+            <p align="right"><a href="https://doi.org/<%= data.doi %>"><img src="https://zenodo.org/badge/DOI/<%= data.doi %>.svg"></a></p>
+          <% } %>
+          <% if(data.image) { %>
+            <p align="center"><img width="750" src="<%= data.image %>"></p>
+          <% } %>
+          <h1>Paper</h1>
+          <p class="is-size-5" align="justify">
+          <% if(data.refline) { %>
+            <%= data.refline %>
+          <% } else { %>
+            <%= data.author %> (<%= data.year %>). <b><%= data.title %></b>, <i><%= data.journal %></i>. <%= data.versionissue %>: <%= data.page %>.
+          <% } %>
+          </p>
+          <% if(data.abstract) { %>
+            <h1>Abstract</h1>
+            <p class="is-size-5" align="justify">
+            <%= data.abstract %>
+            </p>
+          <% } %>
+          <%= data.body %>
+          <hr>
+          <p>
+          Read article here: 
+            <ul>
+                        <% if(data.doi) { %><li>Official website: <a href="https://doi.org/<%= data.doi %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
+                        <% if(data.link) { %><li>Link: <a href="https://<%= data.link %>" target="_blank"><%= data.title %>, <i><%= data.journal %></a></i>, </li> <% } %>
+              <% if(data.researchgate) { %><li>ResearchGate: <a href="https://<%= data.researchgate %>" target="_blank">Abstract and full text (on request or downloadable directly)</a>,</li> <% } %>
+              <li>Please contact me (<a href="mailto:wcchin.88@gmail.com"><span class="typcn typcn-social-at-circular"></span>by Gmail </a>). </li>
+            </ul>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
