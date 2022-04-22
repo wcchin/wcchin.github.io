@@ -185,6 +185,97 @@ function process_article(item) {
   return line
 }
 
+
+function grouping_yeartype(bib_docs) {
+  var year_docs = {};
+  for (let i=0; i<bib_docs.length;i++) {
+    let typ = bib_docs[i]["entryType"];
+    var item = bib_docs[i]["entryTags"];
+    var yr = item["year"];
+    if(!(year_docs.hasOwnProperty(yr))) {
+      year_docs[yr] = {
+        "incollection": [],
+        "journal_article": [], 
+        "preprint_article": [],
+        "thesis": []
+      }
+    }
+    if (typ==="incollection") {
+      year_docs[yr]["incollection"].push(item);
+    } else if (typ=="phdthesis" || typ=="mastersthesis") {
+      year_docs[yr]["thesis"].push(item);
+    } else if (typ=="article" && preprint.includes(item["journal"])) {
+      year_docs[yr]["preprint_article"].push(item);
+    } else if (typ=="article") {
+      year_docs[yr]["journal_article"].push(item);
+    } else {
+      console.log("check entry type");
+    }
+  }
+  return year_docs
+}
+
+
+function load_bibtex(fp) {
+  let yr = fp.split("_").at(-1).replace(".bib", "");
+  //console.log(yr);
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var bib_docs = bibtexParse.toJSON(xhr.responseText);
+      var year_docs = grouping_yeartype(bib_docs);
+      for (var yr in year_docs) {
+        var text_box = '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
+      }
+      for (var yr in year_docs) {
+        var incollection = year_docs[yr]["incollection"];
+        var journal_article = year_docs[yr]["journal_article"];
+        var preprint_article = year_docs[yr]["preprint_article"];
+        var thesis = year_docs[yr]["thesis"];
+        //console.log(bib_docs);
+        var text_response = '';
+        if (journal_article.length>0) {
+          text_response += '<h4 class="subtitle is-4"> Journal Article </h4>';
+          for (let i=0; i<journal_article.length;i++){
+            let item = journal_article[i];
+            var txt = process_article(item);
+            text_response += txt + "<br><br>";
+          }
+        }
+        if (incollection.length>0) {
+          text_response += '<h4 class="subtitle is-4"> Book chapter </h4>';
+          for (let i=0; i<incollection.length;i++){
+            let item = incollection[i];
+            var txt = process_incollection(item);
+            text_response += txt + "<br><br>";
+          }
+        }
+        if (preprint_article.length>0) {
+          text_response += '<h4 class="subtitle is-4"> Preprint Article </h4>';
+          for (let i=0; i<preprint_article.length;i++){
+            let item = preprint_article[i];
+            let txt = process_article(item);
+            text_response += txt + "<br><br>";
+          }
+        }
+        if (thesis.length>0) {
+          text_response += '<h4 class="subtitle is-4"> Dissertation/Thesis </h4>';
+          for (let i=0; i<preprint_article.length;i++){
+            let item = preprint_article[i];
+            let txt = process_thesis(item);
+            text_response += txt + "<br><br>";
+          }
+        }
+        //text_response += "<hr>";
+        document.getElementById('bibtex_'+yr).innerHTML += text_response;
+      }
+    }
+  }
+  xhr.open('GET', fp);
+  xhr.send();
+  return text_box
+}
+/*
 function grouping(bib_docs) {
   var incollection = [];
   var journal_article = [];
@@ -266,23 +357,28 @@ function load_bibtex(fp) {
   xhr.send();
   return text_box
 }
+*/
 
 
 //
 function loading_bibs() {
   //console.log("checking", 222);
   //window.onload = function() {
-    var years = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013];
-    //var years_fp = [];
-    var all_text = "";
-    for (let i=0; i<years.length;i++) {
-      let yr = years[i];
-      let fp = './resources/bibtex/publications_'+yr.toString()+'.bib';
-      //years_fp.push(fp);
-      all_text += load_bibtex(fp);
-    }
-    //years_fp.forEach(load_bibtex);
-    document.getElementById('bibtex_display').innerHTML = all_text;
+  //var years_fp = [];
+  /*
+  var years = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013];
+  var all_text = "";
+  for (let i=0; i<years.length;i++) {
+    let yr = years[i];
+    let fp = './resources/bibtex/publications_'+yr.toString()+'.bib';
+    //years_fp.push(fp);
+    all_text += load_bibtex(fp);
+  }
+  */
+  let fp = './resources/my_publications.bib';
+  var all_text = load_bibtex(fp);
+  //years_fp.forEach(load_bibtex);
+  document.getElementById('bibtex_display').innerHTML = all_text;
   //}
 }
 
