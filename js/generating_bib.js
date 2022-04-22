@@ -120,7 +120,7 @@ function get_keywords_line(item) {
 
 
 function process_thesis(item) {
-  var line = "";
+  var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
@@ -140,13 +140,14 @@ function process_thesis(item) {
   if (item.hasOwnProperty('keywords')) {
     line += get_keywords_line(item);
   }
+  line += '</p>'
   return line
 }
 
 
 function process_incollection(item){
-  var st = item["title"] + "<br>";
-  var line = "";
+  //var st = item["title"] + "<br>";
+  var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
@@ -172,12 +173,13 @@ function process_incollection(item){
   if (item.hasOwnProperty('keywords')) {
     line += get_keywords_line(item);
   }
+  line += '</p>'
   return line
 }
 
 function process_article(item) {
   //var st = item["title"] + "<br>";
-  var line = "";
+  var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
@@ -207,6 +209,7 @@ function process_article(item) {
   if (item.hasOwnProperty('keywords')) {
     line += get_keywords_line(item);
   }
+  line += '</p>'
   return line
 }
 
