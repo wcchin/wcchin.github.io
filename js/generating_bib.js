@@ -220,12 +220,13 @@ function load_bibtex(fp) {
   let yr = fp.split("_").at(-1).replace(".bib", "");
   //console.log(yr);
   var xhr = new XMLHttpRequest();
+  var text_box = '';
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var bib_docs = bibtexParse.toJSON(xhr.responseText);
       var year_docs = grouping_yeartype(bib_docs);
       for (var yr in year_docs) {
-        var text_box = '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
+        text_box += '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
       }
       for (var yr in year_docs) {
         var incollection = year_docs[yr]["incollection"];
