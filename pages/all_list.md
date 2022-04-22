@@ -1,5 +1,5 @@
 ---
-title: All publications
+title: List of publications
 ---
 
 <div class="columns is-desktop">
