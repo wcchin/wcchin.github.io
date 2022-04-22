@@ -103,6 +103,22 @@ function get_authors(names) {
 }
 
 
+function get_keywords_line(item) {
+  var line = "";
+  line += " <br> <b>Keywords:</b> ";
+  kws = item["keywords"].split(" and ");
+  for (let i=0;i<kws.length;i++) {
+    line += kws[i];
+    if (i<kws.length-1) {
+      line += "; ";
+    } else {
+      line += ".";
+    }
+  }
+  return line
+}
+
+
 function process_thesis(item) {
   var line = "";
   if (item.hasOwnProperty('author')) {
@@ -113,13 +129,16 @@ function process_thesis(item) {
     line += " (" + item["year"] + ").";
   }
   if (item.hasOwnProperty('title')) {
-    line += " <i>" + item["title"] + "</i>.";
+    line += " <b><i>" + item["title"] + "</i></b>.";
   }
   if (item.hasOwnProperty('school')) {
     line += " Publisher: " + item["school"] + ".";
   }
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
+  }
+  if (item.hasOwnProperty('keywords')) {
+    line += get_keywords_line(item);
   }
   return line
 }
@@ -149,6 +168,9 @@ function process_incollection(item){
   }
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
+  }
+  if (item.hasOwnProperty('keywords')) {
+    line += get_keywords_line(item);
   }
   return line
 }
@@ -182,6 +204,9 @@ function process_article(item) {
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
   }
+  if (item.hasOwnProperty('keywords')) {
+    line += get_keywords_line(item);
+  }
   return line
 }
 
@@ -199,7 +224,7 @@ function grouping_yeartype(bib_docs) {
         "journal_article": [], 
         "preprint_article": [],
         "thesis": []
-      }
+      };
     }
     if (typ==="incollection") {
       year_docs[yr]["incollection"].push(item);
@@ -226,8 +251,11 @@ function load_bibtex(fp) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var bib_docs = bibtexParse.toJSON(xhr.responseText);
       var year_docs = grouping_yeartype(bib_docs);
-      for (var yr in year_docs) {
-        text_box += '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
+      var years = Object.keys(year_docs).sort().reverse();
+      for (let i=0;i<years.length;i++) {
+        //text_box += ;
+        yr = years[i];
+        document.getElementById('bibtex_display').innerHTML += '<div class="block" id="bibtex_'+yr+'"><h3 class="title is-3">'+yr+'</h3></div>';
       }
       for (var yr in year_docs) {
         var incollection = year_docs[yr]["incollection"];
@@ -262,8 +290,8 @@ function load_bibtex(fp) {
         }
         if (thesis.length>0) {
           text_response += '<h4 class="subtitle is-4"> Dissertation/Thesis </h4>';
-          for (let i=0; i<preprint_article.length;i++){
-            let item = preprint_article[i];
+          for (let i=0; i<thesis.length;i++){
+            let item = thesis[i];
             let txt = process_thesis(item);
             text_response += txt + "<br><br>";
           }
@@ -380,7 +408,7 @@ function loading_bibs() {
   let fp = './resources/my_publications.bib';
   var all_text = load_bibtex(fp);
   //years_fp.forEach(load_bibtex);
-  document.getElementById('bibtex_display').innerHTML = all_text;
+  //document.getElementById('bibtex_display').innerHTML = all_text;
   //}
 }
 
