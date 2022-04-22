@@ -63,3 +63,55 @@ var onRouteCheck = function() {
   scrollTop();
   closeMenuCheck();
 }
+
+
+
+function openModal(evt, cardName) {
+  var cardcontent = document.getElementById(cardName);
+  cardcontent.className = cardcontent.className += " is-active";
+}
+
+function closeModal(evt, cardName) {
+  var cardcontent = document.getElementById(cardName);
+  if (cardcontent && cardcontent.className.includes("is-active")) {
+    cardcontent.className = cardcontent.className.replace(" is-active", "");
+  }
+  var but = cardcontent.querySelector("#copyButton");
+  if (but.className.includes("is-success")) {
+    but.textContent = "Copy bibtex";
+    but.className = but.className.replace(" is-success", " is-info");
+  }
+}
+
+function closeAllModals() {
+  (document.querySelectorAll('.modal')).forEach(($modal) => {
+    if ($modal.className.includes("is-active")) {
+      $modal.className = $modal.className.replace(" is-active", "");
+    }
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  const e = event || window.event;
+  if (e.keyCode === 27) { // Escape key
+    closeAllModals();
+  }
+});
+
+function copyModal(evt, cardName) {
+  var card = document.getElementById(cardName);
+  var cardcontent = card.querySelector("#bibtex");
+  const copyText = cardcontent.textContent;
+  //console.log(copyText);
+  const textArea = document.createElement('textarea');
+  textArea.textContent = copyText;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  //navigator.clipboard.writeText(textArea.value);
+  textArea.remove();
+  
+  var but = card.querySelector("#copyButton");
+  but.textContent = "Copied!";
+  but.className = but.className.replace(" is-info", " is-success");
+}

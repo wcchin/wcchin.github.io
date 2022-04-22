@@ -1,3 +1,39 @@
+function bibtexraw(bibitem) {
+  //console.log(bibitem);
+  var item = bibitem['entryTags'];
+  var line = '<pre id="bibtex">'
+  line += '@'+bibitem['entryType']+'{'+bibitem['citationKey']+',\n';
+  for (let key in item){
+    let value = item[key];
+    line += '\t' + key + ' = ' + '{' + value + '}\n';
+  }
+  line += '}'
+  line += "</pre>"
+  return line
+}
+
+
+function get_bibtex_modal(bibitem) {
+  var line = "";
+  line += '<button class="button is-info is-small" onclick="openModal(event, \'modal-'+bibitem["citationKey"]+'\')">bibtex</button>';
+  line += '<div id="modal-'+bibitem["citationKey"]+'" class="modal">';
+  line += '  <div class="modal-background"></div>';
+  line += '  <div class="modal-card">'
+  line += '    <header class="modal-card-head"><p><b>'+bibitem["entryTags"]["title"]+'</b></p>';
+  line += '    </header>';
+  line += '    <section class="modal-card-body">';
+  line += '    ' + bibtexraw(bibitem);
+  line += '    </section>';
+  line += '    <button class="modal-close is-large" aria-label="close"  onclick="closeModal(event, \'modal-'+bibitem["citationKey"]+'\')"></button>';
+  line += '    <footer class="card-footer">';
+  line += '      <button class="button is-info card-footer-item" onclick="copyModal(event, \'modal-'+bibitem["citationKey"]+'\')" id="copyButton">Copy bibtex</button>';
+  line += '      <button class="button is-info card-footer-item" onclick="closeModal(event, \'modal-'+bibitem["citationKey"]+'\')">Close</button>';
+  line += '    </footer>';
+  line += '  </div>'
+  line += '</div>';
+  return line
+}
+
 
 function fixValue(value) {
   var regExps = [];
@@ -119,7 +155,8 @@ function get_keywords_line(item) {
 }
 
 
-function process_thesis(item) {
+function process_thesis(bibitem) {
+  var item = bibitem['entryTags'];
   var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
@@ -131,8 +168,13 @@ function process_thesis(item) {
   if (item.hasOwnProperty('title')) {
     line += " <b><i>" + item["title"] + "</i></b>.";
   }
+  if (bibitem.entryType=="phdthesis") {
+    line += " [Doctoral dissertation]";
+  } else if (bibitem.entryType=="mastersthesis") {
+    line += " [Master thesis]";
+  }
   if (item.hasOwnProperty('school')) {
-    line += " Publisher: " + item["school"] + ".";
+    line += " " + item["school"] + ".";
   }
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
@@ -141,12 +183,14 @@ function process_thesis(item) {
     line += get_keywords_line(item);
   }
   line += '</p>'
+  line += get_bibtex_modal(bibitem);
   return line
 }
 
 
-function process_incollection(item){
+function process_incollection(bibitem){
   //var st = item["title"] + "<br>";
+  var item = bibitem['entryTags'];
   var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
@@ -174,11 +218,13 @@ function process_incollection(item){
     line += get_keywords_line(item);
   }
   line += '</p>'
+  line += get_bibtex_modal(bibitem);
   return line
 }
 
-function process_article(item) {
+function process_article(bibitem) {
   //var st = item["title"] + "<br>";
+  var item = bibitem['entryTags'];
   var line = '<p align="justify">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
@@ -210,6 +256,7 @@ function process_article(item) {
     line += get_keywords_line(item);
   }
   line += '</p>'
+  line += get_bibtex_modal(bibitem);
   return line
 }
 
@@ -218,8 +265,9 @@ function grouping_yeartype(bib_docs) {
   var year_docs = {};
   const preprint = ["SSRN", "medRxiv", "arXiv"];
   for (let i=0; i<bib_docs.length;i++) {
-    let typ = bib_docs[i]["entryType"];
-    var item = bib_docs[i]["entryTags"];
+    var bibitem = bib_docs[i]
+    let typ = bibitem["entryType"];
+    var item = bibitem["entryTags"];
     var yr = item["year"];
     if(!(year_docs.hasOwnProperty(yr))) {
       year_docs[yr] = {
@@ -230,13 +278,13 @@ function grouping_yeartype(bib_docs) {
       };
     }
     if (typ==="incollection") {
-      year_docs[yr]["incollection"].push(item);
+      year_docs[yr]["incollection"].push(bibitem);
     } else if (typ=="phdthesis" || typ=="mastersthesis") {
-      year_docs[yr]["thesis"].push(item);
+      year_docs[yr]["thesis"].push(bibitem);
     } else if (typ=="article" && preprint.includes(item["journal"])) {
-      year_docs[yr]["preprint_article"].push(item);
+      year_docs[yr]["preprint_article"].push(bibitem);
     } else if (typ=="article") {
-      year_docs[yr]["journal_article"].push(item);
+      year_docs[yr]["journal_article"].push(bibitem);
     } else {
       console.log("check entry type");
     }
