@@ -2,7 +2,7 @@
 layout: publication
 title: A Framework for the Identification of Human Vertical Displacement Activity Based on Multi-Sensor Data
 excerpt: To date, the methodology to track and identify vertical movement from large-scale unstructured data sets is lacking. Here, we design and develop such a framework to accurately and systematically identify the sparse human vertical displacement activity typically buried into the predominantly horizontal mobility.
-date: 2022-03-06
+date: 2022-04-16
 year: 2022
 author: Manivannan, A., Willemse, E. J., Balamurali B. T., Chin, W. C. B., Zhou, Y., Tunçer, B., Barrat, A., and Bouffanais, R.
 journal: IEEE Sensors
