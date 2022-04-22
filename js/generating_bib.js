@@ -188,6 +188,7 @@ function process_article(item) {
 
 function grouping_yeartype(bib_docs) {
   var year_docs = {};
+  const preprint = ["SSRN", "medRxiv", "arXiv"];
   for (let i=0; i<bib_docs.length;i++) {
     let typ = bib_docs[i]["entryType"];
     var item = bib_docs[i]["entryTags"];
