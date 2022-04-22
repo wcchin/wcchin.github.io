@@ -22,10 +22,14 @@
             </div> 
           </div>
         </div>
-        <div class="content article-body">
-          <% if(post.excerpt) { %>
-            <p><%= post.excerpt %></p>
-          <% } %>
+        <div class="content"><!--<div class="content article-body">-->
+          <div class="columns is-desktop">
+            <div class="column is-10 is-offset-1">
+              <% if(post.excerpt) { %>
+                <p><%= post.excerpt %></p>
+              <% } %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

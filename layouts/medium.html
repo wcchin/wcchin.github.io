@@ -33,15 +33,19 @@
         <% } %>
       </div>
     </div>
-    <div class="content article-body">
-      <p align="center"><img width="750" src="<%= data.image %>"></p>  
-      English version: 
-      <p><%= data.abstract_en %></p>
-      <p>Read here: <a href="<%= data.url_en %>" target="blank"> <%= data.title_en %> </a>, written on <%= data.date_en %></p>
-      
-      中文版：
-      <p><%= data.abstract_zh %></p>
-      <p>繼續閱讀: <a href="<%= data.url_zh %>" target="blank"> <%= data.title_zh %> </a>, 寫於 on <%= data.date_zh %></p>
+    <div class="content"><!-- article-body -->
+      <div class="columns is-desktop">
+        <div class="column is-10 is-offset-1">
+          <p align="center"><img width="750" src="<%= data.image %>"></p>  
+          English version: 
+          <p><%= data.abstract_en %></p>
+          <p>Read here: <a href="<%= data.url_en %>" target="blank"> <%= data.title_en %> </a>, written on <%= data.date_en %></p>
+          
+          中文版：
+          <p><%= data.abstract_zh %></p>
+          <p>繼續閱讀: <a href="<%= data.url_zh %>" target="blank"> <%= data.title_zh %> </a>, 寫於 on <%= data.date_zh %></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
