@@ -45,7 +45,7 @@
           <% } else { %>
             <%= data.author %> (<%= data.year %>). <b><%= data.title %></b>, <i><%= data.journal %></i>. <%= data.versionissue %>: <%= data.page %>.
           <% } %>
-          <% if(publication.doi)%>
+          <% if(publication.doi) { %>
             <div data-badge-type="1" data-doi="<%= publication.doi %>" data-hide-no-mentions="true" class="altmetric-embed"></div>
           <% } %>
           </p>
