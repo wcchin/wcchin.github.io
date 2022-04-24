@@ -9,6 +9,9 @@ My Github contributions (open project).
 <a href="https://github.com/wcchin" target="_blank"><img src="https://grass-graph.appspot.com/images/wcchin.png" > </a>
 
 
+<p align="right"><a target="_blank" href="https://www.codewars.com/users/wcchin"><img src="https://www.codewars.com/users/wcchin/badges/small" alt="codewars badge small" /></a></p>
+
+
 <div class="tabs is-toggle is-toggle-rounded is-centered">
   <ul>
     <li class="tablink is-active"><a onclick="openTab(event, 'Algorithm')"><span class="is-small typcn typcn-chart-pie"></span>Algorithm</a></li>
