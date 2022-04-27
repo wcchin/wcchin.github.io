@@ -8,23 +8,24 @@ title: Curriculum Vitae
 Research Fellow, GIS Unit, Department of Geography, National University of Singapore. 
 <!--<h5 class="subtitle is-5" align="center">My profile pages</h5>-->
 <div class="level">
-	<p class="level-item has-text-centered"><a href="https://www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i> ResearchGate </a></p>
-	<p class="level-item has-text-centered"><a href="https://www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span> Linkedin </a></p>
-	<p class="level-item has-text-centered"><a href="https://github.com/wcchin/" target="_blank"><i class="fab fa-github-alt"></i> Github </a></p>
-	<p class="level-item has-text-centered"><a href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i> ORCID </a></p>
-	<p class="level-item has-text-centered"><a href="https://www.scopus.com/authid/detail.uri?authorId=56596201400" target="_blank"><i class="ai ai-scopus"></i> Scopus </a></p>
-	<p class="level-item has-text-centered"><a href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i> Google Scholar </a></p>
-    <p class="level-item has-text-centered"><a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4909051" target="_blank"><i class="ai ai-ssrn ai-2x"></i> </a></p>
-	<p class="level-item has-text-centered"><a href="https://medium.com/@wcchin.88" target="_blank"><i class="fab fa-medium-m"></i> Medium </a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="ResearchGate" href="https://www.researchgate.net/profile/Benny_Chin" target="_blank"><i class="ai ai-researchgate"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Linkedin" href="https://www.linkedin.com/in/wcchin/" target="_blank"><span class="typcn typcn-social-linkedin"></span></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Github" href="https://github.com/wcchin/" target="_blank"><i class="fab fa-github-alt"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="ORCID" href="https://orcid.org/0000-0001-7215-3303" target="_blank"><i class="ai ai-orcid"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Scopus" href="https://www.scopus.com/authid/detail.uri?authorId=56596201400" target="_blank"><i class="ai ai-scopus"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Google Scholar" href="https://scholar.google.com/citations?hl=zh-TW&user=P2IJvyQAAAAJ" target="_blank"><i class="ai ai-google-scholar"></i></a></p>
+  <p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="SSRN" href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=4909051" target="_blank"><i class="ai ai-ssrn ai-2x"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Medium" href="https://medium.com/@wcchin.88" target="_blank"><i class="fab fa-medium-m"></i></a></p>
 	<!--<p class="level-item has-text-centered"><span id="badgeCont357"></span></p>-->
 </div>
+
 <!--<h5 class="subtitle is-5" align="center">CV and portfolio in PDF</h5>-->
 <div class="level">
-	<p class="level-item has-text-centered">[<i class="ai ai-cv"></i> (pdf)](https://wcchin.github.io/pdfs/benny_cv_academic_latest.pdf)</p>
-	<p class="level-item has-text-centered">[<span class="typcn typcn-clipboard"></span> Academic portfolio (pdf)](https://wcchin.github.io/pdfs/benny_portfolio.pdf)</p>
-	<!--<p class="level-item has-text-centered"><a href="https://wcchin.github.io/" target="_blank">https://wcchin.github.io/</a></p>-->
-	<p class="level-item has-text-centered"><a href="mailto:wcchin.88@gmail.com"><i class="fas fa-envelope"></i> wcchin.88@gmail.com</a></p>
-	<p class="level-item has-text-centered"><a href="mailto:wcchin@nus.edu.sg"><i class="fas fa-envelope"></i> wcchin@nus.edu.sg</a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="CV in PDF" href="https://wcchin.github.io/pdfs/benny_cv_academic_latest.pdf" target="_blank"><i class="ai ai-cv"></i></a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="Academic portfolio in PDF" href="https://wcchin.github.io/pdfs/benny_portfolio.pdf" target="_blank"><span class="typcn typcn-clipboard"></span></a></p>
+	<!--<p class="level-item has-text-centered"><a href="https://wcchin.github.io/" target="_blank"><p class="is-hidden-touch">https://wcchin.github.io/</p></a></p>-->
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="wcchin.88@gmail" href="mailto:wcchin.88@gmail.com" target="_blank"><i class="fas fa-envelope"></i> @GMAIL</a></p>
+	<p class="level-item has-text-centered"><a class="has-tooltip-arrow" data-tooltip="wcchin@nus.edu.sg" href="mailto:wcchin@nus.edu.sg" target="_blank"><i class="fas fa-envelope"></i> @NUS</a></p>
 </div>
 
 <h5 class="subtitle is-5" align="center">Short-bio</h5>
@@ -40,13 +41,13 @@ Research Fellow, GIS Unit, Department of Geography, National University of Singa
 
 
 
-<div class="tabs is-boxed is-fullwidth is-size-5">
+<div class="tabs is-boxed is-fullwidth is-size-6 is-size-7-touch">
   <ul>
-    <li class="tablink is-active"><a onclick="openTab(event, 'Work')"><span class="typcn typcn-briefcase"></i></span>Work</a></li>
-    <li class="tablink"><a onclick="openTab(event, 'Education')"><span class="typcn typcn-mortar-board"></span>Education</a></li>
-    <li class="tablink"><a onclick="openTab(event, 'Rewards')"><span class="typcn typcn-wine"></span>Rewards</a></li>
-    <li class="tablink"><a onclick="openTab(event, 'Skills')"><span class="typcn typcn-puzzle"></span>Skills</a></li>
-    <li class="tablink"><a onclick="openTab(event, 'Foci')"><span class="typcn typcn-lightbulb"></span>Research Foci</a></li>
+    <li class="tablink is-active"><a data-tooltip="Work" onclick="openTab(event, 'Work')"><span data-tooltip="Work" class="typcn typcn-briefcase"></i></span><p>Work</p></a></li>
+    <li class="tablink"><a data-tooltip="Education" onclick="openTab(event, 'Education')"><span class="typcn typcn-mortar-board"></span><p>Education</p></a></li>
+    <li class="tablink"><a data-tooltip="Rewards" onclick="openTab(event, 'Rewards')"><span class="typcn typcn-wine"></span><p>Rewards</p></a></li>
+    <li class="tablink"><a data-tooltip="Skills" onclick="openTab(event, 'Skills')"><span class="typcn typcn-puzzle"></span><p>Skills</p></a></li>
+    <li class="tablink"><a data-tooltip="Research Foci" onclick="openTab(event, 'Foci')"><span class="typcn typcn-lightbulb"></span><p>Foci</p></a></li>
   </ul>
 </div>
 
