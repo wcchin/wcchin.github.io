@@ -206,7 +206,7 @@ function process_incollection(bibitem){
     line += " In "；
     if (item.hasOwnProperty('editor')) {
       var names = get_authors(item["editor"]);
-      line += names;
+      line += names + " (eds.)";
     }
     line += " <i>" + item["booktitle"] + "</i>.";
   }
