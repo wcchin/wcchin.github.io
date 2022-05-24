@@ -203,12 +203,13 @@ function process_incollection(bibitem){
     line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('booktitle')) {
-    line += " In "；
+    line += ' In ';
     if (item.hasOwnProperty('editor')) {
-      var names = get_authors(item["editor"]) + " (eds.)";
+      var names = get_authors(item['editor']);
+      names += " (eds.) ";
       line += names;
     }
-    line += " <i>" + item["booktitle"] + "</i>.";
+    line += "<i>" + item["booktitle"] + "</i>.";
   }
   if (item.hasOwnProperty('pages')) {
     line += " (pp. " + item["pages"].replace("--", "-") + ").";
