@@ -203,7 +203,12 @@ function process_incollection(bibitem){
     line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('booktitle')) {
-    line += " In <i>" + item["booktitle"] + "</i>.";
+    line += " In "；
+    if (item.hasOwnProperty('editor')) {
+      var names = get_authors(item["editor"]);
+      line += names;
+    }
+    line += " <i>" + item["booktitle"] + "</i>.";
   }
   if (item.hasOwnProperty('pages')) {
     line += " (pp. " + item["pages"].replace("--", "-") + ").";
