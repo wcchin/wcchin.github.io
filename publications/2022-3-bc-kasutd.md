@@ -7,7 +7,7 @@ year: 2022
 author: Srikanth, A. D. S., Chin, W. C. B., Bouffanais, R., Schroepfer, T.
 journal: Artificial Intelligence in Urban Planning and Design: Technologies, Implementation, and Impacts
 cat: Book Chapter
-doi: 10.1016/B978-0-12-823941-4.00019-6. 
+doi: 10.1016/B978-0-12-823941-4.00019-6
 researchgate: www.researchgate.net/publication/360763087_Complexity_science-based_spatial_performance_analyses_of_UNStudioDP_Architects'_SUTD_Campus_and_WOHA's_Kampung_Admiralty
 tags: 2022, Book Chapter, complex network, Kampung Admiralty, SUTD campus, Singapore
 image: resources/publications/bookchap_kasutd_AIUPD.png
