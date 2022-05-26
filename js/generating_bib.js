@@ -158,15 +158,16 @@ function get_keywords_line(item) {
 function process_thesis(bibitem) {
   var item = bibitem['entryTags'];
   var line = '<p align="justify">';
+  if (item.hasOwnProperty('title')) {
+    line += " <b><i>" + item["title"] + "</i></b>.";
+  }
+  line += '<div style="margin-left: 20px; ">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
   }
   if (item.hasOwnProperty('year')) {
     line += " (" + item["year"] + ").";
-  }
-  if (item.hasOwnProperty('title')) {
-    line += " <b><i>" + item["title"] + "</i></b>.";
   }
   if (bibitem.entryType=="phdthesis") {
     line += " [Doctoral dissertation]";
@@ -179,11 +180,13 @@ function process_thesis(bibitem) {
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
   }
-  if (item.hasOwnProperty('keywords')) {
-    line += get_keywords_line(item);
-  }
-  line += '</p>'
+  //if (item.hasOwnProperty('keywords')) {
+  //  line += get_keywords_line(item);
+  //}
+  line += '<br>';
   line += get_bibtex_modal(bibitem);
+  line += '</div>';
+  line += '</p>';
   return line
 }
 
@@ -192,15 +195,16 @@ function process_incollection(bibitem){
   //var st = item["title"] + "<br>";
   var item = bibitem['entryTags'];
   var line = '<p align="justify">';
+  if (item.hasOwnProperty('title')) {
+    line += " <b>" + item["title"] + "</b>.";
+  }
+  line += '<div style="margin-left: 20px; ">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
   }
   if (item.hasOwnProperty('year')) {
     line += " (" + item["year"] + ").";
-  }
-  if (item.hasOwnProperty('title')) {
-    line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('booktitle')) {
     line += ' In ';
@@ -220,11 +224,13 @@ function process_incollection(bibitem){
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
   }
-  if (item.hasOwnProperty('keywords')) {
-    line += get_keywords_line(item);
-  }
-  line += '</p>'
+  //if (item.hasOwnProperty('keywords')) {
+  //  line += get_keywords_line(item);
+  //}
+  line += '<br>';
   line += get_bibtex_modal(bibitem);
+  line += '</div>';
+  line += '</p>';
   return line
 }
 
@@ -232,15 +238,16 @@ function process_article(bibitem) {
   //var st = item["title"] + "<br>";
   var item = bibitem['entryTags'];
   var line = '<p align="justify">';
+  if (item.hasOwnProperty('title')) {
+    line += " <b>" + item["title"] + "</b>.";
+  }
+  line += '<div style="margin-left: 20px; ">';
   if (item.hasOwnProperty('author')) {
     var names = get_authors(item["author"]);
     line += names;
   }
   if (item.hasOwnProperty('year')) {
     line += " (" + item["year"] + ").";
-  }
-  if (item.hasOwnProperty('title')) {
-    line += " <b>" + item["title"] + "</b>.";
   }
   if (item.hasOwnProperty('journal')) {
     line += " <i>" + item["journal"] + "</i>";
@@ -258,11 +265,13 @@ function process_article(bibitem) {
   if (item.hasOwnProperty('doi')) {
     line += " DOI: <a href=\"https://dx.doi.org/" + item["doi"].replace(/[\\\{|\}]/g, '') + "\" target=\"_blank\">" + item["doi"].replace(/[\\\{|\}]/g, '') + "</a>.";
   }
-  if (item.hasOwnProperty('keywords')) {
-    line += get_keywords_line(item);
-  }
-  line += '</p>'
+  //if (item.hasOwnProperty('keywords')) {
+  //  line += get_keywords_line(item);
+  //}
+  line += '<br>';
   line += get_bibtex_modal(bibitem);
+  line += '</div>';
+  line += '</p>';
   return line
 }
 
@@ -326,7 +335,7 @@ function load_bibtex(fp) {
           for (let i=0; i<journal_article.length;i++){
             let item = journal_article[i];
             var txt = process_article(item);
-            text_response += txt + "<br><br>";
+            text_response += txt + "<br>";
           }
         }
         if (incollection.length>0) {
@@ -334,7 +343,7 @@ function load_bibtex(fp) {
           for (let i=0; i<incollection.length;i++){
             let item = incollection[i];
             var txt = process_incollection(item);
-            text_response += txt + "<br><br>";
+            text_response += txt + "<br>";
           }
         }
         if (preprint_article.length>0) {
@@ -342,7 +351,7 @@ function load_bibtex(fp) {
           for (let i=0; i<preprint_article.length;i++){
             let item = preprint_article[i];
             let txt = process_article(item);
-            text_response += txt + "<br><br>";
+            text_response += txt + "<br>";
           }
         }
         if (thesis.length>0) {
@@ -350,7 +359,7 @@ function load_bibtex(fp) {
           for (let i=0; i<thesis.length;i++){
             let item = thesis[i];
             let txt = process_thesis(item);
-            text_response += txt + "<br><br>";
+            text_response += txt + "<br>";
           }
         }
         //text_response += "<hr>";
