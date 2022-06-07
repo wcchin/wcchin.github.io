@@ -5,7 +5,7 @@ function bibtexraw(bibitem) {
   line += '@'+bibitem['entryType']+'{'+bibitem['citationKey']+',\n';
   for (let key in item){
     let value = item[key];
-    line += '\t' + key + ' = ' + '{' + value + '}\n';
+    line += '\t' + key + ' = ' + '{' + value + '},\n';
   }
   line += '}'
   line += "</pre>"
