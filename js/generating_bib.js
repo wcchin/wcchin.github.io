@@ -289,6 +289,7 @@ function grouping_yeartype(bib_docs) {
         "incollection": [],
         "journal_article": [], 
         "preprint_article": [],
+        "proceedings": [],
         "thesis": []
       };
     }
@@ -300,6 +301,8 @@ function grouping_yeartype(bib_docs) {
       year_docs[yr]["preprint_article"].push(bibitem);
     } else if (typ=="article") {
       year_docs[yr]["journal_article"].push(bibitem);
+    } else if (typ=="proceedings") {
+      year_docs[yr]["proceedings"].push(bibitem);
     } else {
       console.log("check entry type");
     }
@@ -327,6 +330,7 @@ function load_bibtex(fp) {
         var incollection = year_docs[yr]["incollection"];
         var journal_article = year_docs[yr]["journal_article"];
         var preprint_article = year_docs[yr]["preprint_article"];
+        var proceedings = year_docs[yr]["proceedings"];
         var thesis = year_docs[yr]["thesis"];
         //console.log(bib_docs);
         var text_response = '';
@@ -342,6 +346,14 @@ function load_bibtex(fp) {
           text_response += '<h4 class="subtitle is-4"> Book chapter </h4>';
           for (let i=0; i<incollection.length;i++){
             let item = incollection[i];
+            var txt = process_incollection(item);
+            text_response += txt + "<br>";
+          }
+        }
+        if (proceedings.length>0) {
+          text_response += '<h4 class="subtitle is-4"> Conference paper </h4>';
+          for (let i=0; i<proceedings.length;i++){
+            let item = proceedings[i];
             var txt = process_incollection(item);
             text_response += txt + "<br>";
           }
