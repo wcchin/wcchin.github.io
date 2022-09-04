@@ -1,7 +1,10 @@
 html,body {
-  font-family: 'Montserrat Alternates', Nunito, 'Kosugi Maru', sans-serif;
+  font-family: Nunito, 'Kosugi Maru', sans-serif;
   font-size: 16px;
   background: #F0F2F4;
+}
+h1 {
+  font-family: 'Montserrat Alternates', Nunito, 'Kosugi Maru', sans-serif;
 }
 .navbar.is-white {
   background: #F0F2F4;
