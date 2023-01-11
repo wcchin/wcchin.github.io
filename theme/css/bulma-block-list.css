@@ -1,0 +1,61 @@
+@charset "utf-8";
+ .content ul.block-list {
+	 list-style: none;
+	 margin-left: 0;
+}
+ .block-list {
+	 list-style: none;
+}
+ .block-list li {
+	 padding: 0.75rem;
+	 background: #f5f5f5;
+	 margin-bottom: 0.25rem;
+}
+ .block-list li.is-left, .block-list.is-left > li {
+	 text-align: left;
+}
+ .block-list li.is-centered, .block-list.is-centered > li {
+	 text-align: center;
+}
+ .block-list li.is-right, .block-list.is-right > li {
+	 text-align: right;
+}
+ .block-list li.is-small, .block-list.is-small > li {
+	 font-size: 0.875em;
+	 padding: 0.5rem;
+}
+ .block-list li.is-normal, .block-list.is-normal > li {
+	 font-size: 1em;
+}
+ .block-list li.is-large, .block-list.is-large > li {
+	 font-size: 1.5rem;
+}
+ .block-list li.has-radius, .block-list.has-radius > li {
+	 border-radius: 9999px;
+}
+ .block-list li.is-highlighted, .block-list.is-highlighted > li {
+	 border-left: 5px #363636 solid;
+}
+ .block-list li.is-outlined, .block-list.is-outlined > li {
+	 background: transparent;
+	 color: 1px;
+	 border: 1px solid 1px;
+	 color: inherit;
+}
+ .block-list li.has-icon {
+	 display: flex;
+}
+ .block-list li.has-icon .icon {
+	 flex-grow: 0;
+	 flex-shrink: 0;
+	 flex-basis: auto;
+	 margin-right: 1em;
+}
+ .block-list li.has-icon span {
+	 flex-grow: 1;
+}
+ .block-list li.has-icon.is-right .icon {
+	 margin-right: 0;
+	 margin-left: 1em;
+}
+ 

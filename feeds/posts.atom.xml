@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Benny Chin - posts</title><link href="https://wcchin.github.io/" rel="alternate"></link><link href="https://wcchin.github.io/feeds/posts.atom.xml" rel="self"></link><id>https://wcchin.github.io/</id><updated>2022-03-15T00:00:00+08:00</updated><entry><title>The functional zones 3D map</title><link href="https://wcchin.github.io/posts/the-functional-zones-3d-map.html" rel="alternate"></link><published>2022-03-15T00:00:00+08:00</published><updated>2022-03-15T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2022-03-15:/posts/the-functional-zones-3d-map.html</id><content type="html">&lt;p&gt;The three 3D Mapbox map for showing the urban functional zones distribution:&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/resources/urban_vibrancy/test_mapbox_3d_QT.html"&gt;3D map for Queenstown&lt;/a&gt;&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/resources/urban_vibrancy/test_mapbox_3d_JE.html"&gt;3D map for Jurong East&lt;/a&gt;&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/resources/urban_vibrancy/test_mapbox_3d_PG.html"&gt;3D map for Punggol&lt;/a&gt;  &lt;/p&gt;</content><category term="posts"></category><category term="Project"></category><category term="Map"></category></entry><entry><title>SUTD campus Project app webpage</title><link href="https://wcchin.github.io/posts/sutd-campus-project-app-webpage.html" rel="alternate"></link><published>2021-08-10T00:00:00+08:00</published><updated>2021-08-10T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2021-08-10:/posts/sutd-campus-project-app-webpage.html</id><content type="html">&lt;p&gt;SUTD campus Project app webpage&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/SUTD_vertical_city_project"&gt;SUTD_vertical_city_project&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Project"></category><category term="App"></category></entry><entry><title>Urban Vibrancy POI</title><link href="https://wcchin.github.io/posts/urban-vibrancy-poi.html" rel="alternate"></link><published>2021-07-15T00:00:00+08:00</published><updated>2021-07-15T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2021-07-15:/posts/urban-vibrancy-poi.html</id><content type="html">&lt;p&gt;A kepler.gl map for showing the poi distribution&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/resources/urban_vibrancy/map_poi.html"&gt;Kepler.gl map for all POI from different sources&lt;/a&gt;
+link: &lt;a href="https://wcchin.github.io/resources/urban_vibrancy/map_poi_cat01.html"&gt;Kepler.gl map for the classified types&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Project"></category><category term="Map"></category></entry><entry><title>Kampung Admiralty Project app webpage</title><link href="https://wcchin.github.io/posts/kampung-admiralty-project-app-webpage.html" rel="alternate"></link><published>2021-01-12T00:00:00+08:00</published><updated>2021-01-12T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2021-01-12:/posts/kampung-admiralty-project-app-webpage.html</id><content type="html">&lt;p&gt;Kampung Admiralty Project app webpage&lt;br&gt;
+link: &lt;a href="https://wcchin.github.io/Kampung_Admiralty_project_SUTD"&gt;Kampung_Admiralty_project_SUTD&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Project"></category><category term="App"></category></entry><entry><title>Medium Article</title><link href="https://wcchin.github.io/posts/medium-article.html" rel="alternate"></link><published>2020-06-04T00:00:00+08:00</published><updated>2020-06-04T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2020-06-04:/posts/medium-article.html</id><summary type="html">&lt;p&gt;Are we safe now? The incidence trends of COVID-19 in May 2020.
+&lt;a href="https://medium.com/@wcchin.88/are-we-safe-now-the-incidence-trends-of-covid-19-in-may-2020-b0ae20cd123b"&gt;Are we safe now? The incidence trends of COVID-19 in May 2020.&lt;/a&gt;
+One of the critical questions that we want to know is that ARE WE SAFE NOW? This article intended to give some information regarding that question …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Are we safe now? The incidence trends of COVID-19 in May 2020.
+&lt;a href="https://medium.com/@wcchin.88/are-we-safe-now-the-incidence-trends-of-covid-19-in-may-2020-b0ae20cd123b"&gt;Are we safe now? The incidence trends of COVID-19 in May 2020.&lt;/a&gt;
+One of the critical questions that we want to know is that ARE WE SAFE NOW? This article intended to give some information regarding that question, in two scales: globally and by country. &lt;/p&gt;
+&lt;p&gt;肺炎危機解除了嗎？分析2020年5月的新確診案例變化趨勢
+&lt;a href="https://medium.com/@wcchin.88/%E8%82%BA%E7%82%8E%E5%8D%B1%E6%A9%9F%E8%A7%A3%E9%99%A4%E4%BA%86%E5%97%8E-%E5%88%86%E6%9E%902020%E5%B9%B45%E6%9C%88%E7%9A%84%E6%96%B0%E7%A2%BA%E8%A8%BA%E6%A1%88%E4%BE%8B%E8%AE%8A%E5%8C%96%E8%B6%A8%E5%8B%A2-84973aa99be4"&gt;肺炎危機解除了嗎？分析2020年5月的新確診案例變化趨勢&lt;/a&gt;
+如今全球趨勢似乎開始趨向平緩，各大城市、國家介已開始籌劃城市、國家的重啓計劃。然而我們真的安全了嗎？這個全球大流行的19肺炎危機真的快要解除了嗎？這是這篇短文核心想探討的問題。本文將從兩個尺度去討論這個問題，包括全球尺度與國家尺度。&lt;/p&gt;</content><category term="posts"></category><category term="COVID19"></category><category term="Statistics"></category></entry><entry><title>My Covid-19 article on Medium</title><link href="https://wcchin.github.io/posts/my-covid-19-article-on-medium.html" rel="alternate"></link><published>2020-05-03T00:00:00+08:00</published><updated>2020-05-03T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2020-05-03:/posts/my-covid-19-article-on-medium.html</id><summary type="html">&lt;h1&gt;My Covid-19 article on Medium&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@wcchin.88/covid-19-in-100-days-a-simple-observation-report-677348ab5d00"&gt;Link to the full article&lt;/a&gt;
+&lt;a href="https://medium.com/@wcchin.88/2019-%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%92%E8%82%BA%E7%82%8E-covid-19-%E7%9A%84%E7%99%BE%E6%97%A5%E8%A7%80%E5%AF%9F%E5%A0%B1%E5%91%8A-6c52cec1fa9a"&gt;中文版文章鏈接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After about 14 weeks (100 days) since the first Covid-19 lockdown at Wuhan City, the number of confirmed cases surpassed 3,000,000 globally.  The article aims to present some short and simple …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;My Covid-19 article on Medium&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@wcchin.88/covid-19-in-100-days-a-simple-observation-report-677348ab5d00"&gt;Link to the full article&lt;/a&gt;
+&lt;a href="https://medium.com/@wcchin.88/2019-%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%92%E8%82%BA%E7%82%8E-covid-19-%E7%9A%84%E7%99%BE%E6%97%A5%E8%A7%80%E5%AF%9F%E5%A0%B1%E5%91%8A-6c52cec1fa9a"&gt;中文版文章鏈接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After about 14 weeks (100 days) since the first Covid-19 lockdown at Wuhan City, the number of confirmed cases surpassed 3,000,000 globally.  The article aims to present some short and simple observations on the Covid-19.&lt;/p&gt;</content><category term="posts"></category><category term="COVID19"></category><category term="Statistics"></category></entry><entry><title>A simple app for EpiRank demonstration</title><link href="https://wcchin.github.io/posts/a-simple-app-for-epirank-demonstration.html" rel="alternate"></link><published>2020-03-24T00:00:00+08:00</published><updated>2020-03-24T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2020-03-24:/posts/a-simple-app-for-epirank-demonstration.html</id><content type="html">&lt;h1&gt;EpiRank disease diffusion risk distribution&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://epirank-app.herokuapp.com/"&gt;EpiRank web-app for Taiwan commuting network&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/wcchin/EpiRank"&gt;EpiRank algorithm repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nature.com/articles/s41598-019-41719-8"&gt;EpiRank paper on Scientific Reports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="resources/post/epirank_animated_by_daytime.gif"&gt;EpiRank animation of daytime sensitivity analysis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note:&lt;br&gt;
+The tool used in this project: Python 3, Plotly-Dash, Mapbox, and Heroku. &lt;/p&gt;</content><category term="posts"></category><category term="Algorithm"></category><category term="Heroku"></category><category term="Paper"></category><category term="Taiwan"></category></entry><entry><title>Visualizing the development of COVID-19</title><link href="https://wcchin.github.io/posts/visualizing-the-development-of-covid-19.html" rel="alternate"></link><published>2020-03-19T00:00:00+08:00</published><updated>2020-03-19T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2020-03-19:/posts/visualizing-the-development-of-covid-19.html</id><summary type="html">&lt;h1&gt;Visualizing the development of COVID-19&lt;/h1&gt;
+&lt;p&gt;As the title mentioned, the maps in the list show the COVID-19 development through space and time. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Maps&lt;/strong&gt;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Confirmed.html"&gt;Total confirmed cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Recovered.html"&gt;Total recovered cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Deaths.html"&gt;Total deaths&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Remaining.html"&gt;Remaining cases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/wcchin/ncov2019_datavis"&gt;The repository&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The latest data source is pull from JHU CSSE repos for COVID-19: https://github …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Visualizing the development of COVID-19&lt;/h1&gt;
+&lt;p&gt;As the title mentioned, the maps in the list show the COVID-19 development through space and time. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Maps&lt;/strong&gt;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Confirmed.html"&gt;Total confirmed cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Recovered.html"&gt;Total recovered cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Deaths.html"&gt;Total deaths&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wcchin.github.io/ncov2019_datavis/map_covid19_Remaining.html"&gt;Remaining cases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/wcchin/ncov2019_datavis"&gt;The repository&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The latest data source is pull from JHU CSSE repos for COVID-19: https://github.com/CSSEGISandData/COVID-19&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Visualization Technique&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The visualization is based on Uber's &lt;a href="https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md"&gt;Kepler.gl-jupyter&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="COVID19"></category><category term="Statistics"></category><category term="Map"></category></entry><entry><title>NSE VDA extration spatial distribution</title><link href="https://wcchin.github.io/posts/nse-vda-extration-spatial-distribution.html" rel="alternate"></link><published>2019-12-12T00:00:00+08:00</published><updated>2019-12-12T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2019-12-12:/posts/nse-vda-extration-spatial-distribution.html</id><content type="html">&lt;h1&gt;VDA distribution&lt;/h1&gt;
+&lt;p&gt;The map shows the vertical displacement activity extracted from the NSE dataset. The data contained only the Wednesday data:&lt;/p&gt;
+&lt;p&gt;&lt;a href="resources/nse/vda_map_01.html"&gt;The VDA map&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some examples:&lt;/p&gt;
+&lt;p&gt;&lt;a data-fancybox="gallery" href="resources/post/keplergl_bedok_bus_interchange.png" data-caption="Bedok bus/MRT interchange and Bedok Mall"&gt;
+  &lt;img width="350" src="resources/post/keplergl_bedok_bus_interchange.png"&gt;
+&lt;/a&gt;
+&lt;a data-fancybox="gallery" href="resources/post/keplergl_Clementi_clementi_town_sec.png" data-caption="Clementi Town Secondary School and Clementi MRT station"&gt;
+  &lt;img width="350" src="resources/post/keplergl_Clementi_clementi_town_sec.png"&gt;
+&lt;/a&gt;
+&lt;a data-fancybox="gallery" href="resources/post/keplergl_JurongEast_jcube_jem_westgate_imm_crestsec.png" data-caption="Jurong East, Jcube, Jem, Westgate, IMM, Crest Secondary School"&gt;
+  &lt;img width="350" src="resources/post/keplergl_JurongEast_jcube_jem_westgate_imm_crestsec.png"&gt;
+&lt;/a&gt;
+&lt;a data-fancybox="gallery" href="resources/post/keplergl_pasirris_bus_interchange.png" data-caption="Pasir Ris interchange "&gt;
+  &lt;img width="350" src="resources/post/keplergl_pasirris_bus_interchange.png"&gt;
+&lt;/a&gt;
+&lt;a data-fancybox="gallery" href="resources/post/keplergl_tampines_interchange_and_malls.png" data-caption="Tampines bus/MRT interchange, Tampines Mall, Tampines One, Century Square"&gt;
+  &lt;img width="350" src="resources/post/keplergl_tampines_interchange_and_malls.png"&gt;
+&lt;/a&gt;
+&lt;a data-fancybox="gallery" href="resources/post/keplergl_woodlands_interchange_republic_polytechnic.png" data-caption="Woodlands interchange and Republic Polytechnic"&gt;
+  &lt;img width="350" src="resources/post/keplergl_woodlands_interchange_republic_polytechnic.png"&gt;
+&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Map"></category><category term="Singapore"></category><category term="NSE"></category></entry><entry><title>Dynamic heatmap of NSE data</title><link href="https://wcchin.github.io/posts/dynamic-heatmap-of-nse-data.html" rel="alternate"></link><published>2019-07-25T00:00:00+08:00</published><updated>2019-07-25T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2019-07-25:/posts/dynamic-heatmap-of-nse-data.html</id><summary type="html">&lt;h1&gt;Dynamic Heat Map&lt;/h1&gt;
+&lt;p&gt;A series of heat map showing the density of the students in week 4 Tuesday to Thursday (3days) samples, using different time steps: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;density in every 1 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi1.html"&gt;1 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 5 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi5.html"&gt;5 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 10 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi10.html"&gt;10 …&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1&gt;Dynamic Heat Map&lt;/h1&gt;
+&lt;p&gt;A series of heat map showing the density of the students in week 4 Tuesday to Thursday (3days) samples, using different time steps: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;density in every 1 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi1.html"&gt;1 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 5 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi5.html"&gt;5 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 10 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi10.html"&gt;10 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 15 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi15.html"&gt;15 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;density in every 30 minutes: &lt;a href="resources/nse/HeatMap_w4_hr_mi30.html"&gt;30 minute heat map&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Change the slide bar at the bottom (right of the time slide bar) from 3fps to 10fps for faster view.&lt;/p&gt;
+&lt;p&gt;For Tuesday only:
+1. density in every 1 minutes: &lt;a href="resources/nse/HeatMap_w4_20160524_Tue_hr_mi1.html"&gt;1 minute heat map&lt;/a&gt;
+2. density in every 5 minutes: &lt;a href="resources/nse/HeatMap_w4_20160524_Tue_hr_mi5.html"&gt;5 minute heat map&lt;/a&gt;
+3. density in every 10 minutes: &lt;a href="resources/nse/HeatMap_w4_20160524_Tue_hr_mi10.html"&gt;10 minute heat map&lt;/a&gt;
+4. density in every 15 minutes: &lt;a href="resources/nse/HeatMap_w4_20160524_Tue_hr_mi15.html"&gt;15 minute heat map&lt;/a&gt;
+5. density in every 30 minutes: &lt;a href="resources/nse/HeatMap_w4_20160524_Tue_hr_mi30.html"&gt;30 minute heat map&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Map"></category><category term="Singapore"></category><category term="NSE"></category></entry><entry><title>About Singapore Demography</title><link href="https://wcchin.github.io/posts/about-singapore-demography.html" rel="alternate"></link><published>2019-06-26T00:00:00+08:00</published><updated>2019-06-26T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2019-06-26:/posts/about-singapore-demography.html</id><summary type="html">&lt;h1&gt;About Singapore Demography - part 1&lt;/h1&gt;
+&lt;p&gt;This page is about the first step starting to understand and describe the demography of Singapore. &lt;/p&gt;
+&lt;h2&gt;Dwelling types&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Dwelling type changes" src="resources/sg_demog/population_dwelling_dynamics.png"&gt;&lt;br&gt;
+Fig. 1. The dynamic of dwelling types from 2000 to 2018. The total number of people live in HDB, condo, landed, and other. &lt;/p&gt;
+&lt;p&gt;While the total population …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;About Singapore Demography - part 1&lt;/h1&gt;
+&lt;p&gt;This page is about the first step starting to understand and describe the demography of Singapore. &lt;/p&gt;
+&lt;h2&gt;Dwelling types&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Dwelling type changes" src="resources/sg_demog/population_dwelling_dynamics.png"&gt;&lt;br&gt;
+Fig. 1. The dynamic of dwelling types from 2000 to 2018. The total number of people live in HDB, condo, landed, and other. &lt;/p&gt;
+&lt;p&gt;While the total population increase slowly, the number of people live in HDB also increase slowly with a different speed (a). The # people live in condo increase faster than the HDB. This caused the proportion of HDB decreaase and condo increase (b). From (c), the share of condo in 2018 increased to about 2.75 times the # people live in condo in 2000. &lt;/p&gt;
+&lt;h2&gt;The aging population dynamic&lt;/h2&gt;
+&lt;p&gt;&lt;img src="resources/sg_demog/population_age_dynamics.png" "Population dynamic by age group" style="width: 100%; height: 100%"/&gt;
+Fig. 2. Population dynamic by age group. Which age-group of people is contributing to the population increse?&lt;/p&gt;
+&lt;p&gt;The figure shows the population dynamic from 2000 to 2018. 
+The total number of people in Singapore keep rising. The number of new born child and pre-school age childrens are decreasing (a); only the young adult (20-24) increase during 2008-2012. 
+The number of adult people (25-49) seems maintained in a stable number until 2018. But because of the young people in (a) shows decreasing trend, it is expected that the adult people will also go to decreasing stage in the following decade. 
+The number of elderly people (&amp;gt;=50, in c and d) keep rising. This is a typical population dynamic pattern that indicates an aging population. &lt;/p&gt;
+&lt;h2&gt;The dynamic of age-specific sex differences by ethnics&lt;/h2&gt;
+&lt;p&gt;&lt;img src="resources/sg_demog/pop_age_sex.gif" "Age group specific sex-ratio by ethnics" style="width: 100%; height: 100%"/&gt;&lt;br&gt;
+Fig. 3. The age-specific sex differences from 1990 to 2017 by ethnics. &lt;/p&gt;
+&lt;p&gt;The Chinese (b), Malays (c), and Indians (d) dynamic pattern happens are different. 
+In all sub-figures, there are two high waves, one indicated the parents (older), and the other POSSIBLY indicates their children. 
+The chinese older wave is higher than the younger wave, which also shows possible increses from immigrations from the outside world (i.e. not all grow from the younger wave). 
+The malays waves on the other hand, show that the younger wave is higher than the older wave at the begining, which stablely grow old with a little decreasing (become lower in the recent year). 
+The indians older wave is higher than the younger wave, similar to the chinese; but there are significant increase of older wave in 1998-2011; which mostly were male. 
+The others sub-figure also shows significant increase of older wave in 1998-2011, in which female is more than male. &lt;/p&gt;
+&lt;p&gt;There is a little bit unknown is that for the young people, bars of male are normaly higher than the bars of female, indicated that more boys than girls. 
+But when they grow up (the wave move to the right), the bars of female are higher than the bars of male, i.e. more woman than man. This could be due to the gender differences of immigrants and emigrants, i.e. more woman come to SG than man, and more man leave SG than woman. But of cause this require further investigation to understand this observation. &lt;/p&gt;
+&lt;h2&gt;The grooms and brides that the woman and man chose to get married with&lt;/h2&gt;
+&lt;p&gt;&lt;img src="resources/sg_demog/marriage_by_brides.gif" "which age group of man would the brides in specific age group marry to?" style="width: 100%; height: 100%"/&gt;&lt;br&gt;
+Fig. 4. Which age group of man would the brides in specific age group marry to? &lt;/p&gt;
+&lt;p&gt;Women tend to marry to someone in the age group of 1-level higher or the same level, i.e. about 0-9 years older than themself. &lt;/p&gt;
+&lt;p&gt;&lt;img src="resources/sg_demog/marriage_by_grooms.gif" "which age group of woman would the grooms in specific age group choose to marry?" style="width: 100%; height: 100%"/&gt;&lt;br&gt;
+Fig. 5. Which age group of woman would the grooms in specific age group choose to marry? &lt;/p&gt;
+&lt;p&gt;On the other hand, the choices of men change with ages. Very young people (&amp;lt;24) would choose ladies in the same group, or maybe 1 level older. Men in age 25-44 would choose ladies in 1 level younger or in the same age-group. Men in age 44 and above would choose ladies in  2 levels younger or even 3-4 levels younger. &lt;/p&gt;</content><category term="posts"></category><category term="Statistics"></category><category term="Singapore"></category></entry><entry><title>A map of HDB distribution</title><link href="https://wcchin.github.io/posts/a-map-of-hdb-distribution.html" rel="alternate"></link><published>2019-06-18T00:00:00+08:00</published><updated>2019-06-18T00:00:00+08:00</updated><author><name>Benny</name></author><id>tag:wcchin.github.io,2019-06-18:/posts/a-map-of-hdb-distribution.html</id><content type="html">&lt;h1&gt;A map of HDB distribution&lt;/h1&gt;
+&lt;p&gt;&lt;a href="resources/HDB_MarkerCluster0.html"&gt;The HDB map&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;data source: &lt;a href="https://data.gov.sg/dataset/hdb-property-information"&gt;data.gov.sg/dataset/hdb-property-information&lt;/a&gt;&lt;/p&gt;</content><category term="posts"></category><category term="Map"></category><category term="Singapore"></category></entry></feed>

@@ -1,0 +1,208 @@
+[input]
+base_directory = "output"
+html_selector = "main"
+
+[[input.files]]
+path = "pages/curriculum-vitae.html"
+url = "/pages/curriculum-vitae.html"
+title = "Curriculum Vitae"
+
+[[input.files]]
+path = "index.html"
+url = "/"
+title = "Home"
+
+[[input.files]]
+path = "pages/open-projects.html"
+url = "/pages/open-projects.html"
+title = "Open Projects"
+
+[[input.files]]
+path = "publications-all.html"
+url = "/publications-all.html"
+title = "Publications"
+
+[[input.files]]
+path = "publications/Wong2022-connectadapt.html"
+url = "/publications/Wong2022-connectadapt.html"
+title = "Connect or Adapt: Analytic Framework for the Planning and Design of Resilient Spatial Networks"
+
+[[input.files]]
+path = "publications/Srikanth2022-KA-SUTD.html"
+url = "/publications/Srikanth2022-KA-SUTD.html"
+title = "Complexity science-based spatial performance analyses of UNStudio/DP Architects’ SUTD Campus and WOHA's Kampung Admiralty"
+
+[[input.files]]
+path = "publications/Srikanth2022-complexity.html"
+url = "/publications/Srikanth2022-complexity.html"
+title = "Complexity science for urban solutions"
+
+[[input.files]]
+path = "publications/Manivannan2022-VDA.html"
+url = "/publications/Manivannan2022-VDA.html"
+title = "A Framework for the Identification of Human Vertical Displacement Activity Based on Multi-Sensor Data"
+
+[[input.files]]
+path = "posts/the-functional-zones-3d-map.html"
+url = "/posts/the-functional-zones-3d-map.html"
+title = "The functional zones 3D map"
+
+[[input.files]]
+path = "publications/Chin2021-activityspace.html"
+url = "/publications/Chin2021-activityspace.html"
+title = "Daily life pattern of a city: Delineating activity space and time using social media data"
+
+[[input.files]]
+path = "posts/sutd-campus-project-app-webpage.html"
+url = "/posts/sutd-campus-project-app-webpage.html"
+title = "SUTD campus Project app webpage"
+
+[[input.files]]
+path = "publications/Leong2021-vulnerability.html"
+url = "/publications/Leong2021-vulnerability.html"
+title = "A socio-ecological perspective on COVID-19 spatiotemporal integrated vulnerability in Singapore"
+
+[[input.files]]
+path = "publications/Yan2021-sentiment.html"
+url = "/publications/Yan2021-sentiment.html"
+title = "Emotional response through COVID-19 in Singapore"
+
+[[input.files]]
+path = "posts/urban-vibrancy-poi.html"
+url = "/posts/urban-vibrancy-poi.html"
+title = "Urban Vibrancy POI"
+
+[[input.files]]
+path = "posts/kampung-admiralty-project-app-webpage.html"
+url = "/posts/kampung-admiralty-project-app-webpage.html"
+title = "Kampung Admiralty Project app webpage"
+
+[[input.files]]
+path = "publications/Manivannan2020-barometer.html"
+url = "/publications/Manivannan2020-barometer.html"
+title = "On the challenges and potential of using barometric sensors to track human activity"
+
+[[input.files]]
+path = "publications/Chin2020-superspreaders.html"
+url = "/publications/Chin2020-superspreaders.html"
+title = "Spatial super-spreaders and super-susceptibles in human movement networks"
+
+[[input.files]]
+path = "posts/medium-article.html"
+url = "/posts/medium-article.html"
+title = "Medium Article"
+
+[[input.files]]
+path = "mediums/are-we-safe-now-the-incidence-trends-of-covid-19-in-may-2020.html"
+url = "/mediums/are-we-safe-now-the-incidence-trends-of-covid-19-in-may-2020.html"
+title = "Are we safe now? The incidence trends of COVID-19 in May 2020"
+
+[[input.files]]
+path = "mediums/covid-19-in-100-days-a-simple-observation-report.html"
+url = "/mediums/covid-19-in-100-days-a-simple-observation-report.html"
+title = "Covid-19 in 100 days: A simple observation report"
+
+[[input.files]]
+path = "posts/my-covid-19-article-on-medium.html"
+url = "/posts/my-covid-19-article-on-medium.html"
+title = "My Covid-19 article on Medium"
+
+[[input.files]]
+path = "publications/Chin2020-Covid-EpiRank.html"
+url = "/publications/Chin2020-Covid-EpiRank.html"
+title = "Using EpiRank for analyzing emerging Coronavirus epidemic patterns"
+
+[[input.files]]
+path = "publications/Huang2020-HATA.html"
+url = "/publications/Huang2020-HATA.html"
+title = "Distinguishing arc types to understand complex network strength structures and hierarchical connectivity patterns"
+
+[[input.files]]
+path = "posts/a-simple-app-for-epirank-demonstration.html"
+url = "/posts/a-simple-app-for-epirank-demonstration.html"
+title = "A simple app for EpiRank demonstration"
+
+[[input.files]]
+path = "posts/visualizing-the-development-of-covid-19.html"
+url = "/posts/visualizing-the-development-of-covid-19.html"
+title = "Visualizing the development of COVID-19"
+
+[[input.files]]
+path = "posts/nse-vda-extration-spatial-distribution.html"
+url = "/posts/nse-vda-extration-spatial-distribution.html"
+title = "NSE VDA extration spatial distribution"
+
+[[input.files]]
+path = "posts/dynamic-heatmap-of-nse-data.html"
+url = "/posts/dynamic-heatmap-of-nse-data.html"
+title = "Dynamic heatmap of NSE data"
+
+[[input.files]]
+path = "posts/about-singapore-demography.html"
+url = "/posts/about-singapore-demography.html"
+title = "About Singapore Demography"
+
+[[input.files]]
+path = "posts/a-map-of-hdb-distribution.html"
+url = "/posts/a-map-of-hdb-distribution.html"
+title = "A map of HDB distribution"
+
+[[input.files]]
+path = "publications/Huang2019-HETA.html"
+url = "/publications/Huang2019-HETA.html"
+title = "Beyond bond links in complex networks: Local bridges, global bridges and silk links"
+
+[[input.files]]
+path = "publications/Huang2019-EpiRank.html"
+url = "/publications/Huang2019-EpiRank.html"
+title = "EpiRank: Modeling bidirectional disease spread in asymmetric commuting networks"
+
+[[input.files]]
+path = "publications/Chin2018-pointscaling.html"
+url = "/publications/Chin2018-pointscaling.html"
+title = "The scaling properties of point clustering phenomena"
+
+[[input.files]]
+path = "publications/Chin2017-TaPiTaS.html"
+url = "/publications/Chin2017-TaPiTaS.html"
+title = "A geo-computational algorithm for exploring the structure of diffusion progression in time and space"
+
+[[input.files]]
+path = "publications/Wen2017-FBPR.html"
+url = "/publications/Wen2017-FBPR.html"
+title = "Understanding the topological characteristics and flow complexity of urban traffic congestion"
+
+[[input.files]]
+path = "publications/Wen2016-FBPR.html"
+url = "/publications/Wen2016-FBPR.html"
+title = "Link structure analysis of urban street networks for delineating traffic impact areas"
+
+[[input.files]]
+path = "publications/Wen2016-denguelag.html"
+url = "/publications/Wen2016-denguelag.html"
+title = "Evaluating the role of disease importation in the spatiotemporal transmission of indigenous dengue outbreak"
+
+[[input.files]]
+path = "publications/Lin2016-patientflow.html"
+url = "/publications/Lin2016-patientflow.html"
+title = "剖析台灣民眾的就醫流動：利用引力模式評估就醫距離與醫療資源分布的影響。"
+
+[[input.files]]
+path = "publications/Chin2015-GPR.html"
+url = "/publications/Chin2015-GPR.html"
+title = "Geographically modified PageRank algorithms: Identifying the spatial concentration of human movement in a geospatial network"
+
+[[input.files]]
+path = "publications/Wen2015-campus.html"
+url = "/publications/Wen2015-campus.html"
+title = "Incorporation of Spatial Interactions in Location Networks to Identify Critical Geo-Referenced Routes for Assessing Disease Control Measures on a Large-Scale Campus"
+
+[[input.files]]
+path = "publications/Lee2014-experiments.html"
+url = "/publications/Lee2014-experiments.html"
+title = "An experiment to model spatial diffusion process with nearest neighbor analysis and regression estimation"
+
+[[input.files]]
+path = "publications/Chin2013-GPR.html"
+url = "/publications/Chin2013-GPR.html"
+title = "Geographically Modified PageRank Algorithms: Measuring the Importance of Nodes in a Geospatial Network"
