@@ -96,28 +96,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a class="navbar-item" href="https://wcchin.github.io/category/posts.html" style="color:#cccccc;"><i class="fas fa-comment-alt"></i>&nbsp;Posts</a>
         <a class="navbar-item" href="https://wcchin.github.io/archives.html" style="color:#cccccc;"><i class="fas fa-archive"></i>&nbsp;Archives</a>
       </div>
-      <div class="navbar-end"><!--
+      <div class="navbar-end"><!--  -->
         <div class="dropdown" id="searchDropdown">
           <div class="dropdown-trigger">
             <div class="field">
-              <p class="control has-icons-left has-icons-right">
+              <p class="control has-icons-left"> <!-- has-icons-right" -->
               <input data-stork="sitesearch" class="input" type="text" placeholder="Search..." id="searchTerm">
               <span class="icon is-small is-left">
                 <i class="fas fa-search"></i>
-              </span>
+              </span><!--
               <span class="icon is-small is-right">
                 <i class="fas fa-binoculars"></i>
-              </span>
+              </span>-->
               </p>
             </div> 
           </div> 
           <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content" id="searchResults">
-              <div class="dropdown-item">Hello myfriend.
-              <div data-stork="sitesearch-output" class="dropdown-item"></div></div>
-            </div>
+            <div data-stork="sitesearch-output" id="searchRes"></div>
+            <!--<div class="dropdown-content" id="searchResults">
+              <div class="dropdown-item">Hello myfriend.</div>
+            </div>-->
           </div> 
-        </div> -->
+        </div>
       </div> <!-- navbar-end -->
     </div> <!-- navbarMenu -->
   </div> <!-- container -->
@@ -235,6 +235,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     });
     </script>
+    <script src="https://wcchin.github.io/theme/js/search_result.js"></script>
     <script src="https://wcchin.github.io/theme/js/stork.js"></script>
     <script>
         stork.initialize("https://wcchin.github.io/theme/js/stork.wasm")
