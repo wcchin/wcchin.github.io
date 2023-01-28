@@ -23,8 +23,18 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "publications/Chin2023-Delineating.html"
+url = "/publications/Chin2023-Delineating.html"
+title = "Delineating Zones of Disease Diffusion from the Amenity-Sharing Network in Peninsular Malaysia"
+
+[[input.files]]
+path = "publications/Chin2023-Analyzing.html"
+url = "/publications/Chin2023-Analyzing.html"
+title = "Analyzing the Trends of COVID-19 and Human Activity Intensity in Malaysia"
+
+[[input.files]]
 path = "publications/Wong2022-connectadapt.html"
-url = "/publications/Wong2022-connectadapt.html"
+url = "/https://www.arcc-arch.org/arcc-eaae-2022-proceedings-resilient-city-hosted-by-florida-international-university/"
 title = "Connect or Adapt: Analytic Framework for the Planning and Design of Resilient Spatial Networks"
 
 [[input.files]]
