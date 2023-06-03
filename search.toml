@@ -23,6 +23,11 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "publications/Chin2023-Integrating.html"
+url = "/publications/Chin2023-Integrating.html"
+title = "Integrating local and neighboring area influences into vulnerability modeling of infectious diseases in Singapore"
+
+[[input.files]]
 path = "publications/Hsieh2023-TheEffect.html"
 url = "/publications/Hsieh2023-TheEffect.html"
 title = "The effect of water sound level in virtual reality: A study of restorative benefits in young adults through immersive natural environments"
