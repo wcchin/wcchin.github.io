@@ -23,6 +23,11 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "publications/Gopalakrishnan2023-Vertical.html"
+url = "/publications/Gopalakrishnan2023-Vertical.html"
+title = "Vertical Cities: Emergent Patterns of Movement and Space Use in Dense Vertically Integrated Urban Built Environments"
+
+[[input.files]]
 path = "publications/Chin2023-Integrating.html"
 url = "/publications/Chin2023-Integrating.html"
 title = "Integrating local and neighboring area influences into vulnerability modeling of infectious diseases in Singapore"

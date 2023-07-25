@@ -64,8 +64,6 @@ var onRouteCheck = function() {
   closeMenuCheck();
 }
 
-
-
 function openModal(evt, cardName) {
   var cardcontent = document.getElementById(cardName);
   cardcontent.className = cardcontent.className += " is-active";
