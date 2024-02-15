@@ -33,6 +33,11 @@ url = "/publications/Chin2024-Networked.html"
 title = "The networked community of urban mobility during the pandemic"
 
 [[input.files]]
+path = "posts/the-geovisualization-website-for-the-health-data-visualization-contest-2024.html"
+url = "/posts/the-geovisualization-website-for-the-health-data-visualization-contest-2024.html"
+title = "The geovisualization website for the Health Data Visualization Contest 2024"
+
+[[input.files]]
 path = "publications/Gopalakrishnan2023-Vertical.html"
 url = "/publications/Gopalakrishnan2023-Vertical.html"
 title = "Vertical Cities: Emergent Patterns of Movement and Space Use in Dense Vertically Integrated Urban Built Environments"
