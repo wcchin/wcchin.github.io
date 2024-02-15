@@ -23,14 +23,14 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
-path = "publications/Chin2023-Networked.html"
-url = "/publications/Chin2023-Networked.html"
-title = "The networked community of urban mobility during the pandemic"
+path = "publications/Chin2024-Identifying.html"
+url = "/publications/Chin2024-Identifying.html"
+title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
 
 [[input.files]]
-path = "publications/Chin2023-Identifying.html"
-url = "/publications/Chin2023-Identifying.html"
-title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
+path = "publications/Chin2024-Networked.html"
+url = "/publications/Chin2024-Networked.html"
+title = "The networked community of urban mobility during the pandemic"
 
 [[input.files]]
 path = "publications/Gopalakrishnan2023-Vertical.html"
