@@ -28,6 +28,11 @@ url = "/publications/Chin2024-Identifying.html"
 title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
 
 [[input.files]]
+path = "posts/the-morphing-map-project.html"
+url = "/posts/the-morphing-map-project.html"
+title = "The Morphing Map Project"
+
+[[input.files]]
 path = "publications/Chin2024-Networked.html"
 url = "/publications/Chin2024-Networked.html"
 title = "The networked community of urban mobility during the pandemic"
