@@ -23,6 +23,11 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "publications/Ajay2024-Effects.html"
+url = "/publications/Ajay2024-Effects.html"
+title = "Effects of the interplay between topology and function of an integrated urban development on patterns of user movement"
+
+[[input.files]]
 path = "publications/Chin2024-Identifying.html"
 url = "/publications/Chin2024-Identifying.html"
 title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
