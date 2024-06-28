@@ -23,6 +23,11 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "posts/hdb-resale-price-distribution.html"
+url = "/posts/hdb-resale-price-distribution.html"
+title = "HDB resale price distribution"
+
+[[input.files]]
 path = "publications/Ajay2024-Effects.html"
 url = "/publications/Ajay2024-Effects.html"
 title = "Effects of the interplay between topology and function of an integrated urban development on patterns of user movement"
