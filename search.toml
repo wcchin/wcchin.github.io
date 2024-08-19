@@ -23,6 +23,16 @@ url = "/publications-all.html"
 title = "Publications"
 
 [[input.files]]
+path = "publications/Feng2024-Splatial.html"
+url = "/publications/Feng2024-Splatial.html"
+title = "Illustrating a Splatial Framework to Aging: Absolute, Relative, Relational, and Mental Space in Singapore"
+
+[[input.files]]
+path = "publications/Chin2024-Identifying.html"
+url = "/publications/Chin2024-Identifying.html"
+title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
+
+[[input.files]]
 path = "posts/hdb-resale-price-distribution.html"
 url = "/posts/hdb-resale-price-distribution.html"
 title = "HDB resale price distribution"
@@ -31,11 +41,6 @@ title = "HDB resale price distribution"
 path = "publications/Ajay2024-Effects.html"
 url = "/publications/Ajay2024-Effects.html"
 title = "Effects of the interplay between topology and function of an integrated urban development on patterns of user movement"
-
-[[input.files]]
-path = "publications/Chin2024-Identifying.html"
-url = "/publications/Chin2024-Identifying.html"
-title = "Identifying urban functional zones by analysing the spatial distribution of amenities"
 
 [[input.files]]
 path = "posts/the-morphing-map-project.html"
