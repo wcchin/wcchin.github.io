@@ -12,3 +12,13 @@
 .hero-background.is-transparent {
   opacity: 0.5;
 }
+
+.navbar-dropdown {
+  background-color: #181825;
+}
+
+.navbar-item:focus {
+  background-color: #181825;
+}
+
+
