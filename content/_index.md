@@ -64,7 +64,7 @@ index = true
 show_copyright = true
 +++
 
-<p align="center" style="font-size: xx-large;"> Geographer | GIScientist | Educator</p>
+<p align="center" style="font-size: xx-large;">A geographer teaching computing.</p>
 
 Benny Chin got his B.Sc, M.Sc., and Ph.D. degrees in Geography from National Taiwan University and currently work with the Department of Geography, National University of Singapore as a lecturer. He is a Geographical Information Scientist. His research interests include computational geography, complex network, spatial scaling, and geospatial visualisation. He is participating in projects associated with complex human movement networks and spatial epidemiology. Benny teach GE5230 Geospatial Statistics and Visualisation and several GIS-related courses in the department. In other words, he teach computing skills to geography students.
 
