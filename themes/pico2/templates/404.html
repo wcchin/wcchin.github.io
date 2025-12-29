@@ -1,0 +1,56 @@
+{% set cdn_version = now() | date(format="%d%m%Y%H%M%S") %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>
+  404
+  </title>
+{% if dsc is not defined %}
+  <meta name="description" content="{{ config.extra.description }}">
+{% else %}
+  <meta name="description" content="{{ dsc }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endif %}
+  <meta name="author" content="{{config.extra.author}}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/grid.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/style.css?v={{ cdn_version }}">
+  <link type="text/css" rel="stylesheet" href="{{config.base_url | safe }}css/icons.css">
+  <link rel="icon" type="image/png" href="{{config.base_url | safe }}images/favicon.ico">
+  <link rel="mask-icon" type="image/png" href="{{config.base_url | safe }}images/favicon-16x16.png">
+  {% if config.extra.stats and config.mode != 'serve' %}
+  <script async src="{{config.extra.stats.script_src}}" data-website-id="{{config.extra.stats.site_id}}" nonce="{{config.extra.nonce}}"></script>
+  {% endif %}
+  <script src = "{{config.base_url | safe }}js/codecopy.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+  <script src="{{config.base_url | safe }}js/mermaid.min.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+  {%- if config.build_search_index -%}
+  <script src="{{config.base_url | safe }}elasticlunr.min.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+  <script src="{{config.base_url | safe }}js/search.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+  {%- endif -%}
+</head>
+<body>
+
+<main>
+  <div class="container" id="main-container">
+
+<div class="row">
+  <div class="col-12 center">
+    <h1>Ooops! 404!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8 center">
+    <div id="indextext" >
+     <p>Something is definetly went wrong, as you tried to reach page that doesn't exist here. Try to start from the <a href="{{ config.base_url }}">beginning</a></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</main>
+{% include 'footer.html' %}
+<script src = "{{config.base_url | safe }}js/colortheme.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+<script src = "{{config.base_url | safe }}js/init.js?v={{ cdn_version }}" nonce="{{config.extra.nonce}}"></script>
+</body>
+</html>

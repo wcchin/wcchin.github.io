@@ -1,0 +1,39 @@
+.icon-researchgate {
+    mask-image: url("/icons/researchgate.svg");
+}
+.icon-gscholar {
+    mask-image: url("/icons/google-scholar.svg");
+}
+.icon-ieee {
+    mask-image: url("/icons/ieee.svg");
+}
+.icon-orcid {
+    mask-image: url("/icons/orcid.svg");
+}
+.icon-pubmed {
+    mask-image: url("/icons/pubmed.svg");
+}
+.icon-semanticscholar {
+    mask-image: url("/icons/semantic-scholar.svg");
+}
+.icon-ssrn {
+    mask-image: url("/icons/ssrn.svg");
+}
+.icon-clarivate {
+    mask-image: url("/icons/clarivate.svg");
+}
+.icon-elsevier {
+    mask-image: url("/icons/elsevier.svg");
+}
+.icon-doi {
+    mask-image: url("/icons/doi.svg");
+}
+.icon-dblp {
+    mask-image: url("/icons/dblp.svg");
+}
+.icon-scopus {
+    mask-image: url("/icons/scopus.svg");
+}
+.icon-osf {
+    mask-image: url("/icons/osf.svg");
+}
