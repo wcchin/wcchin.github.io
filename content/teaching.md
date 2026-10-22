@@ -16,9 +16,9 @@ show_copyright = true
     <div class="card-content">
       <p>Data visualization is crucial for understanding geographical phenomena, and statistical thinking is essential for effective visualization. This course offers students a comprehensive understanding of geospatial data visualization and analysis techniques. Students will develop a strong foundation in statistical methods and spatial thinking abilities while learning to create compelling visualizations using Python. Key topics include statistical patterns, point patterns, areal patterns, and geovisualization. Through hands-on experience with Python libraries, students will enhance their spatial data science skills. By the end of the course, students will be well-equipped to analyze, visualize, and communicate geospatial data insights effectively.</p>
       <hr />
-      <p align="center" style="font-weight: 700;">AY24/25 | AY25/26 | AY26/27 (plan) </p>
+      <p align="center" style="font-weight: 700;">AY24/25 | AY25/26 | AY26/27 </p>
       <hr />
-      <p align="center" style="font-weight: 600;"><a href="https://wcchin.github.io/geo-stat-vis/" target="_blank">Course Material (coming soon)</a></p>
+      <p align="center" style="font-weight: 600;"><a href="https://wcchin.github.io/geo-stat-vis/" target="_blank">Course Material: Geospatial Statistics and Visualization</a> (A self-study Jupyter Book)</p>
     </div>
   </div>
   
@@ -80,7 +80,9 @@ show_copyright = true
     <div class="card-content">
       <p>This course introduces students to the design and implementation of fundamental data structures and algorithms. The course covers basic data structures (linked lists, stacks, queues, hash tables, binary heaps, trees, and graphs), searching and sorting algorithms, and basic analysis of algorithms. Students will be implementing these in Python or Java.</p>
       <hr />
-      <p align="center" style="font-weight: 700;">AY26/27 (plan)</p>
+      <p align="center" style="font-weight: 700;">AY26/27</p>
+      <hr />
+      <p align="center" style="font-weight: 600;"><a href="https://wcchin.github.io/dsa-concepts/" target="_blank">Course Material: Data Structures and Algorithms - Concepts</a> (A Wiki-like Jupyter Book)</p>
     </div>
   </div>
 </div>
