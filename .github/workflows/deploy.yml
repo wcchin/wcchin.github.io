@@ -20,13 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
+        with:
+          submodules: true  # <--- CRITICAL: This pulls down your theme templates and shortcodes
 
       - name: Install Zola
         uses: taiki-e/install-action@zola
         with:
-          version: "0.21.0"
-
+          tool: zola@0.21.0 # Uses the standard and reliable version syntax format
 
       - name: Build site
         run: zola build
